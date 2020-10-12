@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 ../includes/asm.h
+fcntl.h
+-
 libft.h
 ../includes/libft.h
 
@@ -32,7 +34,7 @@ float.h
 stdint.h
 -
 
-/Users/leathertube/corewar/sources/asm.c
+/Users/leathertube/corewar/sources/ft_is_filename.c
 asm.h
 /Users/leathertube/corewar/sources/asm.h
 

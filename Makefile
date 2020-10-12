@@ -36,7 +36,15 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
 SRC_LIST =
 SRC_LIST_CW = corewar.c
-SRC_LIST_ASM = asm.c
+SRC_LIST_ASM = asm.c \
+				ft_asm_error.c \
+				ft_assemble.c \
+				ft_check_read_argv_files.c \
+				ft_disassemble.c \
+				ft_free_asm_struct.c \
+				ft_init_asm_struct.c \
+				ft_is_filename.c \
+				ft_print_help.c \
 
 SRC_DIR = sources/
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
@@ -66,13 +74,13 @@ all: $(NAME_CW) $(NAME_ASM)
 
 $(NAME_CW): $(LIBFT) $(OBJ_DIR) $(OBJ) $(OBJ_CW)
 	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ) $(OBJ_CW) -o $(NAME_CW)
-	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(RESET)"
-	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(RESET)"
+	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
+	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
 
 $(NAME_ASM): $(LIBFT) $(OBJ_DIR) $(OBJ) $(OBJ_ASM)
 	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ) $(OBJ_ASM) -o $(NAME_ASM)
-	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(RESET)"
-	@echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(RESET)"
+	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
+	@echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)

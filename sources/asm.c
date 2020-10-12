@@ -12,9 +12,20 @@
 
 #include "asm.h"
 
-int		main()
+int		main(int argc, char **argv)
 {
-	ft_printf("start asm.\n");
+	t_asm	*asm_struct;
 
+	ft_printf("start asm! argc: %d\n", argc - 1);
+	if (argc < 2)
+		return (ft_print_help());
+	// get all files from argv
+	// parse && valide all files
+	// if .s -> assemble all valide files to .cor
+	// if .cor -> disassemble
+	asm_struct = ft_init_asm_struct();
+	if (!asm_struct)
+		ft_asm_error(ASM_STRUCT_ERR, asm_struct);
+	ft_check_read_argv_files(argc, argv);
 	return (0);
 }

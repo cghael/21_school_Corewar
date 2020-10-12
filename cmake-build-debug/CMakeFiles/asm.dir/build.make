@@ -90,18 +90,138 @@ CMakeFiles/asm.dir/sources/asm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/asm.c -o CMakeFiles/asm.dir/sources/asm.c.s
 
+CMakeFiles/asm.dir/sources/ft_is_filename.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_is_filename.c.o: ../sources/ft_is_filename.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/asm.dir/sources/ft_is_filename.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_is_filename.c.o   -c /Users/leathertube/corewar/sources/ft_is_filename.c
+
+CMakeFiles/asm.dir/sources/ft_is_filename.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_is_filename.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_is_filename.c > CMakeFiles/asm.dir/sources/ft_is_filename.c.i
+
+CMakeFiles/asm.dir/sources/ft_is_filename.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_is_filename.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_is_filename.c -o CMakeFiles/asm.dir/sources/ft_is_filename.c.s
+
+CMakeFiles/asm.dir/sources/ft_assemble.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_assemble.c.o: ../sources/ft_assemble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/asm.dir/sources/ft_assemble.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_assemble.c.o   -c /Users/leathertube/corewar/sources/ft_assemble.c
+
+CMakeFiles/asm.dir/sources/ft_assemble.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_assemble.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_assemble.c > CMakeFiles/asm.dir/sources/ft_assemble.c.i
+
+CMakeFiles/asm.dir/sources/ft_assemble.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_assemble.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_assemble.c -o CMakeFiles/asm.dir/sources/ft_assemble.c.s
+
+CMakeFiles/asm.dir/sources/ft_disassemble.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_disassemble.c.o: ../sources/ft_disassemble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/asm.dir/sources/ft_disassemble.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_disassemble.c.o   -c /Users/leathertube/corewar/sources/ft_disassemble.c
+
+CMakeFiles/asm.dir/sources/ft_disassemble.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_disassemble.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_disassemble.c > CMakeFiles/asm.dir/sources/ft_disassemble.c.i
+
+CMakeFiles/asm.dir/sources/ft_disassemble.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_disassemble.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_disassemble.c -o CMakeFiles/asm.dir/sources/ft_disassemble.c.s
+
+CMakeFiles/asm.dir/sources/ft_print_help.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_print_help.c.o: ../sources/ft_print_help.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/asm.dir/sources/ft_print_help.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_print_help.c.o   -c /Users/leathertube/corewar/sources/ft_print_help.c
+
+CMakeFiles/asm.dir/sources/ft_print_help.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_print_help.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_print_help.c > CMakeFiles/asm.dir/sources/ft_print_help.c.i
+
+CMakeFiles/asm.dir/sources/ft_print_help.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_print_help.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_print_help.c -o CMakeFiles/asm.dir/sources/ft_print_help.c.s
+
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o: ../sources/ft_init_asm_struct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o   -c /Users/leathertube/corewar/sources/ft_init_asm_struct.c
+
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_init_asm_struct.c > CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.i
+
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_init_asm_struct.c -o CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.s
+
+CMakeFiles/asm.dir/sources/ft_asm_error.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_asm_error.c.o: ../sources/ft_asm_error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/asm.dir/sources/ft_asm_error.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_asm_error.c.o   -c /Users/leathertube/corewar/sources/ft_asm_error.c
+
+CMakeFiles/asm.dir/sources/ft_asm_error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_asm_error.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_asm_error.c > CMakeFiles/asm.dir/sources/ft_asm_error.c.i
+
+CMakeFiles/asm.dir/sources/ft_asm_error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_asm_error.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_asm_error.c -o CMakeFiles/asm.dir/sources/ft_asm_error.c.s
+
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o: ../sources/ft_free_asm_struct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o   -c /Users/leathertube/corewar/sources/ft_free_asm_struct.c
+
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_free_asm_struct.c > CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.i
+
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_free_asm_struct.c -o CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.s
+
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o: ../sources/ft_check_read_argv_files.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o   -c /Users/leathertube/corewar/sources/ft_check_read_argv_files.c
+
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/leathertube/corewar/sources/ft_check_read_argv_files.c > CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.i
+
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/leathertube/corewar/sources/ft_check_read_argv_files.c -o CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.s
+
 # Object files for target asm
 asm_OBJECTS = \
-"CMakeFiles/asm.dir/sources/asm.c.o"
+"CMakeFiles/asm.dir/sources/asm.c.o" \
+"CMakeFiles/asm.dir/sources/ft_is_filename.c.o" \
+"CMakeFiles/asm.dir/sources/ft_assemble.c.o" \
+"CMakeFiles/asm.dir/sources/ft_disassemble.c.o" \
+"CMakeFiles/asm.dir/sources/ft_print_help.c.o" \
+"CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o" \
+"CMakeFiles/asm.dir/sources/ft_asm_error.c.o" \
+"CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o" \
+"CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o"
 
 # External object files for target asm
 asm_EXTERNAL_OBJECTS =
 
 asm: CMakeFiles/asm.dir/sources/asm.c.o
+asm: CMakeFiles/asm.dir/sources/ft_is_filename.c.o
+asm: CMakeFiles/asm.dir/sources/ft_assemble.c.o
+asm: CMakeFiles/asm.dir/sources/ft_disassemble.c.o
+asm: CMakeFiles/asm.dir/sources/ft_print_help.c.o
+asm: CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o
+asm: CMakeFiles/asm.dir/sources/ft_asm_error.c.o
+asm: CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o
+asm: CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o
 asm: CMakeFiles/asm.dir/build.make
 asm: libft/liblibft.a
 asm: CMakeFiles/asm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leathertube/corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable asm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/asm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

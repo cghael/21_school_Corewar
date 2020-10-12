@@ -530,6 +530,30 @@
 		<Unit filename="/Users/leathertube/corewar/sources/corewar.c">
 			<Option target="corewar"/>
 		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_asm_error.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_assemble.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_check_read_argv_files.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_disassemble.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_free_asm_struct.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_init_asm_struct.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_is_filename.c">
+			<Option target="asm"/>
+		</Unit>
+		<Unit filename="/Users/leathertube/corewar/sources/ft_print_help.c">
+			<Option target="asm"/>
+		</Unit>
 		<Unit filename="/Users/leathertube/corewar/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

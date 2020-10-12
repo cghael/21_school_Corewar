@@ -5,3 +5,35 @@ CMakeFiles/asm.dir/sources/asm.c.o: ../includes/asm.h
 CMakeFiles/asm.dir/sources/asm.c.o: ../libft/inc/libft.h
 CMakeFiles/asm.dir/sources/asm.c.o: ../sources/asm.c
 
+CMakeFiles/asm.dir/sources/ft_asm_error.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_asm_error.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_asm_error.c.o: ../sources/ft_asm_error.c
+
+CMakeFiles/asm.dir/sources/ft_assemble.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_assemble.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_assemble.c.o: ../sources/ft_assemble.c
+
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o: ../sources/ft_check_read_argv_files.c
+
+CMakeFiles/asm.dir/sources/ft_disassemble.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_disassemble.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_disassemble.c.o: ../sources/ft_disassemble.c
+
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o: ../sources/ft_free_asm_struct.c
+
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o: ../sources/ft_init_asm_struct.c
+
+CMakeFiles/asm.dir/sources/ft_is_filename.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_is_filename.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_is_filename.c.o: ../sources/ft_is_filename.c
+
+CMakeFiles/asm.dir/sources/ft_print_help.c.o: ../includes/asm.h
+CMakeFiles/asm.dir/sources/ft_print_help.c.o: ../libft/inc/libft.h
+CMakeFiles/asm.dir/sources/ft_print_help.c.o: ../sources/ft_print_help.c
+
