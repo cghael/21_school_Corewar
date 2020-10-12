@@ -3,7 +3,7 @@ project(corewar C)
 
 set(CMAKE_C_STANDARD 90)
 
-set(SOURCES_VM
+set(SOURCES_CW
         sources/corewar.c)
 
 set(SOURCES_ASM
