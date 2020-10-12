@@ -16,6 +16,8 @@ void	ft_check_read_argv_files(int argc, char **argv)
 			ft_disassemble(argv[i]);
 		else if (IS_BAD_FILE == ft_is_filename(argv[i]))
 			ft_dprintf(2, "invalid file [%s]\n", argv[i]);
+		else if (IS_NOT_FILE == ft_is_filename(argv[i]))
+			ft_dprintf(2, "is not file [%s]\n", argv[i]);
 //		ft_printf("i %d\n", i);
 		i--;
 	}
