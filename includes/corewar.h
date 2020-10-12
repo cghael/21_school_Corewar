@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COREWAR_WM_H
-# define COREWAR_WM_H
+#ifndef COREWAR_H
+# define COREWAR_H
 
 # include "libft.h"
 
