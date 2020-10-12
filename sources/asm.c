@@ -14,6 +14,7 @@
 
 int		main()
 {
-	ft_printf("start asm.");
+	ft_printf("start asm.\n");
+
 	return (0);
 }
