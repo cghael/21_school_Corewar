@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/antongorobets/school21/21_school_Corewar
+CMAKE_SOURCE_DIR = /Users/ksemele/Desktop/corewar_collaborate
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/progress.marks
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles 0
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/CMakeFiles/progress.marks
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/clean
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libft/CMakeFiles/libft.dir/rule:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/CMakeFiles/libft.dir/rule
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/CMakeFiles/libft.dir/rule
 .PHONY : libft/CMakeFiles/libft.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ libft: libft/CMakeFiles/libft.dir/rule
 
 # fast build rule for target.
 libft/fast:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/build
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/build
 .PHONY : libft/fast
 
 src/ft_abs.o: src/ft_abs.c.o
@@ -151,7 +151,7 @@ src/ft_abs.o: src/ft_abs.c.o
 
 # target to build an object file
 src/ft_abs.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_abs.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_abs.c.o
 .PHONY : src/ft_abs.c.o
 
 src/ft_abs.i: src/ft_abs.c.i
@@ -160,7 +160,7 @@ src/ft_abs.i: src/ft_abs.c.i
 
 # target to preprocess a source file
 src/ft_abs.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_abs.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_abs.c.i
 .PHONY : src/ft_abs.c.i
 
 src/ft_abs.s: src/ft_abs.c.s
@@ -169,7 +169,7 @@ src/ft_abs.s: src/ft_abs.c.s
 
 # target to generate assembly for a file
 src/ft_abs.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_abs.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_abs.c.s
 .PHONY : src/ft_abs.c.s
 
 src/ft_add_dig_to_int.o: src/ft_add_dig_to_int.c.o
@@ -178,7 +178,7 @@ src/ft_add_dig_to_int.o: src/ft_add_dig_to_int.c.o
 
 # target to build an object file
 src/ft_add_dig_to_int.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_dig_to_int.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_dig_to_int.c.o
 .PHONY : src/ft_add_dig_to_int.c.o
 
 src/ft_add_dig_to_int.i: src/ft_add_dig_to_int.c.i
@@ -187,7 +187,7 @@ src/ft_add_dig_to_int.i: src/ft_add_dig_to_int.c.i
 
 # target to preprocess a source file
 src/ft_add_dig_to_int.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_dig_to_int.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_dig_to_int.c.i
 .PHONY : src/ft_add_dig_to_int.c.i
 
 src/ft_add_dig_to_int.s: src/ft_add_dig_to_int.c.s
@@ -196,7 +196,7 @@ src/ft_add_dig_to_int.s: src/ft_add_dig_to_int.c.s
 
 # target to generate assembly for a file
 src/ft_add_dig_to_int.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_dig_to_int.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_dig_to_int.c.s
 .PHONY : src/ft_add_dig_to_int.c.s
 
 src/ft_add_float_to_str.o: src/ft_add_float_to_str.c.o
@@ -205,7 +205,7 @@ src/ft_add_float_to_str.o: src/ft_add_float_to_str.c.o
 
 # target to build an object file
 src/ft_add_float_to_str.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_float_to_str.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_float_to_str.c.o
 .PHONY : src/ft_add_float_to_str.c.o
 
 src/ft_add_float_to_str.i: src/ft_add_float_to_str.c.i
@@ -214,7 +214,7 @@ src/ft_add_float_to_str.i: src/ft_add_float_to_str.c.i
 
 # target to preprocess a source file
 src/ft_add_float_to_str.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_float_to_str.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_float_to_str.c.i
 .PHONY : src/ft_add_float_to_str.c.i
 
 src/ft_add_float_to_str.s: src/ft_add_float_to_str.c.s
@@ -223,7 +223,7 @@ src/ft_add_float_to_str.s: src/ft_add_float_to_str.c.s
 
 # target to generate assembly for a file
 src/ft_add_float_to_str.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_float_to_str.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_float_to_str.c.s
 .PHONY : src/ft_add_float_to_str.c.s
 
 src/ft_add_specials.o: src/ft_add_specials.c.o
@@ -232,7 +232,7 @@ src/ft_add_specials.o: src/ft_add_specials.c.o
 
 # target to build an object file
 src/ft_add_specials.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_specials.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_specials.c.o
 .PHONY : src/ft_add_specials.c.o
 
 src/ft_add_specials.i: src/ft_add_specials.c.i
@@ -241,7 +241,7 @@ src/ft_add_specials.i: src/ft_add_specials.c.i
 
 # target to preprocess a source file
 src/ft_add_specials.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_specials.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_specials.c.i
 .PHONY : src/ft_add_specials.c.i
 
 src/ft_add_specials.s: src/ft_add_specials.c.s
@@ -250,7 +250,7 @@ src/ft_add_specials.s: src/ft_add_specials.c.s
 
 # target to generate assembly for a file
 src/ft_add_specials.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_specials.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_add_specials.c.s
 .PHONY : src/ft_add_specials.c.s
 
 src/ft_atoi.o: src/ft_atoi.c.o
@@ -259,7 +259,7 @@ src/ft_atoi.o: src/ft_atoi.c.o
 
 # target to build an object file
 src/ft_atoi.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_atoi.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_atoi.c.o
 .PHONY : src/ft_atoi.c.o
 
 src/ft_atoi.i: src/ft_atoi.c.i
@@ -268,7 +268,7 @@ src/ft_atoi.i: src/ft_atoi.c.i
 
 # target to preprocess a source file
 src/ft_atoi.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_atoi.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_atoi.c.i
 .PHONY : src/ft_atoi.c.i
 
 src/ft_atoi.s: src/ft_atoi.c.s
@@ -277,7 +277,7 @@ src/ft_atoi.s: src/ft_atoi.c.s
 
 # target to generate assembly for a file
 src/ft_atoi.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_atoi.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_atoi.c.s
 .PHONY : src/ft_atoi.c.s
 
 src/ft_b.o: src/ft_b.c.o
@@ -286,7 +286,7 @@ src/ft_b.o: src/ft_b.c.o
 
 # target to build an object file
 src/ft_b.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_b.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_b.c.o
 .PHONY : src/ft_b.c.o
 
 src/ft_b.i: src/ft_b.c.i
@@ -295,7 +295,7 @@ src/ft_b.i: src/ft_b.c.i
 
 # target to preprocess a source file
 src/ft_b.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_b.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_b.c.i
 .PHONY : src/ft_b.c.i
 
 src/ft_b.s: src/ft_b.c.s
@@ -304,7 +304,7 @@ src/ft_b.s: src/ft_b.c.s
 
 # target to generate assembly for a file
 src/ft_b.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_b.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_b.c.s
 .PHONY : src/ft_b.c.s
 
 src/ft_buff_finded_percent.o: src/ft_buff_finded_percent.c.o
@@ -313,7 +313,7 @@ src/ft_buff_finded_percent.o: src/ft_buff_finded_percent.c.o
 
 # target to build an object file
 src/ft_buff_finded_percent.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_finded_percent.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_finded_percent.c.o
 .PHONY : src/ft_buff_finded_percent.c.o
 
 src/ft_buff_finded_percent.i: src/ft_buff_finded_percent.c.i
@@ -322,7 +322,7 @@ src/ft_buff_finded_percent.i: src/ft_buff_finded_percent.c.i
 
 # target to preprocess a source file
 src/ft_buff_finded_percent.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_finded_percent.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_finded_percent.c.i
 .PHONY : src/ft_buff_finded_percent.c.i
 
 src/ft_buff_finded_percent.s: src/ft_buff_finded_percent.c.s
@@ -331,7 +331,7 @@ src/ft_buff_finded_percent.s: src/ft_buff_finded_percent.c.s
 
 # target to generate assembly for a file
 src/ft_buff_finded_percent.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_finded_percent.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_finded_percent.c.s
 .PHONY : src/ft_buff_finded_percent.c.s
 
 src/ft_buff_free.o: src/ft_buff_free.c.o
@@ -340,7 +340,7 @@ src/ft_buff_free.o: src/ft_buff_free.c.o
 
 # target to build an object file
 src/ft_buff_free.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_free.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_free.c.o
 .PHONY : src/ft_buff_free.c.o
 
 src/ft_buff_free.i: src/ft_buff_free.c.i
@@ -349,7 +349,7 @@ src/ft_buff_free.i: src/ft_buff_free.c.i
 
 # target to preprocess a source file
 src/ft_buff_free.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_free.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_free.c.i
 .PHONY : src/ft_buff_free.c.i
 
 src/ft_buff_free.s: src/ft_buff_free.c.s
@@ -358,7 +358,7 @@ src/ft_buff_free.s: src/ft_buff_free.c.s
 
 # target to generate assembly for a file
 src/ft_buff_free.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_free.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_free.c.s
 .PHONY : src/ft_buff_free.c.s
 
 src/ft_buff_no_percent.o: src/ft_buff_no_percent.c.o
@@ -367,7 +367,7 @@ src/ft_buff_no_percent.o: src/ft_buff_no_percent.c.o
 
 # target to build an object file
 src/ft_buff_no_percent.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_no_percent.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_no_percent.c.o
 .PHONY : src/ft_buff_no_percent.c.o
 
 src/ft_buff_no_percent.i: src/ft_buff_no_percent.c.i
@@ -376,7 +376,7 @@ src/ft_buff_no_percent.i: src/ft_buff_no_percent.c.i
 
 # target to preprocess a source file
 src/ft_buff_no_percent.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_no_percent.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_no_percent.c.i
 .PHONY : src/ft_buff_no_percent.c.i
 
 src/ft_buff_no_percent.s: src/ft_buff_no_percent.c.s
@@ -385,7 +385,7 @@ src/ft_buff_no_percent.s: src/ft_buff_no_percent.c.s
 
 # target to generate assembly for a file
 src/ft_buff_no_percent.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_no_percent.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_no_percent.c.s
 .PHONY : src/ft_buff_no_percent.c.s
 
 src/ft_buff_print_free.o: src/ft_buff_print_free.c.o
@@ -394,7 +394,7 @@ src/ft_buff_print_free.o: src/ft_buff_print_free.c.o
 
 # target to build an object file
 src/ft_buff_print_free.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_free.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_free.c.o
 .PHONY : src/ft_buff_print_free.c.o
 
 src/ft_buff_print_free.i: src/ft_buff_print_free.c.i
@@ -403,7 +403,7 @@ src/ft_buff_print_free.i: src/ft_buff_print_free.c.i
 
 # target to preprocess a source file
 src/ft_buff_print_free.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_free.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_free.c.i
 .PHONY : src/ft_buff_print_free.c.i
 
 src/ft_buff_print_free.s: src/ft_buff_print_free.c.s
@@ -412,7 +412,7 @@ src/ft_buff_print_free.s: src/ft_buff_print_free.c.s
 
 # target to generate assembly for a file
 src/ft_buff_print_free.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_free.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_free.c.s
 .PHONY : src/ft_buff_print_free.c.s
 
 src/ft_buff_print_n_len.o: src/ft_buff_print_n_len.c.o
@@ -421,7 +421,7 @@ src/ft_buff_print_n_len.o: src/ft_buff_print_n_len.c.o
 
 # target to build an object file
 src/ft_buff_print_n_len.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_n_len.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_n_len.c.o
 .PHONY : src/ft_buff_print_n_len.c.o
 
 src/ft_buff_print_n_len.i: src/ft_buff_print_n_len.c.i
@@ -430,7 +430,7 @@ src/ft_buff_print_n_len.i: src/ft_buff_print_n_len.c.i
 
 # target to preprocess a source file
 src/ft_buff_print_n_len.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_n_len.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_n_len.c.i
 .PHONY : src/ft_buff_print_n_len.c.i
 
 src/ft_buff_print_n_len.s: src/ft_buff_print_n_len.c.s
@@ -439,7 +439,7 @@ src/ft_buff_print_n_len.s: src/ft_buff_print_n_len.c.s
 
 # target to generate assembly for a file
 src/ft_buff_print_n_len.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_n_len.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_print_n_len.c.s
 .PHONY : src/ft_buff_print_n_len.c.s
 
 src/ft_buff_treated_percent.o: src/ft_buff_treated_percent.c.o
@@ -448,7 +448,7 @@ src/ft_buff_treated_percent.o: src/ft_buff_treated_percent.c.o
 
 # target to build an object file
 src/ft_buff_treated_percent.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_treated_percent.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_treated_percent.c.o
 .PHONY : src/ft_buff_treated_percent.c.o
 
 src/ft_buff_treated_percent.i: src/ft_buff_treated_percent.c.i
@@ -457,7 +457,7 @@ src/ft_buff_treated_percent.i: src/ft_buff_treated_percent.c.i
 
 # target to preprocess a source file
 src/ft_buff_treated_percent.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_treated_percent.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_treated_percent.c.i
 .PHONY : src/ft_buff_treated_percent.c.i
 
 src/ft_buff_treated_percent.s: src/ft_buff_treated_percent.c.s
@@ -466,7 +466,7 @@ src/ft_buff_treated_percent.s: src/ft_buff_treated_percent.c.s
 
 # target to generate assembly for a file
 src/ft_buff_treated_percent.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_treated_percent.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_buff_treated_percent.c.s
 .PHONY : src/ft_buff_treated_percent.c.s
 
 src/ft_bzero.o: src/ft_bzero.c.o
@@ -475,7 +475,7 @@ src/ft_bzero.o: src/ft_bzero.c.o
 
 # target to build an object file
 src/ft_bzero.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero.c.o
 .PHONY : src/ft_bzero.c.o
 
 src/ft_bzero.i: src/ft_bzero.c.i
@@ -484,7 +484,7 @@ src/ft_bzero.i: src/ft_bzero.c.i
 
 # target to preprocess a source file
 src/ft_bzero.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero.c.i
 .PHONY : src/ft_bzero.c.i
 
 src/ft_bzero.s: src/ft_bzero.c.s
@@ -493,7 +493,7 @@ src/ft_bzero.s: src/ft_bzero.c.s
 
 # target to generate assembly for a file
 src/ft_bzero.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero.c.s
 .PHONY : src/ft_bzero.c.s
 
 src/ft_bzero_buf_n_set_pointers.o: src/ft_bzero_buf_n_set_pointers.c.o
@@ -502,7 +502,7 @@ src/ft_bzero_buf_n_set_pointers.o: src/ft_bzero_buf_n_set_pointers.c.o
 
 # target to build an object file
 src/ft_bzero_buf_n_set_pointers.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero_buf_n_set_pointers.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero_buf_n_set_pointers.c.o
 .PHONY : src/ft_bzero_buf_n_set_pointers.c.o
 
 src/ft_bzero_buf_n_set_pointers.i: src/ft_bzero_buf_n_set_pointers.c.i
@@ -511,7 +511,7 @@ src/ft_bzero_buf_n_set_pointers.i: src/ft_bzero_buf_n_set_pointers.c.i
 
 # target to preprocess a source file
 src/ft_bzero_buf_n_set_pointers.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero_buf_n_set_pointers.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero_buf_n_set_pointers.c.i
 .PHONY : src/ft_bzero_buf_n_set_pointers.c.i
 
 src/ft_bzero_buf_n_set_pointers.s: src/ft_bzero_buf_n_set_pointers.c.s
@@ -520,7 +520,7 @@ src/ft_bzero_buf_n_set_pointers.s: src/ft_bzero_buf_n_set_pointers.c.s
 
 # target to generate assembly for a file
 src/ft_bzero_buf_n_set_pointers.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero_buf_n_set_pointers.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_bzero_buf_n_set_pointers.c.s
 .PHONY : src/ft_bzero_buf_n_set_pointers.c.s
 
 src/ft_c.o: src/ft_c.c.o
@@ -529,7 +529,7 @@ src/ft_c.o: src/ft_c.c.o
 
 # target to build an object file
 src/ft_c.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_c.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_c.c.o
 .PHONY : src/ft_c.c.o
 
 src/ft_c.i: src/ft_c.c.i
@@ -538,7 +538,7 @@ src/ft_c.i: src/ft_c.c.i
 
 # target to preprocess a source file
 src/ft_c.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_c.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_c.c.i
 .PHONY : src/ft_c.c.i
 
 src/ft_c.s: src/ft_c.c.s
@@ -547,7 +547,7 @@ src/ft_c.s: src/ft_c.c.s
 
 # target to generate assembly for a file
 src/ft_c.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_c.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_c.c.s
 .PHONY : src/ft_c.c.s
 
 src/ft_choose_func.o: src/ft_choose_func.c.o
@@ -556,7 +556,7 @@ src/ft_choose_func.o: src/ft_choose_func.c.o
 
 # target to build an object file
 src/ft_choose_func.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_choose_func.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_choose_func.c.o
 .PHONY : src/ft_choose_func.c.o
 
 src/ft_choose_func.i: src/ft_choose_func.c.i
@@ -565,7 +565,7 @@ src/ft_choose_func.i: src/ft_choose_func.c.i
 
 # target to preprocess a source file
 src/ft_choose_func.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_choose_func.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_choose_func.c.i
 .PHONY : src/ft_choose_func.c.i
 
 src/ft_choose_func.s: src/ft_choose_func.c.s
@@ -574,7 +574,7 @@ src/ft_choose_func.s: src/ft_choose_func.c.s
 
 # target to generate assembly for a file
 src/ft_choose_func.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_choose_func.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_choose_func.c.s
 .PHONY : src/ft_choose_func.c.s
 
 src/ft_count_float.o: src/ft_count_float.c.o
@@ -583,7 +583,7 @@ src/ft_count_float.o: src/ft_count_float.c.o
 
 # target to build an object file
 src/ft_count_float.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_count_float.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_count_float.c.o
 .PHONY : src/ft_count_float.c.o
 
 src/ft_count_float.i: src/ft_count_float.c.i
@@ -592,7 +592,7 @@ src/ft_count_float.i: src/ft_count_float.c.i
 
 # target to preprocess a source file
 src/ft_count_float.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_count_float.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_count_float.c.i
 .PHONY : src/ft_count_float.c.i
 
 src/ft_count_float.s: src/ft_count_float.c.s
@@ -601,7 +601,7 @@ src/ft_count_float.s: src/ft_count_float.c.s
 
 # target to generate assembly for a file
 src/ft_count_float.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_count_float.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_count_float.c.s
 .PHONY : src/ft_count_float.c.s
 
 src/ft_di.o: src/ft_di.c.o
@@ -610,7 +610,7 @@ src/ft_di.o: src/ft_di.c.o
 
 # target to build an object file
 src/ft_di.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_di.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_di.c.o
 .PHONY : src/ft_di.c.o
 
 src/ft_di.i: src/ft_di.c.i
@@ -619,7 +619,7 @@ src/ft_di.i: src/ft_di.c.i
 
 # target to preprocess a source file
 src/ft_di.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_di.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_di.c.i
 .PHONY : src/ft_di.c.i
 
 src/ft_di.s: src/ft_di.c.s
@@ -628,7 +628,7 @@ src/ft_di.s: src/ft_di.c.s
 
 # target to generate assembly for a file
 src/ft_di.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_di.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_di.c.s
 .PHONY : src/ft_di.c.s
 
 src/ft_dollar_arg.o: src/ft_dollar_arg.c.o
@@ -637,7 +637,7 @@ src/ft_dollar_arg.o: src/ft_dollar_arg.c.o
 
 # target to build an object file
 src/ft_dollar_arg.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_arg.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_arg.c.o
 .PHONY : src/ft_dollar_arg.c.o
 
 src/ft_dollar_arg.i: src/ft_dollar_arg.c.i
@@ -646,7 +646,7 @@ src/ft_dollar_arg.i: src/ft_dollar_arg.c.i
 
 # target to preprocess a source file
 src/ft_dollar_arg.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_arg.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_arg.c.i
 .PHONY : src/ft_dollar_arg.c.i
 
 src/ft_dollar_arg.s: src/ft_dollar_arg.c.s
@@ -655,7 +655,7 @@ src/ft_dollar_arg.s: src/ft_dollar_arg.c.s
 
 # target to generate assembly for a file
 src/ft_dollar_arg.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_arg.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_arg.c.s
 .PHONY : src/ft_dollar_arg.c.s
 
 src/ft_dollar_treat.o: src/ft_dollar_treat.c.o
@@ -664,7 +664,7 @@ src/ft_dollar_treat.o: src/ft_dollar_treat.c.o
 
 # target to build an object file
 src/ft_dollar_treat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_treat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_treat.c.o
 .PHONY : src/ft_dollar_treat.c.o
 
 src/ft_dollar_treat.i: src/ft_dollar_treat.c.i
@@ -673,7 +673,7 @@ src/ft_dollar_treat.i: src/ft_dollar_treat.c.i
 
 # target to preprocess a source file
 src/ft_dollar_treat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_treat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_treat.c.i
 .PHONY : src/ft_dollar_treat.c.i
 
 src/ft_dollar_treat.s: src/ft_dollar_treat.c.s
@@ -682,7 +682,7 @@ src/ft_dollar_treat.s: src/ft_dollar_treat.c.s
 
 # target to generate assembly for a file
 src/ft_dollar_treat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_treat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_dollar_treat.c.s
 .PHONY : src/ft_dollar_treat.c.s
 
 src/ft_error_exit.o: src/ft_error_exit.c.o
@@ -691,7 +691,7 @@ src/ft_error_exit.o: src/ft_error_exit.c.o
 
 # target to build an object file
 src/ft_error_exit.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_error_exit.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_error_exit.c.o
 .PHONY : src/ft_error_exit.c.o
 
 src/ft_error_exit.i: src/ft_error_exit.c.i
@@ -700,7 +700,7 @@ src/ft_error_exit.i: src/ft_error_exit.c.i
 
 # target to preprocess a source file
 src/ft_error_exit.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_error_exit.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_error_exit.c.i
 .PHONY : src/ft_error_exit.c.i
 
 src/ft_error_exit.s: src/ft_error_exit.c.s
@@ -709,7 +709,7 @@ src/ft_error_exit.s: src/ft_error_exit.c.s
 
 # target to generate assembly for a file
 src/ft_error_exit.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_error_exit.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_error_exit.c.s
 .PHONY : src/ft_error_exit.c.s
 
 src/ft_exeption_treat.o: src/ft_exeption_treat.c.o
@@ -718,7 +718,7 @@ src/ft_exeption_treat.o: src/ft_exeption_treat.c.o
 
 # target to build an object file
 src/ft_exeption_treat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_exeption_treat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_exeption_treat.c.o
 .PHONY : src/ft_exeption_treat.c.o
 
 src/ft_exeption_treat.i: src/ft_exeption_treat.c.i
@@ -727,7 +727,7 @@ src/ft_exeption_treat.i: src/ft_exeption_treat.c.i
 
 # target to preprocess a source file
 src/ft_exeption_treat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_exeption_treat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_exeption_treat.c.i
 .PHONY : src/ft_exeption_treat.c.i
 
 src/ft_exeption_treat.s: src/ft_exeption_treat.c.s
@@ -736,7 +736,7 @@ src/ft_exeption_treat.s: src/ft_exeption_treat.c.s
 
 # target to generate assembly for a file
 src/ft_exeption_treat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_exeption_treat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_exeption_treat.c.s
 .PHONY : src/ft_exeption_treat.c.s
 
 src/ft_f.o: src/ft_f.c.o
@@ -745,7 +745,7 @@ src/ft_f.o: src/ft_f.c.o
 
 # target to build an object file
 src/ft_f.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_f.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_f.c.o
 .PHONY : src/ft_f.c.o
 
 src/ft_f.i: src/ft_f.c.i
@@ -754,7 +754,7 @@ src/ft_f.i: src/ft_f.c.i
 
 # target to preprocess a source file
 src/ft_f.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_f.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_f.c.i
 .PHONY : src/ft_f.c.i
 
 src/ft_f.s: src/ft_f.c.s
@@ -763,7 +763,7 @@ src/ft_f.s: src/ft_f.c.s
 
 # target to generate assembly for a file
 src/ft_f.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_f.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_f.c.s
 .PHONY : src/ft_f.c.s
 
 src/ft_final_print_n_free_rt_len.o: src/ft_final_print_n_free_rt_len.c.o
@@ -772,7 +772,7 @@ src/ft_final_print_n_free_rt_len.o: src/ft_final_print_n_free_rt_len.c.o
 
 # target to build an object file
 src/ft_final_print_n_free_rt_len.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_final_print_n_free_rt_len.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_final_print_n_free_rt_len.c.o
 .PHONY : src/ft_final_print_n_free_rt_len.c.o
 
 src/ft_final_print_n_free_rt_len.i: src/ft_final_print_n_free_rt_len.c.i
@@ -781,7 +781,7 @@ src/ft_final_print_n_free_rt_len.i: src/ft_final_print_n_free_rt_len.c.i
 
 # target to preprocess a source file
 src/ft_final_print_n_free_rt_len.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_final_print_n_free_rt_len.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_final_print_n_free_rt_len.c.i
 .PHONY : src/ft_final_print_n_free_rt_len.c.i
 
 src/ft_final_print_n_free_rt_len.s: src/ft_final_print_n_free_rt_len.c.s
@@ -790,7 +790,7 @@ src/ft_final_print_n_free_rt_len.s: src/ft_final_print_n_free_rt_len.c.s
 
 # target to generate assembly for a file
 src/ft_final_print_n_free_rt_len.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_final_print_n_free_rt_len.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_final_print_n_free_rt_len.c.s
 .PHONY : src/ft_final_print_n_free_rt_len.c.s
 
 src/ft_find_digit.o: src/ft_find_digit.c.o
@@ -799,7 +799,7 @@ src/ft_find_digit.o: src/ft_find_digit.c.o
 
 # target to build an object file
 src/ft_find_digit.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_digit.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_digit.c.o
 .PHONY : src/ft_find_digit.c.o
 
 src/ft_find_digit.i: src/ft_find_digit.c.i
@@ -808,7 +808,7 @@ src/ft_find_digit.i: src/ft_find_digit.c.i
 
 # target to preprocess a source file
 src/ft_find_digit.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_digit.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_digit.c.i
 .PHONY : src/ft_find_digit.c.i
 
 src/ft_find_digit.s: src/ft_find_digit.c.s
@@ -817,7 +817,7 @@ src/ft_find_digit.s: src/ft_find_digit.c.s
 
 # target to generate assembly for a file
 src/ft_find_digit.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_digit.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_digit.c.s
 .PHONY : src/ft_find_digit.c.s
 
 src/ft_find_in_def.o: src/ft_find_in_def.c.o
@@ -826,7 +826,7 @@ src/ft_find_in_def.o: src/ft_find_in_def.c.o
 
 # target to build an object file
 src/ft_find_in_def.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_in_def.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_in_def.c.o
 .PHONY : src/ft_find_in_def.c.o
 
 src/ft_find_in_def.i: src/ft_find_in_def.c.i
@@ -835,7 +835,7 @@ src/ft_find_in_def.i: src/ft_find_in_def.c.i
 
 # target to preprocess a source file
 src/ft_find_in_def.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_in_def.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_in_def.c.i
 .PHONY : src/ft_find_in_def.c.i
 
 src/ft_find_in_def.s: src/ft_find_in_def.c.s
@@ -844,7 +844,7 @@ src/ft_find_in_def.s: src/ft_find_in_def.c.s
 
 # target to generate assembly for a file
 src/ft_find_in_def.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_in_def.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_find_in_def.c.s
 .PHONY : src/ft_find_in_def.c.s
 
 src/ft_free_tdarr.o: src/ft_free_tdarr.c.o
@@ -853,7 +853,7 @@ src/ft_free_tdarr.o: src/ft_free_tdarr.c.o
 
 # target to build an object file
 src/ft_free_tdarr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_tdarr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_tdarr.c.o
 .PHONY : src/ft_free_tdarr.c.o
 
 src/ft_free_tdarr.i: src/ft_free_tdarr.c.i
@@ -862,7 +862,7 @@ src/ft_free_tdarr.i: src/ft_free_tdarr.c.i
 
 # target to preprocess a source file
 src/ft_free_tdarr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_tdarr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_tdarr.c.i
 .PHONY : src/ft_free_tdarr.c.i
 
 src/ft_free_tdarr.s: src/ft_free_tdarr.c.s
@@ -871,7 +871,7 @@ src/ft_free_tdarr.s: src/ft_free_tdarr.c.s
 
 # target to generate assembly for a file
 src/ft_free_tdarr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_tdarr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_tdarr.c.s
 .PHONY : src/ft_free_tdarr.c.s
 
 src/ft_free_two_dem_str.o: src/ft_free_two_dem_str.c.o
@@ -880,7 +880,7 @@ src/ft_free_two_dem_str.o: src/ft_free_two_dem_str.c.o
 
 # target to build an object file
 src/ft_free_two_dem_str.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_two_dem_str.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_two_dem_str.c.o
 .PHONY : src/ft_free_two_dem_str.c.o
 
 src/ft_free_two_dem_str.i: src/ft_free_two_dem_str.c.i
@@ -889,7 +889,7 @@ src/ft_free_two_dem_str.i: src/ft_free_two_dem_str.c.i
 
 # target to preprocess a source file
 src/ft_free_two_dem_str.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_two_dem_str.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_two_dem_str.c.i
 .PHONY : src/ft_free_two_dem_str.c.i
 
 src/ft_free_two_dem_str.s: src/ft_free_two_dem_str.c.s
@@ -898,7 +898,7 @@ src/ft_free_two_dem_str.s: src/ft_free_two_dem_str.c.s
 
 # target to generate assembly for a file
 src/ft_free_two_dem_str.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_two_dem_str.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_free_two_dem_str.c.s
 .PHONY : src/ft_free_two_dem_str.c.s
 
 src/ft_get_divisional.o: src/ft_get_divisional.c.o
@@ -907,7 +907,7 @@ src/ft_get_divisional.o: src/ft_get_divisional.c.o
 
 # target to build an object file
 src/ft_get_divisional.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_divisional.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_divisional.c.o
 .PHONY : src/ft_get_divisional.c.o
 
 src/ft_get_divisional.i: src/ft_get_divisional.c.i
@@ -916,7 +916,7 @@ src/ft_get_divisional.i: src/ft_get_divisional.c.i
 
 # target to preprocess a source file
 src/ft_get_divisional.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_divisional.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_divisional.c.i
 .PHONY : src/ft_get_divisional.c.i
 
 src/ft_get_divisional.s: src/ft_get_divisional.c.s
@@ -925,7 +925,7 @@ src/ft_get_divisional.s: src/ft_get_divisional.c.s
 
 # target to generate assembly for a file
 src/ft_get_divisional.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_divisional.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_divisional.c.s
 .PHONY : src/ft_get_divisional.c.s
 
 src/ft_get_integer.o: src/ft_get_integer.c.o
@@ -934,7 +934,7 @@ src/ft_get_integer.o: src/ft_get_integer.c.o
 
 # target to build an object file
 src/ft_get_integer.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_integer.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_integer.c.o
 .PHONY : src/ft_get_integer.c.o
 
 src/ft_get_integer.i: src/ft_get_integer.c.i
@@ -943,7 +943,7 @@ src/ft_get_integer.i: src/ft_get_integer.c.i
 
 # target to preprocess a source file
 src/ft_get_integer.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_integer.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_integer.c.i
 .PHONY : src/ft_get_integer.c.i
 
 src/ft_get_integer.s: src/ft_get_integer.c.s
@@ -952,7 +952,7 @@ src/ft_get_integer.s: src/ft_get_integer.c.s
 
 # target to generate assembly for a file
 src/ft_get_integer.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_integer.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_integer.c.s
 .PHONY : src/ft_get_integer.c.s
 
 src/ft_get_next_line.o: src/ft_get_next_line.c.o
@@ -961,7 +961,7 @@ src/ft_get_next_line.o: src/ft_get_next_line.c.o
 
 # target to build an object file
 src/ft_get_next_line.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_next_line.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_next_line.c.o
 .PHONY : src/ft_get_next_line.c.o
 
 src/ft_get_next_line.i: src/ft_get_next_line.c.i
@@ -970,7 +970,7 @@ src/ft_get_next_line.i: src/ft_get_next_line.c.i
 
 # target to preprocess a source file
 src/ft_get_next_line.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_next_line.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_next_line.c.i
 .PHONY : src/ft_get_next_line.c.i
 
 src/ft_get_next_line.s: src/ft_get_next_line.c.s
@@ -979,7 +979,7 @@ src/ft_get_next_line.s: src/ft_get_next_line.c.s
 
 # target to generate assembly for a file
 src/ft_get_next_line.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_next_line.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_get_next_line.c.s
 .PHONY : src/ft_get_next_line.c.s
 
 src/ft_i64toa_base.o: src/ft_i64toa_base.c.o
@@ -988,7 +988,7 @@ src/ft_i64toa_base.o: src/ft_i64toa_base.c.o
 
 # target to build an object file
 src/ft_i64toa_base.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_i64toa_base.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_i64toa_base.c.o
 .PHONY : src/ft_i64toa_base.c.o
 
 src/ft_i64toa_base.i: src/ft_i64toa_base.c.i
@@ -997,7 +997,7 @@ src/ft_i64toa_base.i: src/ft_i64toa_base.c.i
 
 # target to preprocess a source file
 src/ft_i64toa_base.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_i64toa_base.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_i64toa_base.c.i
 .PHONY : src/ft_i64toa_base.c.i
 
 src/ft_i64toa_base.s: src/ft_i64toa_base.c.s
@@ -1006,7 +1006,7 @@ src/ft_i64toa_base.s: src/ft_i64toa_base.c.s
 
 # target to generate assembly for a file
 src/ft_i64toa_base.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_i64toa_base.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_i64toa_base.c.s
 .PHONY : src/ft_i64toa_base.c.s
 
 src/ft_integer_to_str.o: src/ft_integer_to_str.c.o
@@ -1015,7 +1015,7 @@ src/ft_integer_to_str.o: src/ft_integer_to_str.c.o
 
 # target to build an object file
 src/ft_integer_to_str.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_integer_to_str.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_integer_to_str.c.o
 .PHONY : src/ft_integer_to_str.c.o
 
 src/ft_integer_to_str.i: src/ft_integer_to_str.c.i
@@ -1024,7 +1024,7 @@ src/ft_integer_to_str.i: src/ft_integer_to_str.c.i
 
 # target to preprocess a source file
 src/ft_integer_to_str.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_integer_to_str.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_integer_to_str.c.i
 .PHONY : src/ft_integer_to_str.c.i
 
 src/ft_integer_to_str.s: src/ft_integer_to_str.c.s
@@ -1033,7 +1033,7 @@ src/ft_integer_to_str.s: src/ft_integer_to_str.c.s
 
 # target to generate assembly for a file
 src/ft_integer_to_str.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_integer_to_str.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_integer_to_str.c.s
 .PHONY : src/ft_integer_to_str.c.s
 
 src/ft_isalnum.o: src/ft_isalnum.c.o
@@ -1042,7 +1042,7 @@ src/ft_isalnum.o: src/ft_isalnum.c.o
 
 # target to build an object file
 src/ft_isalnum.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalnum.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalnum.c.o
 .PHONY : src/ft_isalnum.c.o
 
 src/ft_isalnum.i: src/ft_isalnum.c.i
@@ -1051,7 +1051,7 @@ src/ft_isalnum.i: src/ft_isalnum.c.i
 
 # target to preprocess a source file
 src/ft_isalnum.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalnum.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalnum.c.i
 .PHONY : src/ft_isalnum.c.i
 
 src/ft_isalnum.s: src/ft_isalnum.c.s
@@ -1060,7 +1060,7 @@ src/ft_isalnum.s: src/ft_isalnum.c.s
 
 # target to generate assembly for a file
 src/ft_isalnum.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalnum.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalnum.c.s
 .PHONY : src/ft_isalnum.c.s
 
 src/ft_isalpha.o: src/ft_isalpha.c.o
@@ -1069,7 +1069,7 @@ src/ft_isalpha.o: src/ft_isalpha.c.o
 
 # target to build an object file
 src/ft_isalpha.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalpha.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalpha.c.o
 .PHONY : src/ft_isalpha.c.o
 
 src/ft_isalpha.i: src/ft_isalpha.c.i
@@ -1078,7 +1078,7 @@ src/ft_isalpha.i: src/ft_isalpha.c.i
 
 # target to preprocess a source file
 src/ft_isalpha.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalpha.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalpha.c.i
 .PHONY : src/ft_isalpha.c.i
 
 src/ft_isalpha.s: src/ft_isalpha.c.s
@@ -1087,7 +1087,7 @@ src/ft_isalpha.s: src/ft_isalpha.c.s
 
 # target to generate assembly for a file
 src/ft_isalpha.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalpha.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isalpha.c.s
 .PHONY : src/ft_isalpha.c.s
 
 src/ft_isascii.o: src/ft_isascii.c.o
@@ -1096,7 +1096,7 @@ src/ft_isascii.o: src/ft_isascii.c.o
 
 # target to build an object file
 src/ft_isascii.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isascii.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isascii.c.o
 .PHONY : src/ft_isascii.c.o
 
 src/ft_isascii.i: src/ft_isascii.c.i
@@ -1105,7 +1105,7 @@ src/ft_isascii.i: src/ft_isascii.c.i
 
 # target to preprocess a source file
 src/ft_isascii.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isascii.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isascii.c.i
 .PHONY : src/ft_isascii.c.i
 
 src/ft_isascii.s: src/ft_isascii.c.s
@@ -1114,7 +1114,7 @@ src/ft_isascii.s: src/ft_isascii.c.s
 
 # target to generate assembly for a file
 src/ft_isascii.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isascii.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isascii.c.s
 .PHONY : src/ft_isascii.c.s
 
 src/ft_isbigger.o: src/ft_isbigger.c.o
@@ -1123,7 +1123,7 @@ src/ft_isbigger.o: src/ft_isbigger.c.o
 
 # target to build an object file
 src/ft_isbigger.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isbigger.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isbigger.c.o
 .PHONY : src/ft_isbigger.c.o
 
 src/ft_isbigger.i: src/ft_isbigger.c.i
@@ -1132,7 +1132,7 @@ src/ft_isbigger.i: src/ft_isbigger.c.i
 
 # target to preprocess a source file
 src/ft_isbigger.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isbigger.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isbigger.c.i
 .PHONY : src/ft_isbigger.c.i
 
 src/ft_isbigger.s: src/ft_isbigger.c.s
@@ -1141,7 +1141,7 @@ src/ft_isbigger.s: src/ft_isbigger.c.s
 
 # target to generate assembly for a file
 src/ft_isbigger.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isbigger.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isbigger.c.s
 .PHONY : src/ft_isbigger.c.s
 
 src/ft_isdigit.o: src/ft_isdigit.c.o
@@ -1150,7 +1150,7 @@ src/ft_isdigit.o: src/ft_isdigit.c.o
 
 # target to build an object file
 src/ft_isdigit.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isdigit.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isdigit.c.o
 .PHONY : src/ft_isdigit.c.o
 
 src/ft_isdigit.i: src/ft_isdigit.c.i
@@ -1159,7 +1159,7 @@ src/ft_isdigit.i: src/ft_isdigit.c.i
 
 # target to preprocess a source file
 src/ft_isdigit.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isdigit.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isdigit.c.i
 .PHONY : src/ft_isdigit.c.i
 
 src/ft_isdigit.s: src/ft_isdigit.c.s
@@ -1168,7 +1168,7 @@ src/ft_isdigit.s: src/ft_isdigit.c.s
 
 # target to generate assembly for a file
 src/ft_isdigit.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isdigit.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isdigit.c.s
 .PHONY : src/ft_isdigit.c.s
 
 src/ft_isprint.o: src/ft_isprint.c.o
@@ -1177,7 +1177,7 @@ src/ft_isprint.o: src/ft_isprint.c.o
 
 # target to build an object file
 src/ft_isprint.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isprint.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isprint.c.o
 .PHONY : src/ft_isprint.c.o
 
 src/ft_isprint.i: src/ft_isprint.c.i
@@ -1186,7 +1186,7 @@ src/ft_isprint.i: src/ft_isprint.c.i
 
 # target to preprocess a source file
 src/ft_isprint.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isprint.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isprint.c.i
 .PHONY : src/ft_isprint.c.i
 
 src/ft_isprint.s: src/ft_isprint.c.s
@@ -1195,7 +1195,7 @@ src/ft_isprint.s: src/ft_isprint.c.s
 
 # target to generate assembly for a file
 src/ft_isprint.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isprint.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_isprint.c.s
 .PHONY : src/ft_isprint.c.s
 
 src/ft_itoa.o: src/ft_itoa.c.o
@@ -1204,7 +1204,7 @@ src/ft_itoa.o: src/ft_itoa.c.o
 
 # target to build an object file
 src/ft_itoa.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_itoa.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_itoa.c.o
 .PHONY : src/ft_itoa.c.o
 
 src/ft_itoa.i: src/ft_itoa.c.i
@@ -1213,7 +1213,7 @@ src/ft_itoa.i: src/ft_itoa.c.i
 
 # target to preprocess a source file
 src/ft_itoa.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_itoa.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_itoa.c.i
 .PHONY : src/ft_itoa.c.i
 
 src/ft_itoa.s: src/ft_itoa.c.s
@@ -1222,7 +1222,7 @@ src/ft_itoa.s: src/ft_itoa.c.s
 
 # target to generate assembly for a file
 src/ft_itoa.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_itoa.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_itoa.c.s
 .PHONY : src/ft_itoa.c.s
 
 src/ft_list_clear.o: src/ft_list_clear.c.o
@@ -1231,7 +1231,7 @@ src/ft_list_clear.o: src/ft_list_clear.c.o
 
 # target to build an object file
 src/ft_list_clear.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_clear.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_clear.c.o
 .PHONY : src/ft_list_clear.c.o
 
 src/ft_list_clear.i: src/ft_list_clear.c.i
@@ -1240,7 +1240,7 @@ src/ft_list_clear.i: src/ft_list_clear.c.i
 
 # target to preprocess a source file
 src/ft_list_clear.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_clear.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_clear.c.i
 .PHONY : src/ft_list_clear.c.i
 
 src/ft_list_clear.s: src/ft_list_clear.c.s
@@ -1249,7 +1249,7 @@ src/ft_list_clear.s: src/ft_list_clear.c.s
 
 # target to generate assembly for a file
 src/ft_list_clear.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_clear.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_clear.c.s
 .PHONY : src/ft_list_clear.c.s
 
 src/ft_list_size.o: src/ft_list_size.c.o
@@ -1258,7 +1258,7 @@ src/ft_list_size.o: src/ft_list_size.c.o
 
 # target to build an object file
 src/ft_list_size.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_size.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_size.c.o
 .PHONY : src/ft_list_size.c.o
 
 src/ft_list_size.i: src/ft_list_size.c.i
@@ -1267,7 +1267,7 @@ src/ft_list_size.i: src/ft_list_size.c.i
 
 # target to preprocess a source file
 src/ft_list_size.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_size.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_size.c.i
 .PHONY : src/ft_list_size.c.i
 
 src/ft_list_size.s: src/ft_list_size.c.s
@@ -1276,7 +1276,7 @@ src/ft_list_size.s: src/ft_list_size.c.s
 
 # target to generate assembly for a file
 src/ft_list_size.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_size.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_list_size.c.s
 .PHONY : src/ft_list_size.c.s
 
 src/ft_lstadd.o: src/ft_lstadd.c.o
@@ -1285,7 +1285,7 @@ src/ft_lstadd.o: src/ft_lstadd.c.o
 
 # target to build an object file
 src/ft_lstadd.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstadd.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstadd.c.o
 .PHONY : src/ft_lstadd.c.o
 
 src/ft_lstadd.i: src/ft_lstadd.c.i
@@ -1294,7 +1294,7 @@ src/ft_lstadd.i: src/ft_lstadd.c.i
 
 # target to preprocess a source file
 src/ft_lstadd.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstadd.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstadd.c.i
 .PHONY : src/ft_lstadd.c.i
 
 src/ft_lstadd.s: src/ft_lstadd.c.s
@@ -1303,7 +1303,7 @@ src/ft_lstadd.s: src/ft_lstadd.c.s
 
 # target to generate assembly for a file
 src/ft_lstadd.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstadd.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstadd.c.s
 .PHONY : src/ft_lstadd.c.s
 
 src/ft_lstaddend.o: src/ft_lstaddend.c.o
@@ -1312,7 +1312,7 @@ src/ft_lstaddend.o: src/ft_lstaddend.c.o
 
 # target to build an object file
 src/ft_lstaddend.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstaddend.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstaddend.c.o
 .PHONY : src/ft_lstaddend.c.o
 
 src/ft_lstaddend.i: src/ft_lstaddend.c.i
@@ -1321,7 +1321,7 @@ src/ft_lstaddend.i: src/ft_lstaddend.c.i
 
 # target to preprocess a source file
 src/ft_lstaddend.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstaddend.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstaddend.c.i
 .PHONY : src/ft_lstaddend.c.i
 
 src/ft_lstaddend.s: src/ft_lstaddend.c.s
@@ -1330,7 +1330,7 @@ src/ft_lstaddend.s: src/ft_lstaddend.c.s
 
 # target to generate assembly for a file
 src/ft_lstaddend.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstaddend.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstaddend.c.s
 .PHONY : src/ft_lstaddend.c.s
 
 src/ft_lstdel.o: src/ft_lstdel.c.o
@@ -1339,7 +1339,7 @@ src/ft_lstdel.o: src/ft_lstdel.c.o
 
 # target to build an object file
 src/ft_lstdel.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdel.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdel.c.o
 .PHONY : src/ft_lstdel.c.o
 
 src/ft_lstdel.i: src/ft_lstdel.c.i
@@ -1348,7 +1348,7 @@ src/ft_lstdel.i: src/ft_lstdel.c.i
 
 # target to preprocess a source file
 src/ft_lstdel.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdel.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdel.c.i
 .PHONY : src/ft_lstdel.c.i
 
 src/ft_lstdel.s: src/ft_lstdel.c.s
@@ -1357,7 +1357,7 @@ src/ft_lstdel.s: src/ft_lstdel.c.s
 
 # target to generate assembly for a file
 src/ft_lstdel.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdel.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdel.c.s
 .PHONY : src/ft_lstdel.c.s
 
 src/ft_lstdelone.o: src/ft_lstdelone.c.o
@@ -1366,7 +1366,7 @@ src/ft_lstdelone.o: src/ft_lstdelone.c.o
 
 # target to build an object file
 src/ft_lstdelone.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdelone.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdelone.c.o
 .PHONY : src/ft_lstdelone.c.o
 
 src/ft_lstdelone.i: src/ft_lstdelone.c.i
@@ -1375,7 +1375,7 @@ src/ft_lstdelone.i: src/ft_lstdelone.c.i
 
 # target to preprocess a source file
 src/ft_lstdelone.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdelone.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdelone.c.i
 .PHONY : src/ft_lstdelone.c.i
 
 src/ft_lstdelone.s: src/ft_lstdelone.c.s
@@ -1384,7 +1384,7 @@ src/ft_lstdelone.s: src/ft_lstdelone.c.s
 
 # target to generate assembly for a file
 src/ft_lstdelone.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdelone.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstdelone.c.s
 .PHONY : src/ft_lstdelone.c.s
 
 src/ft_lstiter.o: src/ft_lstiter.c.o
@@ -1393,7 +1393,7 @@ src/ft_lstiter.o: src/ft_lstiter.c.o
 
 # target to build an object file
 src/ft_lstiter.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstiter.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstiter.c.o
 .PHONY : src/ft_lstiter.c.o
 
 src/ft_lstiter.i: src/ft_lstiter.c.i
@@ -1402,7 +1402,7 @@ src/ft_lstiter.i: src/ft_lstiter.c.i
 
 # target to preprocess a source file
 src/ft_lstiter.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstiter.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstiter.c.i
 .PHONY : src/ft_lstiter.c.i
 
 src/ft_lstiter.s: src/ft_lstiter.c.s
@@ -1411,7 +1411,7 @@ src/ft_lstiter.s: src/ft_lstiter.c.s
 
 # target to generate assembly for a file
 src/ft_lstiter.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstiter.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstiter.c.s
 .PHONY : src/ft_lstiter.c.s
 
 src/ft_lstmap.o: src/ft_lstmap.c.o
@@ -1420,7 +1420,7 @@ src/ft_lstmap.o: src/ft_lstmap.c.o
 
 # target to build an object file
 src/ft_lstmap.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstmap.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstmap.c.o
 .PHONY : src/ft_lstmap.c.o
 
 src/ft_lstmap.i: src/ft_lstmap.c.i
@@ -1429,7 +1429,7 @@ src/ft_lstmap.i: src/ft_lstmap.c.i
 
 # target to preprocess a source file
 src/ft_lstmap.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstmap.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstmap.c.i
 .PHONY : src/ft_lstmap.c.i
 
 src/ft_lstmap.s: src/ft_lstmap.c.s
@@ -1438,7 +1438,7 @@ src/ft_lstmap.s: src/ft_lstmap.c.s
 
 # target to generate assembly for a file
 src/ft_lstmap.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstmap.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstmap.c.s
 .PHONY : src/ft_lstmap.c.s
 
 src/ft_lstnew.o: src/ft_lstnew.c.o
@@ -1447,7 +1447,7 @@ src/ft_lstnew.o: src/ft_lstnew.c.o
 
 # target to build an object file
 src/ft_lstnew.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstnew.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstnew.c.o
 .PHONY : src/ft_lstnew.c.o
 
 src/ft_lstnew.i: src/ft_lstnew.c.i
@@ -1456,7 +1456,7 @@ src/ft_lstnew.i: src/ft_lstnew.c.i
 
 # target to preprocess a source file
 src/ft_lstnew.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstnew.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstnew.c.i
 .PHONY : src/ft_lstnew.c.i
 
 src/ft_lstnew.s: src/ft_lstnew.c.s
@@ -1465,7 +1465,7 @@ src/ft_lstnew.s: src/ft_lstnew.c.s
 
 # target to generate assembly for a file
 src/ft_lstnew.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstnew.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_lstnew.c.s
 .PHONY : src/ft_lstnew.c.s
 
 src/ft_memalloc.o: src/ft_memalloc.c.o
@@ -1474,7 +1474,7 @@ src/ft_memalloc.o: src/ft_memalloc.c.o
 
 # target to build an object file
 src/ft_memalloc.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memalloc.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memalloc.c.o
 .PHONY : src/ft_memalloc.c.o
 
 src/ft_memalloc.i: src/ft_memalloc.c.i
@@ -1483,7 +1483,7 @@ src/ft_memalloc.i: src/ft_memalloc.c.i
 
 # target to preprocess a source file
 src/ft_memalloc.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memalloc.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memalloc.c.i
 .PHONY : src/ft_memalloc.c.i
 
 src/ft_memalloc.s: src/ft_memalloc.c.s
@@ -1492,7 +1492,7 @@ src/ft_memalloc.s: src/ft_memalloc.c.s
 
 # target to generate assembly for a file
 src/ft_memalloc.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memalloc.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memalloc.c.s
 .PHONY : src/ft_memalloc.c.s
 
 src/ft_memccpy.o: src/ft_memccpy.c.o
@@ -1501,7 +1501,7 @@ src/ft_memccpy.o: src/ft_memccpy.c.o
 
 # target to build an object file
 src/ft_memccpy.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memccpy.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memccpy.c.o
 .PHONY : src/ft_memccpy.c.o
 
 src/ft_memccpy.i: src/ft_memccpy.c.i
@@ -1510,7 +1510,7 @@ src/ft_memccpy.i: src/ft_memccpy.c.i
 
 # target to preprocess a source file
 src/ft_memccpy.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memccpy.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memccpy.c.i
 .PHONY : src/ft_memccpy.c.i
 
 src/ft_memccpy.s: src/ft_memccpy.c.s
@@ -1519,7 +1519,7 @@ src/ft_memccpy.s: src/ft_memccpy.c.s
 
 # target to generate assembly for a file
 src/ft_memccpy.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memccpy.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memccpy.c.s
 .PHONY : src/ft_memccpy.c.s
 
 src/ft_memchr.o: src/ft_memchr.c.o
@@ -1528,7 +1528,7 @@ src/ft_memchr.o: src/ft_memchr.c.o
 
 # target to build an object file
 src/ft_memchr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memchr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memchr.c.o
 .PHONY : src/ft_memchr.c.o
 
 src/ft_memchr.i: src/ft_memchr.c.i
@@ -1537,7 +1537,7 @@ src/ft_memchr.i: src/ft_memchr.c.i
 
 # target to preprocess a source file
 src/ft_memchr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memchr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memchr.c.i
 .PHONY : src/ft_memchr.c.i
 
 src/ft_memchr.s: src/ft_memchr.c.s
@@ -1546,7 +1546,7 @@ src/ft_memchr.s: src/ft_memchr.c.s
 
 # target to generate assembly for a file
 src/ft_memchr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memchr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memchr.c.s
 .PHONY : src/ft_memchr.c.s
 
 src/ft_memcmp.o: src/ft_memcmp.c.o
@@ -1555,7 +1555,7 @@ src/ft_memcmp.o: src/ft_memcmp.c.o
 
 # target to build an object file
 src/ft_memcmp.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcmp.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcmp.c.o
 .PHONY : src/ft_memcmp.c.o
 
 src/ft_memcmp.i: src/ft_memcmp.c.i
@@ -1564,7 +1564,7 @@ src/ft_memcmp.i: src/ft_memcmp.c.i
 
 # target to preprocess a source file
 src/ft_memcmp.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcmp.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcmp.c.i
 .PHONY : src/ft_memcmp.c.i
 
 src/ft_memcmp.s: src/ft_memcmp.c.s
@@ -1573,7 +1573,7 @@ src/ft_memcmp.s: src/ft_memcmp.c.s
 
 # target to generate assembly for a file
 src/ft_memcmp.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcmp.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcmp.c.s
 .PHONY : src/ft_memcmp.c.s
 
 src/ft_memcpy.o: src/ft_memcpy.c.o
@@ -1582,7 +1582,7 @@ src/ft_memcpy.o: src/ft_memcpy.c.o
 
 # target to build an object file
 src/ft_memcpy.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcpy.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcpy.c.o
 .PHONY : src/ft_memcpy.c.o
 
 src/ft_memcpy.i: src/ft_memcpy.c.i
@@ -1591,7 +1591,7 @@ src/ft_memcpy.i: src/ft_memcpy.c.i
 
 # target to preprocess a source file
 src/ft_memcpy.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcpy.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcpy.c.i
 .PHONY : src/ft_memcpy.c.i
 
 src/ft_memcpy.s: src/ft_memcpy.c.s
@@ -1600,7 +1600,7 @@ src/ft_memcpy.s: src/ft_memcpy.c.s
 
 # target to generate assembly for a file
 src/ft_memcpy.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcpy.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memcpy.c.s
 .PHONY : src/ft_memcpy.c.s
 
 src/ft_memdel.o: src/ft_memdel.c.o
@@ -1609,7 +1609,7 @@ src/ft_memdel.o: src/ft_memdel.c.o
 
 # target to build an object file
 src/ft_memdel.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memdel.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memdel.c.o
 .PHONY : src/ft_memdel.c.o
 
 src/ft_memdel.i: src/ft_memdel.c.i
@@ -1618,7 +1618,7 @@ src/ft_memdel.i: src/ft_memdel.c.i
 
 # target to preprocess a source file
 src/ft_memdel.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memdel.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memdel.c.i
 .PHONY : src/ft_memdel.c.i
 
 src/ft_memdel.s: src/ft_memdel.c.s
@@ -1627,7 +1627,7 @@ src/ft_memdel.s: src/ft_memdel.c.s
 
 # target to generate assembly for a file
 src/ft_memdel.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memdel.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memdel.c.s
 .PHONY : src/ft_memdel.c.s
 
 src/ft_memmove.o: src/ft_memmove.c.o
@@ -1636,7 +1636,7 @@ src/ft_memmove.o: src/ft_memmove.c.o
 
 # target to build an object file
 src/ft_memmove.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memmove.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memmove.c.o
 .PHONY : src/ft_memmove.c.o
 
 src/ft_memmove.i: src/ft_memmove.c.i
@@ -1645,7 +1645,7 @@ src/ft_memmove.i: src/ft_memmove.c.i
 
 # target to preprocess a source file
 src/ft_memmove.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memmove.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memmove.c.i
 .PHONY : src/ft_memmove.c.i
 
 src/ft_memmove.s: src/ft_memmove.c.s
@@ -1654,7 +1654,7 @@ src/ft_memmove.s: src/ft_memmove.c.s
 
 # target to generate assembly for a file
 src/ft_memmove.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memmove.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memmove.c.s
 .PHONY : src/ft_memmove.c.s
 
 src/ft_memset.o: src/ft_memset.c.o
@@ -1663,7 +1663,7 @@ src/ft_memset.o: src/ft_memset.c.o
 
 # target to build an object file
 src/ft_memset.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memset.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memset.c.o
 .PHONY : src/ft_memset.c.o
 
 src/ft_memset.i: src/ft_memset.c.i
@@ -1672,7 +1672,7 @@ src/ft_memset.i: src/ft_memset.c.i
 
 # target to preprocess a source file
 src/ft_memset.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memset.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memset.c.i
 .PHONY : src/ft_memset.c.i
 
 src/ft_memset.s: src/ft_memset.c.s
@@ -1681,7 +1681,7 @@ src/ft_memset.s: src/ft_memset.c.s
 
 # target to generate assembly for a file
 src/ft_memset.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memset.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_memset.c.s
 .PHONY : src/ft_memset.c.s
 
 src/ft_node_del.o: src/ft_node_del.c.o
@@ -1690,7 +1690,7 @@ src/ft_node_del.o: src/ft_node_del.c.o
 
 # target to build an object file
 src/ft_node_del.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_node_del.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_node_del.c.o
 .PHONY : src/ft_node_del.c.o
 
 src/ft_node_del.i: src/ft_node_del.c.i
@@ -1699,7 +1699,7 @@ src/ft_node_del.i: src/ft_node_del.c.i
 
 # target to preprocess a source file
 src/ft_node_del.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_node_del.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_node_del.c.i
 .PHONY : src/ft_node_del.c.i
 
 src/ft_node_del.s: src/ft_node_del.c.s
@@ -1708,7 +1708,7 @@ src/ft_node_del.s: src/ft_node_del.c.s
 
 # target to generate assembly for a file
 src/ft_node_del.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_node_del.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_node_del.c.s
 .PHONY : src/ft_node_del.c.s
 
 src/ft_num_to_str.o: src/ft_num_to_str.c.o
@@ -1717,7 +1717,7 @@ src/ft_num_to_str.o: src/ft_num_to_str.c.o
 
 # target to build an object file
 src/ft_num_to_str.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_num_to_str.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_num_to_str.c.o
 .PHONY : src/ft_num_to_str.c.o
 
 src/ft_num_to_str.i: src/ft_num_to_str.c.i
@@ -1726,7 +1726,7 @@ src/ft_num_to_str.i: src/ft_num_to_str.c.i
 
 # target to preprocess a source file
 src/ft_num_to_str.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_num_to_str.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_num_to_str.c.i
 .PHONY : src/ft_num_to_str.c.i
 
 src/ft_num_to_str.s: src/ft_num_to_str.c.s
@@ -1735,7 +1735,7 @@ src/ft_num_to_str.s: src/ft_num_to_str.c.s
 
 # target to generate assembly for a file
 src/ft_num_to_str.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_num_to_str.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_num_to_str.c.s
 .PHONY : src/ft_num_to_str.c.s
 
 src/ft_o.o: src/ft_o.c.o
@@ -1744,7 +1744,7 @@ src/ft_o.o: src/ft_o.c.o
 
 # target to build an object file
 src/ft_o.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_o.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_o.c.o
 .PHONY : src/ft_o.c.o
 
 src/ft_o.i: src/ft_o.c.i
@@ -1753,7 +1753,7 @@ src/ft_o.i: src/ft_o.c.i
 
 # target to preprocess a source file
 src/ft_o.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_o.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_o.c.i
 .PHONY : src/ft_o.c.i
 
 src/ft_o.s: src/ft_o.c.s
@@ -1762,7 +1762,7 @@ src/ft_o.s: src/ft_o.c.s
 
 # target to generate assembly for a file
 src/ft_o.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_o.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_o.c.s
 .PHONY : src/ft_o.c.s
 
 src/ft_p.o: src/ft_p.c.o
@@ -1771,7 +1771,7 @@ src/ft_p.o: src/ft_p.c.o
 
 # target to build an object file
 src/ft_p.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_p.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_p.c.o
 .PHONY : src/ft_p.c.o
 
 src/ft_p.i: src/ft_p.c.i
@@ -1780,7 +1780,7 @@ src/ft_p.i: src/ft_p.c.i
 
 # target to preprocess a source file
 src/ft_p.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_p.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_p.c.i
 .PHONY : src/ft_p.c.i
 
 src/ft_p.s: src/ft_p.c.s
@@ -1789,7 +1789,7 @@ src/ft_p.s: src/ft_p.c.s
 
 # target to generate assembly for a file
 src/ft_p.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_p.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_p.c.s
 .PHONY : src/ft_p.c.s
 
 src/ft_parse_flags.o: src/ft_parse_flags.c.o
@@ -1798,7 +1798,7 @@ src/ft_parse_flags.o: src/ft_parse_flags.c.o
 
 # target to build an object file
 src/ft_parse_flags.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_flags.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_flags.c.o
 .PHONY : src/ft_parse_flags.c.o
 
 src/ft_parse_flags.i: src/ft_parse_flags.c.i
@@ -1807,7 +1807,7 @@ src/ft_parse_flags.i: src/ft_parse_flags.c.i
 
 # target to preprocess a source file
 src/ft_parse_flags.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_flags.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_flags.c.i
 .PHONY : src/ft_parse_flags.c.i
 
 src/ft_parse_flags.s: src/ft_parse_flags.c.s
@@ -1816,7 +1816,7 @@ src/ft_parse_flags.s: src/ft_parse_flags.c.s
 
 # target to generate assembly for a file
 src/ft_parse_flags.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_flags.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_flags.c.s
 .PHONY : src/ft_parse_flags.c.s
 
 src/ft_parse_spec.o: src/ft_parse_spec.c.o
@@ -1825,7 +1825,7 @@ src/ft_parse_spec.o: src/ft_parse_spec.c.o
 
 # target to build an object file
 src/ft_parse_spec.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_spec.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_spec.c.o
 .PHONY : src/ft_parse_spec.c.o
 
 src/ft_parse_spec.i: src/ft_parse_spec.c.i
@@ -1834,7 +1834,7 @@ src/ft_parse_spec.i: src/ft_parse_spec.c.i
 
 # target to preprocess a source file
 src/ft_parse_spec.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_spec.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_spec.c.i
 .PHONY : src/ft_parse_spec.c.i
 
 src/ft_parse_spec.s: src/ft_parse_spec.c.s
@@ -1843,7 +1843,7 @@ src/ft_parse_spec.s: src/ft_parse_spec.c.s
 
 # target to generate assembly for a file
 src/ft_parse_spec.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_spec.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parse_spec.c.s
 .PHONY : src/ft_parse_spec.c.s
 
 src/ft_parsing.o: src/ft_parsing.c.o
@@ -1852,7 +1852,7 @@ src/ft_parsing.o: src/ft_parsing.c.o
 
 # target to build an object file
 src/ft_parsing.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parsing.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parsing.c.o
 .PHONY : src/ft_parsing.c.o
 
 src/ft_parsing.i: src/ft_parsing.c.i
@@ -1861,7 +1861,7 @@ src/ft_parsing.i: src/ft_parsing.c.i
 
 # target to preprocess a source file
 src/ft_parsing.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parsing.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parsing.c.i
 .PHONY : src/ft_parsing.c.i
 
 src/ft_parsing.s: src/ft_parsing.c.s
@@ -1870,7 +1870,7 @@ src/ft_parsing.s: src/ft_parsing.c.s
 
 # target to generate assembly for a file
 src/ft_parsing.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parsing.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_parsing.c.s
 .PHONY : src/ft_parsing.c.s
 
 src/ft_percent_treat.o: src/ft_percent_treat.c.o
@@ -1879,7 +1879,7 @@ src/ft_percent_treat.o: src/ft_percent_treat.c.o
 
 # target to build an object file
 src/ft_percent_treat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_percent_treat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_percent_treat.c.o
 .PHONY : src/ft_percent_treat.c.o
 
 src/ft_percent_treat.i: src/ft_percent_treat.c.i
@@ -1888,7 +1888,7 @@ src/ft_percent_treat.i: src/ft_percent_treat.c.i
 
 # target to preprocess a source file
 src/ft_percent_treat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_percent_treat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_percent_treat.c.i
 .PHONY : src/ft_percent_treat.c.i
 
 src/ft_percent_treat.s: src/ft_percent_treat.c.s
@@ -1897,7 +1897,7 @@ src/ft_percent_treat.s: src/ft_percent_treat.c.s
 
 # target to generate assembly for a file
 src/ft_percent_treat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_percent_treat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_percent_treat.c.s
 .PHONY : src/ft_percent_treat.c.s
 
 src/ft_precision_treat.o: src/ft_precision_treat.c.o
@@ -1906,7 +1906,7 @@ src/ft_precision_treat.o: src/ft_precision_treat.c.o
 
 # target to build an object file
 src/ft_precision_treat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_precision_treat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_precision_treat.c.o
 .PHONY : src/ft_precision_treat.c.o
 
 src/ft_precision_treat.i: src/ft_precision_treat.c.i
@@ -1915,7 +1915,7 @@ src/ft_precision_treat.i: src/ft_precision_treat.c.i
 
 # target to preprocess a source file
 src/ft_precision_treat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_precision_treat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_precision_treat.c.i
 .PHONY : src/ft_precision_treat.c.i
 
 src/ft_precision_treat.s: src/ft_precision_treat.c.s
@@ -1924,7 +1924,7 @@ src/ft_precision_treat.s: src/ft_precision_treat.c.s
 
 # target to generate assembly for a file
 src/ft_precision_treat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_precision_treat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_precision_treat.c.s
 .PHONY : src/ft_precision_treat.c.s
 
 src/ft_printf.o: src/ft_printf.c.o
@@ -1933,7 +1933,7 @@ src/ft_printf.o: src/ft_printf.c.o
 
 # target to build an object file
 src/ft_printf.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_printf.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_printf.c.o
 .PHONY : src/ft_printf.c.o
 
 src/ft_printf.i: src/ft_printf.c.i
@@ -1942,7 +1942,7 @@ src/ft_printf.i: src/ft_printf.c.i
 
 # target to preprocess a source file
 src/ft_printf.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_printf.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_printf.c.i
 .PHONY : src/ft_printf.c.i
 
 src/ft_printf.s: src/ft_printf.c.s
@@ -1951,7 +1951,7 @@ src/ft_printf.s: src/ft_printf.c.s
 
 # target to generate assembly for a file
 src/ft_printf.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_printf.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_printf.c.s
 .PHONY : src/ft_printf.c.s
 
 src/ft_put_div_by_one.o: src/ft_put_div_by_one.c.o
@@ -1960,7 +1960,7 @@ src/ft_put_div_by_one.o: src/ft_put_div_by_one.c.o
 
 # target to build an object file
 src/ft_put_div_by_one.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_put_div_by_one.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_put_div_by_one.c.o
 .PHONY : src/ft_put_div_by_one.c.o
 
 src/ft_put_div_by_one.i: src/ft_put_div_by_one.c.i
@@ -1969,7 +1969,7 @@ src/ft_put_div_by_one.i: src/ft_put_div_by_one.c.i
 
 # target to preprocess a source file
 src/ft_put_div_by_one.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_put_div_by_one.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_put_div_by_one.c.i
 .PHONY : src/ft_put_div_by_one.c.i
 
 src/ft_put_div_by_one.s: src/ft_put_div_by_one.c.s
@@ -1978,7 +1978,7 @@ src/ft_put_div_by_one.s: src/ft_put_div_by_one.c.s
 
 # target to generate assembly for a file
 src/ft_put_div_by_one.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_put_div_by_one.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_put_div_by_one.c.s
 .PHONY : src/ft_put_div_by_one.c.s
 
 src/ft_putchar.o: src/ft_putchar.c.o
@@ -1987,7 +1987,7 @@ src/ft_putchar.o: src/ft_putchar.c.o
 
 # target to build an object file
 src/ft_putchar.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar.c.o
 .PHONY : src/ft_putchar.c.o
 
 src/ft_putchar.i: src/ft_putchar.c.i
@@ -1996,7 +1996,7 @@ src/ft_putchar.i: src/ft_putchar.c.i
 
 # target to preprocess a source file
 src/ft_putchar.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar.c.i
 .PHONY : src/ft_putchar.c.i
 
 src/ft_putchar.s: src/ft_putchar.c.s
@@ -2005,7 +2005,7 @@ src/ft_putchar.s: src/ft_putchar.c.s
 
 # target to generate assembly for a file
 src/ft_putchar.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar.c.s
 .PHONY : src/ft_putchar.c.s
 
 src/ft_putchar_fd.o: src/ft_putchar_fd.c.o
@@ -2014,7 +2014,7 @@ src/ft_putchar_fd.o: src/ft_putchar_fd.c.o
 
 # target to build an object file
 src/ft_putchar_fd.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar_fd.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar_fd.c.o
 .PHONY : src/ft_putchar_fd.c.o
 
 src/ft_putchar_fd.i: src/ft_putchar_fd.c.i
@@ -2023,7 +2023,7 @@ src/ft_putchar_fd.i: src/ft_putchar_fd.c.i
 
 # target to preprocess a source file
 src/ft_putchar_fd.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar_fd.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar_fd.c.i
 .PHONY : src/ft_putchar_fd.c.i
 
 src/ft_putchar_fd.s: src/ft_putchar_fd.c.s
@@ -2032,7 +2032,7 @@ src/ft_putchar_fd.s: src/ft_putchar_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putchar_fd.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar_fd.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putchar_fd.c.s
 .PHONY : src/ft_putchar_fd.c.s
 
 src/ft_putendl.o: src/ft_putendl.c.o
@@ -2041,7 +2041,7 @@ src/ft_putendl.o: src/ft_putendl.c.o
 
 # target to build an object file
 src/ft_putendl.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl.c.o
 .PHONY : src/ft_putendl.c.o
 
 src/ft_putendl.i: src/ft_putendl.c.i
@@ -2050,7 +2050,7 @@ src/ft_putendl.i: src/ft_putendl.c.i
 
 # target to preprocess a source file
 src/ft_putendl.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl.c.i
 .PHONY : src/ft_putendl.c.i
 
 src/ft_putendl.s: src/ft_putendl.c.s
@@ -2059,7 +2059,7 @@ src/ft_putendl.s: src/ft_putendl.c.s
 
 # target to generate assembly for a file
 src/ft_putendl.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl.c.s
 .PHONY : src/ft_putendl.c.s
 
 src/ft_putendl_fd.o: src/ft_putendl_fd.c.o
@@ -2068,7 +2068,7 @@ src/ft_putendl_fd.o: src/ft_putendl_fd.c.o
 
 # target to build an object file
 src/ft_putendl_fd.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl_fd.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl_fd.c.o
 .PHONY : src/ft_putendl_fd.c.o
 
 src/ft_putendl_fd.i: src/ft_putendl_fd.c.i
@@ -2077,7 +2077,7 @@ src/ft_putendl_fd.i: src/ft_putendl_fd.c.i
 
 # target to preprocess a source file
 src/ft_putendl_fd.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl_fd.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl_fd.c.i
 .PHONY : src/ft_putendl_fd.c.i
 
 src/ft_putendl_fd.s: src/ft_putendl_fd.c.s
@@ -2086,7 +2086,7 @@ src/ft_putendl_fd.s: src/ft_putendl_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putendl_fd.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl_fd.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putendl_fd.c.s
 .PHONY : src/ft_putendl_fd.c.s
 
 src/ft_putnbr.o: src/ft_putnbr.c.o
@@ -2095,7 +2095,7 @@ src/ft_putnbr.o: src/ft_putnbr.c.o
 
 # target to build an object file
 src/ft_putnbr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr.c.o
 .PHONY : src/ft_putnbr.c.o
 
 src/ft_putnbr.i: src/ft_putnbr.c.i
@@ -2104,7 +2104,7 @@ src/ft_putnbr.i: src/ft_putnbr.c.i
 
 # target to preprocess a source file
 src/ft_putnbr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr.c.i
 .PHONY : src/ft_putnbr.c.i
 
 src/ft_putnbr.s: src/ft_putnbr.c.s
@@ -2113,7 +2113,7 @@ src/ft_putnbr.s: src/ft_putnbr.c.s
 
 # target to generate assembly for a file
 src/ft_putnbr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr.c.s
 .PHONY : src/ft_putnbr.c.s
 
 src/ft_putnbr_fd.o: src/ft_putnbr_fd.c.o
@@ -2122,7 +2122,7 @@ src/ft_putnbr_fd.o: src/ft_putnbr_fd.c.o
 
 # target to build an object file
 src/ft_putnbr_fd.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr_fd.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr_fd.c.o
 .PHONY : src/ft_putnbr_fd.c.o
 
 src/ft_putnbr_fd.i: src/ft_putnbr_fd.c.i
@@ -2131,7 +2131,7 @@ src/ft_putnbr_fd.i: src/ft_putnbr_fd.c.i
 
 # target to preprocess a source file
 src/ft_putnbr_fd.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr_fd.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr_fd.c.i
 .PHONY : src/ft_putnbr_fd.c.i
 
 src/ft_putnbr_fd.s: src/ft_putnbr_fd.c.s
@@ -2140,7 +2140,7 @@ src/ft_putnbr_fd.s: src/ft_putnbr_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putnbr_fd.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr_fd.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putnbr_fd.c.s
 .PHONY : src/ft_putnbr_fd.c.s
 
 src/ft_putstr.o: src/ft_putstr.c.o
@@ -2149,7 +2149,7 @@ src/ft_putstr.o: src/ft_putstr.c.o
 
 # target to build an object file
 src/ft_putstr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr.c.o
 .PHONY : src/ft_putstr.c.o
 
 src/ft_putstr.i: src/ft_putstr.c.i
@@ -2158,7 +2158,7 @@ src/ft_putstr.i: src/ft_putstr.c.i
 
 # target to preprocess a source file
 src/ft_putstr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr.c.i
 .PHONY : src/ft_putstr.c.i
 
 src/ft_putstr.s: src/ft_putstr.c.s
@@ -2167,7 +2167,7 @@ src/ft_putstr.s: src/ft_putstr.c.s
 
 # target to generate assembly for a file
 src/ft_putstr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr.c.s
 .PHONY : src/ft_putstr.c.s
 
 src/ft_putstr_fd.o: src/ft_putstr_fd.c.o
@@ -2176,7 +2176,7 @@ src/ft_putstr_fd.o: src/ft_putstr_fd.c.o
 
 # target to build an object file
 src/ft_putstr_fd.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr_fd.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr_fd.c.o
 .PHONY : src/ft_putstr_fd.c.o
 
 src/ft_putstr_fd.i: src/ft_putstr_fd.c.i
@@ -2185,7 +2185,7 @@ src/ft_putstr_fd.i: src/ft_putstr_fd.c.i
 
 # target to preprocess a source file
 src/ft_putstr_fd.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr_fd.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr_fd.c.i
 .PHONY : src/ft_putstr_fd.c.i
 
 src/ft_putstr_fd.s: src/ft_putstr_fd.c.s
@@ -2194,7 +2194,7 @@ src/ft_putstr_fd.s: src/ft_putstr_fd.c.s
 
 # target to generate assembly for a file
 src/ft_putstr_fd.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr_fd.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_putstr_fd.c.s
 .PHONY : src/ft_putstr_fd.c.s
 
 src/ft_round_float.o: src/ft_round_float.c.o
@@ -2203,7 +2203,7 @@ src/ft_round_float.o: src/ft_round_float.c.o
 
 # target to build an object file
 src/ft_round_float.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_round_float.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_round_float.c.o
 .PHONY : src/ft_round_float.c.o
 
 src/ft_round_float.i: src/ft_round_float.c.i
@@ -2212,7 +2212,7 @@ src/ft_round_float.i: src/ft_round_float.c.i
 
 # target to preprocess a source file
 src/ft_round_float.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_round_float.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_round_float.c.i
 .PHONY : src/ft_round_float.c.i
 
 src/ft_round_float.s: src/ft_round_float.c.s
@@ -2221,7 +2221,7 @@ src/ft_round_float.s: src/ft_round_float.c.s
 
 # target to generate assembly for a file
 src/ft_round_float.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_round_float.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_round_float.c.s
 .PHONY : src/ft_round_float.c.s
 
 src/ft_s.o: src/ft_s.c.o
@@ -2230,7 +2230,7 @@ src/ft_s.o: src/ft_s.c.o
 
 # target to build an object file
 src/ft_s.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_s.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_s.c.o
 .PHONY : src/ft_s.c.o
 
 src/ft_s.i: src/ft_s.c.i
@@ -2239,7 +2239,7 @@ src/ft_s.i: src/ft_s.c.i
 
 # target to preprocess a source file
 src/ft_s.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_s.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_s.c.i
 .PHONY : src/ft_s.c.i
 
 src/ft_s.s: src/ft_s.c.s
@@ -2248,7 +2248,7 @@ src/ft_s.s: src/ft_s.c.s
 
 # target to generate assembly for a file
 src/ft_s.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_s.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_s.c.s
 .PHONY : src/ft_s.c.s
 
 src/ft_str_is_int.o: src/ft_str_is_int.c.o
@@ -2257,7 +2257,7 @@ src/ft_str_is_int.o: src/ft_str_is_int.c.o
 
 # target to build an object file
 src/ft_str_is_int.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_str_is_int.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_str_is_int.c.o
 .PHONY : src/ft_str_is_int.c.o
 
 src/ft_str_is_int.i: src/ft_str_is_int.c.i
@@ -2266,7 +2266,7 @@ src/ft_str_is_int.i: src/ft_str_is_int.c.i
 
 # target to preprocess a source file
 src/ft_str_is_int.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_str_is_int.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_str_is_int.c.i
 .PHONY : src/ft_str_is_int.c.i
 
 src/ft_str_is_int.s: src/ft_str_is_int.c.s
@@ -2275,7 +2275,7 @@ src/ft_str_is_int.s: src/ft_str_is_int.c.s
 
 # target to generate assembly for a file
 src/ft_str_is_int.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_str_is_int.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_str_is_int.c.s
 .PHONY : src/ft_str_is_int.c.s
 
 src/ft_strcat.o: src/ft_strcat.c.o
@@ -2284,7 +2284,7 @@ src/ft_strcat.o: src/ft_strcat.c.o
 
 # target to build an object file
 src/ft_strcat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcat.c.o
 .PHONY : src/ft_strcat.c.o
 
 src/ft_strcat.i: src/ft_strcat.c.i
@@ -2293,7 +2293,7 @@ src/ft_strcat.i: src/ft_strcat.c.i
 
 # target to preprocess a source file
 src/ft_strcat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcat.c.i
 .PHONY : src/ft_strcat.c.i
 
 src/ft_strcat.s: src/ft_strcat.c.s
@@ -2302,7 +2302,7 @@ src/ft_strcat.s: src/ft_strcat.c.s
 
 # target to generate assembly for a file
 src/ft_strcat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcat.c.s
 .PHONY : src/ft_strcat.c.s
 
 src/ft_strchr.o: src/ft_strchr.c.o
@@ -2311,7 +2311,7 @@ src/ft_strchr.o: src/ft_strchr.c.o
 
 # target to build an object file
 src/ft_strchr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strchr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strchr.c.o
 .PHONY : src/ft_strchr.c.o
 
 src/ft_strchr.i: src/ft_strchr.c.i
@@ -2320,7 +2320,7 @@ src/ft_strchr.i: src/ft_strchr.c.i
 
 # target to preprocess a source file
 src/ft_strchr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strchr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strchr.c.i
 .PHONY : src/ft_strchr.c.i
 
 src/ft_strchr.s: src/ft_strchr.c.s
@@ -2329,7 +2329,7 @@ src/ft_strchr.s: src/ft_strchr.c.s
 
 # target to generate assembly for a file
 src/ft_strchr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strchr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strchr.c.s
 .PHONY : src/ft_strchr.c.s
 
 src/ft_strclr.o: src/ft_strclr.c.o
@@ -2338,7 +2338,7 @@ src/ft_strclr.o: src/ft_strclr.c.o
 
 # target to build an object file
 src/ft_strclr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strclr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strclr.c.o
 .PHONY : src/ft_strclr.c.o
 
 src/ft_strclr.i: src/ft_strclr.c.i
@@ -2347,7 +2347,7 @@ src/ft_strclr.i: src/ft_strclr.c.i
 
 # target to preprocess a source file
 src/ft_strclr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strclr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strclr.c.i
 .PHONY : src/ft_strclr.c.i
 
 src/ft_strclr.s: src/ft_strclr.c.s
@@ -2356,7 +2356,7 @@ src/ft_strclr.s: src/ft_strclr.c.s
 
 # target to generate assembly for a file
 src/ft_strclr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strclr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strclr.c.s
 .PHONY : src/ft_strclr.c.s
 
 src/ft_strcmp.o: src/ft_strcmp.c.o
@@ -2365,7 +2365,7 @@ src/ft_strcmp.o: src/ft_strcmp.c.o
 
 # target to build an object file
 src/ft_strcmp.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcmp.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcmp.c.o
 .PHONY : src/ft_strcmp.c.o
 
 src/ft_strcmp.i: src/ft_strcmp.c.i
@@ -2374,7 +2374,7 @@ src/ft_strcmp.i: src/ft_strcmp.c.i
 
 # target to preprocess a source file
 src/ft_strcmp.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcmp.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcmp.c.i
 .PHONY : src/ft_strcmp.c.i
 
 src/ft_strcmp.s: src/ft_strcmp.c.s
@@ -2383,7 +2383,7 @@ src/ft_strcmp.s: src/ft_strcmp.c.s
 
 # target to generate assembly for a file
 src/ft_strcmp.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcmp.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcmp.c.s
 .PHONY : src/ft_strcmp.c.s
 
 src/ft_strcpy.o: src/ft_strcpy.c.o
@@ -2392,7 +2392,7 @@ src/ft_strcpy.o: src/ft_strcpy.c.o
 
 # target to build an object file
 src/ft_strcpy.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy.c.o
 .PHONY : src/ft_strcpy.c.o
 
 src/ft_strcpy.i: src/ft_strcpy.c.i
@@ -2401,7 +2401,7 @@ src/ft_strcpy.i: src/ft_strcpy.c.i
 
 # target to preprocess a source file
 src/ft_strcpy.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy.c.i
 .PHONY : src/ft_strcpy.c.i
 
 src/ft_strcpy.s: src/ft_strcpy.c.s
@@ -2410,7 +2410,7 @@ src/ft_strcpy.s: src/ft_strcpy.c.s
 
 # target to generate assembly for a file
 src/ft_strcpy.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy.c.s
 .PHONY : src/ft_strcpy.c.s
 
 src/ft_strcpy_dptp.o: src/ft_strcpy_dptp.c.o
@@ -2419,7 +2419,7 @@ src/ft_strcpy_dptp.o: src/ft_strcpy_dptp.c.o
 
 # target to build an object file
 src/ft_strcpy_dptp.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy_dptp.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy_dptp.c.o
 .PHONY : src/ft_strcpy_dptp.c.o
 
 src/ft_strcpy_dptp.i: src/ft_strcpy_dptp.c.i
@@ -2428,7 +2428,7 @@ src/ft_strcpy_dptp.i: src/ft_strcpy_dptp.c.i
 
 # target to preprocess a source file
 src/ft_strcpy_dptp.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy_dptp.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy_dptp.c.i
 .PHONY : src/ft_strcpy_dptp.c.i
 
 src/ft_strcpy_dptp.s: src/ft_strcpy_dptp.c.s
@@ -2437,7 +2437,7 @@ src/ft_strcpy_dptp.s: src/ft_strcpy_dptp.c.s
 
 # target to generate assembly for a file
 src/ft_strcpy_dptp.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy_dptp.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strcpy_dptp.c.s
 .PHONY : src/ft_strcpy_dptp.c.s
 
 src/ft_strdel.o: src/ft_strdel.c.o
@@ -2446,7 +2446,7 @@ src/ft_strdel.o: src/ft_strdel.c.o
 
 # target to build an object file
 src/ft_strdel.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdel.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdel.c.o
 .PHONY : src/ft_strdel.c.o
 
 src/ft_strdel.i: src/ft_strdel.c.i
@@ -2455,7 +2455,7 @@ src/ft_strdel.i: src/ft_strdel.c.i
 
 # target to preprocess a source file
 src/ft_strdel.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdel.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdel.c.i
 .PHONY : src/ft_strdel.c.i
 
 src/ft_strdel.s: src/ft_strdel.c.s
@@ -2464,7 +2464,7 @@ src/ft_strdel.s: src/ft_strdel.c.s
 
 # target to generate assembly for a file
 src/ft_strdel.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdel.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdel.c.s
 .PHONY : src/ft_strdel.c.s
 
 src/ft_strdup.o: src/ft_strdup.c.o
@@ -2473,7 +2473,7 @@ src/ft_strdup.o: src/ft_strdup.c.o
 
 # target to build an object file
 src/ft_strdup.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdup.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdup.c.o
 .PHONY : src/ft_strdup.c.o
 
 src/ft_strdup.i: src/ft_strdup.c.i
@@ -2482,7 +2482,7 @@ src/ft_strdup.i: src/ft_strdup.c.i
 
 # target to preprocess a source file
 src/ft_strdup.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdup.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdup.c.i
 .PHONY : src/ft_strdup.c.i
 
 src/ft_strdup.s: src/ft_strdup.c.s
@@ -2491,7 +2491,7 @@ src/ft_strdup.s: src/ft_strdup.c.s
 
 # target to generate assembly for a file
 src/ft_strdup.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdup.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strdup.c.s
 .PHONY : src/ft_strdup.c.s
 
 src/ft_strequ.o: src/ft_strequ.c.o
@@ -2500,7 +2500,7 @@ src/ft_strequ.o: src/ft_strequ.c.o
 
 # target to build an object file
 src/ft_strequ.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strequ.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strequ.c.o
 .PHONY : src/ft_strequ.c.o
 
 src/ft_strequ.i: src/ft_strequ.c.i
@@ -2509,7 +2509,7 @@ src/ft_strequ.i: src/ft_strequ.c.i
 
 # target to preprocess a source file
 src/ft_strequ.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strequ.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strequ.c.i
 .PHONY : src/ft_strequ.c.i
 
 src/ft_strequ.s: src/ft_strequ.c.s
@@ -2518,7 +2518,7 @@ src/ft_strequ.s: src/ft_strequ.c.s
 
 # target to generate assembly for a file
 src/ft_strequ.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strequ.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strequ.c.s
 .PHONY : src/ft_strequ.c.s
 
 src/ft_striter.o: src/ft_striter.c.o
@@ -2527,7 +2527,7 @@ src/ft_striter.o: src/ft_striter.c.o
 
 # target to build an object file
 src/ft_striter.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striter.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striter.c.o
 .PHONY : src/ft_striter.c.o
 
 src/ft_striter.i: src/ft_striter.c.i
@@ -2536,7 +2536,7 @@ src/ft_striter.i: src/ft_striter.c.i
 
 # target to preprocess a source file
 src/ft_striter.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striter.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striter.c.i
 .PHONY : src/ft_striter.c.i
 
 src/ft_striter.s: src/ft_striter.c.s
@@ -2545,7 +2545,7 @@ src/ft_striter.s: src/ft_striter.c.s
 
 # target to generate assembly for a file
 src/ft_striter.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striter.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striter.c.s
 .PHONY : src/ft_striter.c.s
 
 src/ft_striteri.o: src/ft_striteri.c.o
@@ -2554,7 +2554,7 @@ src/ft_striteri.o: src/ft_striteri.c.o
 
 # target to build an object file
 src/ft_striteri.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striteri.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striteri.c.o
 .PHONY : src/ft_striteri.c.o
 
 src/ft_striteri.i: src/ft_striteri.c.i
@@ -2563,7 +2563,7 @@ src/ft_striteri.i: src/ft_striteri.c.i
 
 # target to preprocess a source file
 src/ft_striteri.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striteri.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striteri.c.i
 .PHONY : src/ft_striteri.c.i
 
 src/ft_striteri.s: src/ft_striteri.c.s
@@ -2572,7 +2572,7 @@ src/ft_striteri.s: src/ft_striteri.c.s
 
 # target to generate assembly for a file
 src/ft_striteri.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striteri.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_striteri.c.s
 .PHONY : src/ft_striteri.c.s
 
 src/ft_strjoin.o: src/ft_strjoin.c.o
@@ -2581,7 +2581,7 @@ src/ft_strjoin.o: src/ft_strjoin.c.o
 
 # target to build an object file
 src/ft_strjoin.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strjoin.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strjoin.c.o
 .PHONY : src/ft_strjoin.c.o
 
 src/ft_strjoin.i: src/ft_strjoin.c.i
@@ -2590,7 +2590,7 @@ src/ft_strjoin.i: src/ft_strjoin.c.i
 
 # target to preprocess a source file
 src/ft_strjoin.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strjoin.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strjoin.c.i
 .PHONY : src/ft_strjoin.c.i
 
 src/ft_strjoin.s: src/ft_strjoin.c.s
@@ -2599,7 +2599,7 @@ src/ft_strjoin.s: src/ft_strjoin.c.s
 
 # target to generate assembly for a file
 src/ft_strjoin.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strjoin.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strjoin.c.s
 .PHONY : src/ft_strjoin.c.s
 
 src/ft_strlcat.o: src/ft_strlcat.c.o
@@ -2608,7 +2608,7 @@ src/ft_strlcat.o: src/ft_strlcat.c.o
 
 # target to build an object file
 src/ft_strlcat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlcat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlcat.c.o
 .PHONY : src/ft_strlcat.c.o
 
 src/ft_strlcat.i: src/ft_strlcat.c.i
@@ -2617,7 +2617,7 @@ src/ft_strlcat.i: src/ft_strlcat.c.i
 
 # target to preprocess a source file
 src/ft_strlcat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlcat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlcat.c.i
 .PHONY : src/ft_strlcat.c.i
 
 src/ft_strlcat.s: src/ft_strlcat.c.s
@@ -2626,7 +2626,7 @@ src/ft_strlcat.s: src/ft_strlcat.c.s
 
 # target to generate assembly for a file
 src/ft_strlcat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlcat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlcat.c.s
 .PHONY : src/ft_strlcat.c.s
 
 src/ft_strlen.o: src/ft_strlen.c.o
@@ -2635,7 +2635,7 @@ src/ft_strlen.o: src/ft_strlen.c.o
 
 # target to build an object file
 src/ft_strlen.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlen.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlen.c.o
 .PHONY : src/ft_strlen.c.o
 
 src/ft_strlen.i: src/ft_strlen.c.i
@@ -2644,7 +2644,7 @@ src/ft_strlen.i: src/ft_strlen.c.i
 
 # target to preprocess a source file
 src/ft_strlen.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlen.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlen.c.i
 .PHONY : src/ft_strlen.c.i
 
 src/ft_strlen.s: src/ft_strlen.c.s
@@ -2653,7 +2653,7 @@ src/ft_strlen.s: src/ft_strlen.c.s
 
 # target to generate assembly for a file
 src/ft_strlen.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlen.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strlen.c.s
 .PHONY : src/ft_strlen.c.s
 
 src/ft_strmap.o: src/ft_strmap.c.o
@@ -2662,7 +2662,7 @@ src/ft_strmap.o: src/ft_strmap.c.o
 
 # target to build an object file
 src/ft_strmap.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmap.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmap.c.o
 .PHONY : src/ft_strmap.c.o
 
 src/ft_strmap.i: src/ft_strmap.c.i
@@ -2671,7 +2671,7 @@ src/ft_strmap.i: src/ft_strmap.c.i
 
 # target to preprocess a source file
 src/ft_strmap.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmap.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmap.c.i
 .PHONY : src/ft_strmap.c.i
 
 src/ft_strmap.s: src/ft_strmap.c.s
@@ -2680,7 +2680,7 @@ src/ft_strmap.s: src/ft_strmap.c.s
 
 # target to generate assembly for a file
 src/ft_strmap.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmap.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmap.c.s
 .PHONY : src/ft_strmap.c.s
 
 src/ft_strmapi.o: src/ft_strmapi.c.o
@@ -2689,7 +2689,7 @@ src/ft_strmapi.o: src/ft_strmapi.c.o
 
 # target to build an object file
 src/ft_strmapi.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmapi.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmapi.c.o
 .PHONY : src/ft_strmapi.c.o
 
 src/ft_strmapi.i: src/ft_strmapi.c.i
@@ -2698,7 +2698,7 @@ src/ft_strmapi.i: src/ft_strmapi.c.i
 
 # target to preprocess a source file
 src/ft_strmapi.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmapi.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmapi.c.i
 .PHONY : src/ft_strmapi.c.i
 
 src/ft_strmapi.s: src/ft_strmapi.c.s
@@ -2707,7 +2707,7 @@ src/ft_strmapi.s: src/ft_strmapi.c.s
 
 # target to generate assembly for a file
 src/ft_strmapi.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmapi.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strmapi.c.s
 .PHONY : src/ft_strmapi.c.s
 
 src/ft_strncat.o: src/ft_strncat.c.o
@@ -2716,7 +2716,7 @@ src/ft_strncat.o: src/ft_strncat.c.o
 
 # target to build an object file
 src/ft_strncat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncat.c.o
 .PHONY : src/ft_strncat.c.o
 
 src/ft_strncat.i: src/ft_strncat.c.i
@@ -2725,7 +2725,7 @@ src/ft_strncat.i: src/ft_strncat.c.i
 
 # target to preprocess a source file
 src/ft_strncat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncat.c.i
 .PHONY : src/ft_strncat.c.i
 
 src/ft_strncat.s: src/ft_strncat.c.s
@@ -2734,7 +2734,7 @@ src/ft_strncat.s: src/ft_strncat.c.s
 
 # target to generate assembly for a file
 src/ft_strncat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncat.c.s
 .PHONY : src/ft_strncat.c.s
 
 src/ft_strncmp.o: src/ft_strncmp.c.o
@@ -2743,7 +2743,7 @@ src/ft_strncmp.o: src/ft_strncmp.c.o
 
 # target to build an object file
 src/ft_strncmp.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncmp.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncmp.c.o
 .PHONY : src/ft_strncmp.c.o
 
 src/ft_strncmp.i: src/ft_strncmp.c.i
@@ -2752,7 +2752,7 @@ src/ft_strncmp.i: src/ft_strncmp.c.i
 
 # target to preprocess a source file
 src/ft_strncmp.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncmp.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncmp.c.i
 .PHONY : src/ft_strncmp.c.i
 
 src/ft_strncmp.s: src/ft_strncmp.c.s
@@ -2761,7 +2761,7 @@ src/ft_strncmp.s: src/ft_strncmp.c.s
 
 # target to generate assembly for a file
 src/ft_strncmp.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncmp.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncmp.c.s
 .PHONY : src/ft_strncmp.c.s
 
 src/ft_strncpy.o: src/ft_strncpy.c.o
@@ -2770,7 +2770,7 @@ src/ft_strncpy.o: src/ft_strncpy.c.o
 
 # target to build an object file
 src/ft_strncpy.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncpy.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncpy.c.o
 .PHONY : src/ft_strncpy.c.o
 
 src/ft_strncpy.i: src/ft_strncpy.c.i
@@ -2779,7 +2779,7 @@ src/ft_strncpy.i: src/ft_strncpy.c.i
 
 # target to preprocess a source file
 src/ft_strncpy.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncpy.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncpy.c.i
 .PHONY : src/ft_strncpy.c.i
 
 src/ft_strncpy.s: src/ft_strncpy.c.s
@@ -2788,7 +2788,7 @@ src/ft_strncpy.s: src/ft_strncpy.c.s
 
 # target to generate assembly for a file
 src/ft_strncpy.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncpy.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strncpy.c.s
 .PHONY : src/ft_strncpy.c.s
 
 src/ft_strnequ.o: src/ft_strnequ.c.o
@@ -2797,7 +2797,7 @@ src/ft_strnequ.o: src/ft_strnequ.c.o
 
 # target to build an object file
 src/ft_strnequ.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnequ.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnequ.c.o
 .PHONY : src/ft_strnequ.c.o
 
 src/ft_strnequ.i: src/ft_strnequ.c.i
@@ -2806,7 +2806,7 @@ src/ft_strnequ.i: src/ft_strnequ.c.i
 
 # target to preprocess a source file
 src/ft_strnequ.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnequ.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnequ.c.i
 .PHONY : src/ft_strnequ.c.i
 
 src/ft_strnequ.s: src/ft_strnequ.c.s
@@ -2815,7 +2815,7 @@ src/ft_strnequ.s: src/ft_strnequ.c.s
 
 # target to generate assembly for a file
 src/ft_strnequ.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnequ.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnequ.c.s
 .PHONY : src/ft_strnequ.c.s
 
 src/ft_strnew.o: src/ft_strnew.c.o
@@ -2824,7 +2824,7 @@ src/ft_strnew.o: src/ft_strnew.c.o
 
 # target to build an object file
 src/ft_strnew.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnew.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnew.c.o
 .PHONY : src/ft_strnew.c.o
 
 src/ft_strnew.i: src/ft_strnew.c.i
@@ -2833,7 +2833,7 @@ src/ft_strnew.i: src/ft_strnew.c.i
 
 # target to preprocess a source file
 src/ft_strnew.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnew.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnew.c.i
 .PHONY : src/ft_strnew.c.i
 
 src/ft_strnew.s: src/ft_strnew.c.s
@@ -2842,7 +2842,7 @@ src/ft_strnew.s: src/ft_strnew.c.s
 
 # target to generate assembly for a file
 src/ft_strnew.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnew.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnew.c.s
 .PHONY : src/ft_strnew.c.s
 
 src/ft_strnstr.o: src/ft_strnstr.c.o
@@ -2851,7 +2851,7 @@ src/ft_strnstr.o: src/ft_strnstr.c.o
 
 # target to build an object file
 src/ft_strnstr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnstr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnstr.c.o
 .PHONY : src/ft_strnstr.c.o
 
 src/ft_strnstr.i: src/ft_strnstr.c.i
@@ -2860,7 +2860,7 @@ src/ft_strnstr.i: src/ft_strnstr.c.i
 
 # target to preprocess a source file
 src/ft_strnstr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnstr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnstr.c.i
 .PHONY : src/ft_strnstr.c.i
 
 src/ft_strnstr.s: src/ft_strnstr.c.s
@@ -2869,7 +2869,7 @@ src/ft_strnstr.s: src/ft_strnstr.c.s
 
 # target to generate assembly for a file
 src/ft_strnstr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnstr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strnstr.c.s
 .PHONY : src/ft_strnstr.c.s
 
 src/ft_strpcpy.o: src/ft_strpcpy.c.o
@@ -2878,7 +2878,7 @@ src/ft_strpcpy.o: src/ft_strpcpy.c.o
 
 # target to build an object file
 src/ft_strpcpy.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strpcpy.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strpcpy.c.o
 .PHONY : src/ft_strpcpy.c.o
 
 src/ft_strpcpy.i: src/ft_strpcpy.c.i
@@ -2887,7 +2887,7 @@ src/ft_strpcpy.i: src/ft_strpcpy.c.i
 
 # target to preprocess a source file
 src/ft_strpcpy.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strpcpy.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strpcpy.c.i
 .PHONY : src/ft_strpcpy.c.i
 
 src/ft_strpcpy.s: src/ft_strpcpy.c.s
@@ -2896,7 +2896,7 @@ src/ft_strpcpy.s: src/ft_strpcpy.c.s
 
 # target to generate assembly for a file
 src/ft_strpcpy.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strpcpy.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strpcpy.c.s
 .PHONY : src/ft_strpcpy.c.s
 
 src/ft_strrchr.o: src/ft_strrchr.c.o
@@ -2905,7 +2905,7 @@ src/ft_strrchr.o: src/ft_strrchr.c.o
 
 # target to build an object file
 src/ft_strrchr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strrchr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strrchr.c.o
 .PHONY : src/ft_strrchr.c.o
 
 src/ft_strrchr.i: src/ft_strrchr.c.i
@@ -2914,7 +2914,7 @@ src/ft_strrchr.i: src/ft_strrchr.c.i
 
 # target to preprocess a source file
 src/ft_strrchr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strrchr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strrchr.c.i
 .PHONY : src/ft_strrchr.c.i
 
 src/ft_strrchr.s: src/ft_strrchr.c.s
@@ -2923,7 +2923,7 @@ src/ft_strrchr.s: src/ft_strrchr.c.s
 
 # target to generate assembly for a file
 src/ft_strrchr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strrchr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strrchr.c.s
 .PHONY : src/ft_strrchr.c.s
 
 src/ft_strsepcut.o: src/ft_strsepcut.c.o
@@ -2932,7 +2932,7 @@ src/ft_strsepcut.o: src/ft_strsepcut.c.o
 
 # target to build an object file
 src/ft_strsepcut.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsepcut.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsepcut.c.o
 .PHONY : src/ft_strsepcut.c.o
 
 src/ft_strsepcut.i: src/ft_strsepcut.c.i
@@ -2941,7 +2941,7 @@ src/ft_strsepcut.i: src/ft_strsepcut.c.i
 
 # target to preprocess a source file
 src/ft_strsepcut.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsepcut.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsepcut.c.i
 .PHONY : src/ft_strsepcut.c.i
 
 src/ft_strsepcut.s: src/ft_strsepcut.c.s
@@ -2950,7 +2950,7 @@ src/ft_strsepcut.s: src/ft_strsepcut.c.s
 
 # target to generate assembly for a file
 src/ft_strsepcut.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsepcut.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsepcut.c.s
 .PHONY : src/ft_strsepcut.c.s
 
 src/ft_strsplit.o: src/ft_strsplit.c.o
@@ -2959,7 +2959,7 @@ src/ft_strsplit.o: src/ft_strsplit.c.o
 
 # target to build an object file
 src/ft_strsplit.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsplit.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsplit.c.o
 .PHONY : src/ft_strsplit.c.o
 
 src/ft_strsplit.i: src/ft_strsplit.c.i
@@ -2968,7 +2968,7 @@ src/ft_strsplit.i: src/ft_strsplit.c.i
 
 # target to preprocess a source file
 src/ft_strsplit.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsplit.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsplit.c.i
 .PHONY : src/ft_strsplit.c.i
 
 src/ft_strsplit.s: src/ft_strsplit.c.s
@@ -2977,7 +2977,7 @@ src/ft_strsplit.s: src/ft_strsplit.c.s
 
 # target to generate assembly for a file
 src/ft_strsplit.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsplit.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsplit.c.s
 .PHONY : src/ft_strsplit.c.s
 
 src/ft_strstr.o: src/ft_strstr.c.o
@@ -2986,7 +2986,7 @@ src/ft_strstr.o: src/ft_strstr.c.o
 
 # target to build an object file
 src/ft_strstr.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strstr.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strstr.c.o
 .PHONY : src/ft_strstr.c.o
 
 src/ft_strstr.i: src/ft_strstr.c.i
@@ -2995,7 +2995,7 @@ src/ft_strstr.i: src/ft_strstr.c.i
 
 # target to preprocess a source file
 src/ft_strstr.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strstr.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strstr.c.i
 .PHONY : src/ft_strstr.c.i
 
 src/ft_strstr.s: src/ft_strstr.c.s
@@ -3004,7 +3004,7 @@ src/ft_strstr.s: src/ft_strstr.c.s
 
 # target to generate assembly for a file
 src/ft_strstr.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strstr.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strstr.c.s
 .PHONY : src/ft_strstr.c.s
 
 src/ft_strsub.o: src/ft_strsub.c.o
@@ -3013,7 +3013,7 @@ src/ft_strsub.o: src/ft_strsub.c.o
 
 # target to build an object file
 src/ft_strsub.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsub.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsub.c.o
 .PHONY : src/ft_strsub.c.o
 
 src/ft_strsub.i: src/ft_strsub.c.i
@@ -3022,7 +3022,7 @@ src/ft_strsub.i: src/ft_strsub.c.i
 
 # target to preprocess a source file
 src/ft_strsub.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsub.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsub.c.i
 .PHONY : src/ft_strsub.c.i
 
 src/ft_strsub.s: src/ft_strsub.c.s
@@ -3031,7 +3031,7 @@ src/ft_strsub.s: src/ft_strsub.c.s
 
 # target to generate assembly for a file
 src/ft_strsub.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsub.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strsub.c.s
 .PHONY : src/ft_strsub.c.s
 
 src/ft_strtrim.o: src/ft_strtrim.c.o
@@ -3040,7 +3040,7 @@ src/ft_strtrim.o: src/ft_strtrim.c.o
 
 # target to build an object file
 src/ft_strtrim.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strtrim.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strtrim.c.o
 .PHONY : src/ft_strtrim.c.o
 
 src/ft_strtrim.i: src/ft_strtrim.c.i
@@ -3049,7 +3049,7 @@ src/ft_strtrim.i: src/ft_strtrim.c.i
 
 # target to preprocess a source file
 src/ft_strtrim.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strtrim.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strtrim.c.i
 .PHONY : src/ft_strtrim.c.i
 
 src/ft_strtrim.s: src/ft_strtrim.c.s
@@ -3058,7 +3058,7 @@ src/ft_strtrim.s: src/ft_strtrim.c.s
 
 # target to generate assembly for a file
 src/ft_strtrim.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strtrim.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_strtrim.c.s
 .PHONY : src/ft_strtrim.c.s
 
 src/ft_to_pow.o: src/ft_to_pow.c.o
@@ -3067,7 +3067,7 @@ src/ft_to_pow.o: src/ft_to_pow.c.o
 
 # target to build an object file
 src/ft_to_pow.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_to_pow.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_to_pow.c.o
 .PHONY : src/ft_to_pow.c.o
 
 src/ft_to_pow.i: src/ft_to_pow.c.i
@@ -3076,7 +3076,7 @@ src/ft_to_pow.i: src/ft_to_pow.c.i
 
 # target to preprocess a source file
 src/ft_to_pow.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_to_pow.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_to_pow.c.i
 .PHONY : src/ft_to_pow.c.i
 
 src/ft_to_pow.s: src/ft_to_pow.c.s
@@ -3085,7 +3085,7 @@ src/ft_to_pow.s: src/ft_to_pow.c.s
 
 # target to generate assembly for a file
 src/ft_to_pow.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_to_pow.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_to_pow.c.s
 .PHONY : src/ft_to_pow.c.s
 
 src/ft_tolower.o: src/ft_tolower.c.o
@@ -3094,7 +3094,7 @@ src/ft_tolower.o: src/ft_tolower.c.o
 
 # target to build an object file
 src/ft_tolower.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_tolower.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_tolower.c.o
 .PHONY : src/ft_tolower.c.o
 
 src/ft_tolower.i: src/ft_tolower.c.i
@@ -3103,7 +3103,7 @@ src/ft_tolower.i: src/ft_tolower.c.i
 
 # target to preprocess a source file
 src/ft_tolower.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_tolower.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_tolower.c.i
 .PHONY : src/ft_tolower.c.i
 
 src/ft_tolower.s: src/ft_tolower.c.s
@@ -3112,7 +3112,7 @@ src/ft_tolower.s: src/ft_tolower.c.s
 
 # target to generate assembly for a file
 src/ft_tolower.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_tolower.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_tolower.c.s
 .PHONY : src/ft_tolower.c.s
 
 src/ft_toupper.o: src/ft_toupper.c.o
@@ -3121,7 +3121,7 @@ src/ft_toupper.o: src/ft_toupper.c.o
 
 # target to build an object file
 src/ft_toupper.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_toupper.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_toupper.c.o
 .PHONY : src/ft_toupper.c.o
 
 src/ft_toupper.i: src/ft_toupper.c.i
@@ -3130,7 +3130,7 @@ src/ft_toupper.i: src/ft_toupper.c.i
 
 # target to preprocess a source file
 src/ft_toupper.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_toupper.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_toupper.c.i
 .PHONY : src/ft_toupper.c.i
 
 src/ft_toupper.s: src/ft_toupper.c.s
@@ -3139,7 +3139,7 @@ src/ft_toupper.s: src/ft_toupper.c.s
 
 # target to generate assembly for a file
 src/ft_toupper.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_toupper.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_toupper.c.s
 .PHONY : src/ft_toupper.c.s
 
 src/ft_u.o: src/ft_u.c.o
@@ -3148,7 +3148,7 @@ src/ft_u.o: src/ft_u.c.o
 
 # target to build an object file
 src/ft_u.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u.c.o
 .PHONY : src/ft_u.c.o
 
 src/ft_u.i: src/ft_u.c.i
@@ -3157,7 +3157,7 @@ src/ft_u.i: src/ft_u.c.i
 
 # target to preprocess a source file
 src/ft_u.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u.c.i
 .PHONY : src/ft_u.c.i
 
 src/ft_u.s: src/ft_u.c.s
@@ -3166,7 +3166,7 @@ src/ft_u.s: src/ft_u.c.s
 
 # target to generate assembly for a file
 src/ft_u.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u.c.s
 .PHONY : src/ft_u.c.s
 
 src/ft_u64toa_base.o: src/ft_u64toa_base.c.o
@@ -3175,7 +3175,7 @@ src/ft_u64toa_base.o: src/ft_u64toa_base.c.o
 
 # target to build an object file
 src/ft_u64toa_base.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u64toa_base.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u64toa_base.c.o
 .PHONY : src/ft_u64toa_base.c.o
 
 src/ft_u64toa_base.i: src/ft_u64toa_base.c.i
@@ -3184,7 +3184,7 @@ src/ft_u64toa_base.i: src/ft_u64toa_base.c.i
 
 # target to preprocess a source file
 src/ft_u64toa_base.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u64toa_base.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u64toa_base.c.i
 .PHONY : src/ft_u64toa_base.c.i
 
 src/ft_u64toa_base.s: src/ft_u64toa_base.c.s
@@ -3193,7 +3193,7 @@ src/ft_u64toa_base.s: src/ft_u64toa_base.c.s
 
 # target to generate assembly for a file
 src/ft_u64toa_base.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u64toa_base.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_u64toa_base.c.s
 .PHONY : src/ft_u64toa_base.c.s
 
 src/ft_width_n_precision.o: src/ft_width_n_precision.c.o
@@ -3202,7 +3202,7 @@ src/ft_width_n_precision.o: src/ft_width_n_precision.c.o
 
 # target to build an object file
 src/ft_width_n_precision.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_n_precision.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_n_precision.c.o
 .PHONY : src/ft_width_n_precision.c.o
 
 src/ft_width_n_precision.i: src/ft_width_n_precision.c.i
@@ -3211,7 +3211,7 @@ src/ft_width_n_precision.i: src/ft_width_n_precision.c.i
 
 # target to preprocess a source file
 src/ft_width_n_precision.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_n_precision.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_n_precision.c.i
 .PHONY : src/ft_width_n_precision.c.i
 
 src/ft_width_n_precision.s: src/ft_width_n_precision.c.s
@@ -3220,7 +3220,7 @@ src/ft_width_n_precision.s: src/ft_width_n_precision.c.s
 
 # target to generate assembly for a file
 src/ft_width_n_precision.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_n_precision.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_n_precision.c.s
 .PHONY : src/ft_width_n_precision.c.s
 
 src/ft_width_treat.o: src/ft_width_treat.c.o
@@ -3229,7 +3229,7 @@ src/ft_width_treat.o: src/ft_width_treat.c.o
 
 # target to build an object file
 src/ft_width_treat.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_treat.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_treat.c.o
 .PHONY : src/ft_width_treat.c.o
 
 src/ft_width_treat.i: src/ft_width_treat.c.i
@@ -3238,7 +3238,7 @@ src/ft_width_treat.i: src/ft_width_treat.c.i
 
 # target to preprocess a source file
 src/ft_width_treat.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_treat.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_treat.c.i
 .PHONY : src/ft_width_treat.c.i
 
 src/ft_width_treat.s: src/ft_width_treat.c.s
@@ -3247,7 +3247,7 @@ src/ft_width_treat.s: src/ft_width_treat.c.s
 
 # target to generate assembly for a file
 src/ft_width_treat.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_treat.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_width_treat.c.s
 .PHONY : src/ft_width_treat.c.s
 
 src/ft_word_count.o: src/ft_word_count.c.o
@@ -3256,7 +3256,7 @@ src/ft_word_count.o: src/ft_word_count.c.o
 
 # target to build an object file
 src/ft_word_count.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_word_count.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_word_count.c.o
 .PHONY : src/ft_word_count.c.o
 
 src/ft_word_count.i: src/ft_word_count.c.i
@@ -3265,7 +3265,7 @@ src/ft_word_count.i: src/ft_word_count.c.i
 
 # target to preprocess a source file
 src/ft_word_count.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_word_count.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_word_count.c.i
 .PHONY : src/ft_word_count.c.i
 
 src/ft_word_count.s: src/ft_word_count.c.s
@@ -3274,7 +3274,7 @@ src/ft_word_count.s: src/ft_word_count.c.s
 
 # target to generate assembly for a file
 src/ft_word_count.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_word_count.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_word_count.c.s
 .PHONY : src/ft_word_count.c.s
 
 src/ft_x.o: src/ft_x.c.o
@@ -3283,7 +3283,7 @@ src/ft_x.o: src/ft_x.c.o
 
 # target to build an object file
 src/ft_x.c.o:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_x.c.o
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_x.c.o
 .PHONY : src/ft_x.c.o
 
 src/ft_x.i: src/ft_x.c.i
@@ -3292,7 +3292,7 @@ src/ft_x.i: src/ft_x.c.i
 
 # target to preprocess a source file
 src/ft_x.c.i:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_x.c.i
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_x.c.i
 .PHONY : src/ft_x.c.i
 
 src/ft_x.s: src/ft_x.c.s
@@ -3301,7 +3301,7 @@ src/ft_x.s: src/ft_x.c.s
 
 # target to generate assembly for a file
 src/ft_x.c.s:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_x.c.s
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/src/ft_x.c.s
 .PHONY : src/ft_x.c.s
 
 # Help Target
@@ -3675,6 +3675,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

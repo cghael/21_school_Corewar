@@ -28,469 +28,469 @@ float.h
 stdint.h
 -
 
-/Users/leathertube/corewar/libft/src/ft_abs.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_abs.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_add_dig_to_int.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_add_dig_to_int.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_add_float_to_str.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_add_float_to_str.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_add_specials.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_add_specials.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_atoi.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_atoi.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_b.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_b.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_buff_finded_percent.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_finded_percent.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_buff_free.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_free.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_buff_no_percent.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_no_percent.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_buff_print_free.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_print_free.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_buff_print_n_len.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_print_n_len.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_buff_treated_percent.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_treated_percent.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_bzero.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_bzero.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_bzero_buf_n_set_pointers.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_bzero_buf_n_set_pointers.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_c.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_c.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_choose_func.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_choose_func.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_count_float.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_count_float.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_di.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_di.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_dollar_arg.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_dollar_arg.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_dollar_treat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_dollar_treat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_error_exit.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_error_exit.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_exeption_treat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_exeption_treat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_f.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_f.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_final_print_n_free_rt_len.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_final_print_n_free_rt_len.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_find_digit.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_find_digit.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_find_in_def.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_find_in_def.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_free_tdarr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_free_tdarr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_free_two_dem_str.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_free_two_dem_str.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_get_divisional.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_get_divisional.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_get_integer.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_get_integer.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_get_next_line.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_get_next_line.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_i64toa_base.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_i64toa_base.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_integer_to_str.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_integer_to_str.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_isalnum.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isalnum.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_isalpha.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isalpha.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_isascii.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isascii.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_isbigger.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isbigger.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_isdigit.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isdigit.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_isprint.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isprint.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_itoa.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_itoa.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_list_clear.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_list_clear.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_list_size.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_list_size.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstadd.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstadd.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstaddend.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstaddend.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstdel.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstdel.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstdelone.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstdelone.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstiter.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstiter.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstmap.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstmap.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_lstnew.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstnew.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memalloc.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memalloc.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memccpy.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memccpy.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memchr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memchr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memcmp.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memcmp.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memcpy.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memcpy.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memdel.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memdel.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memmove.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memmove.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_memset.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memset.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_node_del.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_node_del.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_num_to_str.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_num_to_str.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_o.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_o.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_p.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_p.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_parse_flags.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_parse_flags.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_parse_spec.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_parse_spec.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_parsing.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_parsing.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_percent_treat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_percent_treat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_precision_treat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_precision_treat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_printf.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_printf.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_put_div_by_one.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_put_div_by_one.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putchar.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putchar.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putchar_fd.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putchar_fd.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putendl.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putendl.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putendl_fd.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putendl_fd.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putnbr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putnbr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putnbr_fd.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putnbr_fd.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putstr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putstr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_putstr_fd.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putstr_fd.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_round_float.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_round_float.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_s.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_s.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_str_is_int.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_str_is_int.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strcat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strchr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strchr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strclr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strclr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strcmp.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcmp.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strcpy.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcpy.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strcpy_dptp.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcpy_dptp.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strdel.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strdel.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strdup.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strdup.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strequ.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strequ.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_striter.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_striter.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_striteri.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_striteri.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strjoin.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strjoin.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strlcat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strlcat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strlen.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strlen.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strmap.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strmap.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strmapi.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strmapi.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strncat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strncat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strncmp.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strncmp.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strncpy.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strncpy.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strnequ.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strnequ.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strnew.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strnew.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strnstr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strnstr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strpcpy.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strpcpy.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strrchr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strrchr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strsepcut.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strsepcut.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strsplit.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strsplit.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strstr.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strstr.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strsub.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strsub.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_strtrim.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strtrim.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_to_pow.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_to_pow.c
 
-/Users/leathertube/corewar/libft/src/ft_tolower.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_tolower.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_toupper.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_toupper.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_u.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_u.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_u64toa_base.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_u64toa_base.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_width_n_precision.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_width_n_precision.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_width_treat.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_width_treat.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_word_count.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_word_count.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 
-/Users/leathertube/corewar/libft/src/ft_x.c
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_x.c
 libft.h
-/Users/leathertube/corewar/libft/src/libft.h
+/Users/ksemele/Desktop/corewar_collaborate/libft/src/libft.h
 

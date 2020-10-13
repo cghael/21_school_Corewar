@@ -26,6 +26,6 @@ int		main(int argc, char **argv)
 	asm_struct = ft_init_asm_struct();
 	if (!asm_struct)
 		ft_asm_error(ASM_STRUCT_ERR, asm_struct);
-	ft_check_read_argv_files(argc, argv);
+	ft_check_read_argv_files(argc, argv, NULL);
 	return (0);
 }

@@ -57,7 +57,7 @@
 
 typedef struct				s_asm
 {
-	t_list					fd;
+	int						fd;
 	unsigned				row;
 	unsigned				column;
 	t_token					*tokens;
@@ -76,10 +76,10 @@ typedef struct				s_asm
 
 t_asm						*ft_init_asm_struct();
 void						ft_free_asm_struct(t_asm *asm_struct);
-int							ft_is_filename(char *filename);
-void						ft_check_read_argv_files(int argc, char **argv);
+int ft_is_filename(char *filename, t_asm *asm_struct);
+void ft_check_read_argv_files(int argc, char **argv, t_asm *asm_struct);
 void						ft_assemble(char *file, t_asm *asm_struct);
-void						ft_disassemble(char *file);
+void ft_disassemble(char *file, t_asm *asm_struct);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_struct);
 void						ft_write_bytecode_to_file(int fd, \

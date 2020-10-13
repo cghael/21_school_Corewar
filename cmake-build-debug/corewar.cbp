@@ -8,559 +8,559 @@
 		<Option virtualFolders="CMake Files\;CMake Files\libft\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="asm">
-				<Option output="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option output="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/includes"/>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/libft/inc"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/includes"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/libft/inc"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="asm/fast">
-				<Option output="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option output="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/asm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/includes"/>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/libft/inc"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/includes"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/libft/inc"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 asm/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="corewar">
-				<Option output="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option output="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/includes"/>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/libft/inc"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/includes"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/libft/inc"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="corewar/fast">
-				<Option output="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug"/>
+				<Option output="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/corewar" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/includes"/>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/libft/inc"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/includes"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/libft/inc"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 corewar/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libft">
-				<Option output="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft"/>
+				<Option output="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/includes"/>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/libft/inc"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/includes"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/libft/inc"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 libft"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 libft"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="libft/fast">
-				<Option output="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft"/>
+				<Option output="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/liblibft.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/includes"/>
-					<Add directory="/Users/antongorobets/school21/21_school_Corewar/libft/inc"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/includes"/>
+					<Add directory="/Users/ksemele/Desktop/corewar_collaborate/libft/inc"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 libft/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 libft/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/libft/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/inc/libft.h">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/inc/libft.h">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_abs.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_abs.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_add_dig_to_int.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_add_dig_to_int.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_add_float_to_str.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_add_float_to_str.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_add_specials.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_add_specials.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_atoi.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_atoi.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_b.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_b.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_buff_finded_percent.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_finded_percent.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_buff_free.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_free.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_buff_no_percent.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_no_percent.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_buff_print_free.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_print_free.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_buff_print_n_len.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_print_n_len.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_buff_treated_percent.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_buff_treated_percent.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_bzero.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_bzero.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_bzero_buf_n_set_pointers.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_bzero_buf_n_set_pointers.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_c.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_c.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_choose_func.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_choose_func.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_count_float.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_count_float.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_di.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_di.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_dollar_arg.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_dollar_arg.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_dollar_treat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_dollar_treat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_error_exit.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_error_exit.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_exeption_treat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_exeption_treat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_f.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_f.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_final_print_n_free_rt_len.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_final_print_n_free_rt_len.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_find_digit.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_find_digit.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_find_in_def.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_find_in_def.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_free_tdarr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_free_tdarr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_free_two_dem_str.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_free_two_dem_str.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_get_divisional.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_get_divisional.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_get_integer.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_get_integer.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_get_next_line.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_get_next_line.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_i64toa_base.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_i64toa_base.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_integer_to_str.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_integer_to_str.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_isalnum.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isalnum.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_isalpha.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isalpha.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_isascii.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isascii.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_isbigger.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isbigger.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_isdigit.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isdigit.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_isprint.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_isprint.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_itoa.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_itoa.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_list_clear.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_list_clear.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_list_size.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_list_size.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstadd.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstadd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstaddend.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstaddend.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstdel.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstdel.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstdelone.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstdelone.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstiter.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstiter.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstmap.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstmap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_lstnew.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_lstnew.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memalloc.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memalloc.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memccpy.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memccpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memchr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memchr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memcmp.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memcmp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memcpy.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memcpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memdel.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memdel.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memmove.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memmove.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_memset.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_memset.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_node_del.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_node_del.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_num_to_str.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_num_to_str.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_o.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_o.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_p.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_p.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_parse_flags.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_parse_flags.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_parse_spec.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_parse_spec.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_parsing.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_parsing.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_percent_treat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_percent_treat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_precision_treat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_precision_treat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_printf.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_printf.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_put_div_by_one.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_put_div_by_one.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putchar.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putchar.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putchar_fd.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putchar_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putendl.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putendl.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putendl_fd.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putendl_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putnbr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putnbr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putnbr_fd.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putnbr_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putstr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putstr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_putstr_fd.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_putstr_fd.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_round_float.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_round_float.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_s.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_s.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_str_is_int.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_str_is_int.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strcat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strchr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strchr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strclr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strclr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strcmp.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcmp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strcpy.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strcpy_dptp.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strcpy_dptp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strdel.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strdel.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strdup.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strdup.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strequ.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strequ.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_striter.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_striter.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_striteri.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_striteri.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strjoin.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strjoin.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strlcat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strlcat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strlen.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strlen.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strmap.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strmap.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strmapi.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strmapi.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strncat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strncat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strncmp.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strncmp.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strncpy.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strncpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strnequ.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strnequ.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strnew.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strnew.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strnstr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strnstr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strpcpy.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strpcpy.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strrchr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strrchr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strsepcut.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strsepcut.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strsplit.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strsplit.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strstr.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strstr.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strsub.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strsub.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_strtrim.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_strtrim.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_to_pow.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_to_pow.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_tolower.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_tolower.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_toupper.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_toupper.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_u.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_u.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_u64toa_base.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_u64toa_base.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_width_n_precision.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_width_n_precision.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_width_treat.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_width_treat.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_word_count.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_word_count.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/src/ft_x.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/src/ft_x.c">
 			<Option target="libft"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/asm.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/asm.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_asm_error.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_asm_error.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_assemble.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_assemble.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_check_read_argv_files.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_check_read_argv_files.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_disassemble.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_disassemble.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_free_asm_struct.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_free_asm_struct.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_init_asm_struct.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_init_asm_struct.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_is_filename.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_is_filename.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_print_help.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_print_help.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/asm/ft_write_bytecode_to_file.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_write_bytecode_to_file.c">
 			<Option target="asm"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/sources/cw/corewar.c">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/sources/cw/corewar.c">
 			<Option target="corewar"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/CMakeLists.txt">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/antongorobets/school21/21_school_Corewar/libft/CMakeLists.txt">
+		<Unit filename="/Users/ksemele/Desktop/corewar_collaborate/libft/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libft\"/>
 		</Unit>
 	</Project>
