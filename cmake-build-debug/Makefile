@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/antongorobets/school21/21_school_Corewar
+CMAKE_SOURCE_DIR = /Users/leathertube/corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/leathertube/corewar/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leathertube/corewar/cmake-build-debug/CMakeFiles /Users/leathertube/corewar/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leathertube/corewar/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -412,6 +412,33 @@ sources/asm/ft_print_help.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_print_help.c.s
 .PHONY : sources/asm/ft_print_help.c.s
 
+sources/asm/ft_write_bytecode_to_file.o: sources/asm/ft_write_bytecode_to_file.c.o
+
+.PHONY : sources/asm/ft_write_bytecode_to_file.o
+
+# target to build an object file
+sources/asm/ft_write_bytecode_to_file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o
+.PHONY : sources/asm/ft_write_bytecode_to_file.c.o
+
+sources/asm/ft_write_bytecode_to_file.i: sources/asm/ft_write_bytecode_to_file.c.i
+
+.PHONY : sources/asm/ft_write_bytecode_to_file.i
+
+# target to preprocess a source file
+sources/asm/ft_write_bytecode_to_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.i
+.PHONY : sources/asm/ft_write_bytecode_to_file.c.i
+
+sources/asm/ft_write_bytecode_to_file.s: sources/asm/ft_write_bytecode_to_file.c.s
+
+.PHONY : sources/asm/ft_write_bytecode_to_file.s
+
+# target to generate assembly for a file
+sources/asm/ft_write_bytecode_to_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.s
+.PHONY : sources/asm/ft_write_bytecode_to_file.c.s
+
 sources/cw/corewar.o: sources/cw/corewar.c.o
 
 .PHONY : sources/cw/corewar.o
@@ -477,6 +504,9 @@ help:
 	@echo "... sources/asm/ft_print_help.o"
 	@echo "... sources/asm/ft_print_help.i"
 	@echo "... sources/asm/ft_print_help.s"
+	@echo "... sources/asm/ft_write_bytecode_to_file.o"
+	@echo "... sources/asm/ft_write_bytecode_to_file.i"
+	@echo "... sources/asm/ft_write_bytecode_to_file.s"
 	@echo "... sources/cw/corewar.o"
 	@echo "... sources/cw/corewar.i"
 	@echo "... sources/cw/corewar.s"

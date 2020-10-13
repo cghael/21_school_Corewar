@@ -10,4 +10,5 @@ void	ft_assemble(char *file)
 	//valide file
 	//if valid -> parse file -> translate to binary file:
 	//create file with same name .cor
+	ft_write_bytecode_to_file();
 }

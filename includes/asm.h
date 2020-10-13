@@ -19,6 +19,7 @@
 
 # include <fcntl.h>
 # include "libft.h"
+# include "op.h"
 
 /*
 ** ALLOWED funcs:
@@ -46,7 +47,7 @@
 # define IS_S_FILE			0
 # define IS_COR_FILE		1
 # define IS_BAD_FILE		2
-
+# define ERR_WRITE_BYTE		"Error in ft_write_bytecode_to_file()\n"
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -68,5 +69,7 @@ void						ft_assemble(char *file);
 void						ft_disassemble(char *file);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_struct);
+void						ft_write_bytecode_to_file(int fd, \
+															t_asm *asm_struct);
 
 #endif

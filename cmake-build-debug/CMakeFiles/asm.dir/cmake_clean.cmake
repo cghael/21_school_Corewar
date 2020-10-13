@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o"
   "CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o"
   "CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o"
+  "CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o"
   "asm"
   "asm.pdb"
 )

@@ -1,1 +1,1 @@
-/usr/bin/cc  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/corewar.dir/sources/cw/corewar.c.o  -o corewar  libft/liblibft.a 
+/Library/Developer/CommandLineTools/usr/bin/cc -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/corewar.dir/sources/cw/corewar.c.o  -o corewar  libft/liblibft.a 
