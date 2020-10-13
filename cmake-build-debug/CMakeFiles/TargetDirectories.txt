@@ -1,7 +1,0 @@
-/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles/asm.dir
-/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles/corewar.dir
-/Users/cghael/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/rebuild_cache.dir
-/Users/cghael/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/edit_cache.dir
-/Users/cghael/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/libft.dir
