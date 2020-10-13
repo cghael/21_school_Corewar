@@ -61,14 +61,14 @@ typedef struct				s_asm
 	int						fd_solution;
 	unsigned				row;
 	unsigned				column;
-	t_token					*tokens;
+//	t_token					*tokens;
 	int32_t					exec_size;
 	int32_t					op_pos;
 	char					*name;
 	char					*comment;
 	char					*code;
 	int32_t					code_size;
-	t_label					*labels;
+//	t_label					*labels;
 }							t_asm;
 
 /*
@@ -78,8 +78,7 @@ typedef struct				s_asm
 t_asm						*ft_init_asm_struct();
 void						ft_free_asm_struct(t_asm *asm_s);
 int							ft_is_filename(char *filename, t_asm *asm_s);
-void						ft_check_read_argv_files(int argc, char **argv, \
-															t_asm *asm_s);
+void						ft_check_read_argv_files(int argc, char **argv);
 void						ft_assemble(char *file, t_asm *asm_s);
 void						ft_disassemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);

@@ -4,7 +4,7 @@
 
 #include "asm.h"
 
-void ft_disassemble(char *file, t_asm *asm_struct)
+void ft_disassemble(char *file, t_asm *asm_s)
 {
-	ft_printf("disassemble! %s\n", file);
+	ft_printf("disassemble! %s %p\n", file, asm_s);
 }

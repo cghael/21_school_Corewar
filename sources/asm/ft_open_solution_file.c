@@ -28,7 +28,12 @@ void			ft_open_solution_file(char *file, t_asm *asm_struct)
 		ft_asm_error("Error in ft_open_solution_file()\n", asm_struct);
 	}
 	free(tmp_name);
-	asm_struct->fd_solution = open(file_solution, O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
+	asm_struct->fd_solution = open(file_solution, \
+								O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
 	if (asm_struct->fd_solution < 0)
+	{
+		free(file_solution);
 		ft_asm_error("Error in ft_open_solution_file()\n", asm_struct);
+	}
+	free(file_solution);
 }

@@ -45,6 +45,8 @@ SRC_LIST_ASM = asm.c \
 				ft_init_asm_struct.c \
 				ft_is_filename.c \
 				ft_print_help.c \
+				ft_open_solution_file.c \
+				ft_int32_to_bytecode.c
 
 SRC_DIR = ./sources/
 SRC_ASM_DIR = ${SRC_DIR}asm/
@@ -80,38 +82,38 @@ END = \033[0m
 all: $(NAME_CW) $(NAME_ASM)
 
 $(NAME_CW): $(LIBFT) $(OBJ_CW_DIR) $(OBJ_CW)
-	$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) -o $(NAME_CW)
-	echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
-	echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) -o $(NAME_CW)
+	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
+	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
 
 $(NAME_ASM): $(LIBFT) $(OBJ_ASM_DIR) $(OBJ_ASM)
-	$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) -o $(NAME_ASM)
-	echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
-	echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) -o $(NAME_ASM)
+	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
+	@echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
 
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
-	echo "$(GRN)$(OBJ_DIR) created$(END)"
+	@mkdir -p $(OBJ_DIR)
+	@echo "$(GRN)$(OBJ_DIR) created$(END)"
 
 $(OBJ_CW_DIR):
-	mkdir -p $(OBJ_CW_DIR)
-	echo "$(GRN)$(OBJ_CW DIR) created$(END)"
+	@mkdir -p $(OBJ_CW_DIR)
+	@echo "$(GRN)$(OBJ_CW DIR) created$(END)"
 
 $(OBJ_ASM_DIR):
-	mkdir -p $(OBJ_ASM_DIR)
-	echo "$(GRN)$(OBJ_ASM_DIR) created$(END)"
+	@mkdir -p $(OBJ_ASM_DIR)
+	@echo "$(GRN)$(OBJ_ASM_DIR) created$(END)"
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c $(HEADERS)
-	$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
-	echo "$(GRN).$(END)\c"
+	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	@echo "$(GRN).$(END)\c"
 
 $(OBJ_CW_DIR)%.o : $(SRC_CW_DIR)%.c $(HEADERS)
-	$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
-	echo "$(GRN).$(END)\c"
+	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	@echo "$(GRN).$(END)\c"
 
 $(OBJ_ASM_DIR)%.o : $(SRC_ASM_DIR)%.c $(HEADERS)
-	$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
-	echo "$(GRN).$(END)\c"
+	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	@echo "$(GRN).$(END)\c"
 
 $(LIBFT):
 	@echo "$(GRN)Creating $(LIBFT)...$(END)"
