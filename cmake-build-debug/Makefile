@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ksemele/Desktop/corewar_collaborate
+CMAKE_SOURCE_DIR = /Users/cghael/21_school_Corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/cghael/21_school_Corewar/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles /Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -385,6 +385,33 @@ sources/asm/ft_is_filename.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.s
 .PHONY : sources/asm/ft_is_filename.c.s
 
+sources/asm/ft_open_solution_file.o: sources/asm/ft_open_solution_file.c.o
+
+.PHONY : sources/asm/ft_open_solution_file.o
+
+# target to build an object file
+sources/asm/ft_open_solution_file.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o
+.PHONY : sources/asm/ft_open_solution_file.c.o
+
+sources/asm/ft_open_solution_file.i: sources/asm/ft_open_solution_file.c.i
+
+.PHONY : sources/asm/ft_open_solution_file.i
+
+# target to preprocess a source file
+sources/asm/ft_open_solution_file.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.i
+.PHONY : sources/asm/ft_open_solution_file.c.i
+
+sources/asm/ft_open_solution_file.s: sources/asm/ft_open_solution_file.c.s
+
+.PHONY : sources/asm/ft_open_solution_file.s
+
+# target to generate assembly for a file
+sources/asm/ft_open_solution_file.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.s
+.PHONY : sources/asm/ft_open_solution_file.c.s
+
 sources/asm/ft_print_help.o: sources/asm/ft_print_help.c.o
 
 .PHONY : sources/asm/ft_print_help.o
@@ -501,6 +528,9 @@ help:
 	@echo "... sources/asm/ft_is_filename.o"
 	@echo "... sources/asm/ft_is_filename.i"
 	@echo "... sources/asm/ft_is_filename.s"
+	@echo "... sources/asm/ft_open_solution_file.o"
+	@echo "... sources/asm/ft_open_solution_file.i"
+	@echo "... sources/asm/ft_open_solution_file.s"
 	@echo "... sources/asm/ft_print_help.o"
 	@echo "... sources/asm/ft_print_help.i"
 	@echo "... sources/asm/ft_print_help.s"

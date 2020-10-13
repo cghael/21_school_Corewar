@@ -1,4 +1,4 @@
-# Install script for directory: /Users/ksemele/Desktop/corewar_collaborate/libft
+# Install script for directory: /Users/cghael/21_school_Corewar/libft
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

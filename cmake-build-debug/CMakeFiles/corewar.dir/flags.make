@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/ksemele/Desktop/corewar_collaborate/includes -I/Users/ksemele/Desktop/corewar_collaborate/libft/inc 
+C_INCLUDES = -I/Users/cghael/21_school_Corewar/includes -I/Users/cghael/21_school_Corewar/libft/inc 
 

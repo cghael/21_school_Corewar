@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ksemele/Desktop/corewar_collaborate
+CMAKE_SOURCE_DIR = /Users/cghael/21_school_Corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/cghael/21_school_Corewar/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/asm.dir/depend.make
@@ -79,133 +79,146 @@ include CMakeFiles/asm.dir/flags.make
 
 CMakeFiles/asm.dir/sources/asm/asm.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/asm.c.o: ../sources/asm/asm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/asm.dir/sources/asm/asm.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/asm.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/asm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/asm.dir/sources/asm/asm.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/asm.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/asm.c
 
 CMakeFiles/asm.dir/sources/asm/asm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/asm.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/asm.c > CMakeFiles/asm.dir/sources/asm/asm.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/asm.c > CMakeFiles/asm.dir/sources/asm/asm.c.i
 
 CMakeFiles/asm.dir/sources/asm/asm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/asm.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/asm.c -o CMakeFiles/asm.dir/sources/asm/asm.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/asm.c -o CMakeFiles/asm.dir/sources/asm/asm.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o: ../sources/asm/ft_is_filename.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_is_filename.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_is_filename.c
 
 CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_is_filename.c > CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_is_filename.c > CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_is_filename.c -o CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_is_filename.c -o CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o: ../sources/asm/ft_assemble.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_assemble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_assemble.c
 
 CMakeFiles/asm.dir/sources/asm/ft_assemble.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_assemble.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_assemble.c > CMakeFiles/asm.dir/sources/asm/ft_assemble.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_assemble.c > CMakeFiles/asm.dir/sources/asm/ft_assemble.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_assemble.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_assemble.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_assemble.c -o CMakeFiles/asm.dir/sources/asm/ft_assemble.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_assemble.c -o CMakeFiles/asm.dir/sources/asm/ft_assemble.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o: ../sources/asm/ft_disassemble.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_disassemble.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_disassemble.c
 
 CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_disassemble.c > CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_disassemble.c > CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_disassemble.c -o CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_disassemble.c -o CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o: ../sources/asm/ft_print_help.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_print_help.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_print_help.c
 
 CMakeFiles/asm.dir/sources/asm/ft_print_help.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_print_help.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_print_help.c > CMakeFiles/asm.dir/sources/asm/ft_print_help.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_print_help.c > CMakeFiles/asm.dir/sources/asm/ft_print_help.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_print_help.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_print_help.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_print_help.c -o CMakeFiles/asm.dir/sources/asm/ft_print_help.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_print_help.c -o CMakeFiles/asm.dir/sources/asm/ft_print_help.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o: ../sources/asm/ft_init_asm_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_init_asm_struct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_init_asm_struct.c
 
 CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_init_asm_struct.c > CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_init_asm_struct.c > CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_init_asm_struct.c -o CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_init_asm_struct.c -o CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o: ../sources/asm/ft_asm_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_asm_error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_asm_error.c
 
 CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_asm_error.c > CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_asm_error.c > CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_asm_error.c -o CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_asm_error.c -o CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o: ../sources/asm/ft_free_asm_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_free_asm_struct.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_free_asm_struct.c
 
 CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_free_asm_struct.c > CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_free_asm_struct.c > CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_free_asm_struct.c -o CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_free_asm_struct.c -o CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o: ../sources/asm/ft_check_read_argv_files.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_check_read_argv_files.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_check_read_argv_files.c
 
 CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_check_read_argv_files.c > CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_check_read_argv_files.c > CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_check_read_argv_files.c -o CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_check_read_argv_files.c -o CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.s
 
 CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o: CMakeFiles/asm.dir/flags.make
 CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o: ../sources/asm/ft_write_bytecode_to_file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o   -c /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_write_bytecode_to_file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_write_bytecode_to_file.c
 
 CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_write_bytecode_to_file.c > CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_write_bytecode_to_file.c > CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.i
 
 CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ksemele/Desktop/corewar_collaborate/sources/asm/ft_write_bytecode_to_file.c -o CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_write_bytecode_to_file.c -o CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.s
+
+CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o: CMakeFiles/asm.dir/flags.make
+CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o: ../sources/asm/ft_open_solution_file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o   -c /Users/cghael/21_school_Corewar/sources/asm/ft_open_solution_file.c
+
+CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cghael/21_school_Corewar/sources/asm/ft_open_solution_file.c > CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.i
+
+CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cghael/21_school_Corewar/sources/asm/ft_open_solution_file.c -o CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.s
 
 # Object files for target asm
 asm_OBJECTS = \
@@ -218,7 +231,8 @@ asm_OBJECTS = \
 "CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o" \
 "CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o" \
 "CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o" \
-"CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o"
+"CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o" \
+"CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o"
 
 # External object files for target asm
 asm_EXTERNAL_OBJECTS =
@@ -233,10 +247,11 @@ asm: CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o
 asm: CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o
 asm: CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o
 asm: CMakeFiles/asm.dir/sources/asm/ft_write_bytecode_to_file.c.o
+asm: CMakeFiles/asm.dir/sources/asm/ft_open_solution_file.c.o
 asm: CMakeFiles/asm.dir/build.make
 asm: libft/liblibft.a
 asm: CMakeFiles/asm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable asm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable asm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/asm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -249,6 +264,6 @@ CMakeFiles/asm.dir/clean:
 .PHONY : CMakeFiles/asm.dir/clean
 
 CMakeFiles/asm.dir/depend:
-	cd /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ksemele/Desktop/corewar_collaborate /Users/ksemele/Desktop/corewar_collaborate /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug /Users/ksemele/Desktop/corewar_collaborate/cmake-build-debug/CMakeFiles/asm.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/cghael/21_school_Corewar/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/cghael/21_school_Corewar /Users/cghael/21_school_Corewar /Users/cghael/21_school_Corewar/cmake-build-debug /Users/cghael/21_school_Corewar/cmake-build-debug /Users/cghael/21_school_Corewar/cmake-build-debug/CMakeFiles/asm.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/asm.dir/depend
 

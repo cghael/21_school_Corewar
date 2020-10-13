@@ -58,6 +58,7 @@
 typedef struct				s_asm
 {
 	int						fd;
+	int						fd_solution;
 	unsigned				row;
 	unsigned				column;
 	t_token					*tokens;
@@ -84,5 +85,6 @@ int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_struct);
 void						ft_write_bytecode_to_file(int fd, \
 															t_asm *asm_struct);
+void						ft_open_solution_file(char *file, t_asm *asm_struct);
 
 #endif
