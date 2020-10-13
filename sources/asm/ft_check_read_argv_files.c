@@ -11,7 +11,7 @@ void	ft_check_read_argv_files(int argc, char **argv)
 	while (i > 0)
 	{
 		if (IS_S_FILE == ft_is_filename(argv[i]))
-			ft_assemble(argv[i]);
+			ft_assemble(argv[i], NULL);
 		else if (IS_COR_FILE == ft_is_filename(argv[i]))
 			ft_disassemble(argv[i]);
 		else if (IS_BAD_FILE == ft_is_filename(argv[i]))
