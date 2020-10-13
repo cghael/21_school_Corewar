@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void			ft_open_solution_file(char *file, t_asm *asm_struct)
+void			ft_open_solution_file(char *file, t_asm *asm_s)
 {
 	char	*dot;
 	char	*tmp_name;
@@ -21,19 +21,19 @@ void			ft_open_solution_file(char *file, t_asm *asm_struct)
 	dot = ft_strrchr(file, '.');
 
 	if (!(tmp_name = ft_strsub(file, 0, dot - file + 1)))
-		ft_asm_error("Error in ft_open_solution_file()\n", asm_struct);
+		ft_asm_error("Error in ft_open_solution_file()\n", asm_s);
 	if (!(file_solution = ft_strjoin(tmp_name, "cor")))
 	{
 		free(tmp_name);
-		ft_asm_error("Error in ft_open_solution_file()\n", asm_struct);
+		ft_asm_error("Error in ft_open_solution_file()\n", asm_s);
 	}
 	free(tmp_name);
-	asm_struct->fd_solution = open(file_solution, \
+	asm_s->fd_solution = open(file_solution, \
 								O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
-	if (asm_struct->fd_solution < 0)
+	if (asm_s->fd_solution < 0)
 	{
 		free(file_solution);
-		ft_asm_error("Error in ft_open_solution_file()\n", asm_struct);
+		ft_asm_error("Error in ft_open_solution_file()\n", asm_s);
 	}
 	free(file_solution);
 }
