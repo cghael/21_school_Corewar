@@ -1,17 +1,21 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.17.1)
 project(corewar C)
 
 set(CMAKE_C_STANDARD 90)
 
 set(SOURCES_CW
-        sources/corewar.c)
+        sources/cw/corewar.c)
 
 set(SOURCES_ASM
-        sources/asm.c
-		sources/ft_is_filename.c
-		sources/ft_assemble.c
-		sources/ft_disassemble.c
-		sources/ft_print_help.c sources/ft_init_asm_struct.c sources/ft_asm_error.c sources/ft_free_asm_struct.c sources/ft_check_read_argv_files.c)
+        sources/asm/asm.c
+        sources/asm/ft_is_filename.c
+        sources/asm/ft_assemble.c
+        sources/asm/ft_disassemble.c
+        sources/asm/ft_print_help.c
+        sources/asm/ft_init_asm_struct.c
+        sources/asm/ft_asm_error.c
+        sources/asm/ft_free_asm_struct.c
+        sources/asm/ft_check_read_argv_files.c)
 
 include_directories(includes)
 include_directories(libft/inc)

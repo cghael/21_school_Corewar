@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leathertube/corewar
+CMAKE_SOURCE_DIR = /Users/antongorobets/school21/21_school_Corewar
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leathertube/corewar/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leathertube/corewar/cmake-build-debug/CMakeFiles /Users/leathertube/corewar/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leathertube/corewar/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,275 +169,275 @@ libft/fast:
 	$(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/build
 .PHONY : libft/fast
 
-sources/asm.o: sources/asm.c.o
+sources/asm/asm.o: sources/asm/asm.c.o
 
-.PHONY : sources/asm.o
-
-# target to build an object file
-sources/asm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm.c.o
-.PHONY : sources/asm.c.o
-
-sources/asm.i: sources/asm.c.i
-
-.PHONY : sources/asm.i
-
-# target to preprocess a source file
-sources/asm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm.c.i
-.PHONY : sources/asm.c.i
-
-sources/asm.s: sources/asm.c.s
-
-.PHONY : sources/asm.s
-
-# target to generate assembly for a file
-sources/asm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm.c.s
-.PHONY : sources/asm.c.s
-
-sources/corewar.o: sources/corewar.c.o
-
-.PHONY : sources/corewar.o
+.PHONY : sources/asm/asm.o
 
 # target to build an object file
-sources/corewar.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/sources/corewar.c.o
-.PHONY : sources/corewar.c.o
+sources/asm/asm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/asm.c.o
+.PHONY : sources/asm/asm.c.o
 
-sources/corewar.i: sources/corewar.c.i
+sources/asm/asm.i: sources/asm/asm.c.i
 
-.PHONY : sources/corewar.i
+.PHONY : sources/asm/asm.i
 
 # target to preprocess a source file
-sources/corewar.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/sources/corewar.c.i
-.PHONY : sources/corewar.c.i
+sources/asm/asm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/asm.c.i
+.PHONY : sources/asm/asm.c.i
 
-sources/corewar.s: sources/corewar.c.s
+sources/asm/asm.s: sources/asm/asm.c.s
 
-.PHONY : sources/corewar.s
+.PHONY : sources/asm/asm.s
 
 # target to generate assembly for a file
-sources/corewar.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/sources/corewar.c.s
-.PHONY : sources/corewar.c.s
+sources/asm/asm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/asm.c.s
+.PHONY : sources/asm/asm.c.s
 
-sources/ft_asm_error.o: sources/ft_asm_error.c.o
+sources/asm/ft_asm_error.o: sources/asm/ft_asm_error.c.o
 
-.PHONY : sources/ft_asm_error.o
+.PHONY : sources/asm/ft_asm_error.o
 
 # target to build an object file
-sources/ft_asm_error.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_asm_error.c.o
-.PHONY : sources/ft_asm_error.c.o
+sources/asm/ft_asm_error.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.o
+.PHONY : sources/asm/ft_asm_error.c.o
 
-sources/ft_asm_error.i: sources/ft_asm_error.c.i
+sources/asm/ft_asm_error.i: sources/asm/ft_asm_error.c.i
 
-.PHONY : sources/ft_asm_error.i
+.PHONY : sources/asm/ft_asm_error.i
 
 # target to preprocess a source file
-sources/ft_asm_error.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_asm_error.c.i
-.PHONY : sources/ft_asm_error.c.i
+sources/asm/ft_asm_error.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.i
+.PHONY : sources/asm/ft_asm_error.c.i
 
-sources/ft_asm_error.s: sources/ft_asm_error.c.s
+sources/asm/ft_asm_error.s: sources/asm/ft_asm_error.c.s
 
-.PHONY : sources/ft_asm_error.s
+.PHONY : sources/asm/ft_asm_error.s
 
 # target to generate assembly for a file
-sources/ft_asm_error.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_asm_error.c.s
-.PHONY : sources/ft_asm_error.c.s
+sources/asm/ft_asm_error.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_asm_error.c.s
+.PHONY : sources/asm/ft_asm_error.c.s
 
-sources/ft_assemble.o: sources/ft_assemble.c.o
+sources/asm/ft_assemble.o: sources/asm/ft_assemble.c.o
 
-.PHONY : sources/ft_assemble.o
+.PHONY : sources/asm/ft_assemble.o
 
 # target to build an object file
-sources/ft_assemble.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_assemble.c.o
-.PHONY : sources/ft_assemble.c.o
+sources/asm/ft_assemble.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_assemble.c.o
+.PHONY : sources/asm/ft_assemble.c.o
 
-sources/ft_assemble.i: sources/ft_assemble.c.i
+sources/asm/ft_assemble.i: sources/asm/ft_assemble.c.i
 
-.PHONY : sources/ft_assemble.i
+.PHONY : sources/asm/ft_assemble.i
 
 # target to preprocess a source file
-sources/ft_assemble.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_assemble.c.i
-.PHONY : sources/ft_assemble.c.i
+sources/asm/ft_assemble.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_assemble.c.i
+.PHONY : sources/asm/ft_assemble.c.i
 
-sources/ft_assemble.s: sources/ft_assemble.c.s
+sources/asm/ft_assemble.s: sources/asm/ft_assemble.c.s
 
-.PHONY : sources/ft_assemble.s
+.PHONY : sources/asm/ft_assemble.s
 
 # target to generate assembly for a file
-sources/ft_assemble.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_assemble.c.s
-.PHONY : sources/ft_assemble.c.s
+sources/asm/ft_assemble.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_assemble.c.s
+.PHONY : sources/asm/ft_assemble.c.s
 
-sources/ft_check_read_argv_files.o: sources/ft_check_read_argv_files.c.o
+sources/asm/ft_check_read_argv_files.o: sources/asm/ft_check_read_argv_files.c.o
 
-.PHONY : sources/ft_check_read_argv_files.o
+.PHONY : sources/asm/ft_check_read_argv_files.o
 
 # target to build an object file
-sources/ft_check_read_argv_files.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.o
-.PHONY : sources/ft_check_read_argv_files.c.o
+sources/asm/ft_check_read_argv_files.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.o
+.PHONY : sources/asm/ft_check_read_argv_files.c.o
 
-sources/ft_check_read_argv_files.i: sources/ft_check_read_argv_files.c.i
+sources/asm/ft_check_read_argv_files.i: sources/asm/ft_check_read_argv_files.c.i
 
-.PHONY : sources/ft_check_read_argv_files.i
+.PHONY : sources/asm/ft_check_read_argv_files.i
 
 # target to preprocess a source file
-sources/ft_check_read_argv_files.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.i
-.PHONY : sources/ft_check_read_argv_files.c.i
+sources/asm/ft_check_read_argv_files.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.i
+.PHONY : sources/asm/ft_check_read_argv_files.c.i
 
-sources/ft_check_read_argv_files.s: sources/ft_check_read_argv_files.c.s
+sources/asm/ft_check_read_argv_files.s: sources/asm/ft_check_read_argv_files.c.s
 
-.PHONY : sources/ft_check_read_argv_files.s
+.PHONY : sources/asm/ft_check_read_argv_files.s
 
 # target to generate assembly for a file
-sources/ft_check_read_argv_files.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_check_read_argv_files.c.s
-.PHONY : sources/ft_check_read_argv_files.c.s
+sources/asm/ft_check_read_argv_files.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_check_read_argv_files.c.s
+.PHONY : sources/asm/ft_check_read_argv_files.c.s
 
-sources/ft_disassemble.o: sources/ft_disassemble.c.o
+sources/asm/ft_disassemble.o: sources/asm/ft_disassemble.c.o
 
-.PHONY : sources/ft_disassemble.o
+.PHONY : sources/asm/ft_disassemble.o
 
 # target to build an object file
-sources/ft_disassemble.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_disassemble.c.o
-.PHONY : sources/ft_disassemble.c.o
+sources/asm/ft_disassemble.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.o
+.PHONY : sources/asm/ft_disassemble.c.o
 
-sources/ft_disassemble.i: sources/ft_disassemble.c.i
+sources/asm/ft_disassemble.i: sources/asm/ft_disassemble.c.i
 
-.PHONY : sources/ft_disassemble.i
+.PHONY : sources/asm/ft_disassemble.i
 
 # target to preprocess a source file
-sources/ft_disassemble.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_disassemble.c.i
-.PHONY : sources/ft_disassemble.c.i
+sources/asm/ft_disassemble.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.i
+.PHONY : sources/asm/ft_disassemble.c.i
 
-sources/ft_disassemble.s: sources/ft_disassemble.c.s
+sources/asm/ft_disassemble.s: sources/asm/ft_disassemble.c.s
 
-.PHONY : sources/ft_disassemble.s
+.PHONY : sources/asm/ft_disassemble.s
 
 # target to generate assembly for a file
-sources/ft_disassemble.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_disassemble.c.s
-.PHONY : sources/ft_disassemble.c.s
+sources/asm/ft_disassemble.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_disassemble.c.s
+.PHONY : sources/asm/ft_disassemble.c.s
 
-sources/ft_free_asm_struct.o: sources/ft_free_asm_struct.c.o
+sources/asm/ft_free_asm_struct.o: sources/asm/ft_free_asm_struct.c.o
 
-.PHONY : sources/ft_free_asm_struct.o
+.PHONY : sources/asm/ft_free_asm_struct.o
 
 # target to build an object file
-sources/ft_free_asm_struct.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.o
-.PHONY : sources/ft_free_asm_struct.c.o
+sources/asm/ft_free_asm_struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.o
+.PHONY : sources/asm/ft_free_asm_struct.c.o
 
-sources/ft_free_asm_struct.i: sources/ft_free_asm_struct.c.i
+sources/asm/ft_free_asm_struct.i: sources/asm/ft_free_asm_struct.c.i
 
-.PHONY : sources/ft_free_asm_struct.i
+.PHONY : sources/asm/ft_free_asm_struct.i
 
 # target to preprocess a source file
-sources/ft_free_asm_struct.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.i
-.PHONY : sources/ft_free_asm_struct.c.i
+sources/asm/ft_free_asm_struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.i
+.PHONY : sources/asm/ft_free_asm_struct.c.i
 
-sources/ft_free_asm_struct.s: sources/ft_free_asm_struct.c.s
+sources/asm/ft_free_asm_struct.s: sources/asm/ft_free_asm_struct.c.s
 
-.PHONY : sources/ft_free_asm_struct.s
+.PHONY : sources/asm/ft_free_asm_struct.s
 
 # target to generate assembly for a file
-sources/ft_free_asm_struct.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_free_asm_struct.c.s
-.PHONY : sources/ft_free_asm_struct.c.s
+sources/asm/ft_free_asm_struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_free_asm_struct.c.s
+.PHONY : sources/asm/ft_free_asm_struct.c.s
 
-sources/ft_init_asm_struct.o: sources/ft_init_asm_struct.c.o
+sources/asm/ft_init_asm_struct.o: sources/asm/ft_init_asm_struct.c.o
 
-.PHONY : sources/ft_init_asm_struct.o
+.PHONY : sources/asm/ft_init_asm_struct.o
 
 # target to build an object file
-sources/ft_init_asm_struct.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.o
-.PHONY : sources/ft_init_asm_struct.c.o
+sources/asm/ft_init_asm_struct.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.o
+.PHONY : sources/asm/ft_init_asm_struct.c.o
 
-sources/ft_init_asm_struct.i: sources/ft_init_asm_struct.c.i
+sources/asm/ft_init_asm_struct.i: sources/asm/ft_init_asm_struct.c.i
 
-.PHONY : sources/ft_init_asm_struct.i
+.PHONY : sources/asm/ft_init_asm_struct.i
 
 # target to preprocess a source file
-sources/ft_init_asm_struct.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.i
-.PHONY : sources/ft_init_asm_struct.c.i
+sources/asm/ft_init_asm_struct.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.i
+.PHONY : sources/asm/ft_init_asm_struct.c.i
 
-sources/ft_init_asm_struct.s: sources/ft_init_asm_struct.c.s
+sources/asm/ft_init_asm_struct.s: sources/asm/ft_init_asm_struct.c.s
 
-.PHONY : sources/ft_init_asm_struct.s
+.PHONY : sources/asm/ft_init_asm_struct.s
 
 # target to generate assembly for a file
-sources/ft_init_asm_struct.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_init_asm_struct.c.s
-.PHONY : sources/ft_init_asm_struct.c.s
+sources/asm/ft_init_asm_struct.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_init_asm_struct.c.s
+.PHONY : sources/asm/ft_init_asm_struct.c.s
 
-sources/ft_is_filename.o: sources/ft_is_filename.c.o
+sources/asm/ft_is_filename.o: sources/asm/ft_is_filename.c.o
 
-.PHONY : sources/ft_is_filename.o
+.PHONY : sources/asm/ft_is_filename.o
 
 # target to build an object file
-sources/ft_is_filename.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_is_filename.c.o
-.PHONY : sources/ft_is_filename.c.o
+sources/asm/ft_is_filename.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.o
+.PHONY : sources/asm/ft_is_filename.c.o
 
-sources/ft_is_filename.i: sources/ft_is_filename.c.i
+sources/asm/ft_is_filename.i: sources/asm/ft_is_filename.c.i
 
-.PHONY : sources/ft_is_filename.i
+.PHONY : sources/asm/ft_is_filename.i
 
 # target to preprocess a source file
-sources/ft_is_filename.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_is_filename.c.i
-.PHONY : sources/ft_is_filename.c.i
+sources/asm/ft_is_filename.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.i
+.PHONY : sources/asm/ft_is_filename.c.i
 
-sources/ft_is_filename.s: sources/ft_is_filename.c.s
+sources/asm/ft_is_filename.s: sources/asm/ft_is_filename.c.s
 
-.PHONY : sources/ft_is_filename.s
+.PHONY : sources/asm/ft_is_filename.s
 
 # target to generate assembly for a file
-sources/ft_is_filename.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_is_filename.c.s
-.PHONY : sources/ft_is_filename.c.s
+sources/asm/ft_is_filename.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_is_filename.c.s
+.PHONY : sources/asm/ft_is_filename.c.s
 
-sources/ft_print_help.o: sources/ft_print_help.c.o
+sources/asm/ft_print_help.o: sources/asm/ft_print_help.c.o
 
-.PHONY : sources/ft_print_help.o
+.PHONY : sources/asm/ft_print_help.o
 
 # target to build an object file
-sources/ft_print_help.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_print_help.c.o
-.PHONY : sources/ft_print_help.c.o
+sources/asm/ft_print_help.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_print_help.c.o
+.PHONY : sources/asm/ft_print_help.c.o
 
-sources/ft_print_help.i: sources/ft_print_help.c.i
+sources/asm/ft_print_help.i: sources/asm/ft_print_help.c.i
 
-.PHONY : sources/ft_print_help.i
+.PHONY : sources/asm/ft_print_help.i
 
 # target to preprocess a source file
-sources/ft_print_help.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_print_help.c.i
-.PHONY : sources/ft_print_help.c.i
+sources/asm/ft_print_help.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_print_help.c.i
+.PHONY : sources/asm/ft_print_help.c.i
 
-sources/ft_print_help.s: sources/ft_print_help.c.s
+sources/asm/ft_print_help.s: sources/asm/ft_print_help.c.s
 
-.PHONY : sources/ft_print_help.s
+.PHONY : sources/asm/ft_print_help.s
 
 # target to generate assembly for a file
-sources/ft_print_help.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/ft_print_help.c.s
-.PHONY : sources/ft_print_help.c.s
+sources/asm/ft_print_help.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/asm.dir/build.make CMakeFiles/asm.dir/sources/asm/ft_print_help.c.s
+.PHONY : sources/asm/ft_print_help.c.s
+
+sources/cw/corewar.o: sources/cw/corewar.c.o
+
+.PHONY : sources/cw/corewar.o
+
+# target to build an object file
+sources/cw/corewar.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/sources/cw/corewar.c.o
+.PHONY : sources/cw/corewar.c.o
+
+sources/cw/corewar.i: sources/cw/corewar.c.i
+
+.PHONY : sources/cw/corewar.i
+
+# target to preprocess a source file
+sources/cw/corewar.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/sources/cw/corewar.c.i
+.PHONY : sources/cw/corewar.c.i
+
+sources/cw/corewar.s: sources/cw/corewar.c.s
+
+.PHONY : sources/cw/corewar.s
+
+# target to generate assembly for a file
+sources/cw/corewar.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corewar.dir/build.make CMakeFiles/corewar.dir/sources/cw/corewar.c.s
+.PHONY : sources/cw/corewar.c.s
 
 # Help Target
 help:
@@ -450,36 +450,36 @@ help:
 	@echo "... asm"
 	@echo "... corewar"
 	@echo "... libft"
-	@echo "... sources/asm.o"
-	@echo "... sources/asm.i"
-	@echo "... sources/asm.s"
-	@echo "... sources/corewar.o"
-	@echo "... sources/corewar.i"
-	@echo "... sources/corewar.s"
-	@echo "... sources/ft_asm_error.o"
-	@echo "... sources/ft_asm_error.i"
-	@echo "... sources/ft_asm_error.s"
-	@echo "... sources/ft_assemble.o"
-	@echo "... sources/ft_assemble.i"
-	@echo "... sources/ft_assemble.s"
-	@echo "... sources/ft_check_read_argv_files.o"
-	@echo "... sources/ft_check_read_argv_files.i"
-	@echo "... sources/ft_check_read_argv_files.s"
-	@echo "... sources/ft_disassemble.o"
-	@echo "... sources/ft_disassemble.i"
-	@echo "... sources/ft_disassemble.s"
-	@echo "... sources/ft_free_asm_struct.o"
-	@echo "... sources/ft_free_asm_struct.i"
-	@echo "... sources/ft_free_asm_struct.s"
-	@echo "... sources/ft_init_asm_struct.o"
-	@echo "... sources/ft_init_asm_struct.i"
-	@echo "... sources/ft_init_asm_struct.s"
-	@echo "... sources/ft_is_filename.o"
-	@echo "... sources/ft_is_filename.i"
-	@echo "... sources/ft_is_filename.s"
-	@echo "... sources/ft_print_help.o"
-	@echo "... sources/ft_print_help.i"
-	@echo "... sources/ft_print_help.s"
+	@echo "... sources/asm/asm.o"
+	@echo "... sources/asm/asm.i"
+	@echo "... sources/asm/asm.s"
+	@echo "... sources/asm/ft_asm_error.o"
+	@echo "... sources/asm/ft_asm_error.i"
+	@echo "... sources/asm/ft_asm_error.s"
+	@echo "... sources/asm/ft_assemble.o"
+	@echo "... sources/asm/ft_assemble.i"
+	@echo "... sources/asm/ft_assemble.s"
+	@echo "... sources/asm/ft_check_read_argv_files.o"
+	@echo "... sources/asm/ft_check_read_argv_files.i"
+	@echo "... sources/asm/ft_check_read_argv_files.s"
+	@echo "... sources/asm/ft_disassemble.o"
+	@echo "... sources/asm/ft_disassemble.i"
+	@echo "... sources/asm/ft_disassemble.s"
+	@echo "... sources/asm/ft_free_asm_struct.o"
+	@echo "... sources/asm/ft_free_asm_struct.i"
+	@echo "... sources/asm/ft_free_asm_struct.s"
+	@echo "... sources/asm/ft_init_asm_struct.o"
+	@echo "... sources/asm/ft_init_asm_struct.i"
+	@echo "... sources/asm/ft_init_asm_struct.s"
+	@echo "... sources/asm/ft_is_filename.o"
+	@echo "... sources/asm/ft_is_filename.i"
+	@echo "... sources/asm/ft_is_filename.s"
+	@echo "... sources/asm/ft_print_help.o"
+	@echo "... sources/asm/ft_print_help.i"
+	@echo "... sources/asm/ft_print_help.s"
+	@echo "... sources/cw/corewar.o"
+	@echo "... sources/cw/corewar.i"
+	@echo "... sources/cw/corewar.s"
 .PHONY : help
 
 

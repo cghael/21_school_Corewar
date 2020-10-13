@@ -46,20 +46,27 @@ SRC_LIST_ASM = asm.c \
 				ft_is_filename.c \
 				ft_print_help.c \
 
-SRC_DIR = sources/
+SRC_DIR = ./sources/
+SRC_ASM_DIR = ${SRC_DIR}asm/
+SRC_CW_DIR = ${SRC_DIR}cw/
+
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
-SRC_CW = $(addprefix $(SRC_DIR), $(SRC_LIST_CW))
-SRC_ASM = $(addprefix $(SRC_DIR), $(SRC_LIST_ASM))
+SRC_CW = $(addprefix $(SRC_CW_DIR), $(SRC_LIST_CW))
+SRC_ASM = $(addprefix $(SRC_ASM_DIR), $(SRC_LIST_ASM))
 
 #----------------------------------objects--------------------------------------
 
-OBJ_DIR = objects/
+OBJ_DIR = ./objects/
+OBJ_CW_DIR = ${OBJ_DIR}cw/
+OBJ_ASM_DIR = ${OBJ_DIR}asm/
+
 OBJ_LIST = $(patsubst %.c, %.o, $(SRC_LIST))
 OBJ_LIST_CW = $(patsubst %.c, %.o, $(SRC_LIST_CW))
 OBJ_LIST_ASM = $(patsubst %.c, %.o, $(SRC_LIST_ASM))
+
 OBJ	= $(addprefix $(OBJ_DIR), $(OBJ_LIST))
-OBJ_CW	= $(addprefix $(OBJ_DIR), $(OBJ_LIST_CW))
-OBJ_ASM	= $(addprefix $(OBJ_DIR), $(OBJ_LIST_ASM))
+OBJ_CW	= $(addprefix $(OBJ_CW_DIR), $(OBJ_LIST_CW))
+OBJ_ASM	= $(addprefix $(OBJ_ASM_DIR), $(OBJ_LIST_ASM))
 
 # COLORS
 
@@ -72,23 +79,39 @@ END = \033[0m
 
 all: $(NAME_CW) $(NAME_ASM)
 
-$(NAME_CW): $(LIBFT) $(OBJ_DIR) $(OBJ) $(OBJ_CW)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ) $(OBJ_CW) -o $(NAME_CW)
-	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
-	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
+$(NAME_CW): $(LIBFT) $(OBJ_CW_DIR) $(OBJ_CW)
+	$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) -o $(NAME_CW)
+	echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
+	echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
 
-$(NAME_ASM): $(LIBFT) $(OBJ_DIR) $(OBJ) $(OBJ_ASM)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ) $(OBJ_ASM) -o $(NAME_ASM)
-	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
-	@echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
+$(NAME_ASM): $(LIBFT) $(OBJ_ASM_DIR) $(OBJ_ASM)
+	$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) -o $(NAME_ASM)
+	echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
+	echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
 
 $(OBJ_DIR):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GRN)$(OBJ_DIR) created$(END)"
+	mkdir -p $(OBJ_DIR)
+	echo "$(GRN)$(OBJ_DIR) created$(END)"
+
+$(OBJ_CW_DIR):
+	mkdir -p $(OBJ_CW_DIR)
+	echo "$(GRN)$(OBJ_CW DIR) created$(END)"
+
+$(OBJ_ASM_DIR):
+	mkdir -p $(OBJ_ASM_DIR)
+	echo "$(GRN)$(OBJ_ASM_DIR) created$(END)"
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c $(HEADERS)
-	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
-	@echo "$(GRN).$(END)\c"
+	$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	echo "$(GRN).$(END)\c"
+
+$(OBJ_CW_DIR)%.o : $(SRC_CW_DIR)%.c $(HEADERS)
+	$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	echo "$(GRN).$(END)\c"
+
+$(OBJ_ASM_DIR)%.o : $(SRC_ASM_DIR)%.c $(HEADERS)
+	$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	echo "$(GRN).$(END)\c"
 
 $(LIBFT):
 	@echo "$(GRN)Creating $(LIBFT)...$(END)"
