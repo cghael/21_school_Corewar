@@ -48,6 +48,9 @@
 # define IS_COR_FILE		1
 # define IS_BAD_FILE		2
 # define ERR_WRITE_BYTE		"Error in ft_write_bytecode_to_file()\n"
+# define MAGIC_LEN			4
+# define END_SIZE			4
+# define EXEC_SIZE			END_SIZE
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -55,6 +58,16 @@
 typedef struct				s_asm
 {
 	t_list					fd;
+	unsigned				row;
+	unsigned				column;
+	t_token					*tokens;
+	int32_t					exec_size;
+	int32_t					op_pos;
+	char					*name;
+	char					*comment;
+	char					*code;
+	int32_t					code_size;
+	t_label					*labels;
 }							t_asm;
 
 /*

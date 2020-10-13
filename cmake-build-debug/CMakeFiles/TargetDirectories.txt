@@ -1,7 +1,7 @@
-/Users/leathertube/corewar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/leathertube/corewar/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/leathertube/corewar/cmake-build-debug/CMakeFiles/asm.dir
-/Users/leathertube/corewar/cmake-build-debug/CMakeFiles/corewar.dir
-/Users/leathertube/corewar/cmake-build-debug/libft/CMakeFiles/rebuild_cache.dir
-/Users/leathertube/corewar/cmake-build-debug/libft/CMakeFiles/edit_cache.dir
-/Users/leathertube/corewar/cmake-build-debug/libft/CMakeFiles/libft.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles/asm.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/CMakeFiles/corewar.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/rebuild_cache.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/edit_cache.dir
+/Users/antongorobets/school21/21_school_Corewar/cmake-build-debug/libft/CMakeFiles/libft.dir
