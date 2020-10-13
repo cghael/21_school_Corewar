@@ -7,4 +7,7 @@
 void	ft_assemble(char *file)
 {
 	ft_printf("assemble! %s\n", file);
+	//valide file
+	//if valid -> parse file -> translate to binary file:
+	//create file with same name .cor
 }
