@@ -4,13 +4,16 @@
 
 #include "asm.h"
 
-void		ft_assemble(char *file, t_asm *asm_struct)
+void		ft_assemble(char *file, t_asm *asm_s)
 {
 	ft_printf("assemble! %s\n", file);
-	//valide file
+	//valide file in parsing -> if not valid -> print error, stop assembling
+	if (PARSING_OK == ft_parse_file(asm_s))
 	//if valid -> parse file -> translate to binary file:
-	ft_open_solution_file(file, asm_struct);
-//	ft_write_bytecode_to_file(asm_struct->fd_solution, asm_struct);//todo my penis is big
-	close(asm_struct->fd);//todo err management?
-	close(asm_struct->fd_solution);//todo err management?
+	{
+		ft_open_solution_file(file, asm_s);
+//	ft_write_bytecode_to_file(asm_s->fd_solution, asm_s);//todo my penis is big
+	}
+	close(asm_s->fd);//todo err management?
+	close(asm_s->fd_solution);//todo err management?
 }

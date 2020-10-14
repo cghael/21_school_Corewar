@@ -16,7 +16,7 @@ set(SOURCES_ASM
         sources/asm/ft_asm_error.c
         sources/asm/ft_free_asm_struct.c
         sources/asm/ft_check_read_argv_files.c sources/asm/ft_write_bytecode_to_file.c sources/asm/ft_open_solution_file.c
-		sources/asm/ft_int32_to_bytecode.c)
+		sources/asm/ft_int32_to_bytecode.c sources/asm/ft_parse_file.c)
 
 include_directories(includes)
 include_directories(libft/inc)

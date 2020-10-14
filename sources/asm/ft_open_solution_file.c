@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void			ft_open_solution_file(char *file, t_asm *asm_s)
+void		ft_open_solution_file(char *file, t_asm *asm_s)
 {
 	char	*dot;
 	char	*tmp_name;

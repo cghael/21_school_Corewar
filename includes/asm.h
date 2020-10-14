@@ -51,6 +51,9 @@
 # define MAGIC_LEN			4
 # define END_SIZE			4
 # define EXEC_SIZE			END_SIZE
+# define PARSING_ERR		-1
+# define PARSING_OK			0
+
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -88,5 +91,6 @@ void						ft_write_bytecode_to_file(int fd, \
 void						ft_int32_to_bytecode(char *data, int32_t pos, \
 													int32_t val, size_t size);
 void						ft_open_solution_file(char *file, t_asm *asm_s);
+int ft_parse_file(t_asm *asm_s);
 
 #endif
