@@ -54,6 +54,10 @@
 # define PARSING_ERR		-1
 # define PARSING_OK			0
 
+# define IS_NAME			2
+# define IS_COMMENT			3
+# define IS_NOT_COMMAND		-1
+
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -62,7 +66,8 @@ typedef struct				s_asm
 {
 	int						fd;
 	int						fd_solution;
-	unsigned				row;
+//	int						n_lines;
+	unsigned				line;
 	unsigned				column;
 //	t_token					*tokens;
 	int32_t					exec_size;
@@ -86,11 +91,16 @@ void						ft_assemble(char *file, t_asm *asm_s);
 void						ft_disassemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
+void						ft_asm_error_in_line(char *error_text, t_asm *asm_s);
 void						ft_write_bytecode_to_file(int fd, \
 															t_asm *asm_s);
 void						ft_int32_to_bytecode(char *data, int32_t pos, \
 													int32_t val, size_t size);
 void						ft_open_solution_file(char *file, t_asm *asm_s);
-int ft_parse_file(t_asm *asm_s);
+int							ft_parse_file(t_asm *asm_s);
+int							ft_is_whitespace(char c);
+void						ft_increase_line(t_asm *asm_s);
+int							ft_parse_name(char *line, t_asm *asm_s);
+int							ft_parse_comment(char *line, t_asm *asm_s);
 
 #endif
