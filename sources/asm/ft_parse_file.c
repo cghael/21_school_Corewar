@@ -40,7 +40,7 @@ int			ft_parse_file(t_asm *asm_s)
 	while ((res = ft_get_next_line(asm_s->fd, &line)) > 0)
 	{
 		ft_increase_line(asm_s);
-		ft_printf("readed line [%s] gnl return: %d\n", line, res);
+		ft_printf("readed line [%s] gnl return: %d\n", line, res);//todo del
 		command = ft_is_command(line, asm_s);
 		if (line)
 			free(line);
