@@ -47,7 +47,15 @@
 # define IS_S_FILE			0
 # define IS_COR_FILE		1
 # define IS_BAD_FILE		2
+
 # define ERR_WRITE_BYTE		"Error in ft_write_bytecode_to_file()\n"
+# define ERR_NAME_LEN		"Champion name too long (Max length 128)"
+# define ERR_DOUBLE_NAME	-1
+# define ERR_DOUBLE_COMMENT	-2
+# define ERR_UNKNOWN_CMD	-3
+# define ERR_NO_NAME		-4
+
+
 # define OK_WRITE_BYTE		0
 # define MAGIC_LEN			4
 # define END_SIZE			4
