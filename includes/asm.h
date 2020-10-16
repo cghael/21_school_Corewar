@@ -48,6 +48,7 @@
 # define IS_COR_FILE		1
 # define IS_BAD_FILE		2
 # define ERR_WRITE_BYTE		"Error in ft_write_bytecode_to_file()\n"
+# define OK_WRITE_BYTE		0
 # define MAGIC_LEN			4
 # define END_SIZE			4
 # define EXEC_SIZE			END_SIZE
@@ -92,8 +93,7 @@ void						ft_disassemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
 void						ft_asm_error_in_line(char *error_text, t_asm *asm_s);
-void						ft_write_bytecode_to_file(int fd, \
-															t_asm *asm_s);
+void						ft_write_bytecode_to_file(int fd, t_asm *asm_s);
 void						ft_int32_to_bytecode(char *data, int32_t pos, \
 													int32_t val, size_t size);
 void						ft_open_solution_file(char *file, t_asm *asm_s);
@@ -102,5 +102,6 @@ int							ft_is_whitespace(char c);
 void						ft_increase_line(t_asm *asm_s);
 int							ft_parse_name(char *line, t_asm *asm_s);
 int							ft_parse_comment(char *line, t_asm *asm_s);
+void						ft_print_error(char *error, char *func, int line);
 
 #endif

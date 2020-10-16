@@ -46,7 +46,8 @@ SRC_LIST_ASM = asm.c \
 				ft_is_filename.c \
 				ft_print_help.c \
 				ft_open_solution_file.c \
-				ft_int32_to_bytecode.c
+				ft_int32_to_bytecode.c \
+				ft_parse_file.c
 
 SRC_DIR = ./sources/
 SRC_ASM_DIR = ${SRC_DIR}asm/

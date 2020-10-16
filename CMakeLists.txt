@@ -19,7 +19,7 @@ set(SOURCES_ASM
 		sources/asm/ft_write_bytecode_to_file.c
 		sources/asm/ft_open_solution_file.c
 		sources/asm/ft_int32_to_bytecode.c
-		sources/asm/ft_parse_file.c sources/asm/ft_is_whitespace.c sources/asm/ft_increase_line.c sources/asm/ft_parse_name.c sources/asm/ft_parse_comment.c)
+		sources/asm/ft_parse_file.c sources/asm/ft_is_whitespace.c sources/asm/ft_increase_line.c sources/asm/ft_parse_name.c sources/asm/ft_parse_comment.c sources/asm/ft_print_error.c)
 
 include_directories(includes)
 include_directories(libft/inc)
