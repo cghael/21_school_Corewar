@@ -15,7 +15,7 @@
 int		main(int argc, char **argv)
 {
 
-	ft_printf("start asm! argc: %d\n", argc - 1);
+	ft_printf("start asm! argc: %d\n", argc - 1);//todo del
 	if (argc < 2)
 		return (ft_print_help());
 	// get all files from argv

@@ -55,6 +55,10 @@
 # define ERR_UNKNOWN_CMD	-3
 # define ERR_NO_NAME		-4
 
+# define NAME_START			1
+# define NAME_END			2
+# define CMT_START			3
+# define CMT_END			4
 
 # define OK_WRITE_BYTE		0
 # define MAGIC_LEN			4
@@ -71,13 +75,24 @@
 ** ------------------------------ Structures -----------------------------------
 */
 
+typedef struct				s_parse
+{
+	char					*line;
+	int						res;
+	unsigned int			n_column;
+	unsigned int			n_line;
+}							t_parse;
+
 typedef struct				s_asm
 {
 	int						fd;
 	int						fd_solution;
+	t_parse					*parse;
+	int						quotes;
+	int						err_num;
 //	int						n_lines;
-	unsigned				line;
-	unsigned				column;
+//	unsigned				line;
+//	unsigned				column;
 //	t_token					*tokens;
 	int32_t					exec_size;
 	int32_t					op_pos;
@@ -93,6 +108,7 @@ typedef struct				s_asm
 */
 
 t_asm						*ft_init_asm_struct();
+void						ft_parse_line(t_asm *asm_s);
 void						ft_free_asm_struct(t_asm *asm_s);
 int							ft_is_filename(char *filename, t_asm *asm_s);
 void						ft_check_read_argv_files(int argc, char **argv);
@@ -100,14 +116,14 @@ void						ft_assemble(char *file, t_asm *asm_s);
 void						ft_disassemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
-void						ft_asm_error_in_line(char *error_text, t_asm *asm_s);
+void						ft_asm_error_in_line(t_asm *asm_s);
 void						ft_write_bytecode_to_file(int fd, t_asm *asm_s);
 void						ft_int32_to_bytecode(char *data, int32_t pos, \
 													int32_t val, size_t size);
 void						ft_open_solution_file(char *file, t_asm *asm_s);
 int							ft_parse_file(t_asm *asm_s);
 int							ft_is_whitespace(char c);
-void						ft_increase_line(t_asm *asm_s);
+int							ft_line_data_processing(t_asm *asm_s);
 int							ft_parse_name(char *line, t_asm *asm_s);
 int							ft_parse_comment(char *line, t_asm *asm_s);
 void						ft_print_error(char *error, char *func, int line);

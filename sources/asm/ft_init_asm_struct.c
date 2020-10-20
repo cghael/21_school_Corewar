@@ -13,5 +13,16 @@ t_asm		*ft_init_asm_struct(void)
 		ft_dprintf(2, MEMALLOC_ERR);
 		ft_dprintf(2, " in ft_init asm_struct\n");
 	}
+	asm_struct->name = NULL;
+	asm_struct->comment = NULL;
+	asm_struct->code = NULL;
+	asm_struct->parse = ft_memalloc(sizeof(t_parse));
+	if (asm_struct->parse == NULL)
+	{
+		ft_dprintf(2, MEMALLOC_ERR);
+		ft_dprintf(2, " in ft_init asm_struct\n");
+	}
+	asm_struct->parse->line = NULL;
+	asm_struct->parse->n_column = 1;
 	return (asm_struct);
 }
