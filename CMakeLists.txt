@@ -23,7 +23,7 @@ set(SOURCES_ASM
 		sources/asm/ft_is_whitespace.c
 		sources/asm/ft_parse_name.c
 		sources/asm/ft_parse_comment.c
-		sources/asm/ft_print_error.c sources/asm/ft_parse_line.c sources/asm/ft_line_data_processing.c)
+		sources/asm/ft_print_error.c sources/asm/ft_parse_line.c sources/asm/ft_line_data_processing.c sources/asm/ft_start_check_name_or_comment.c sources/asm/ft_line_of_whitespaces_or_comment.c sources/asm/ft_check_quotes.c)
 
 include_directories(includes)
 include_directories(libft/inc)

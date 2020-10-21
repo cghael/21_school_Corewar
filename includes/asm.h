@@ -59,6 +59,7 @@
 # define NAME_END			2
 # define CMT_START			3
 # define CMT_END			4
+# define NAME_CMT_FOUND		5
 
 # define OK_WRITE_BYTE		0
 # define MAGIC_LEN			4
@@ -123,9 +124,12 @@ void						ft_int32_to_bytecode(char *data, int32_t pos, \
 void						ft_open_solution_file(char *file, t_asm *asm_s);
 int							ft_parse_file(t_asm *asm_s);
 int							ft_is_whitespace(char c);
+int							ft_line_of_whitespaces_or_comment(t_asm *asm_s);
 int							ft_line_data_processing(t_asm *asm_s);
+int							ft_start_check_name_or_comment(t_asm *asm_s);
 int							ft_parse_name(char *line, t_asm *asm_s);
 int							ft_parse_comment(char *line, t_asm *asm_s);
 void						ft_print_error(char *error, char *func, int line);
+int							ft_check_quotes(t_asm *asm_s, int *i, int flag);
 
 #endif
