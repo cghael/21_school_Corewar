@@ -4,7 +4,7 @@ project(corewar C)
 set(CMAKE_C_STANDARD 90)
 
 set(SOURCES_CW
-        sources/cw/corewar.c)
+        sources/cw/corewar.c includes/errors.h)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
@@ -21,14 +21,12 @@ set(SOURCES_ASM
 		sources/asm/ft_int32_to_bytecode.c
 		sources/asm/ft_parse_file.c
 		sources/asm/ft_is_whitespace.c
-		sources/asm/ft_parse_name.c
-		sources/asm/ft_parse_comment.c
 		sources/asm/ft_print_error.c
 		sources/asm/ft_parse_line.c
 		sources/asm/ft_line_data_processing.c
 		sources/asm/ft_start_check_name_or_comment.c
 		sources/asm/ft_line_of_whitespaces_or_comment.c
-		sources/asm/ft_check_quotes.c sources/asm/ft_open_quotes_processing.c sources/asm/ft_strjoin_n_free.c)
+		sources/asm/ft_check_quotes.c sources/asm/ft_open_quotes_processing.c sources/asm/ft_strjoin_n_free.c includes/errors.h)
 
 include_directories(includes)
 include_directories(libft/inc)
