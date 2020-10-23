@@ -1,2 +1,8 @@
-   0
-   .name "a"
+
+   .name "a"   #sdfg
+
+
+   .comment    "b
+
+        #penis
+   d"

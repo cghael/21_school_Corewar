@@ -3,15 +3,30 @@
 //
 #include "asm.h"
 
+static int		ft_check_name_comment_size(t_asm *asm_s)
+{
+	//todo check size
+	return (EXIT_SUCCESS);
+}
+
 static int		ft_check_name_or_comment(t_asm *asm_s)
 {
 	int		res;
+	int		pos;
 
+	pos = 0;
 	if (asm_s->quotes == NAME_START || asm_s->quotes == CMT_START)
-//		res = ft_continue_checking(asm_s);
-		res = 1;//todo del
+	{
+		if (EXIT_FAILURE == (res = ft_open_quotes_processing(asm_s, &pos)))
+			return (res);
+	}
 	else
-		res = ft_start_check_name_or_comment(asm_s);//miss whitespaces
+	{
+		if (EXIT_FAILURE == (res = ft_start_check_name_or_comment(asm_s)))
+			return (res);
+	}
+	if (asm_s->quotes == NAME_CMT_FOUND)
+		res = ft_check_name_comment_size(asm_s);
 	return (res);
 }
 

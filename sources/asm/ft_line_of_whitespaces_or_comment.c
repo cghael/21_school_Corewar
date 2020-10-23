@@ -3,11 +3,11 @@
 //
 #include "asm.h"
 
-int			ft_line_of_whitespaces_or_comment(t_asm *asm_s)
+int			ft_line_of_whitespaces_or_comment(t_asm *asm_s, int pos)
 {
 	int		i;
 
-	i = 0;
+	i = pos;
 	while (asm_s->parse->line[i])
 	{
 		if (asm_s->parse->line[i] == '#')
