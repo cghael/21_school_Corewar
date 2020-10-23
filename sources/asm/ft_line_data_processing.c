@@ -6,8 +6,8 @@
 static int		ft_check_name_comment_size(t_asm *asm_s)
 {
 	//todo check size
-	if (ft_strlen(asm_s.name) > PROG_NAME_LENGTH + 1 \
-			|| ft_strlen(asm_s.name) > COMMENT_LENGTH + 1)
+	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH + 1 \
+			|| ft_strlen(asm_s->comment) > COMMENT_LENGTH + 1)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }
