@@ -48,7 +48,7 @@ int			ft_open_quotes_processing(t_asm *asm_s, int *pos)
 	start = *pos;
 	while (asm_s->parse->line[*pos])
 	{
-		if (asm_s->parse->line[*pos] == '"')
+		if (asm_s->parse->line[*pos] == '"') //нашли закрывающую ковычку
 		{
 			if (EXIT_FAILURE == (res = ft_copy_len(asm_s, start, len, TRUE)))
 				return (res);
