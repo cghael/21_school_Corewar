@@ -86,6 +86,7 @@ typedef struct				s_parse
 	char					*line;
 	int						res;
 	t_pos					err;
+	int						err_num;
 }							t_parse;
 
 typedef struct				s_asm
@@ -94,7 +95,6 @@ typedef struct				s_asm
 	int						fd_solution;
 	t_parse					*parse;
 	int						quotes;
-	int						err_num;
 //	int						n_lines;
 //	unsigned				line;
 //	unsigned				column;

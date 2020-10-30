@@ -1,0 +1,21 @@
+
+Dumping annotated program on standard output
+ Writing output program to %s
+ -s -a Usage: %s [-a] <sourcefile.s>
+     -a : Instead of creating a .cor file, outputs a stripped and annotated version of the code to the standard output
+ .cor Can't read source file %s
+ Raw file dump:
+%s
+End of dump
+ live alive ld load st store add addition sub soustraction and et (and  r1, r2, r3   r1&r2 -> r3 or ou  (or   r1, r2, r3   r1 | r2 -> r3 xor ou (xor  r1, r2, r3   r1^r2 -> r3 zjmp jump if zero ldi load index sti store index fork lld long load lldi long load index lfork long fork aff register direct indirect unknown %c [TOKEN][%03d:%03d] %s "%s"
+ COMMAND_NAME COMMAND_COMMENT STRING LABEL INSTRUCTION REGISTER DIRECT DIRECT_LABEL INDIRECT INDIRECT_LABEL ENDLINE SEPARATOR END COMMENT WHITESPACE program header command_name_line command_comment_line code line rest instruction parameters parameter [TOKEN][%03d:%03d] %s
+ [INSTRUCTION] Opcode %d, Pcode 0b%s. (Expects %d params, pcode %d, idx %d)
+ 1 0 [PARAMETER] Type %s, Label ref %s, Value %d
+ NULL [LINE] Size %d, Pos %d
+ [PROG] size %u, name %s, comment %s
+ [NODE] %s
+ Lexical error at [%d:%d]
+ .name .comment abcdefghijklmnopqrstuvwxyz_012345678 9
+ B prog C header D header E cnl F ccl G code H code I line J line K rest L rest M instr N prms O prms P prm Q prm R prm S prm T prm Syntax error - unexpected end of input (Perhaps you forgot to end with a newline ?)
+ Syntax error at token  Invalid instruction at token  Invalid parameter %d type %s for instruction %s
+ Invalid parameter count for instruction %s
