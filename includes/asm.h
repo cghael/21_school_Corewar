@@ -100,7 +100,7 @@ typedef struct				s_asm
 //	unsigned				column;
 //	t_token					*tokens;
 	int32_t					exec_size;
-	int32_t					op_pos;
+	int32_t					pos;
 	char					*name;
 	char					*comment;
 	char					*code;
@@ -136,5 +136,6 @@ void						ft_print_error(char *error, char *func, int line);
 int							ft_check_quotes(t_asm *asm_s, int *i);
 int							ft_open_quotes_processing(t_asm *asm_s, int *i);
 char						*ft_strjoin_n_free(char *s1, char *s2);
+int							ft_check_operation(t_asm *asm_s);
 
 #endif

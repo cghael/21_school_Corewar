@@ -5,17 +5,19 @@
 
 static int		ft_check_name_comment_size(t_asm *asm_s)
 {
-	//todo check size
 	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH + 1 \
-			|| ft_strlen(asm_s->comment) > COMMENT_LENGTH + 1)
+	|| ft_strlen(asm_s->comment) > COMMENT_LENGTH + 1)
+	{
+		//todo error add
 		return (EXIT_FAILURE);
+	}
 	return (EXIT_SUCCESS);
 }
 
 static int		ft_check_name_or_comment(t_asm *asm_s)
 {
-	int		res;
-	int		pos;
+	int			res;
+	int			pos;
 
 	pos = 0;
 	if (asm_s->quotes == NAME_START || asm_s->quotes == CMT_START)
@@ -33,15 +35,9 @@ static int		ft_check_name_or_comment(t_asm *asm_s)
 	return (res);
 }
 
-static int		ft_check_operation(t_asm *asm_s)
-{
-	//miss whitespaces
-	return (EXIT_SUCCESS);
-}
-
 int				ft_line_data_processing(t_asm *asm_s)
 {
-	int		res;
+	int			res;
 
 	if (asm_s->quotes != NAME_CMT_FOUND)
 		res = ft_check_name_or_comment(asm_s);
