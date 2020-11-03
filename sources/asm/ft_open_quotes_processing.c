@@ -3,13 +3,13 @@
 //
 #include "asm.h"
 
-static void	ft_update_quotes_status(t_asm *asm_s, int is_quotes)
+static void	ft_update_quotes_status(t_asm *asm_s)
 {
-		if (asm_s->quotes == NAME_START && asm_s->comment \
-		|| asm_s->quotes == CMT_START && asm_s->name)
-			asm_s->quotes = NAME_CMT_FOUND;
-		else
-			asm_s->quotes++;
+	if (asm_s->quotes == NAME_START && asm_s->comment \
+	|| asm_s->quotes == CMT_START && asm_s->name)
+		asm_s->quotes = NAME_CMT_FOUND;
+	else
+		asm_s->quotes++;
 }
 
 static int	ft_copy_len(t_asm *asm_s, int start, int len, int is_quotes)
@@ -34,25 +34,26 @@ static int	ft_copy_len(t_asm *asm_s, int start, int len, int is_quotes)
 		return (EXIT_FAILURE);
 	}
 	if (is_quotes == TRUE)
-		ft_update_quotes_status(asm_s, is_quotes);
+		ft_update_quotes_status(asm_s);
 	return (EXIT_SUCCESS);
 }
 
-int			ft_open_quotes_processing(t_asm *asm_s, int *pos)
+int			ft_open_quotes_processing(t_asm *asm_s)
 {
 	int		start;
 	int		len;
 	int		res;
 
 	len = 0;
-	start = *pos;
-	while (asm_s->parse->line[*pos])
+	start = asm_s->pos;
+	while (asm_s->parse->line[asm_s->pos])
 	{
-		if (asm_s->parse->line[*pos] == '"') //нашли закрывающую ковычку
+		if (asm_s->parse->line[asm_s->pos] == '"') //нашли закрывающую ковычку
 		{
 			if (EXIT_FAILURE == (res = ft_copy_len(asm_s, start, len, TRUE)))
 				return (res);
-			if (EXIT_FAILURE == ft_line_of_whitespaces_or_comment(asm_s, *pos + 1))
+			asm_s->pos++;
+			if (EXIT_FAILURE == ft_line_of_whitespaces_or_comment(asm_s))
 			{
 				//todo add error
 				return (EXIT_FAILURE);
@@ -60,7 +61,7 @@ int			ft_open_quotes_processing(t_asm *asm_s, int *pos)
 			return (res);
 		}
 		len++;
-		(*pos)++;
+		asm_s->pos++;
 	}
 	res = ft_copy_len(asm_s, start, len, FALSE);
 	return (res);

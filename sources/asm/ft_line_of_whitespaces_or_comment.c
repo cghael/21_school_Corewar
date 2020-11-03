@@ -3,18 +3,15 @@
 //
 #include "asm.h"
 
-int			ft_line_of_whitespaces_or_comment(t_asm *asm_s, int pos)
+int			ft_line_of_whitespaces_or_comment(t_asm *asm_s)
 {
-	int		i;
-
-	i = pos;
-	while (asm_s->parse->line[i])
+	while (asm_s->parse->line[asm_s->pos])
 	{
-		if (asm_s->parse->line[i] == COMMENT_CHAR)//todo alt comment char
+		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR)//todo alt comment char
 			return (EXIT_SUCCESS);
-		if (ft_is_whitespace(asm_s->parse->line[i]))
+		if (ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 			return (EXIT_FAILURE);
-		i++;
+		asm_s->pos++;
 	}
 	return (EXIT_SUCCESS);
 }

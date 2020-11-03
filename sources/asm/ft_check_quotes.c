@@ -4,16 +4,16 @@
 
 #include "asm.h"
 
-int			ft_check_quotes(t_asm *asm_s, int *pos)
+int			ft_check_quotes(t_asm *asm_s)
 {
-	while (asm_s->parse->line[*pos])
+	while (asm_s->parse->line[asm_s->pos])
 	{
-		if (EXIT_SUCCESS == ft_is_whitespace(asm_s->parse->line[*pos]))
-			(*pos)++;
-		else if (asm_s->parse->line[*pos] == '"')
+		if (EXIT_SUCCESS == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
+			asm_s->pos++;
+		else if (asm_s->parse->line[asm_s->pos] == '"')
 		{
-			*pos += 1;
-			return (ft_open_quotes_processing(asm_s, pos));
+			asm_s->pos++;
+			return (ft_open_quotes_processing(asm_s));
 		}
 		else
 		{

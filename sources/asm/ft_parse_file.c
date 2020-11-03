@@ -6,14 +6,12 @@
 
 int			ft_parse_file(t_asm *asm_s)
 {
-	int		processing_res;
-
 	ft_parse_line(asm_s);
 	while (asm_s->parse->res > 0)
 	{
+		asm_s->parse->free_line = FALSE;
 		ft_printf("Read line [%s] gnl return: %d\n", asm_s->parse->line, asm_s->parse->res);//todo del
-		processing_res = ft_line_data_processing(asm_s);
-		if (processing_res == EXIT_FAILURE)
+		if (EXIT_FAILURE == ft_line_data_processing(asm_s))
 		{
 			ft_asm_error_in_line(asm_s);
 			return (PARSING_ERR);
@@ -24,6 +22,11 @@ int			ft_parse_file(t_asm *asm_s)
 			asm_s->parse->line = NULL;
 		}
 		ft_parse_line(asm_s);
+	}
+	if (asm_s->parse->res == 0 && asm_s->parse->free_line == FALSE)
+	{
+		ft_asm_error_in_line(asm_s); //todo forget newline
+		return (PARSING_ERR);
 	}
 	if (asm_s->parse->res < 0)
 		return (PARSING_ERR);

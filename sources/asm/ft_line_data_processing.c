@@ -17,12 +17,10 @@ static int		ft_check_name_comment_size(t_asm *asm_s)
 static int		ft_check_name_or_comment(t_asm *asm_s)
 {
 	int			res;
-	int			pos;
 
-	pos = 0;
 	if (asm_s->quotes == NAME_START || asm_s->quotes == CMT_START)
 	{
-		if (EXIT_FAILURE == (res = ft_open_quotes_processing(asm_s, &pos)))
+		if (EXIT_FAILURE == (res = ft_open_quotes_processing(asm_s)))
 			return (res);
 	}
 	else

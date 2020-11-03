@@ -75,18 +75,15 @@
 /*
 ** ------------------------------ Structures -----------------------------------
 */
-typedef struct				s_pos
-{
-	int						column;
-	int						line;
-}							t_pos;
 
 typedef struct				s_parse
 {
 	char					*line;
 	int						res;
-	t_pos					err;
+	int						n_line;
 	int						err_num;
+	int						free_line;
+
 }							t_parse;
 
 typedef struct				s_asm
@@ -128,13 +125,12 @@ void						ft_int32_to_bytecode(char *data, int32_t pos, \
 void						ft_open_solution_file(char *file, t_asm *asm_s);
 int							ft_parse_file(t_asm *asm_s);
 int							ft_is_whitespace(char c);
-int							ft_line_of_whitespaces_or_comment(t_asm *asm_s, \
-																	int pos);
+int							ft_line_of_whitespaces_or_comment(t_asm *asm_s);
 int							ft_line_data_processing(t_asm *asm_s);
 int							ft_start_check_name_or_comment(t_asm *asm_s);
 void						ft_print_error(char *error, char *func, int line);
-int							ft_check_quotes(t_asm *asm_s, int *i);
-int							ft_open_quotes_processing(t_asm *asm_s, int *i);
+int							ft_check_quotes(t_asm *asm_s);
+int							ft_open_quotes_processing(t_asm *asm_s);
 char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
 
