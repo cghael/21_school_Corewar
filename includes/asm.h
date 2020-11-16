@@ -76,15 +76,40 @@
 ** ------------------------------ Structures -----------------------------------
 */
 
+typedef enum
+{
+	NAME,
+	COMMENT,
+	LABEL,
+	OPERATOR,
+	REGISTER,
+	DIRECT,
+	DIRECT_LABEL,
+	INDIRECT,
+	INDIRECT_LABEL,
+	SEPARATOR,
+	NEW_LINE,
+	END
+}	t_typo;
+
 typedef struct				s_parse
 {
 	char					*line;
 	int						res;
 	int						n_line;
 	int						err_num;
-	int						free_line;
-
+	int						end;
 }							t_parse;
+
+typedef struct				s_token
+{
+	char					*content;
+	int						typo;
+	int						n_line;
+	int						pos;
+	struct s_token			*next;
+	struct s_token			*last;
+}							t_token;
 
 typedef struct				s_asm
 {
@@ -95,7 +120,7 @@ typedef struct				s_asm
 //	int						n_lines;
 //	unsigned				line;
 //	unsigned				column;
-//	t_token					*tokens;
+	t_token					*tokens;
 	int32_t					exec_size;
 	int32_t					pos;
 	char					*name;
@@ -133,5 +158,6 @@ int							ft_check_quotes(t_asm *asm_s);
 int							ft_open_quotes_processing(t_asm *asm_s);
 char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
+int							ft_init_n_add_token(t_asm *asm_s);
 
 #endif

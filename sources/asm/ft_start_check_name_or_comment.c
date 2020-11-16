@@ -48,7 +48,6 @@ int			ft_start_check_name_or_comment(t_asm *asm_s)
 
 	if (EXIT_SUCCESS == ft_line_of_whitespaces_or_comment(asm_s))
 	{
-		asm_s->parse->free_line = TRUE;
 		return (EXIT_SUCCESS);
 	}
 	if (EXIT_SUCCESS == ft_find_name_in_line(asm_s))
