@@ -10,8 +10,8 @@ void	ft_asm_error_in_line(t_asm *asm_s)
 
 	if (asm_s != NULL)
 	{
-		ft_dprintf(2, "ERROR_IN_LINE [%d, %d]:\n"
-			"\e[1;34m%*cへ(ಠ╭╮ಠ)< fix it!\e[m\n%s\n",
+		ft_dprintf(2, "ERROR_IN_LINE \e[1;33m[%d, %d]:\e[m\n"
+			"\e[1;34m%*cへ(ಠ╭╮ಠ)< fix it!\e[m\n\e[1;13m%s\n",
 			asm_s->parse->n_line, asm_s->pos, asm_s->pos + 1,
 			'V', asm_s->parse->line);
 		error_type = asm_s->parse->err_num;
