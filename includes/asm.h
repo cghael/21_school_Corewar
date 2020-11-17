@@ -76,7 +76,7 @@
 ** ------------------------------ Structures -----------------------------------
 */
 
-typedef enum
+typedef						enum
 {
 	NAME,
 	COMMENT,
@@ -90,7 +90,7 @@ typedef enum
 	SEPARATOR,
 	NEW_LINE,
 	END
-}	t_typo;
+}							t_typo;
 
 typedef struct				s_parse
 {

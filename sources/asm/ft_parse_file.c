@@ -13,8 +13,8 @@ static int	ft_parsing_processing(t_asm *asm_s)
 		ft_printf("Read line [%s] gnl return: %d\n", asm_s->parse->line, asm_s->parse->res);//todo del
 		if (EXIT_FAILURE == ft_line_data_processing(asm_s))
 		{
+			ft_printf("Error in ft_parsing_processing()\n");//todo del
 			ft_asm_error_in_line(asm_s);
-			ft_printf("Error ft_asm_error_in_line() 17\n");//todo del
 			return (PARSING_ERR);
 		}
 		if (asm_s->parse->line)
@@ -42,7 +42,7 @@ int			ft_parse_file(t_asm *asm_s)
 	&& asm_s->parse->is_whitespace == FALSE)
 	{
 		ft_asm_error_in_line(asm_s); //todo forget newline
-		ft_printf("Error ft_asm_error_in_line() 44\n");//todo del
+		ft_printf("Error in ft_parse_file()\n");//todo del
 		return (PARSING_ERR);
 	}
 	return (PARSING_OK);

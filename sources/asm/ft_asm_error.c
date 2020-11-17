@@ -10,6 +10,10 @@ void	ft_asm_error_in_line(t_asm *asm_s)
 
 	if (asm_s != NULL)
 	{
+		ft_dprintf(2, "ERROR_IN_LINE [%d, %d]:\n"
+			"\e[1;34m%*c\e[m\n%s\n",
+			asm_s->parse->n_line, asm_s->pos, ft_strlen(asm_s->parse->line),
+			'v', asm_s->parse->line);
 		error_type = asm_s->parse->err_num;
 		//todo processing err_num
 //		if (error_type == )
@@ -21,7 +25,7 @@ void	ft_asm_error_in_line(t_asm *asm_s)
 
 void	ft_asm_error(char *error_text, t_asm *asm_s)
 {
-	ft_dprintf(2, "%s\n", error_text);
+	ft_dprintf(2, "ERROR ______________ %s\n", error_text);
 	if (asm_s)
 		ft_free_asm_struct(asm_s);
 	asm_s = NULL;
