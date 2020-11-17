@@ -4,17 +4,17 @@
 
 #include "asm.h"
 
-int			ft_parse_file(t_asm *asm_s)
+static int	ft_parsing_processing(t_asm *asm_s)
 {
-	ft_count_lines(asm_s);
 	ft_parse_line(asm_s);
 	while (asm_s->parse->res > 0)
 	{
+		asm_s->parse->is_whitespace = FALSE;
 		ft_printf("Read line [%s] gnl return: %d\n", asm_s->parse->line, asm_s->parse->res);//todo del
 		if (EXIT_FAILURE == ft_line_data_processing(asm_s))
 		{
 			ft_asm_error_in_line(asm_s);
-			ft_printf("Error ft_asm_error_in_line() 16\n");//todo del
+			ft_printf("Error ft_asm_error_in_line() 17\n");//todo del
 			return (PARSING_ERR);
 		}
 		if (asm_s->parse->line)
@@ -24,13 +24,26 @@ int			ft_parse_file(t_asm *asm_s)
 		}
 		ft_parse_line(asm_s);
 	}
-	if (asm_s->parse->res == 0) //&& asm_s->parse->free_line == FALSE)
-	{
-		ft_asm_error_in_line(asm_s); //todo forget newline
-		ft_printf("Error ft_asm_error_in_line() 29\n");//todo del
-		return (PARSING_ERR);
-	}
 	if (asm_s->parse->res < 0)
 		return (PARSING_ERR);
+	return (PARSING_OK);
+}
+
+int			ft_parse_file(t_asm *asm_s)
+{
+	if (EXIT_FAILURE == ft_check_end_newline(asm_s))
+		return (PARSING_ERR);
+	if (PARSING_ERR == ft_parsing_processing(asm_s))
+		return (PARSING_ERR);
+
+	//check end newline
+	if (asm_s->parse->res == 0 \
+	&& asm_s->parse->endline == TRUE \
+	&& asm_s->parse->is_whitespace == FALSE)
+	{
+		ft_asm_error_in_line(asm_s); //todo forget newline
+		ft_printf("Error ft_asm_error_in_line() 44\n");//todo del
+		return (PARSING_ERR);
+	}
 	return (PARSING_OK);
 }

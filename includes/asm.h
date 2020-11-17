@@ -98,7 +98,8 @@ typedef struct				s_parse
 	int						res;
 	int						n_line;
 	int						err_num;
-	int						end;
+	int						endline;
+	int						is_whitespace;
 }							t_parse;
 
 typedef struct				s_token
@@ -159,5 +160,6 @@ int							ft_open_quotes_processing(t_asm *asm_s);
 char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
 int							ft_init_n_add_token(t_asm *asm_s);
+int 						ft_check_end_newline(t_asm *asm_s);
 
 #endif

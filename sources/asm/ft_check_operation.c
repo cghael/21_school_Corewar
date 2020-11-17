@@ -7,7 +7,7 @@ int		ft_check_operation(t_asm *asm_s)
 {
 	if (EXIT_SUCCESS == ft_line_of_whitespaces_or_comment(asm_s))
 	{
-//		asm_s->parse->free_line = TRUE;
+		asm_s->parse->is_whitespace = TRUE;
 		return (EXIT_SUCCESS);
 	}
 	asm_s->pos = 0;

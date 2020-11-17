@@ -1,4 +1,3 @@
-   .name  "a"   #sdfg
-   .comment    "b"
+.name "a"
+.comment "b"
 live %1
-      #com

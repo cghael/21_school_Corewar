@@ -16,21 +16,20 @@ static int		ft_check_name_comment_size(t_asm *asm_s)
 
 static int		ft_check_name_or_comment(t_asm *asm_s)
 {
-	int			res;
-
 	if (asm_s->quotes == NAME_START || asm_s->quotes == CMT_START)
 	{
-		if (EXIT_FAILURE == (res = ft_open_quotes_processing(asm_s)))
-			return (res);
+		if (EXIT_FAILURE == ft_open_quotes_processing(asm_s))
+			return (EXIT_FAILURE);
 	}
 	else
 	{
-		if (EXIT_FAILURE == (res = ft_start_check_name_or_comment(asm_s)))
-			return (res);
+		if (EXIT_FAILURE == ft_start_check_name_or_comment(asm_s))
+			return (EXIT_FAILURE);
 	}
-	if (asm_s->quotes == NAME_CMT_FOUND)
-		res = ft_check_name_comment_size(asm_s);
-	return (res);
+	if (asm_s->quotes == NAME_CMT_FOUND \
+	&& EXIT_FAILURE == ft_check_name_comment_size(asm_s))
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }
 
 int				ft_line_data_processing(t_asm *asm_s)
