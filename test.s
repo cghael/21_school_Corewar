@@ -1,4 +1,5 @@
 .name "a"
+     .penis
 .comment "b"
 pipi: st r3, :pupa
 pupa: live %1

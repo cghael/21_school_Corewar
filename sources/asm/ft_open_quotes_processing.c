@@ -5,8 +5,8 @@
 
 static void	ft_update_quotes_status(t_asm *asm_s)
 {
-	if (asm_s->quotes == NAME_START && asm_s->comment \
-	|| asm_s->quotes == CMT_START && asm_s->name)
+	if ((asm_s->quotes == NAME_START && asm_s->comment) \
+	|| (asm_s->quotes == CMT_START && asm_s->name))
 		asm_s->quotes = NAME_CMT_FOUND;
 	else
 		asm_s->quotes++;

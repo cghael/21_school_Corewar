@@ -3,10 +3,33 @@
 //
 #include "asm.h"
 
-int		ft_check_operation(t_asm *asm_s)
+static int		ft_label_processing_n_pos_update(t_asm *asm_s)
 {
-	char *colon;
+	char	*colon;
+	int		label;
+	int		pos;
 
+	label = FALSE;
+	pos = asm_s->pos;
+	while ((colon = ft_strchr(&asm_s->parse->line[pos], LABEL_CHAR)) != NULL)
+	{
+		if (EXIT_SUCCESS == ft_is_label_in_line(asm_s, colon) && label == FALSE)
+		{
+			ft_label_saving_n_pos_update(asm_s);
+			label = TRUE;
+			pos = asm_s->pos;
+		}
+		else if (EXIT_FAILURE == ft_is_mention(asm_s, colon, &pos))
+		{
+			//todo ERROR MANAGE
+			return (EXIT_FAILURE);
+		}
+	}
+	return (EXIT_SUCCESS);
+}
+
+int				ft_check_operation(t_asm *asm_s)
+{
 	if (EXIT_SUCCESS == ft_line_of_whitespaces_or_comment(asm_s))
 	{
 		asm_s->parse->is_whitespace = TRUE;
@@ -14,20 +37,19 @@ int		ft_check_operation(t_asm *asm_s)
 	}
 	while (asm_s->parse->line[asm_s->pos])
 	{
-		//is ':' in line and is it label
-		if ((colon = ft_strchr(&asm_s->parse->line[asm_s->pos], LABEL_CHAR)))
+		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR) //todo add alt comment
+			return (EXIT_SUCCESS);
+		else if (EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 		{
-			//is it label and is it single //todo single
-			if (EXIT_SUCCESS == ft_is_label_in_line(asm_s, colon))
-				ft_label_processing_n_pos_update(asm_s);
-			//is it mention
-			else if (EXIT_FAILURE == ft_is_mention(asm_s, colon))
+			//is ':' in line and is it label or mention
+			if (EXIT_FAILURE == ft_label_processing_n_pos_update(asm_s))
+				return (EXIT_FAILURE);
+			//is it operation and is it single
+			if (EXIT_FAILURE == ft_operation_processing_n_pos_update(asm_s))
 				return (EXIT_FAILURE);
 		}
-		//is it operation and is it single
-		else if (EXIT_FAILURE == ft_operation_processing_n_pos_update(asm_s))
-			return (EXIT_FAILURE);
+		else
+			asm_s->pos++;
 	}
-	//is operation
 	return (EXIT_SUCCESS);
 }

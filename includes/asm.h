@@ -163,8 +163,8 @@ int							ft_init_n_add_token(t_asm *asm_s);
 int 						ft_check_end_newline(t_asm *asm_s);
 //int							ft_is_label_char(char ch);
 int							ft_is_label_in_line(t_asm *asm_s, const char *colon);
-int							ft_label_processing_n_pos_update(t_asm *asm_s);
-int							ft_is_mention(t_asm *asm_s, const char *colon);
+int							ft_label_saving_n_pos_update(t_asm *asm_s);
+int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 
 #endif
