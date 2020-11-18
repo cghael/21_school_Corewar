@@ -24,6 +24,7 @@ t_asm		*ft_init_asm_struct(void)
 	}
 	asm_struct->parse->line = NULL;
 	asm_struct->tokens = NULL;
-//	asm_struct->parse->end = FALSE;
+	asm_struct->labels = NULL;
+	asm_struct->parse->err_num = COMMON;
 	return (asm_struct);
 }

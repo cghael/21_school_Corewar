@@ -1,4 +1,5 @@
 .name "a"
 .comment "b"
-pipa: popo: ld %5, r6
+pipa:
+pipa: ld %5, r6
 

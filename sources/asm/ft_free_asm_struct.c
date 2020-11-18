@@ -4,6 +4,44 @@
 
 #include "asm.h"
 
+static void		ft_free_labels(t_asm *asm_struct)
+{
+	t_label		*tmp;
+	t_mention	*tmp_m;
+
+	tmp = asm_struct->labels;
+	while (tmp)
+	{
+		asm_struct->labels = asm_struct->labels->next;
+		tmp_m = tmp->mention;
+		while (tmp_m)
+		{
+			tmp->mention = tmp->mention->next;
+			free(tmp_m);
+			tmp_m = NULL;
+			tmp_m = tmp->mention;
+		}
+		free(tmp);
+		tmp = NULL;
+		tmp = asm_struct->labels;
+	}
+}
+
+static void		ft_free_tokens(t_asm *asm_struct)
+{
+	t_token	*tmp;
+
+	tmp = asm_struct->tokens;
+	while (tmp)
+	{
+		asm_struct->tokens = asm_struct->tokens->next;
+		free((void*)tmp->content);
+		free(tmp);
+		tmp = NULL;
+		tmp = asm_struct->tokens;
+	}
+}
+
 void	ft_free_asm_struct(t_asm *asm_struct)
 {
 	ft_dprintf(2, "free asm_struct\n");
@@ -25,6 +63,8 @@ void	ft_free_asm_struct(t_asm *asm_struct)
 			free(asm_struct->comment);
 		if (asm_struct->code)
 			free(asm_struct->code);
+		ft_free_labels(asm_struct);
+		ft_free_tokens(asm_struct);
 	}
 	free(asm_struct);
 }

@@ -113,6 +113,16 @@ typedef struct				s_token
 	struct s_token			*last;
 }							t_token;
 
+typedef struct			s_mention
+{
+	unsigned			row;
+	unsigned			column;
+	int32_t				pos;
+	int32_t				op_pos;
+	size_t				size;
+	struct s_mention	*next;
+}						t_mention;
+
 typedef struct				s_label
 {
 	const char				*name;
@@ -172,9 +182,10 @@ int							ft_check_operation(t_asm *asm_s);
 int							ft_init_n_add_token(t_asm *asm_s, t_typo typo, char *content);
 int 						ft_check_end_newline(t_asm *asm_s);
 //int							ft_is_label_char(char ch);
-int							ft_is_label_in_line(t_asm *asm_s, const char *colon);
+//int							ft_is_label_in_line(t_asm *asm_s, const char *colon);
 int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
-int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
+//int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
+int							ft_label_processing_n_pos_update(t_asm *asm_s);
 
 #endif
