@@ -12,6 +12,7 @@ int			ft_check_end_newline(t_asm *asm_s)
 		return (EXIT_FAILURE);
 	if (read(asm_s->fd, buff, 1) <= 0)
 		return (EXIT_FAILURE);
+	buff[1] = '\0';
 	res = ft_strequ(buff, "\n");
 	if (lseek(asm_s->fd, 0, SEEK_SET) < 0)
 		return (EXIT_FAILURE);

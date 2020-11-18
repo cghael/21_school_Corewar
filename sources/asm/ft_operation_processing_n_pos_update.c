@@ -5,5 +5,5 @@
 
 int					ft_operation_processing_n_pos_update(t_asm *asm_s)
 {
-	return (1);
+	return (EXIT_SUCCESS);
 }

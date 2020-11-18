@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include "libft.h"
 # include "op.h"
+# include "errors.h"
 
 /*
 ** ALLOWED funcs:
@@ -97,20 +98,29 @@ typedef struct				s_parse
 	char					*line;
 	int						res;
 	int						n_line;
-	int						err_num;
+	t_errors				err_num;
 	int						endline;
 	int						is_whitespace;
 }							t_parse;
 
 typedef struct				s_token
 {
-	char					*content;
-	int						typo;
+	const char				*content;
+	t_typo					typo;
 	int						n_line;
 	int						pos;
 	struct s_token			*next;
 	struct s_token			*last;
 }							t_token;
+
+typedef struct				s_label
+{
+	const char				*name;
+	int						byte_pos;
+	struct s_mention		*mention;
+	struct s_label			*next;
+	struct s_label			*last;
+}							t_label;
 
 typedef struct				s_asm
 {
@@ -128,7 +138,7 @@ typedef struct				s_asm
 	char					*comment;
 	char					*code;
 	int32_t					code_size;
-//	t_label					*labels;
+	t_label					*labels;
 }							t_asm;
 
 /*
@@ -159,11 +169,11 @@ int							ft_check_quotes(t_asm *asm_s);
 int							ft_open_quotes_processing(t_asm *asm_s);
 char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
-int							ft_init_n_add_token(t_asm *asm_s);
+int							ft_init_n_add_token(t_asm *asm_s, t_typo typo, char *content);
 int 						ft_check_end_newline(t_asm *asm_s);
 //int							ft_is_label_char(char ch);
 int							ft_is_label_in_line(t_asm *asm_s, const char *colon);
-int							ft_label_saving_n_pos_update(t_asm *asm_s);
+int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
 int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 
