@@ -7,7 +7,8 @@ set(SOURCES_CW
         sources/cw/corewar.c
 		sources/cw/init.c
 		sources/cw/operation.c
-		sources/cw/print.c)
+		sources/cw/print.c
+		sources/cw/parsing_input.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
