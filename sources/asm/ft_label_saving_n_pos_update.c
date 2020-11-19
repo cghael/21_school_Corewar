@@ -14,6 +14,7 @@ static int	ft_init_n_add_label(t_asm *asm_s, const char *name)
 	tmp->next = NULL;
 	tmp->mention = NULL;
 	tmp->name = name;
+	tmp->byte_pos = asm_s->exec_size;
 	begin = asm_s->labels;
 	if (begin == NULL)
 		asm_s->labels = tmp;
@@ -23,7 +24,7 @@ static int	ft_init_n_add_label(t_asm *asm_s, const char *name)
 			begin = begin->next;
 		begin->next = tmp;
 	}
-	asm_s->labels->last = tmp;
+//	asm_s->labels->last = tmp;
 	return (EXIT_SUCCESS);
 }
 

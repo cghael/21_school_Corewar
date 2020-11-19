@@ -1,5 +1,4 @@
-.name "a"
-.comment "b"
-pipa:
-pipa: ld %5, r6
-
+.name       "Batman"
+.comment    "This city needs me"
+live %0
+r4

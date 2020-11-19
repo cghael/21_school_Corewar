@@ -93,6 +93,25 @@ typedef						enum
 	END
 }							t_typo;
 
+static char				*g_op[] = {
+		"live",
+		"ld",
+		"st",
+		"add",
+		"sub",
+		"and",
+		"or",
+		"xor",
+		"zjmp",
+		"ldi",
+		"sti",
+		"fork",
+		"lld",
+		"lldi",
+		"lfork",
+		"aff"
+};
+
 typedef struct				s_parse
 {
 	char					*line;
@@ -113,23 +132,23 @@ typedef struct				s_token
 	struct s_token			*last;
 }							t_token;
 
-typedef struct			s_mention
+typedef struct				s_mention
 {
-	unsigned			row;
-	unsigned			column;
-	int32_t				pos;
-	int32_t				op_pos;
-	size_t				size;
-	struct s_mention	*next;
-}						t_mention;
+	unsigned				row;
+	unsigned				column;
+	int32_t					pos;
+	int32_t					op_pos;
+	size_t					size;
+	struct s_mention		*next;
+}							t_mention;
 
 typedef struct				s_label
 {
 	const char				*name;
-	int						byte_pos;
+	int32_t					byte_pos;
 	struct s_mention		*mention;
 	struct s_label			*next;
-	struct s_label			*last;
+//	struct s_label			*last;
 }							t_label;
 
 typedef struct				s_asm
