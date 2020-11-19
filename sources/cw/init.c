@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.c                                          :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/19 17:14:58 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
+/*   Updated: 2020/11/19 17:13:38 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int		main(int ac, char **av)
+t_vm		*vm_init(int ac, char **av)
 {
-	t_vm		*vm;
-	t_player	*win_player;
+	t_vm	*vm;
 
-	vm = vm_init(ac, av);
-	win_player = vm_operation(vm);
-	print_result(win_player);
-	return (0);
+	vm = ft_memalloc(sizeof(t_vm));
+	//TODO parsing input (ac and av)
+	//TODO initialization players
+	//TODO initialization carriages
+	//TODO initialization vm
+	return (vm);
 }

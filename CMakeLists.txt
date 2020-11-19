@@ -4,7 +4,10 @@ project(corewar C)
 set(CMAKE_C_STANDARD 90)
 
 set(SOURCES_CW
-        sources/cw/corewar.c includes/errors.h)
+        sources/cw/corewar.c
+		sources/cw/init.c
+		sources/cw/operation.c
+		sources/cw/print.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
