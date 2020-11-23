@@ -5,6 +5,7 @@
 
 static int		ft_is_valid_op(t_asm *asm_s)
 {
+	//add error if operator unknown
 	return (EXIT_SUCCESS);
 }
 
@@ -19,7 +20,7 @@ int				ft_operation_processing_n_pos_update(t_asm *asm_s)
 		if (EXIT_FAILURE == ft_is_valid_op(asm_s))
 			return (EXIT_FAILURE);
 	}
-	//while (skip whitespaces)
+	//while (skip whitespaces) - done!
 	//is operator and valid
 		//arg type
 		//arg value

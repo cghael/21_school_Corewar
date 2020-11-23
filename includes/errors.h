@@ -13,7 +13,7 @@ typedef						enum
 	LEXICAL_ERROR
 }							t_errors;
 
-static char				*g_error[] = {
+static char					*g_error[] = {
 		"something goes wrong :'(",
 		"label with this name is already exist",
 		"more then one label in line",

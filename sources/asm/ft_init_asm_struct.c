@@ -23,7 +23,7 @@ t_asm		*ft_init_asm_struct(void)
 		ft_dprintf(2, " in ft_init asm_struct\n");
 	}
 	asm_struct->parse->line = NULL;
-	asm_struct->tokens = NULL;
+	asm_struct->ops = NULL;
 	asm_struct->labels = NULL;
 	asm_struct->parse->err_num = COMMON;
 	return (asm_struct);
