@@ -44,7 +44,7 @@
 
 # define STRINGS_EQU		1
 # define ASM_STRUCT_ERR		"error in ft_init_asm_struct"
-# define MEMALLOC_ERR		"ERROR in ft_memalloc()"
+# define MEMALLOC_ERR		"ft_memalloc() error"
 # define IS_NOT_FILE		-1
 # define IS_S_FILE			0
 # define IS_COR_FILE		1

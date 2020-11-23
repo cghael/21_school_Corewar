@@ -18,7 +18,7 @@ void	ft_asm_error_in_line(t_asm *asm_s)
 
 void	ft_asm_error(char *error_text, t_asm *asm_s)
 {
-	ft_dprintf(2, "\nERROR\n\t%s\n", error_text);
+	ft_dprintf(2, "ERROR ______________ %s\n", error_text);
 	if (asm_s)
 		ft_free_asm_struct(asm_s);
 	asm_s = NULL;
