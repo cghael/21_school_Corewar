@@ -21,6 +21,7 @@
 # include "libft.h"
 # include "op.h"
 # include "errors.h"
+# include "asm_op.h"
 
 /*
 ** ALLOWED funcs:
@@ -83,41 +84,6 @@
 ** ------------------------------ Structures -----------------------------------
 */
 
-typedef						enum
-{
-	NAME,
-	COMMENT,
-	LABEL,
-	OPERATOR,
-	REGISTER,
-	DIRECT,
-	DIRECT_LABEL,
-	INDIRECT,
-	INDIRECT_LABEL,
-	SEPARATOR,
-	NEW_LINE,
-	END
-}							t_typo;
-
-//static char					*g_op[] = {
-//		"live",
-//		"ld",
-//		"st",
-//		"add",
-//		"sub",
-//		"and",
-//		"or",
-//		"xor",
-//		"zjmp",
-//		"ldi",
-//		"sti",
-//		"fork",
-//		"lld",
-//		"lldi",
-//		"lfork",
-//		"aff"
-//};
-
 typedef struct				s_parse
 {
 	char					*line;
@@ -128,35 +94,18 @@ typedef struct				s_parse
 	int						is_whitespace;
 }							t_parse;
 
-//typedef struct				s_token
-//{
-//	const char				*content;
-//	t_typo					typo;
-//	int						n_line;
-//	int						pos;
-//	struct s_token			*next;
-//	struct s_token			*last;
-//}							t_token;
-
-typedef struct				s_op
+typedef struct				s_oper
 {
-	const char				*name;
-//	t_typo					typo;
-	int						n_line;
-	int						pos;
-	int						args_typo;
-	int						arg_1;
-	int						arg_2;
-	int						arg_3;
-	struct s_op				*next;
-//	struct s_op				*last;
-}							t_op;
+	t_op					num;
+	unsigned				n_line;
+	unsigned				pos;
+	struct s_oper			*next;
+}							t_oper;
 
 typedef struct				s_mention
 {
-	unsigned				row;
-	unsigned				column;
-	int32_t					pos;
+	unsigned				n_line;
+	unsigned				pos;
 	int32_t					op_pos;
 	size_t					size;
 	struct s_mention		*next;
