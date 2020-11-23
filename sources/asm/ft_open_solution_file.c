@@ -26,6 +26,7 @@ void		ft_open_solution_file(char *file, t_asm *asm_s)
 	{
 		free(tmp_name);
 		ft_asm_error("Error in ft_open_solution_file()\n", asm_s);
+		return ;
 	}
 	free(tmp_name);
 	asm_s->fd_solution = open(file_solution, \
@@ -34,6 +35,7 @@ void		ft_open_solution_file(char *file, t_asm *asm_s)
 	{
 		free(file_solution);
 		ft_asm_error("Error in ft_open_solution_file()\n", asm_s);
+		return ;
 	}
 	free(file_solution);
 }
