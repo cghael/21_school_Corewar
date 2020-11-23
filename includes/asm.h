@@ -93,24 +93,24 @@ typedef						enum
 	END
 }							t_typo;
 
-static char				*g_op[] = {
-		"live",
-		"ld",
-		"st",
-		"add",
-		"sub",
-		"and",
-		"or",
-		"xor",
-		"zjmp",
-		"ldi",
-		"sti",
-		"fork",
-		"lld",
-		"lldi",
-		"lfork",
-		"aff"
-};
+//static char					*g_op[] = {
+//		"live",
+//		"ld",
+//		"st",
+//		"add",
+//		"sub",
+//		"and",
+//		"or",
+//		"xor",
+//		"zjmp",
+//		"ldi",
+//		"sti",
+//		"fork",
+//		"lld",
+//		"lldi",
+//		"lfork",
+//		"aff"
+//};
 
 typedef struct				s_parse
 {
@@ -122,15 +122,29 @@ typedef struct				s_parse
 	int						is_whitespace;
 }							t_parse;
 
-typedef struct				s_token
+//typedef struct				s_token
+//{
+//	const char				*content;
+//	t_typo					typo;
+//	int						n_line;
+//	int						pos;
+//	struct s_token			*next;
+//	struct s_token			*last;
+//}							t_token;
+
+typedef struct				s_op
 {
-	const char				*content;
-	t_typo					typo;
+	const char				*name;
+//	t_typo					typo;
 	int						n_line;
 	int						pos;
-	struct s_token			*next;
-	struct s_token			*last;
-}							t_token;
+	int						args_typo;
+	int						arg_1;
+	int						arg_2;
+	int						arg_3;
+	struct s_op				*next;
+//	struct s_op				*last;
+}							t_op;
 
 typedef struct				s_mention
 {
@@ -145,10 +159,11 @@ typedef struct				s_mention
 typedef struct				s_label
 {
 	const char				*name;
+	int						n_line;
 	int32_t					byte_pos;
 	struct s_mention		*mention;
 	struct s_label			*next;
-//	struct s_label			*last;
+	struct s_label			*last;
 }							t_label;
 
 typedef struct				s_asm
@@ -160,7 +175,8 @@ typedef struct				s_asm
 //	int						n_lines;
 //	unsigned				line;
 //	unsigned				column;
-	t_token					*tokens;
+//	t_token					*tokens;
+	t_op					*ops;
 	int32_t					exec_size;
 	int32_t					pos;
 	char					*name;
@@ -215,5 +231,6 @@ int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
 //int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 int							ft_label_processing_n_pos_update(t_asm *asm_s);
+int							ft_is_label_char(char ch);
 
 #endif

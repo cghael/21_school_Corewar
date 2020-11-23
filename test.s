@@ -1,4 +1,4 @@
 .name       "Batman"
 .comment    "This city needs me"
-live %0
-r4
+label1: sti r1, :label2, %:label2;penis
+label2: live %0
