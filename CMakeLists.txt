@@ -7,6 +7,7 @@ set(SOURCES_CW
         sources/cw/corewar.c includes/errors.h)
 
 set(SOURCES_ASM
+		sources/op.c
 		sources/asm/asm.c
 		sources/asm/ft_is_filename.c
 		sources/asm/ft_assemble.c
@@ -26,7 +27,13 @@ set(SOURCES_ASM
 		sources/asm/ft_line_data_processing.c
 		sources/asm/ft_start_check_name_or_comment.c
 		sources/asm/ft_line_of_whitespaces_or_comment.c
-		sources/asm/ft_check_quotes.c sources/asm/ft_open_quotes_processing.c sources/asm/ft_strjoin_n_free.c includes/errors.h sources/asm/ft_check_operation.c sources/asm/ft_init_n_add_token.c sources/asm/ft_check_end_newline.c sources/asm/ft_label_saving_n_pos_update.c sources/asm/ft_operation_processing_n_pos_update.c sources/asm/ft_label_processing_n_pos_update.c sources/asm/ft_is_label_char.c)
+		sources/asm/ft_check_quotes.c
+		sources/asm/ft_open_quotes_processing.c
+		sources/asm/ft_strjoin_n_free.c
+		sources/asm/ft_check_operation.c
+		sources/asm/ft_init_n_add_token.c
+		sources/asm/ft_check_end_newline.c
+		sources/asm/ft_label_saving_n_pos_update.c sources/asm/ft_operation_processing_n_pos_update.c sources/asm/ft_label_processing_n_pos_update.c sources/asm/ft_is_label_char.c)
 
 include_directories(includes)
 include_directories(libft/inc)
