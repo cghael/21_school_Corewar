@@ -77,10 +77,13 @@
 # define IS_COMMENT			3
 # define IS_NOT_COMMAND		-1
 
-# define FILE_EXIST			"[%s] already exist\ninput new_filename:\n>>>\t"
-# define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [%s.s]\n"
+# define FILE_EXIST			0
+# define FILE_NOT_EXIST		1
+# define FILE_EXIST_TXT		"[%s] already exist\ninput new_filename:\n>>>\t"
+# define FILE_NOT_EXIST_TXT	"new_filename is: [%s]\n"
+# define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [%s]\n"
 # define _IS_CORRECT		"it's correct? (Y/n)\n"
-# define Q_CORRECT_NAME		"new_filename is [%s.s]\nit's correct? (Y/n)\n"
+# define Q_CORRECT_NAME		"new_filename is [%s]\nit's correct? (Y/n)\n"
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -149,18 +152,16 @@ typedef struct				s_asm
 typedef struct				s_dis
 {
 	int						fd_cor;
-	char					*new_filename;
+	char					*file_s;
 }							t_dis;
 
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
 int							ft_dis_error(char *error_text, void *data_for_free);
 t_dis						*ft_dis_init_struct(void);
-void						ft_dis_correct_input(char *answer, \
-											char *file_disassemble, \
-											char *new_filename, t_dis *dis_s);
-void						ft_dis_choose_new_filename(char *file_disassemble, \
-											t_dis *dis_s);
+int ft_dis_correct_input(char *answer, char *new_filename, t_dis *dis_s);
+int ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_filename_treat(char *file_cor, t_dis *dis_s);
+int		ft_dis_check_file_exist(char *filename);
 
 /*
 ** ------------------------------ Functions ------------------------------------

@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void			ft_dis_choose_new_filename(char *file_disassemble, t_dis *dis_s)
+int ft_dis_choose_new_filename(t_dis *dis_s)
 {
 	char		*answer;
 	char		*new_filename;
@@ -20,25 +20,29 @@ void			ft_dis_choose_new_filename(char *file_disassemble, t_dis *dis_s)
 	new_filename = ft_strnew(0);
 	answer = ft_strnew(0);
 	if (!new_filename || !answer)
-		ft_dis_error(ERR_DIS_CHOOSE, NULL);
-//		ft_asm_error("in ft_dis_filename_treat()\n", asm_s);//todo -> dis_err
-//	if ((dis_s->fd_cor = open(file_disassemble, O_RDONLY)) >= 0)//todo hmmm?
-	if ((open(file_disassemble, O_RDONLY)) >= 0)
 	{
-		ft_printf(FILE_EXIST, file_disassemble);
+		if (new_filename != NULL)
+			free(new_filename);
+		if (answer != NULL)
+			free(answer);
+		return (ft_dis_error(ERR_DIS_CHOOSE, NULL));
+	}
+
+//	if (!(dis_s->file_s = ft_strjoin(dis_s->file_s, ".s")))
+//		ft_dis_error(ERR_DIS_CHOOSE, dis_s->file_s);
+	while (FILE_EXIST == ft_dis_check_file_exist(dis_s->file_s))
+	{
 		scanf("%s", new_filename);
-		if (STRINGS_EQU != ft_strequ(answer, "Y"))
+		if (!(new_filename = ft_strjoin(new_filename, ".s")))
+			return (ft_dis_error(ERR_DIS_CHOOSE, new_filename));
+		while (STRINGS_EQU != ft_strequ(answer, "Y"))
 		{
 			ft_printf(Q_CORRECT_NAME, new_filename);
 			scanf("%s", answer);
-			ft_dis_correct_input(answer, file_disassemble, new_filename, dis_s);
+			ft_dis_correct_input(answer, new_filename, dis_s);
 		}
 	}
-	else
-	{
-		ft_printf("i cant OPEN FILE_DISSSS!!!!!!!\n");//todo del
-		dis_s->new_filename = ft_strdup(file_disassemble);
-//		dis_s->fd_cor = open(file_disassemble, \
-//								O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
-	}
+	ft_printf("Ok! I save file to [%s]\n",dis_s->file_s);//todo del
+//	dis_s->file_s = ft_strdup(file_s);//todo kek?
+	return (EXIT_SUCCESS);
 }

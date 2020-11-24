@@ -45,6 +45,7 @@ SRC_LIST_ASM = asm.c \
 				ft_dis_init_struct.c \
 				ft_dis_correct_input.c \
 				ft_dis_choose_new_filename.c \
+				ft_dis_check_file_exist.c \
 				ft_free_asm_struct.c \
 				ft_init_asm_struct.c \
 				ft_is_filename.c \
