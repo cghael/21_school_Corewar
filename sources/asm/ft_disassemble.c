@@ -23,7 +23,12 @@ int				ft_disassemble(char *file, t_asm *asm_s)
 		return (ft_dis_error(ERR_DIS_INIT, dis_s));
 	ft_printf("FD [%d] filename [%s]\n", dis_s->fd_cor, dis_s->file_s);//todo del debug
 	//todo open FD -> add to dis_s
-//	dis_s->fd_cor = open(dis_s->file_s, \
-//								O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);//todo must be in finally
+	if (EXIT_FAILURE == ft_dis_try_create_file(dis_s))
+	{
+		ft_dis_free_ctruct(dis_s);
+		return (ft_dis_error(ERR_DIS, dis_s));
+	}
+	if (dis_s->file_s != NULL)
+		ft_dis_free_ctruct(dis_s);
 	return (EXIT_SUCCESS);
 }

@@ -28,17 +28,18 @@ int ft_dis_correct_input(char *answer, char *new_filename, t_dis *dis_s)
 		}
 		else if (STRINGS_EQU == ft_strequ(answer, "Y"))
 		{
-			ft_printf(FILE_NOT_EXIST_TXT, new_filename);
+			ft_printf(FILE_NOT_EXIST_TXT, new_filename);//todo right 1st Y
 			if (dis_s->file_s != NULL)
 				free(dis_s->file_s);
 			dis_s->file_s = ft_strdup(new_filename);
 			ft_printf("\ndis_s->file_s [%s]\n", dis_s->file_s);//todo del
 			if (FILE_NOT_EXIST == ft_dis_check_file_exist(dis_s->file_s))
-				break ;
-			else
-				ft_printf(FILE_EXIST_TXT, dis_s->file_s);
+				return (EXIT_SUCCESS);
+//				break ;
+//			else
+//				ft_printf(FILE_EXIST_TXT, dis_s->file_s);
 		}
-		ft_printf(WRONG_SCANF_INPUT _IS_CORRECT, new_filename);
+//		ft_printf(WRONG_SCANF_INPUT _IS_CORRECT, new_filename);
 		ft_bzero(answer, ft_strlen(answer));
 		scanf("%s", answer);
 	}

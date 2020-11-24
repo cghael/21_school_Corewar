@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_check_file_exist.c                          :+:      :+:    :+:   */
+/*   ft_dis_ask_new_filename.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:45:07 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/24 13:45:08 by ksemele          ###   ########.fr       */
+/*   Created: 2020/11/24 19:08:06 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/24 19:08:07 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-/*
-** func try open filename.
-**
-** RETURN VALUES:
-**
-** if SUCCESS - FILE_EXIST (0) && close opened FD
-** if FAILURE - FILE_NOT_EXIST (1)
-*/
-
-int			ft_dis_check_file_exist(char *filename)
+char *ft_dis_ask_new_filename(char *new_filename, t_dis *dis_s)
 {
-	int		fd;
-
-//	ft_dprintf(2, "FILE [%s]\n", filename);//todo del
-	fd = open(filename, O_RDONLY);
-	if (fd >= 0)
+	scanf("%s", new_filename);
+	if (!(new_filename = ft_strjoin(new_filename, ".s")))
 	{
-		close(fd);
-		return (FILE_EXIST);
+		ft_dis_error(ERR_DIS_CHOOSE, new_filename);
+		return (NULL);
 	}
-	return (FILE_NOT_EXIST);
+
+	else
+		return (new_filename);
 }

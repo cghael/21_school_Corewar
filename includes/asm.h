@@ -59,6 +59,7 @@
 # define ERR_DIS_FILE		"Error in ft_dis_filename_treat()\n"
 # define ERR_DIS_CHOOSE		"Error in ft_dis_choose_new_filename()\n"
 # define ERR_DIS_INIT		"Error in ft_dis_init_struct()\n"
+# define ERR_DIS			"Error in ft_disassemble()\n"
 
 # define NAME_START			1
 # define NAME_END			2
@@ -79,11 +80,14 @@
 
 # define FILE_EXIST			0
 # define FILE_NOT_EXIST		1
-# define FILE_EXIST_TXT		"[%s] already exist\ninput new_filename:\n>>>\t"
-# define FILE_NOT_EXIST_TXT	"new_filename is: [%s]\n"
-# define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [%s]\n"
+# define FILE_EXIST_TXT		"[\e[1;33m%s\e[m] already exist\ninput new_filename:\n>>>\t"
+# define FILE_NOT_EXIST_TXT	"new_filename is: [\e[1;33m%s\e[m]\n"
+# define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [\e[1;33m%s\e[m]\n"
 # define _IS_CORRECT		"it's correct? (Y/n)\n"
-# define Q_CORRECT_NAME		"new_filename is [%s]\nit's correct? (Y/n)\n"
+# define Q_CORRECT_NAME		"new_filename is [\e[1;33m%s\e[m]\nit's correct? (Y/n)\n"
+# define YES				"Y"
+# define NO					"n"
+
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -158,10 +162,14 @@ typedef struct				s_dis
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
 int							ft_dis_error(char *error_text, void *data_for_free);
 t_dis						*ft_dis_init_struct(void);
-int ft_dis_correct_input(char *answer, char *new_filename, t_dis *dis_s);
-int ft_dis_choose_new_filename(t_dis *dis_s);
+int							ft_dis_free_ctruct(t_dis *dis_s);
+int							ft_dis_correct_input(char *answer, \
+											char *new_filename, t_dis *dis_s);
+int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_filename_treat(char *file_cor, t_dis *dis_s);
-int		ft_dis_check_file_exist(char *filename);
+int							ft_dis_check_file_exist(char *filename);
+int							ft_dis_try_create_file(t_dis *dis_s);
+char *ft_dis_ask_new_filename(char *new_filename, t_dis *dis_s);
 
 /*
 ** ------------------------------ Functions ------------------------------------
