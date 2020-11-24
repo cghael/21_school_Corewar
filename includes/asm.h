@@ -43,8 +43,8 @@
 */
 
 # define STRINGS_EQU		1
-# define ASM_STRUCT_ERR		"error in ft_init_asm_struct"
-# define MEMALLOC_ERR		"ft_memalloc() error"
+# define ERR_ASM_STRUCT		"error in ft_init_asm_struct"
+# define ERR_MEMALLOC		"ERROR in ft_memalloc()"
 # define IS_NOT_FILE		-1
 # define IS_S_FILE			0
 # define IS_COR_FILE		1
@@ -56,6 +56,8 @@
 # define ERR_DOUBLE_COMMENT	-2
 # define ERR_UNKNOWN_CMD	-3
 # define ERR_NO_NAME		-4
+# define ERR_DIS_FILE		"Error in ft_disassemble_file()\n"
+# define ERR_DIS_CHOOSE		"Error in ft_choose_new_filename()\n"
 
 # define NAME_START			1
 # define NAME_END			2
@@ -74,6 +76,10 @@
 # define IS_COMMENT			3
 # define IS_NOT_COMMAND		-1
 
+# define FILE_EXIST			"[%s] already exist\ninput new_filename:\n>>>\t"
+# define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [%s.s]\n"
+# define _IS_CORRECT		"it's correct? (Y/n)\n"
+# define Q_CORRECT_NAME		"new_filename is [%s.s]\nit's correct? (Y/n)\n"
 /*
 ** ------------------------------ Structures -----------------------------------
 */
@@ -142,7 +148,10 @@ typedef struct				s_asm
 typedef struct				s_dis
 {
 	int						fd_cor;
+	char					*new_filename;
 }							t_dis;
+
+int							ft_dis_error(char *error_text, void *data_for_free);
 
 /*
 ** ------------------------------ Functions ------------------------------------

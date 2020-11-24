@@ -10,7 +10,7 @@ t_asm		*ft_init_asm_struct(void)
 	asm_struct = ft_memalloc(sizeof(t_asm));
 	if (asm_struct == NULL)
 	{
-		ft_dprintf(2, MEMALLOC_ERR);
+		ft_dprintf(2, ERR_MEMALLOC);
 		ft_dprintf(2, " in ft_init asm_struct\n");
 	}
 	asm_struct->name = NULL;
@@ -19,7 +19,7 @@ t_asm		*ft_init_asm_struct(void)
 	asm_struct->parse = ft_memalloc(sizeof(t_parse));
 	if (asm_struct->parse == NULL)
 	{
-		ft_dprintf(2, MEMALLOC_ERR);
+		ft_dprintf(2, ERR_MEMALLOC);
 		ft_dprintf(2, " in ft_init asm_struct\n");
 	}
 	asm_struct->parse->line = NULL;
