@@ -5,8 +5,16 @@
 
 static int		ft_is_valid_op(t_asm *asm_s)
 {
-	//add error if operator unknown
-	return (EXIT_SUCCESS);
+	int		i;
+
+	i = 16;
+	while (i)
+	{
+		if (ft_strncmp(g_ops[i].name, &asm_s->parse->line[asm_s->pos], ft_strlen(g_ops[i].name)) == 0)
+			return (EXIT_SUCCESS);
+		i--;
+	}
+	return (EXIT_FAILURE);
 }
 
 int				ft_operation_processing_n_pos_update(t_asm *asm_s)

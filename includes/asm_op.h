@@ -6,7 +6,7 @@
 # define ASM_OP_H
 
 //# include "op.h"
-# include "libft.h"
+//# include "libft.h"
 
 # define REG			1
 # define DIR			2
@@ -46,7 +46,7 @@ typedef struct			s_op
 	int					is_small_dir;
 }						t_op;
 
-t_op					g_ops[16] = {
+static t_op				g_ops[16] = {
 		{
 			.name = "live",
 			.code = 0x01,

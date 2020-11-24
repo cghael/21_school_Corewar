@@ -94,13 +94,13 @@ typedef struct				s_parse
 	int						is_whitespace;
 }							t_parse;
 
-typedef struct				s_oper
+typedef struct				s_operations
 {
-	t_op					num;
+	t_typo					num;
 	unsigned				n_line;
 	unsigned				pos;
-	struct s_oper			*next;
-}							t_oper;
+	struct s_operations		*next;
+}							t_operations;
 
 typedef struct				s_mention
 {
@@ -131,7 +131,7 @@ typedef struct				s_asm
 //	unsigned				line;
 //	unsigned				column;
 //	t_token					*tokens;
-	t_op					*ops;
+	t_operations			*ops;
 	int32_t					exec_size;
 	int32_t					pos;
 	char					*name;

@@ -29,13 +29,13 @@ static void		ft_free_labels(t_asm *asm_struct)
 
 static void		ft_free_ops(t_asm *asm_struct)
 {
-	t_op	*tmp;
+	t_operations	*tmp;
 
 	tmp = asm_struct->ops;
 	while (tmp)
 	{
 		asm_struct->ops = asm_struct->ops->next;
-		free((void*)tmp->name);
+//		free((void*)tmp->name);
 		free(tmp);
 		tmp = NULL;
 		tmp = asm_struct->ops;

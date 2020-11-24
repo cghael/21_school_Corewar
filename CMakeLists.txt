@@ -7,7 +7,6 @@ set(SOURCES_CW
         sources/cw/corewar.c includes/errors.h)
 
 set(SOURCES_ASM
-		sources/op.c
 		sources/asm/asm.c
 		sources/asm/ft_is_filename.c
 		sources/asm/ft_assemble.c
