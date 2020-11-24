@@ -56,8 +56,9 @@
 # define ERR_DOUBLE_COMMENT	-2
 # define ERR_UNKNOWN_CMD	-3
 # define ERR_NO_NAME		-4
-# define ERR_DIS_FILE		"Error in ft_disassemble_file()\n"
-# define ERR_DIS_CHOOSE		"Error in ft_choose_new_filename()\n"
+# define ERR_DIS_FILE		"Error in ft_dis_filename_treat()\n"
+# define ERR_DIS_CHOOSE		"Error in ft_dis_choose_new_filename()\n"
+# define ERR_DIS_INIT		"Error in ft_dis_init_struct()\n"
 
 # define NAME_START			1
 # define NAME_END			2
@@ -151,7 +152,15 @@ typedef struct				s_dis
 	char					*new_filename;
 }							t_dis;
 
+int							ft_disassemble(char *file_cor, t_asm *asm_s);
 int							ft_dis_error(char *error_text, void *data_for_free);
+t_dis						*ft_dis_init_struct(void);
+void						ft_dis_correct_input(char *answer, \
+											char *file_disassemble, \
+											char *new_filename, t_dis *dis_s);
+void						ft_dis_choose_new_filename(char *file_disassemble, \
+											t_dis *dis_s);
+int							ft_dis_filename_treat(char *file_cor, t_dis *dis_s);
 
 /*
 ** ------------------------------ Functions ------------------------------------
@@ -163,7 +172,6 @@ void						ft_free_asm_struct(t_asm *asm_s);
 int							ft_is_filename(char *filename, t_asm *asm_s);
 void						ft_check_read_argv_files(int argc, char **argv);
 void						ft_assemble(char *file, t_asm *asm_s);
-void						ft_disassemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
 void						ft_asm_error_in_line(t_asm *asm_s);

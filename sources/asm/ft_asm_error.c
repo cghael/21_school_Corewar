@@ -23,11 +23,3 @@ void	ft_asm_error(char *error_text, t_asm *asm_s)
 		ft_free_asm_struct(asm_s);
 	asm_s = NULL;
 }
-
-int		ft_dis_error(char *error_text, void *data_for_free)
-{
-	ft_dprintf(STDERR_FILENO, error_text);
-	if (data_for_free != NULL)
-		free(data_for_free);
-	return (EXIT_FAILURE);
-}
