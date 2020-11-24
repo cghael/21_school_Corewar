@@ -31,14 +31,14 @@ static void		ft_free_ops(t_asm *asm_struct)
 {
 	t_operations	*tmp;
 
-	tmp = asm_struct->ops;
+	tmp = asm_struct->op_list;
 	while (tmp)
 	{
-		asm_struct->ops = asm_struct->ops->next;
+		asm_struct->op_list = asm_struct->op_list->next;
 //		free((void*)tmp->name);
 		free(tmp);
 		tmp = NULL;
-		tmp = asm_struct->ops;
+		tmp = asm_struct->op_list;
 	}
 }
 

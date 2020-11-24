@@ -101,6 +101,7 @@ typedef struct				s_operations
 	unsigned				n_line;
 	unsigned				pos;
 	struct s_operations		*next;
+	struct s_operations		*last;
 }							t_operations;
 
 typedef struct				s_mention
@@ -132,7 +133,7 @@ typedef struct				s_asm
 //	unsigned				line;
 //	unsigned				column;
 //	t_token					*tokens;
-	t_operations			*ops;
+	t_operations			*op_list;
 	int32_t					exec_size;
 	int32_t					pos;
 	char					*name;
