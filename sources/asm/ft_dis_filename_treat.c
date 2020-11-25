@@ -16,31 +16,27 @@ int		ft_dis_filename_treat(char *file_cor, t_dis *dis_s)
 {
 	char		*dot;
 	char		*tmp_name;
-	char		*file_s;
 
 	dot = ft_strrchr(file_cor, '.');
 	if (!(tmp_name = ft_strsub(file_cor, 0, dot - file_cor)))
-		return (ft_dis_error(ERR_DIS_FILE, NULL));
-//	{
-//		ft_asm_error("Error in ft_disassemble()\n", asm_s);//todo -> dis_err
-//		return (EXIT_FAILURE);
-//	}
-	ft_printf("tmp_name [%s]\n", tmp_name);//todo del
-	if (!(file_s = ft_strjoin(tmp_name, ".s")))
 		return (ft_dis_error(ERR_DIS_FILE, tmp_name));
-	ft_printf("file_diss [%s]\n", file_s);//todo del
-	ft_dis_choose_new_filename(file_s, dis_s);
-	if (!(dis_s->new_filename = ft_strjoin(dis_s->new_filename, ".s")))
+//	ft_printf("__tmp_name [%s]\n", tmp_name);//todo del
+	if (!(dis_s->file_s = ft_strjoin(tmp_name, ".s")))
+		return (ft_dis_error(ERR_DIS_FILE, tmp_name));
+//	ft_printf("__file_s [%s]\n", dis_s->file_s);//todo del
+	ft_dis_choose_new_filename(dis_s);
+
+ft_dprintf(2, "KEKSOLOL!\n");
+	if (!(dis_s->file_s = ft_strjoin(dis_s->file_s, ".s")))
 	{
-		if (dis_s->new_filename != NULL)
-			free(dis_s->new_filename);
+		if (dis_s->file_s != NULL)
+			free(dis_s->file_s);
 		return (ft_dis_error(ERR_DIS_FILE, tmp_name));
 	}
+
+
 	if (dis_s->fd_cor < 0)
-	{
-		ft_dis_error(ERR_DIS_FILE, file_s);
-		return (EXIT_FAILURE);
-	}
-	free(file_s);
+		return (ft_dis_error(ERR_DIS_FILE, dis_s->file_s));
+	free(dis_s->file_s);
 	return (EXIT_SUCCESS);
 }

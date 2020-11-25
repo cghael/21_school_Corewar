@@ -32,7 +32,7 @@ set(SOURCES_ASM
 		sources/asm/ft_check_operation.c
 		sources/asm/ft_init_n_add_token.c
 		sources/asm/ft_check_end_newline.c
-		sources/asm/ft_label_saving_n_pos_update.c sources/asm/ft_operation_processing_n_pos_update.c sources/asm/ft_label_processing_n_pos_update.c sources/asm/ft_is_label_char.c sources/asm/ft_dis_error.c sources/asm/ft_dis_init_struct.c sources/asm/ft_dis_correct_input.c sources/asm/ft_dis_choose_new_filename.c sources/asm/ft_dis_filename_treat.c sources/asm/ft_check_n_write_op_args.c)
+		sources/asm/ft_label_saving_n_pos_update.c sources/asm/ft_operation_processing_n_pos_update.c sources/asm/ft_label_processing_n_pos_update.c sources/asm/ft_is_label_char.c sources/asm/ft_dis_error.c sources/asm/ft_dis_init_struct.c sources/asm/ft_dis_correct_input.c sources/asm/ft_dis_choose_new_filename.c sources/asm/ft_dis_filename_treat.c sources/asm/ft_check_n_write_op_args.c sources/asm/ft_dis_check_file_exist.c sources/asm/ft_dis_try_create_file.c sources/asm/ft_dis_free_dis_s.c sources/asm/ft_dis_ask_new_filename.c)
 
 include_directories(includes)
 include_directories(libft/inc)

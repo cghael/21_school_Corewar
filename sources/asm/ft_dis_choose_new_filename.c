@@ -12,33 +12,72 @@
 
 #include "asm.h"
 
-void			ft_dis_choose_new_filename(char *file_disassemble, t_dis *dis_s)
+int ft_dis_choose_new_filename(t_dis *dis_s)
 {
 	char		*answer;
 	char		*new_filename;
+	int			check_file;
 
 	new_filename = ft_strnew(0);
 	answer = ft_strnew(0);
 	if (!new_filename || !answer)
-		ft_dis_error(ERR_DIS_CHOOSE, NULL);
-//		ft_asm_error("in ft_dis_filename_treat()\n", asm_s);//todo -> dis_err
-//	if ((dis_s->fd_cor = open(file_disassemble, O_RDONLY)) >= 0)//todo hmmm?
-	if ((open(file_disassemble, O_RDONLY)) >= 0)
 	{
-		ft_printf(FILE_EXIST, file_disassemble);
-		scanf("%s", new_filename);
-		if (STRINGS_EQU != ft_strequ(answer, "Y"))
+		if (new_filename != NULL)
+		{
+			free(new_filename);
+			new_filename = NULL;
+		}
+		if (answer != NULL)
+		{
+			free(answer);
+			answer = NULL;
+		}
+		return (ft_dis_error(ERR_DIS_CHOOSE, NULL));
+	}
+	check_file = ft_dis_check_file_exist(dis_s->file_s);
+	while (FILE_EXIST == check_file)
+	{
+		/*
+		 * Проверяем, что файл по-умолчанию можно создать.
+		 * Если нет - просим имя файла.
+		 *
+		 * пока файл уже ЕСТЬ в системе и он открывается:
+		 * 		(1) просим указать новое имя файла
+		 */
+		ft_printf(FILE_EXIST_TXT, dis_s->file_s);
+		new_filename = ft_dis_ask_new_filename(new_filename, dis_s);
+		while (FILE_EXIST == ft_dis_check_file_exist(new_filename))
+		{
+			ft_printf(FILE_EXIST_TXT, new_filename);
+			new_filename = ft_dis_ask_new_filename(new_filename, dis_s);
+		}
+
+		ft_dprintf(2, "STOP! << all working to here line>> \n");//todo right ++ NULL protect
+		/*
+		* 			добавляем к имени .s
+		* 			(2) Спрашиваем, такое ли имя хотим
+		* 				Да - сохраняем имя в структуру
+		* 				Нет - (1)
+		* 				ошибочный ввод - Варнинг что ошибочный ввод - (2)
+		*
+	   */
+//		if (YES == ft_dis_answer())
+//		{
+//			if (EXIT_FAILURE == ft_dis_try_get_fd())
+//			{
+//				while ()
+//			}
+//		}
+
+
+		while (STRINGS_EQU != ft_strequ(answer, "Y"))
 		{
 			ft_printf(Q_CORRECT_NAME, new_filename);
 			scanf("%s", answer);
-			ft_dis_correct_input(answer, file_disassemble, new_filename, dis_s);
+			ft_dis_correct_input(answer, new_filename, dis_s);
 		}
 	}
-	else
-	{
-		ft_printf("i cant OPEN FILE_DISSSS!!!!!!!\n");//todo del
-		dis_s->new_filename = ft_strdup(file_disassemble);
-//		dis_s->fd_cor = open(file_disassemble, \
-//								O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
-	}
+	ft_printf("Ok! I save file to [%s]\n",dis_s->file_s);//todo del
+//	dis_s->file_s = ft_strdup(file_s);//todo kek?
+	return (EXIT_SUCCESS);
 }
