@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.c                                          :+:      :+:    :+:   */
+/*   ft_dis_ask_new_filename.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/19 17:14:58 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/24 19:08:06 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/24 19:08:07 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corewar.h"
-#include "errors.h"
+#include "asm.h"
 
-int		main(int ac, char **av)
+char *ft_dis_ask_new_filename(char *new_filename, t_dis *dis_s)
 {
-	t_vm		*vm;
-	t_player	*win_player;
+	scanf("%s", new_filename);
+	if (!(new_filename = ft_strjoin(new_filename, ".s")))
+	{
+		ft_dis_error(ERR_DIS_CHOOSE, new_filename);
+		return (NULL);
+	}
 
-	if (!(vm = vm_init(ac, av)))
-	    terminate(ERR_MALC_INIT);
-	win_player = vm_operation(vm);
-	print_result(win_player);
-	return (0);
+	else
+		return (new_filename);
 }

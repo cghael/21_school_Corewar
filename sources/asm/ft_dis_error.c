@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parsing input.c                                    :+:      :+:    :+:   */
+/*   ft_dis_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/19 17:33:26 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/11/19 17:42:54 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/24 12:19:00 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/24 12:19:03 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corewar.h"
+#include "asm.h"
 
-t_list		*parsing_input(int ac, char **av)
+int		ft_dis_error(char *error_text, void *data_for_free)
 {
-	t_list		*players;
-
-	players = NULL;
-	//TODO parsing and add players to list
-	return (players);
+	ft_dprintf(STDERR_FILENO, error_text);
+	if (data_for_free != NULL)
+		free(data_for_free);
+	return (EXIT_FAILURE);
 }

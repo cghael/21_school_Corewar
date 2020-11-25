@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.c                                          :+:      :+:    :+:   */
+/*   ft_dis_init_struct.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/19 17:14:58 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/24 12:19:20 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/24 12:19:23 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corewar.h"
-#include "errors.h"
+#include "asm.h"
 
-int		main(int ac, char **av)
+t_dis	*ft_dis_init_struct(void)
 {
-	t_vm		*vm;
-	t_player	*win_player;
+	t_dis		*dis_s;
 
-	if (!(vm = vm_init(ac, av)))
-	    terminate(ERR_MALC_INIT);
-	win_player = vm_operation(vm);
-	print_result(win_player);
-	return (0);
+	dis_s = ft_memalloc(sizeof(t_dis*));
+	dis_s->file_s = NULL;
+	return (dis_s);
 }

@@ -53,10 +53,10 @@ typedef struct				s_vm
 	t_list					*players;
 }							t_vm;
 
+void                    	terminate(char *s);
 t_vm						*vm_init(int ac, char **av);
 t_player					*vm_operation(t_vm *vm);
 void						print_result(t_player *win_player);
-t_list						*parsing_input(int ac, char **av);
-t_player					*pl_max_number(t_list *players);
+t_list						*vm_init_players(int ac, char **av);
 
 #endif

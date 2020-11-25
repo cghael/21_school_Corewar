@@ -14,6 +14,7 @@ static int	ft_init_n_add_label(t_asm *asm_s, const char *name)
 	tmp->next = NULL;
 	tmp->mention = NULL;
 	tmp->name = name;
+	tmp->n_line = asm_s->parse->n_line;
 	tmp->byte_pos = asm_s->exec_size;
 	begin = asm_s->labels;
 	if (begin == NULL)
@@ -24,7 +25,7 @@ static int	ft_init_n_add_label(t_asm *asm_s, const char *name)
 			begin = begin->next;
 		begin->next = tmp;
 	}
-//	asm_s->labels->last = tmp;
+	asm_s->labels->last = tmp;
 	return (EXIT_SUCCESS);
 }
 
@@ -56,8 +57,20 @@ static char	*ft_get_label_name(t_asm *asm_s, const char *colon)
 {
 	char	*tmp;
 	int		len;
+	int		i;
 
 	len = (int)(colon - &asm_s->parse->line[asm_s->pos]);
+	i = asm_s->pos;
+	while (i < len)
+	{
+		if (EXIT_FAILURE == ft_is_label_char(asm_s->parse->line[i]))
+		{
+			asm_s->parse->err_num = LEXICAL_ERROR;
+			asm_s->pos = i;
+			return (NULL);
+		}
+		i++;
+	}
 	tmp = (char*)ft_memalloc(sizeof(char) * len + 1);
 	if (tmp == NULL)
 		return (NULL);
@@ -72,8 +85,6 @@ int			ft_label_saving_n_pos_update(t_asm *asm_s, char *colon)
 
 	content = ft_get_label_name(asm_s, colon);
 	if (content == NULL)
-		return (EXIT_FAILURE);
-	if (EXIT_FAILURE == ft_init_n_add_token(asm_s, LABEL, content))
 		return (EXIT_FAILURE);
 	if (EXIT_SUCCESS == ft_warning_if_label_exist(asm_s, content))
 	{

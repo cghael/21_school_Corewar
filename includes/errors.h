@@ -5,6 +5,9 @@
 #ifndef ERRORS_H
 # define ERRORS_H
 
+# define ERR_MALC_INIT		"ERROR: Can\'t initialize malloc"
+# define ERR_GNL_READ		"ERROR: Can\'t read gnl"
+
 typedef						enum
 {
 	COMMON,
@@ -13,7 +16,7 @@ typedef						enum
 	LEXICAL_ERROR
 }							t_errors;
 
-static char				*g_error[] = {
+static char					*g_error[] = {
 		"something goes wrong :'(",
 		"label with this name is already exist",
 		"more then one label in line",

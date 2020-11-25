@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.c                                          :+:      :+:    :+:   */
+/*   ft_dis_try_create_file.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/19 17:14:58 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/24 17:26:21 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/24 17:26:24 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "corewar.h"
-#include "errors.h"
+#include "asm.h"
 
-int		main(int ac, char **av)
+int		ft_dis_try_create_file(t_dis *dis_s)
 {
-	t_vm		*vm;
-	t_player	*win_player;
-
-	if (!(vm = vm_init(ac, av)))
-	    terminate(ERR_MALC_INIT);
-	win_player = vm_operation(vm);
-	print_result(win_player);
-	return (0);
+	if (FILE_NOT_EXIST == ft_dis_check_file_exist(dis_s->file_s))
+	{
+		dis_s->fd_cor = open(dis_s->file_s, \
+							 O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
+		if (dis_s->fd_cor > 0)
+			return (EXIT_SUCCESS);
+		else
+			return (EXIT_FAILURE);
+	}
+	else
+		return (EXIT_FAILURE);
 }
