@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.c                                          :+:      :+:    :+:   */
+/*   operation.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/19 17:14:58 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
+/*   Updated: 2020/11/19 17:16:54 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-int		main(int ac, char **av)
+t_player	*vm_operation(t_vm *vm)
 {
-	t_vm		*vm;
-	t_player	*win_player;
-
-	vm = vm_init(ac, av);
-	win_player = vm_operation(vm);
-	print_result(win_player);
-	return (0);
+	//TODO carriage list processing
+	//TODO cycle counting
+	//TODO processing checks
+	//TODO cycle_to_die change
+	return (vm->last_live_player);
 }
