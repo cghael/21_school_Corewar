@@ -37,7 +37,7 @@ typedef struct				s_carriage
 	unsigned int			number_last_live;
 	unsigned int			waiting_moves;
 	unsigned int			position;
-	unsigned char			reg[REG_NUMBER];
+	unsigned char			reg[REG_NUMBER]; //TODO reg_size
 	t_player				*player;
 }							t_carriage;
 

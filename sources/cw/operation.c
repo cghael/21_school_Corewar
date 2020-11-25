@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "corewar.h"
+#include "asm_op.h"
 
 void	ft_lstpdelone(t_list **alst, t_list *del) //TODO add to libft
 {
@@ -44,7 +45,7 @@ int			vm_checkout(t_vm *vm)
 	while (tmp)
 	{
 		if (vm->number_cycle - ((t_carriage*)tmp->content)->number_last_live
-		<= vm->cycles_to_die || vm->cycles_to_die <= 0)
+		>= vm->cycles_to_die || vm->cycles_to_die <= 0)
 			ft_lstpdelone(&vm->carriages, tmp);
 		tmp = tmp->next;
 	}
@@ -57,6 +58,78 @@ int			vm_checkout(t_vm *vm)
 		return (1);
 	else
 		return (0);
+}
+
+int	find_size_arg(unsigned int arg, unsigned int dir)
+{
+	if (arg == 1)
+		return (1);
+	if (arg == 2)
+		return ((int)dir);
+	if (arg == 4)
+		return (2);
+	return (0);
+}
+
+int			check_oper_args(unsigned char oper, unsigned char args)
+{
+	int				sum;
+	unsigned int	arg[3];
+
+	arg[0] = (args >> 6) | 3 == 3 ? 4 : (args >> 6) | 3;
+	arg[1] = (args >> 4) | 3 == 3 ? 4 : (args >> 4) | 3;
+	arg[2] = (args >> 2) | 3 == 3 ? 4 : (args >> 2) | 3;
+	if ((g_ops[oper - 1].n_args == 3 &&
+		(g_ops[oper - 1].args[0] | arg[0]) &&
+		(g_ops[oper - 1].args[1] | arg[1]) &&
+		(g_ops[oper - 1].args[2] | arg[2])) ||
+		(g_ops[oper - 1].n_args == 2 &&
+		(g_ops[oper - 1].args[0] | arg[0]) &&
+		(g_ops[oper - 1].args[1] | arg[1])) ||
+		(g_ops[oper - 1].n_args == 1 &&
+		(g_ops[oper - 1].args[0] | arg[0])))
+		return (0);
+	sum = 2 + find_size_arg(arg[0], 4 - 2 * g_ops[oper - 1].is_small_dir);
+	if (g_ops[oper - 1].n_args > 1)
+		sum += find_size_arg(arg[1], 4 - 2 * g_ops[oper - 1].is_small_dir);
+	if (g_ops[oper - 1].n_args > 2)
+		sum += find_size_arg(arg[2], 4 - 2 * g_ops[oper - 1].is_small_dir);
+	return (sum);
+}
+
+void		cr_operation(t_carriage *car, t_vm *vm)
+{
+	if (car->waiting_moves == 0)
+	{
+		car->operation = vm->arena[car->position];
+		if (car->operation >= 0x01 && car->operation <= 0x10)
+			car->waiting_moves = g_ops[car->operation - 1].cycles;
+	}
+	if (car->waiting_moves > 0)
+		car->waiting_moves--;
+	if (car->waiting_moves == 0)
+	{
+		if (car->operation < 0x01 || car->operation > 0x10)
+			car->position = (car->position + 1) % MEM_SIZE;
+		else if (check_oper_args(car->operation,
+				vm->arena[(car->position + 1) % MEM_SIZE]))
+			car->position = (car->position + check_oper_args(car->operation,
+				vm->arena[(car->position + 1) % MEM_SIZE])) % MEM_SIZE;
+		else
+			cr_operation_make(car, vm);
+	}
+}
+
+void		vm_survey_carriages(t_vm *vm)
+{
+	t_list	*tmp;
+
+	tmp = vm->carriages;
+	while (tmp)
+	{
+		cr_operation(tmp->content, vm);
+		tmp = tmp->next;
+	}
 }
 
 t_player	*vm_operation(t_vm *vm)

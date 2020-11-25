@@ -52,19 +52,23 @@ t_carriage  *cr_init(t_player *player, unsigned int nb)
 
 t_list		*vm_init_carriages(t_list *players)
 {
+	t_list			*tmp;
 	t_list          *carriages;
-	t_carriage      *new_carriage;
+	t_carriage      *new;
 	unsigned int    num;
 
 	carriages = NULL;
 	num = 0;
-	while (players)
+	tmp = players;
+	while (tmp)
     {
-	    if (!(new_carriage = cr_init(players->content, num)))
+	    if (!(new = cr_init(tmp->content, num)))
 	        return (0);
-	    ft_lstadd(&carriages, ft_lstpnew(new_carriage));
+	    new->position = MEM_SIZE / ((t_player*)players->content)->number *
+	    		(((t_player*)tmp->content)->number - 1) % MEM_SIZE;
+	    ft_lstadd(&carriages, ft_lstpnew(new));
 	    num++;
-	    players = players->next;
+	    tmp = tmp->next;
     }
 	return (carriages);
 }
