@@ -60,7 +60,7 @@ int			vm_checkout(t_vm *vm)
 		return (0);
 }
 
-int	find_size_arg(unsigned int arg, unsigned int dir)
+int			find_size_arg(unsigned int arg, unsigned int dir)
 {
 	if (arg == 1)
 		return (1);
@@ -89,12 +89,40 @@ int			check_oper_args(unsigned char oper, unsigned char args)
 		(g_ops[oper - 1].n_args == 1 &&
 		(g_ops[oper - 1].args[0] | arg[0])))
 		return (0);
-	sum = 2 + find_size_arg(arg[0], 4 - 2 * g_ops[oper - 1].is_small_dir);
+	sum = 1 + g_ops[oper - 1].is_args_type +
+			find_size_arg(arg[0], 4 - 2 * g_ops[oper - 1].is_small_dir);
 	if (g_ops[oper - 1].n_args > 1)
 		sum += find_size_arg(arg[1], 4 - 2 * g_ops[oper - 1].is_small_dir);
 	if (g_ops[oper - 1].n_args > 2)
 		sum += find_size_arg(arg[2], 4 - 2 * g_ops[oper - 1].is_small_dir);
 	return (sum);
+}
+
+t_player	*pl_find(t_list *players, int n)
+{
+	t_list	*tmp;
+
+	tmp = players;
+	while (tmp)
+	{
+		if (((t_player*)tmp->content)->number == n)
+			return (tmp->content);
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+void		cr_operation_make(t_carriage *car, t_vm *vm)
+{
+	int arg;
+
+	if (car->operation == 0x01)
+	{
+		car->number_last_live = vm->number_cycle;
+		ft_memcpy(&arg, &vm->arena[car->position], 4);
+		if (pl_find(vm->players, -arg))
+			vm->last_live_player = pl_find(vm->players, arg);
+	}
 }
 
 void		cr_operation(t_carriage *car, t_vm *vm)
@@ -117,6 +145,7 @@ void		cr_operation(t_carriage *car, t_vm *vm)
 				vm->arena[(car->position + 1) % MEM_SIZE])) % MEM_SIZE;
 		else
 			cr_operation_make(car, vm);
+		car->waiting_moves = 0;
 	}
 }
 
@@ -143,8 +172,8 @@ t_player	*vm_operation(t_vm *vm)
 		{
 			vm_survey_carriages(vm);
 			current++;
+			vm->number_cycle++;
 		}
-		vm->number_cycle += current;
 		vm->number_checks++;
 	}
 	return (vm->last_live_player);
