@@ -47,7 +47,7 @@ set(SOURCES_ASM
 		sources/asm/ft_get_one_arg.c
 		sources/asm/ft_dis_copy_filename.c
 		sources/asm/ft_dis_add_s.c
-		sources/asm/ft_dis_del_cor.c)
+		sources/asm/ft_dis_del_cor.c sources/asm/ft_count_num_len.c)
 
 include_directories(includes)
 include_directories(libft/inc)
