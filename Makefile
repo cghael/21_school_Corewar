@@ -44,7 +44,7 @@ SRC_LIST_ASM = asm.c \
 				ft_dis_error.c \
 				ft_dis_init_struct.c \
 				ft_dis_choose_new_filename.c \
-				ft_dis_check_file_correct.c \
+				ft_dis_check_file_exist.c \
 				ft_dis_try_create_file.c \
 				ft_dis_ask_new_filename.c \
 				ft_dis_copy_filename.c \
