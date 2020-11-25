@@ -11,13 +11,15 @@
 /* ************************************************************************** */
 
 #include "corewar.h"
+#include "errors.h"
 
 int		main(int ac, char **av)
 {
 	t_vm		*vm;
 	t_player	*win_player;
 
-	vm = vm_init(ac, av);
+	if (!(vm = vm_init(ac, av)))
+	    terminate(ERR_MALC_INIT);
 	win_player = vm_operation(vm);
 	print_result(win_player);
 	return (0);
