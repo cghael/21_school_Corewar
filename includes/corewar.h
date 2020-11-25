@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.h                                              :+:      :+:    :+:   */
+/*   corewar.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:11:23 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/19 17:40:30 by esnowpea         ###   ########.fr       */
+/*   Created: 2020/11/25 11:49:00 by ablane            #+#    #+#             */
+/*   Updated: 2020/11/25 11:49:00 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define COREWAR_H
 
 # include "libft.h"
+# include "errors.h"
 # include "op.h"
+# include <fcntl.h>
 
 /*
 ** struct's definitions
@@ -53,10 +55,11 @@ typedef struct				s_vm
 	t_list					*players;
 }							t_vm;
 
-void                    	terminate(char *s);
 t_vm						*vm_init(int ac, char **av);
 t_player					*vm_operation(t_vm *vm);
 void						print_result(t_player *win_player);
-t_list						*vm_init_players(int ac, char **av);
+void						terminate(char *s);
+t_list						*pl_parsing_input(int ac, char **av);
+t_player					*pl_max_number(t_list *players);
 
 #endif
