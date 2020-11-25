@@ -14,6 +14,10 @@
 
 t_player	*vm_operation(t_vm *vm)
 {
+	while (checkout())
+	{
+
+	}
 	//TODO carriage list processing
 	//TODO cycle counting
 	//TODO processing checks

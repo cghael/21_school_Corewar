@@ -12,16 +12,6 @@
 
 #include "corewar.h"
 
-t_list	*ft_lstpnew(void *content) //TODO add to libft
-{
-    t_list	*lstnew;
-
-    if (!(lstnew = (t_list*)ft_memalloc(sizeof(t_list))))
-        return (NULL);
-    lstnew->content = content;
-    return (lstnew);
-}
-
 t_list		*vm_init_players(int ac, char **av)
 {
     t_list		*players;
@@ -29,6 +19,23 @@ t_list		*vm_init_players(int ac, char **av)
     players = NULL;
     //TODO parsing and add players to list with number
     return (players);
+}
+
+void		vm_init_arena(t_vm *vm)
+{
+	t_list			*tmp;
+	t_player		*player;
+	unsigned int	n;
+
+	n = vm->last_live_player->number;
+	tmp = vm->players;
+	while (tmp)
+	{
+		player = (t_player*)tmp->content;
+		ft_memcpy(&vm->arena[MEM_SIZE / n * (player->number - 1) % MEM_SIZE],
+				  player->exec_code, player->exec_size);
+		tmp = tmp->next;
+	}
 }
 
 t_carriage  *cr_init(t_player *player, unsigned int nb)
@@ -72,6 +79,7 @@ t_vm		*vm_init(int ac, char **av)
 	if (!(vm->players = vm_init_players(ac, av)))
 	    return (0);
 	vm->last_live_player = vm->players->content;
+	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))
 	    return (0);
 	return (vm);
