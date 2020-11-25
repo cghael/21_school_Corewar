@@ -15,17 +15,15 @@
 int ft_dis_choose_new_filename(t_dis *dis_s)
 {
 	char		*answer;
-	char		*new_filename;
-	int			check_file;
 
-	new_filename = ft_strnew(0);
+	dis_s->file_s = ft_strnew(0);
 	answer = ft_strnew(0);
-	if (!new_filename || !answer)
+	if (!dis_s->file_s || !answer)
 	{
-		if (new_filename != NULL)
+		if (dis_s->file_s != NULL)
 		{
-			free(new_filename);
-			new_filename = NULL;
+			free(dis_s->file_s);
+			dis_s->file_s = NULL;
 		}
 		if (answer != NULL)
 		{
@@ -34,8 +32,9 @@ int ft_dis_choose_new_filename(t_dis *dis_s)
 		}
 		return (ft_dis_error(ERR_DIS_CHOOSE, NULL));
 	}
-	check_file = ft_dis_check_file_exist(dis_s->file_s);
-	while (FILE_EXIST == check_file)
+	ft_dprintf(2, " (1) FD [%d] dis_file_s [%s]\n"
+				  "STOP! << all working to here line>> \n", dis_s->fd_cor, dis_s->file_s);//todo right ++ NULL protect
+	if (FILE_EXIST == ft_dis_check_file_correct(dis_s) || dis_s->fd_cor < 0)
 	{
 		/*
 		 * Проверяем, что файл по-умолчанию можно создать.
@@ -43,41 +42,36 @@ int ft_dis_choose_new_filename(t_dis *dis_s)
 		 *
 		 * пока файл уже ЕСТЬ в системе и он открывается:
 		 * 		(1) просим указать новое имя файла
-		 */
-		ft_printf(FILE_EXIST_TXT, dis_s->file_s);
-		new_filename = ft_dis_ask_new_filename(new_filename, dis_s);
-		while (FILE_EXIST == ft_dis_check_file_exist(new_filename))
-		{
-			ft_printf(FILE_EXIST_TXT, new_filename);
-			new_filename = ft_dis_ask_new_filename(new_filename, dis_s);
-		}
-
-		ft_dprintf(2, "STOP! << all working to here line>> \n");//todo right ++ NULL protect
-		/*
 		* 			добавляем к имени .s
+		 */
+		ft_printf(FILE_EXIST_TXT FILE_INPUT_NEW, dis_s->file_s);
+		ft_dis_ask_new_filename(dis_s);
+		while (dis_s->fd_cor < 0)
+//		while (FILE_EXIST == ft_dis_check_file_correct(dis_s) || dis_s->fd_cor < 0)
+		{
+			ft_printf(FILE_EXIST_TXT FILE_INPUT_NEW, dis_s);
+			ft_dis_ask_new_filename(dis_s);
+			if (FILE_NOT_EXIST == ft_dis_check_file_correct(dis_s))
+			{
+				ft_strdel(&dis_s->file_s);
+				dis_s->file_s = ft_strdup(dis_s->file_s);//todo protect
+				if (EXIT_FAILURE == ft_dis_try_create_file(dis_s))
+					ft_printf("Srry, incorrect filename! [%d]\n", dis_s->fd_cor);
+				else
+					break;
+			}
+		}
+	}
+		ft_dprintf(2, "dis_file_s [%s]\n"
+				"STOP! << all working to here line>> \n", dis_s->file_s);//todo right ++ NULL protect
+		/*
 		* 			(2) Спрашиваем, такое ли имя хотим
 		* 				Да - сохраняем имя в структуру
 		* 				Нет - (1)
 		* 				ошибочный ввод - Варнинг что ошибочный ввод - (2)
 		*
 	   */
-//		if (YES == ft_dis_answer())
-//		{
-//			if (EXIT_FAILURE == ft_dis_try_get_fd())
-//			{
-//				while ()
-//			}
-//		}
 
-
-		while (STRINGS_EQU != ft_strequ(answer, "Y"))
-		{
-			ft_printf(Q_CORRECT_NAME, new_filename);
-			scanf("%s", answer);
-			ft_dis_correct_input(answer, new_filename, dis_s);
-		}
-	}
 	ft_printf("Ok! I save file to [%s]\n",dis_s->file_s);//todo del
-//	dis_s->file_s = ft_strdup(file_s);//todo kek?
 	return (EXIT_SUCCESS);
 }

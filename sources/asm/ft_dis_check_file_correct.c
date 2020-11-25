@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_check_file_exist.c                          :+:      :+:    :+:   */
+/*   ft_dis_check_file_correct.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -21,16 +21,17 @@
 ** if FAILURE - FILE_NOT_EXIST (1)
 */
 
-int			ft_dis_check_file_exist(char *filename)
+int ft_dis_check_file_correct(t_dis *dis_s)
 {
-	int		fd;
-
-//	ft_dprintf(2, "FILE [%s]\n", filename);//todo del
-	fd = open(filename, O_RDONLY);
-	if (fd >= 0)
-	{
-		close(fd);
+//	dis_s->fd_cor = open(dis_s->file_s, O_RDONLY);
+//	if (dis_s->fd_cor >= 0)
+//	{
+//		close(dis_s->fd_cor);
+//		dis_s->fd_cor = -1;
+//		return (FILE_EXIST);
+//	}
+	if (EXIT_FAILURE == ft_dis_try_create_file(dis_s))
 		return (FILE_EXIST);
-	}
+
 	return (FILE_NOT_EXIST);
 }
