@@ -102,12 +102,19 @@ typedef struct				s_parse
 	int						is_whitespace;
 }							t_parse;
 
+typedef struct				s_args
+{
+	int						type;
+	char					*content;
+	int						is_label;
+}							t_args;
+
 typedef struct				s_operations
 {
 	t_typo					num;
 	unsigned				n_line;
 	unsigned				pos;
-
+	t_args					*args;
 	struct s_operations		*next;
 	struct s_operations		*last;
 }							t_operations;
