@@ -4,7 +4,11 @@ project(corewar C)
 set(CMAKE_C_STANDARD 90)
 
 set(SOURCES_CW
-        sources/cw/corewar.c includes/errors.h)
+        sources/cw/corewar.c
+		sources/cw/init.c
+		sources/cw/operation.c
+		sources/cw/print.c
+		sources/cw/terminate.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
@@ -48,6 +52,11 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_add_s.c
 		sources/asm/ft_dis_del_cor.c
 		sources/asm/ft_dis_convert_start_filename.c)
+		sources/asm/ft_check_n_write_op_args.c
+		sources/asm/ft_get_one_arg.c
+		sources/asm/ft_dis_copy_filename.c
+		sources/asm/ft_dis_add_s.c
+		sources/asm/ft_dis_del_cor.c sources/asm/ft_count_num_len.c)
 
 include_directories(includes)
 include_directories(libft/inc)
