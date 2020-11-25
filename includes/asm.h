@@ -100,6 +100,7 @@ typedef struct				s_operations
 	t_typo					num;
 	unsigned				n_line;
 	unsigned				pos;
+
 	struct s_operations		*next;
 	struct s_operations		*last;
 }							t_operations;
@@ -199,5 +200,6 @@ int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 int							ft_label_processing_n_pos_update(t_asm *asm_s);
 int							ft_is_label_char(char ch);
+int							ft_check_n_write_op_args(t_asm *asm_s);
 
 #endif
