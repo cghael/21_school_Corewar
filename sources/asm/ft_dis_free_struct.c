@@ -4,7 +4,7 @@
 
 #include "asm.h"
 
-int		ft_dis_free_ctruct(t_dis *dis_s)
+int		ft_dis_free_struct(t_dis *dis_s)
 {
 	if (dis_s->file_s != NULL)
 		free(dis_s->file_s);

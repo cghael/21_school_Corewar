@@ -3,6 +3,24 @@
 //
 #include "asm.h"
 
+static t_args	*ft_add_args_array(t_typo num)
+{
+	t_args	*tmp;
+	int		i;
+
+	tmp = ft_memalloc(sizeof(t_args) * g_ops[num].n_args);
+	if (tmp == NULL)
+		return (NULL);
+	i = 0;
+	while (i < g_ops[num].n_args)
+	{
+		tmp[i].content = NULL;
+		tmp[i].is_label = FALSE;
+		i++;
+	}
+	return (tmp);
+}
+
 static int		ft_init_n_add_operation_token(t_asm *asm_s, t_typo num)
 {
 	t_operations	*tmp;
@@ -13,6 +31,9 @@ static int		ft_init_n_add_operation_token(t_asm *asm_s, t_typo num)
 	if (tmp == NULL)
 		return (EXIT_FAILURE);
 	tmp->num = num;
+	tmp->args = ft_add_args_array(num);
+	if (tmp->args == NULL)
+		return (EXIT_FAILURE);
 	tmp->next = NULL;
 	if (begin == NULL)
 		asm_s->op_list = tmp;
@@ -37,6 +58,10 @@ static int		ft_is_valid_op_name(t_asm *asm_s)
 												ft_strlen(g_ops[i].name)) == 0)
 		{
 			if (EXIT_FAILURE == ft_init_n_add_operation_token(asm_s, i))
+				return (EXIT_FAILURE);
+			asm_s->pos += ft_strlen(g_ops[i].name);
+			if (asm_s->parse->line[asm_s->pos] != DIRECT_CHAR \
+			&& EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 				return (EXIT_FAILURE);
 			return (ft_check_n_write_op_args(asm_s));
 		}

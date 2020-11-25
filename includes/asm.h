@@ -80,7 +80,8 @@
 
 # define FILE_EXIST			0
 # define FILE_NOT_EXIST		1
-# define FILE_EXIST_TXT		"[\e[1;33m%s\e[m] already exist\ninput new_filename:\n>>>\t"
+# define FILE_EXIST_TXT		"[\e[1;33m%s\e[m] already exist or incorrect\n"
+# define FILE_INPUT_NEW		"input new_filename:\n>>>\t"
 # define FILE_NOT_EXIST_TXT	"new_filename is: [\e[1;33m%s\e[m]\n"
 # define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [\e[1;33m%s\e[m]\n"
 # define _IS_CORRECT		"it's correct? (Y/n)\n"
@@ -102,11 +103,19 @@ typedef struct				s_parse
 	int						is_whitespace;
 }							t_parse;
 
+typedef struct				s_args
+{
+	int						type;
+	char					*content;
+	int						is_label;
+}							t_args;
+
 typedef struct				s_operations
 {
 	t_typo					num;
 	unsigned				n_line;
 	unsigned				pos;
+	t_args					*args;
 	struct s_operations		*next;
 	struct s_operations		*last;
 }							t_operations;
@@ -163,14 +172,15 @@ typedef struct				s_dis
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
 int							ft_dis_error(char *error_text, void *data_for_free);
 t_dis						*ft_dis_init_struct(void);
-int							ft_dis_free_ctruct(t_dis *dis_s);
-int							ft_dis_correct_input(char *answer, \
-											char *new_filename, t_dis *dis_s);
+int							ft_dis_free_struct(t_dis *dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_filename_treat(char *file_cor, t_dis *dis_s);
-int							ft_dis_check_file_exist(char *filename);
+int ft_dis_check_file_correct(t_dis *dis_s);
 int							ft_dis_try_create_file(t_dis *dis_s);
-char *ft_dis_ask_new_filename(char *new_filename, t_dis *dis_s);
+void ft_dis_ask_new_filename(t_dis *dis_s);
+int		ft_dis_copy_filename(char *filename, t_dis *dis_s);
+int		ft_dis_add_s(t_dis *dis_s);
+int		ft_dis_del_cor(t_dis *dis_s);
 
 /*
 ** ------------------------------ Functions ------------------------------------
@@ -208,5 +218,8 @@ int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 int							ft_label_processing_n_pos_update(t_asm *asm_s);
 int							ft_is_label_char(char ch);
+int							ft_check_n_write_op_args(t_asm *asm_s);
+int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
+int							ft_count_num_len(const char *str);
 
 #endif

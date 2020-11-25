@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_ask_new_filename.c                          :+:      :+:    :+:   */
+/*   ft_dis_add_s.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 19:08:06 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/24 19:08:07 by ksemele          ###   ########.fr       */
+/*   Created: 2020/11/25 13:45:17 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/25 13:45:20 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void ft_dis_ask_new_filename(t_dis *dis_s)
+int		ft_dis_add_s(t_dis *dis_s)
 {
-	scanf("%s", dis_s->file_s);
 	if (!(dis_s->file_s = ft_strjoin(dis_s->file_s, ".s")))
 		ft_dis_error(ERR_DIS_CHOOSE, dis_s->file_s);
+	return (EXIT_SUCCESS);
 }

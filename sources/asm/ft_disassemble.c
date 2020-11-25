@@ -19,16 +19,18 @@ int				ft_disassemble(char *file, t_asm *asm_s)
 	ft_printf("disassemble! [%s]\n", file);//todo del
 	if (!(dis_s = ft_dis_init_struct()))
 		return (ft_dis_error(ERR_DIS_INIT, NULL));
-	if (EXIT_FAILURE == ft_dis_filename_treat(file, dis_s))
-		return (ft_dis_error(ERR_DIS_INIT, dis_s));
-	ft_printf("FD [%d] filename [%s]\n", dis_s->fd_cor, dis_s->file_s);//todo del debug
-	//todo open FD -> add to dis_s
+	//todo ft_dis_convert_start_filename();
+	ft_dis_copy_filename(file, dis_s);
+	ft_dis_del_cor(dis_s);
+	ft_dis_add_s(dis_s);
+	ft_printf("init struct: FD [%d] filename [%s]\n", dis_s->fd_cor, dis_s->file_s);//todo del debug
+	exit(77);//todo break
 	if (EXIT_FAILURE == ft_dis_try_create_file(dis_s))
 	{
-		ft_dis_free_ctruct(dis_s);
+		ft_dis_free_struct(dis_s);
 		return (ft_dis_error(ERR_DIS, dis_s));
 	}
 	if (dis_s->file_s != NULL)
-		ft_dis_free_ctruct(dis_s);
+		ft_dis_free_struct(dis_s);
 	return (EXIT_SUCCESS);
 }

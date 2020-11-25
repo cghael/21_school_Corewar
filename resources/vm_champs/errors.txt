@@ -36,3 +36,14 @@ End of dump
  Syntax error at token  Invalid instruction at token
  Invalid parameter %d type %s for instruction %s
  Invalid parameter count for instruction %s
+
+
+функи
+
+	добавление .s к имени
+	delete .[*]
+	copy filename to struct
+	проверка есть ли такой файл
+	получение имени файла от юзера - чтение из консоли
+	проверка валидное ли имя файла
+	создание файла
