@@ -13,6 +13,8 @@ typedef						enum
 	LEXICAL_ERROR,
 	NO_SEPARATOR,
 	FEW_ARGS,
+	WRONG_ARG_TYPE,
+	INCORRECT_REG,
 }							t_errors;
 
 static char					*g_error[] = {
@@ -21,6 +23,8 @@ static char					*g_error[] = {
 		"more then one label in line",
 		"lexical error",
 		"no separator char",
+		"wrong argument type",
+		"incorrect register argument",
 };
 
 #endif //ERRORS_H
