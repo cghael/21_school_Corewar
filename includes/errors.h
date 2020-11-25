@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/25 11:31:18 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/25 14:13:08 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # define ERR_NUM_CHAMP		"ERROR: Invalid champion number"
 # define ERR_BAD_FILE		"ERROR: Can\'t open file"
 # define USAGE				"Usage: all info for CW"
-
+# define ERR_BAD_MAGIC		"Error: File has an invalid header"
 typedef						enum
 {
 	COMMON,

@@ -8,7 +8,6 @@ set(SOURCES_CW
 		sources/cw/init.c
 		sources/cw/operation.c
 		sources/cw/print.c
-		sources/cw/parsing_input.c
 		sources/cw/terminate.c
 		sources/cw/pl_init.c)
 

@@ -29,7 +29,7 @@ t_vm		*vm_init(int ac, char **av)
 		return (NULL);
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	vm->players = pl_parsing_input(ac, av);
-	vm->last_live_player = pl_max_number(vm->players); //TODO write fun player with max number
-	vm->carriages = vm_carriages_init(vm->players);
+//	vm->last_live_player = pl_max_number(vm->players); //TODO write fun player with max number
+//	vm->carriages = vm_carriages_init(vm->players);
 	return (vm);
 }

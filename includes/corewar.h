@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:49:00 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/25 11:49:00 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/25 14:32:48 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@
 # include "errors.h"
 # include "op.h"
 # include <fcntl.h>
-
-/*
-** struct's definitions
-*/
+# include "asm.h"
+# include "stdbool.h"
 
 typedef struct				s_player
 {
@@ -61,5 +59,6 @@ void						print_result(t_player *win_player);
 void						terminate(char *s);
 t_list						*pl_parsing_input(int ac, char **av);
 t_player					*pl_max_number(t_list *players);
+void						pl_check_magic_header(int fd);
 
 #endif
