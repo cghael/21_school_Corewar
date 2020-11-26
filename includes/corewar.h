@@ -22,33 +22,33 @@
 
 typedef struct				s_player
 {
-	int						number;
-	char					name[PROG_NAME_LENGTH];
-	char					comment[COMMENT_LENGTH];
-	unsigned int			exec_size;
-	unsigned char			exec_code[CHAMP_MAX_SIZE];
+	uint32_t				number;
+	uint8_t					name[PROG_NAME_LENGTH];
+	uint8_t					comment[COMMENT_LENGTH];
+	uint8_t					exec_size;
+	uint8_t					exec_code[CHAMP_MAX_SIZE];
 }							t_player;
 
 typedef struct				s_carriage
 {
-	unsigned int			number;
-	unsigned short int		carry;
-	unsigned char			operation;
-	unsigned int			number_last_live;
-	unsigned int			waiting_moves;
-	unsigned int			position;
-	unsigned char			reg[REG_NUMBER]; //TODO reg_size
+	uint32_t				number;
+	uint8_t					carry;
+	uint8_t					operation;
+	uint32_t				number_last_live;
+	uint32_t				waiting_moves;
+	uint32_t				position;
+	uint8_t					reg[REG_NUMBER][REG_SIZE];
 	t_player				*player;
 }							t_carriage;
 
 typedef struct				s_vm
 {
-	unsigned char			arena[MEM_SIZE];
+	uint8_t					arena[MEM_SIZE];
 	t_player				*last_live_player;
-	unsigned int			number_cycle;
-	unsigned int			number_live; //number of live transactions for the period
-	int						cycles_to_die;
-	unsigned int			number_checks;
+	uint32_t				number_cycle;
+	uint32_t				number_live;
+	uint32_t				cycles_to_die;
+	uint32_t				number_checks;
 	t_list					*carriages;
 	t_list					*players;
 }							t_vm;

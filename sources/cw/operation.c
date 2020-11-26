@@ -13,7 +13,7 @@
 #include "corewar.h"
 #include "asm_op.h"
 
-void	ft_lstpdelone(t_list **alst, t_list *del) //TODO add to libft
+void		ft_lstpdelone(t_list **alst, t_list *del) //TODO add to libft
 {
 	t_list	*tmp;
 	if (!alst || !(*alst) || !del)
@@ -22,7 +22,6 @@ void	ft_lstpdelone(t_list **alst, t_list *del) //TODO add to libft
 	{
 		*alst = (*alst)->next;
 		free(del);
-		del = 0;
 		return ;
 	}
 	else
@@ -32,12 +31,11 @@ void	ft_lstpdelone(t_list **alst, t_list *del) //TODO add to libft
 			tmp = tmp->next;
 		tmp->next = del->next;
 		free(del);
-		del = 0;
 		return ;
 	}
 }
 
-int			vm_checkout(t_vm *vm)
+uint8_t		vm_checkout(t_vm *vm)
 {
 	t_list	*tmp;
 
@@ -60,21 +58,21 @@ int			vm_checkout(t_vm *vm)
 		return (0);
 }
 
-int			find_size_arg(unsigned int arg, unsigned int dir)
+uint8_t		find_size_arg(uint8_t arg, uint8_t dir)
 {
 	if (arg == 1)
 		return (1);
 	if (arg == 2)
-		return ((int)dir);
+		return (dir);
 	if (arg == 4)
 		return (2);
 	return (0);
 }
 
-int			check_oper_args(unsigned char oper, unsigned char args)
+uint32_t	check_oper_args(uint8_t oper, uint8_t args)
 {
-	int				sum;
-	unsigned int	arg[3];
+	uint32_t		sum;
+	uint8_t			arg[3];
 
 	arg[0] = (args >> 6) | 3 == 3 ? 4 : (args >> 6) | 3;
 	arg[1] = (args >> 4) | 3 == 3 ? 4 : (args >> 4) | 3;
@@ -98,7 +96,7 @@ int			check_oper_args(unsigned char oper, unsigned char args)
 	return (sum);
 }
 
-t_player	*pl_find(t_list *players, int n)
+t_player	*pl_find(t_list *players, uint32_t n)
 {
 	t_list	*tmp;
 
@@ -112,16 +110,34 @@ t_player	*pl_find(t_list *players, int n)
 	return (0);
 }
 
+int32_t		ucarrtoint(uint8_t const arg[], uint8_t len)
+{
+	int8_t		i;
+	int32_t		sum;
+	uint32_t	k;
+
+	i = 0;
+	sum = 0;
+	k = 1;
+	while (i < len)
+	{
+		sum += arg[i++] * k;
+		k *= 256;
+	}
+	return (sum);
+}
+
 void		cr_operation_make(t_carriage *car, t_vm *vm)
 {
-	int arg;
+	uint8_t		arg[DIR_SIZE];
 
 	if (car->operation == 0x01)
 	{
 		car->number_last_live = vm->number_cycle;
 		ft_memcpy(&arg, &vm->arena[car->position], 4);
-		if (pl_find(vm->players, -arg))
-			vm->last_live_player = pl_find(vm->players, arg);
+		if (pl_find(vm->players, -ucarrtoint(arg, DIR_SIZE)))
+			vm->last_live_player =
+					pl_find(vm->players, -ucarrtoint(arg, DIR_SIZE));
 	}
 }
 
@@ -163,7 +179,7 @@ void		vm_survey_carriages(t_vm *vm)
 
 t_player	*vm_operation(t_vm *vm)
 {
-	unsigned int	current;
+	uint32_t	current;
 
 	while (vm_checkout(vm))
 	{
@@ -171,6 +187,7 @@ t_player	*vm_operation(t_vm *vm)
 		while (current < vm->cycles_to_die)
 		{
 			vm_survey_carriages(vm);
+			vm_print_arena(vm);
 			current++;
 			vm->number_cycle++;
 		}

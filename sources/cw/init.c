@@ -25,7 +25,7 @@ void		vm_init_arena(t_vm *vm)
 {
 	t_list			*tmp;
 	t_player		*player;
-	unsigned int	n;
+	uint32_t		n;
 
 	n = vm->last_live_player->number;
 	tmp = vm->players;
@@ -38,14 +38,16 @@ void		vm_init_arena(t_vm *vm)
 	}
 }
 
-t_carriage  *cr_init(t_player *player, unsigned int nb)
+t_carriage  *cr_init(t_player *player, uint32_t nb)
 {
     t_carriage  *carriage;
+	int32_t		minus_num;
 
     if (!(carriage = ft_memalloc(sizeof(t_carriage))))
         return (0);
     carriage->number = nb;
-    carriage->reg[0] = -player->number;
+    minus_num = -player->number;
+	ft_memcpy(&carriage->reg[0], &(minus_num), REG_SIZE);
     carriage->player = player;
     return (carriage);
 }
@@ -55,7 +57,7 @@ t_list		*vm_init_carriages(t_list *players)
 	t_list			*tmp;
 	t_list          *carriages;
 	t_carriage      *new;
-	unsigned int    num;
+	uint32_t		    num;
 
 	carriages = NULL;
 	num = 0;
