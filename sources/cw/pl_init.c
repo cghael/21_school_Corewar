@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/26 12:46:04 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/26 16:41:49 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,7 +174,10 @@ t_list		*pl_list_champions(int *i, char **av, t_list *champions)
 	{
 		if (ft_strequ(av[*i], "-n")) //todo: проверить местоположение флага
 			 // todo (возможно использование флага после аргумента имени)
-			num_pl = ft_atoi(av[*++i]);
+		{
+			*i = *i + 1;
+			num_pl = ft_atoi(av[*i]);
+		}
 //		if (ft_strequ(av[*i], "-dump")) //todo: put other flags;
 //		if (ft_strequ(av[*i], "-d")) //todo: put other flags;
 		*i = *i + 1;
@@ -186,6 +189,138 @@ t_list		*pl_list_champions(int *i, char **av, t_list *champions)
 	else
 		ft_lstadd(&champions, player);
 	return (champions);
+}
+
+int			pl_search_duplicate_num(t_list *champions, int quant)
+{
+	t_list *tmp;
+
+	tmp = champions;
+	while (tmp)
+	{
+		if (((t_player*)tmp->content)->number == quant && quant > 0)
+			quant = pl_search_duplicate_num(champions, --quant);
+		tmp = tmp->next;
+	}
+	return (quant);
+}
+
+void		pl_check_duplicate_num(t_list *champions)
+{
+	t_list *tmp;
+	t_list *this;
+
+	this = champions;
+	while (this->next)
+	{
+		tmp = this->next;
+		while (tmp)
+		{
+			if (((t_player *) this->content)->number
+				== ((t_player *) tmp->content)->number
+				|| ((t_player *) this->content)->number > MAX_PLAYERS
+				|| ((t_player *) tmp->content)->number > MAX_PLAYERS)
+				terminate(ERR_NUM_CHAMP);
+			tmp = tmp->next;
+		}
+		this = this->next;
+	}
+}
+
+void		pl_number_order(t_list *champions, int quant)
+{
+	t_list *tmp;
+
+	tmp = champions;
+	while (tmp)
+	{
+		quant = pl_search_duplicate_num(champions, quant);
+		if (((t_player*)tmp->content)->number == 0)
+			((t_player*)tmp->content)->number = quant--;
+		tmp = tmp->next;
+	}
+	pl_check_duplicate_num(champions);
+}
+
+t_list 		*pl_swap(t_list *start, t_list *champ, t_list *tmp, t_list *prev)
+{
+	if (prev == champ)
+	{
+		champ->next = tmp->next;
+		tmp->next = champ;
+		champ = tmp;
+		start = champ;
+	}
+	else
+	{
+		champ->next = tmp->next;
+		tmp->next = champ;
+		prev->next = tmp;
+	}
+	return (start);
+}
+
+t_list		*pl_sort_stack_champ(t_list *champions)
+{
+	t_list *start;
+	t_list *prev;
+	t_list *tmp;
+
+	prev = champions;
+	start = champions;
+	while (champions->next)
+	{
+		tmp = champions->next;
+		if (((t_player *) champions->content)->number < ((t_player *)
+		tmp->content)->number)
+		{
+			if (prev == champions)
+				start = pl_swap(start, champions, tmp, prev);
+			else
+				start = pl_swap(start, champions, tmp, prev);
+			champions = start;
+		}
+		else
+		{
+			prev = champions;
+			champions = champions->next;
+		}
+	}
+	return (start);
+}
+
+void		pl_player_order(t_list **champions)
+{
+	t_list *tmp;
+	int quant;
+
+	quant = 0;
+	tmp = *champions;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		quant++;
+	}
+	if (quant > MAX_PLAYERS)
+		terminate(ERR_MANY_CHAMP);
+	pl_number_order(*champions, quant);
+	*champions = pl_sort_stack_champ(*champions);
+}
+
+
+void 	print_num_player(t_list *champ)
+{
+	t_list *cham;
+	int num;
+
+	cham = champ;
+	while (cham)
+	{
+		num = ((t_player*)cham->content)->number;
+		ft_printf("%s:\t%i\n", ((t_player*)cham->content)->name, num);
+		cham = cham->next;
+	}
+	ft_printf("\n\n");
 }
 
 t_list		*pl_parsing_input(int ac, char **av)
@@ -202,5 +337,9 @@ t_list		*pl_parsing_input(int ac, char **av)
 		champions = pl_list_champions(&i, av, champions);
 		i++;
 	}
+	print_num_player(champions);
+
+	pl_player_order(&champions);
+	print_num_player(champions);
 	return (champions);
 }
