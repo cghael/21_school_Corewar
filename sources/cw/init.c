@@ -12,6 +12,12 @@
 
 #include "corewar.h"
 
+void		in_close_fd_err(int fd, char *err)
+{
+	close(fd);
+	terminate(err);
+}
+
 t_list		*vm_carriages_init(t_list *players)
 {
 	t_list	*carrriages;
