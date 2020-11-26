@@ -43,13 +43,13 @@
 */
 
 # define STRINGS_EQU		1
-# define ERR_ASM_STRUCT		"error in ft_init_asm_struct"
-# define ERR_MEMALLOC		"ERROR in ft_memalloc()"
 # define IS_NOT_FILE		-1
 # define IS_S_FILE			0
 # define IS_COR_FILE		1
 # define IS_BAD_FILE		2
 
+# define ERR_ASM_STRUCT		"error in ft_init_asm_struct"
+# define ERR_MEMALLOC		"ERROR in ft_memalloc()"
 # define ERR_WRITE_BYTE		"Error in ft_write_bytecode_to_file()\n"
 # define ERR_NAME_LEN		"Champion name too long (Max length 128)"
 # define ERR_DOUBLE_NAME	-1
@@ -82,7 +82,9 @@
 # define FILE_NOT_EXIST		1
 # define FILE_EXIST_TXT		"[\e[1;33m%s\e[m] already exist or incorrect\n"
 # define FILE_INPUT_NEW		"input new_filename:\n>>>\t"
+# define FILE_SAVE_OK		"Ok! I save file to [\e[1;33m%s\e[m]\n"
 # define FILE_NOT_EXIST_TXT	"new_filename is: [\e[1;33m%s\e[m]\n"
+# define FILE_INCORRECT		"Srry, incorrect filename! [\e[1;33m%s\e[m]\n"
 # define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [\e[1;33m%s\e[m]\n"
 # define _IS_CORRECT		"it's correct? (Y/n)\n"
 # define Q_CORRECT_NAME		"new_filename is [\e[1;33m%s\e[m]\nit's correct? (Y/n)\n"
@@ -175,12 +177,13 @@ t_dis						*ft_dis_init_struct(void);
 int							ft_dis_free_struct(t_dis *dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_filename_treat(char *file_cor, t_dis *dis_s);
-int ft_dis_check_file_correct(t_dis *dis_s);
+int ft_dis_check_file_exist(t_dis *dis_s);
 int							ft_dis_try_create_file(t_dis *dis_s);
 void ft_dis_ask_new_filename(t_dis *dis_s);
 int		ft_dis_copy_filename(char *filename, t_dis *dis_s);
 int		ft_dis_add_s(t_dis *dis_s);
 int		ft_dis_del_cor(t_dis *dis_s);
+int		ft_dis_convert_start_filename(char *file, t_dis *dis_s);
 
 /*
 ** ------------------------------ Functions ------------------------------------

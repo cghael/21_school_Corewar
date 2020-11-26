@@ -43,15 +43,17 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_error.c
 		sources/asm/ft_dis_init_struct.c
 		sources/asm/ft_dis_choose_new_filename.c
-		sources/asm/ft_dis_check_file_correct.c
+		sources/asm/ft_dis_check_file_exist.c
 		sources/asm/ft_dis_try_create_file.c
 		sources/asm/ft_dis_free_struct.c
 		sources/asm/ft_dis_ask_new_filename.c
 		sources/asm/ft_check_n_write_op_args.c
-		sources/asm/ft_get_one_arg.c
 		sources/asm/ft_dis_copy_filename.c
 		sources/asm/ft_dis_add_s.c
-		sources/asm/ft_dis_del_cor.c sources/asm/ft_count_num_len.c)
+		sources/asm/ft_dis_del_cor.c
+		sources/asm/ft_dis_convert_start_filename.c
+		sources/asm/ft_get_one_arg.c
+		sources/asm/ft_count_num_len.c)
 
 include_directories(includes)
 include_directories(libft/inc)

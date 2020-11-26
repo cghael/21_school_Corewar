@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_try_create_file.c                           :+:      :+:    :+:   */
+/*   ft_dis_convert_start_filename.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 17:26:21 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/24 17:26:24 by ksemele          ###   ########.fr       */
+/*   Created: 2020/11/25 16:22:06 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/25 16:22:08 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_try_create_file(t_dis *dis_s)
+int		ft_dis_convert_start_filename(char *file, t_dis *dis_s)
 {
-	if (FILE_NOT_EXIST == ft_dis_check_file_exist(dis_s))
-	{
-		dis_s->fd_cor = open(dis_s->file_s, \
-							O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
-		if (dis_s->fd_cor > 0)
-			return (EXIT_SUCCESS);
-		else
-			return (EXIT_FAILURE);
-	}
-	else
+	if (EXIT_FAILURE == ft_dis_copy_filename(file, dis_s) \
+		|| EXIT_FAILURE == ft_dis_del_cor(dis_s) \
+		|| EXIT_FAILURE == ft_dis_add_s(dis_s))
 		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }
