@@ -27,18 +27,19 @@ void		print_bit(uint8_t bit)
 	ft_putchar(a[bit % 16]);
 }
 
-void		vm_print_arena(t_vm vm)
+void		vm_print_arena(t_vm *vm)
 {
 	uint32_t		i;
 
 	i = 0;
 	while (i < MEM_SIZE)
 	{
-		print_bit(vm.arena[i]);
-		if ((i + 1) % 64 == 0)
+		print_bit(vm->arena[i]);
+		if ((i + 1) % 32 == 0)
 			ft_printf("\n");
 		else
 			ft_printf(" ");
 		i++;
 	}
+	ft_printf("\n\n\n");
 }

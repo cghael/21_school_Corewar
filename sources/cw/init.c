@@ -11,14 +11,43 @@
 /* ************************************************************************** */
 
 #include "corewar.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+t_player	*pl_init(char *filename, uint32_t number)
+{
+	int			fd;
+	uint8_t		buf[4];
+	t_player	*player;
+
+	player = ft_memalloc(sizeof(t_player));
+	fd = open(filename, O_RDONLY, S_IREAD | S_IWRITE);
+	read(fd, buf, 4);
+	read(fd, player->name, PROG_NAME_LENGTH);
+	read(fd, buf, 4);
+	read(fd, buf, 4);
+	player->exec_size = buf[3];
+	read(fd, player->comment, COMMENT_LENGTH);
+	read(fd, buf, 4);
+	read(fd, player->exec_code, CHAMP_MAX_SIZE);
+	player->number = number;
+	return (player);
+}
 
 t_list		*vm_init_players(int ac, char **av)
 {
-    t_list		*players;
+	t_list		*players;
+	u_int8_t	i;
 
-    players = NULL;
-    //TODO parsing and add players to list with number
-    return (players);
+	players = NULL;
+	i = 1;
+	while (i < ac)
+	{
+		ft_lstadd(&players, ft_lstpnew(pl_init(av[i], i)));
+		i++;
+	}
+	return (players);
 }
 
 void		vm_init_arena(t_vm *vm)
@@ -57,7 +86,7 @@ t_list		*vm_init_carriages(t_list *players)
 	t_list			*tmp;
 	t_list          *carriages;
 	t_carriage      *new;
-	uint32_t		    num;
+	uint32_t	    num;
 
 	carriages = NULL;
 	num = 0;

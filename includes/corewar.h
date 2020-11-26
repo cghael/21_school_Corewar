@@ -25,7 +25,7 @@ typedef struct				s_player
 	uint32_t				number;
 	uint8_t					name[PROG_NAME_LENGTH];
 	uint8_t					comment[COMMENT_LENGTH];
-	uint8_t					exec_size;
+	uint32_t				exec_size;
 	uint8_t					exec_code[CHAMP_MAX_SIZE];
 }							t_player;
 
@@ -57,6 +57,13 @@ void                    	terminate(char *s);
 t_vm						*vm_init(int ac, char **av);
 t_player					*vm_operation(t_vm *vm);
 void						print_result(t_player *win_player);
+void						vm_print_arena(t_vm *vm);
 t_list						*vm_init_players(int ac, char **av);
+
+/*
+**  temporary functions
+*/
+
+int32_t		ucarrtoint(uint8_t const arg[], uint8_t len);
 
 #endif
