@@ -3,35 +3,35 @@
 //
 #include "asm.h"
 
-static char			*ft_get_num_content(t_asm *asm_s)
+//static char			*ft_get_num_content(t_asm *asm_s)
+//{
+//	char	*tmp;
+//	int		num;
+//
+//	num = ft_atoi(&asm_s->parse->line[asm_s->pos]);
+//	tmp = ft_itoa(num);
+//	return (tmp);
+//}
+
+static char			*ft_get_content(t_asm *asm_s, int len)
 {
 	char	*tmp;
-	int		num;
+//	char	*tmp_sign;
+//	int		malloc_len;
 
-	num = ft_atoi(&asm_s->parse->line[asm_s->pos]);
-	tmp = ft_itoa(num);
-	return (tmp);
-}
-
-static char			*ft_get_content(t_asm *asm_s, int len, int sign)
-{
-	char	*tmp;
-	char	*tmp_sign;
-	int		malloc_len;
-
-	malloc_len = (sign == 0) ? len + 1 : len + 2;
-	tmp = ft_memalloc(sizeof(char) * malloc_len);
+//	malloc_len = (sign == 0) ? len + 1 : len + 2;
+	tmp = ft_memalloc(sizeof(char) * len + 1);
 	if (tmp == NULL)
 		return (NULL);
-	if (sign)
-	{
-		tmp_sign = tmp;
-		tmp[0] = '-';
-		ft_strncpy(tmp + 1, &asm_s->parse->line[asm_s->pos], len);
-		return (tmp_sign);
-	}
-	else
-		tmp = ft_strncpy(tmp, &asm_s->parse->line[asm_s->pos], len);
+//	if (sign)
+//	{
+//		tmp_sign = tmp;
+//		tmp[0] = '-';
+//		ft_strncpy(tmp + 1, &asm_s->parse->line[asm_s->pos], len);
+//		return (tmp_sign);
+//	}
+//	else
+	tmp = ft_strncpy(tmp, &asm_s->parse->line[asm_s->pos], len);
 	return (tmp);
 }
 
