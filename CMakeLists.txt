@@ -8,7 +8,11 @@ set(SOURCES_CW
 		sources/cw/init.c
 		sources/cw/operation.c
 		sources/cw/print.c
-		sources/cw/terminate.c)
+		sources/cw/terminate.c
+		sources/cw/libft.c
+		sources/cw/commands/live.c
+		sources/cw/commands/ld.c
+		sources/cw/commands/sti.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c

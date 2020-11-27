@@ -54,15 +54,14 @@ void		vm_init_arena(t_vm *vm)
 {
 	t_list			*tmp;
 	t_player		*player;
-	uint32_t		n;
 
-	n = vm->last_live_player->number;
 	tmp = vm->players;
 	while (tmp)
 	{
 		player = (t_player*)tmp->content;
-		ft_memcpy(&vm->arena[MEM_SIZE / n * (player->number - 1) % MEM_SIZE],
-				  player->exec_code, player->exec_size);
+		ft_memcpy_cor(&vm->arena[MEM_SIZE / vm->number_players *
+				(player->number - 1) % MEM_SIZE],
+				player->exec_code, player->exec_size, MEM_SIZE);
 		tmp = tmp->next;
 	}
 }
@@ -113,6 +112,7 @@ t_vm		*vm_init(int ac, char **av)
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	if (!(vm->players = vm_init_players(ac, av)))
 	    return (0);
+	vm->number_players = ft_lstlength(vm->players);
 	vm->last_live_player = vm->players->content;
 	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))

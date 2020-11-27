@@ -49,6 +49,7 @@ typedef struct				s_vm
 	uint32_t				number_live;
 	uint32_t				cycles_to_die;
 	uint32_t				number_checks;
+	uint32_t				number_players;
 	t_list					*carriages;
 	t_list					*players;
 }							t_vm;
@@ -61,9 +62,21 @@ void						vm_print_arena(t_vm *vm);
 t_list						*vm_init_players(int ac, char **av);
 
 /*
-**  temporary functions
+**  commands
 */
 
-int32_t		ucarrtoint(uint8_t const arg[], uint8_t len);
+void						live(t_carriage *car, t_vm *vm);
+void						ld(t_carriage *car, t_vm *vm);
+
+/*
+**  newlibft functions
+*/
+
+t_list		*ft_lstpnew(void *content);
+void		ft_lstpdelone(t_list **alst, t_list *del);
+u_int32_t	ft_lstlength(t_list *lst);
+void		*ft_memcpy_cor(void *dest, const void *source, size_t n,
+					 size_t max);
+int32_t		ft_bitetoint(uint8_t const arg[], uint8_t len);
 
 #endif
