@@ -5,6 +5,9 @@
 #ifndef ERRORS_H
 # define ERRORS_H
 
+# define ERR_MALC_INIT		"ERROR: Can\'t initialize malloc"
+# define ERR_GNL_READ		"ERROR: Can\'t read gnl"
+
 typedef						enum
 {
 	COMMON,

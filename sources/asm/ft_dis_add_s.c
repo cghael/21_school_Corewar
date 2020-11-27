@@ -15,6 +15,6 @@
 int		ft_dis_add_s(t_dis *dis_s)
 {
 	if (!(dis_s->file_s = ft_strjoin(dis_s->file_s, ".s")))
-		ft_dis_error(ERR_DIS_CHOOSE, dis_s->file_s);
+		return (ft_dis_error(ERR_DIS_CHOOSE, dis_s->file_s));
 	return (EXIT_SUCCESS);
 }
