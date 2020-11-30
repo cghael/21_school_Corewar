@@ -113,7 +113,7 @@ int				ft_dis_read_write(t_dis *dis_s)
 	ft_dis_parse_bytecode(dis_s);
 //	ft_dis_valide_name(dis_s);
 //	ft_dis_valide_comment(dis_s);
-//	ft_dis_process_exec_code(dis_s);//todo what is it?
+	ft_dis_process_exec_code(dis_s);//todo what is it?
 	ft_dis_write_file(dis_s);
 	return (EXIT_SUCCESS);
 }

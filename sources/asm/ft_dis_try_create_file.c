@@ -16,9 +16,9 @@ int		ft_dis_try_create_file(t_dis *dis_s)
 {
 	if (FILE_NOT_EXIST == ft_dis_check_file_exist(dis_s))
 	{
-		dis_s->fd_cor = open(dis_s->file_s, \
+		dis_s->fd_s = open(dis_s->file_s, \
 							O_RDWR | O_TRUNC | O_CREAT, S_IREAD | S_IWRITE);
-		if (dis_s->fd_cor > 0)
+		if (dis_s->fd_s > 0)
 			return (EXIT_SUCCESS);
 		else
 			return (EXIT_FAILURE);

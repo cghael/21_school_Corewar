@@ -23,10 +23,10 @@
 
 int		ft_dis_check_file_exist(t_dis *dis_s)
 {
-	dis_s->fd_cor = open(dis_s->file_s, O_RDONLY);
-	if (dis_s->fd_cor >= 0)
+	dis_s->fd_s = open(dis_s->file_s, O_RDONLY);
+	if (dis_s->fd_s >= 0)
 	{
-		close(dis_s->fd_cor);
+		close(dis_s->fd_s);
 		return (FILE_EXIST);
 	}
 	return (FILE_NOT_EXIST);
