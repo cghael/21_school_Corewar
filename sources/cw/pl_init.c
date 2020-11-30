@@ -6,11 +6,17 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/30 12:52:26 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/30 13:48:33 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
+
+void		in_close_fd_err(int fd, char *err)
+{
+	close(fd);
+	terminate(err);
+}
 
 t_list		*pl_new_champ(int num_player)
 {
@@ -310,8 +316,13 @@ void 	print_num_players(t_list *champ)
 	while (cham)
 	{
 		num = ((t_player*)cham->content)->number;
-		ft_printf("NUM CHAMP:\t%i\nNAME:\t\t%s\n\n", num, ((t_player*)
-		cham->content)->name);
+		ft_printf("_____________________________\nNUM "
+			"CHAMP:\t%i\nNAME:\t\t%s\nCOMMENT:\t\t%s\nSI"
+			"ZE_CODE:\t%i\nEXEC_CODE:\t%s\n-----------------------------\n\n",
+			num, ((t_player*)cham->content)->name,
+				((t_player*)cham->content)->comment,
+				  ((t_player*)cham->content)->exec_size,
+				  ((t_player*)cham->content)->exec_code);
 		cham = cham->next;
 	}
 	ft_printf("\n\n");
@@ -332,7 +343,6 @@ t_list		*pl_parsing_input(int ac, char **av)
 		i++;
 	}
 //	print_num_players(champions);
-
 	pl_players_order(&champions);
 //	print_num_players(champions);
 	return (champions);

@@ -6,6 +6,7 @@ set(CMAKE_C_STANDARD 90)
 set(SOURCES_CW
         sources/cw/corewar.c
 		sources/cw/init.c
+		sources/cw/pl_init.c
 		sources/cw/operation.c
 		sources/cw/print.c
 		sources/cw/terminate.c
