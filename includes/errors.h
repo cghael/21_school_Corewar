@@ -19,6 +19,8 @@ typedef						enum
 	WRONG_ARG_TYPE,
 	INCORRECT_REG,
 	INCORRECT_DIR,
+	INCORRECT_IND,
+	UNKNOWN_OPERATOR,
 }							t_errors;
 
 static char					*g_error[] = {
@@ -31,6 +33,8 @@ static char					*g_error[] = {
 		"wrong argument type",
 		"incorrect register argument",
 		"incorrect direct argument",
+		"incorrect indirect argument",
+		"incorrect operation name",
 };
 
 #endif //ERRORS_H

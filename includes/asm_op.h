@@ -15,6 +15,7 @@
 # define REG_IND		5
 # define DIR_IND		6
 # define REG_DIR_IND	7
+# define COMMANDS_NUM	16
 
 typedef					enum
 {
@@ -48,7 +49,7 @@ typedef struct			s_op
 	unsigned int		cycles;
 }						t_op;
 
-static t_op				g_ops[16] = {
+static t_op				g_ops[COMMANDS_NUM] = {
 		{
 			.name = "live",
 			.code = 0x01,

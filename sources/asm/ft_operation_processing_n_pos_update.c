@@ -47,15 +47,27 @@ static int		ft_init_n_add_operation_token(t_asm *asm_s, t_typo num)
 	return (EXIT_SUCCESS);
 }
 
+static int		ft_get_op_len(char *str)
+{
+	int len;
+
+	len = 0;
+	while (str[len] && EXIT_FAILURE == ft_is_whitespace(str[len]) \
+	&& str[len] != DIRECT_CHAR)
+		len++;
+	return (len);
+}
+
 static int		ft_is_valid_op_name(t_asm *asm_s)
 {
 	int		i;
+	int		len;
 
-	i = 15;
-	while (i >= 0)
+	i = 0;
+	len = ft_get_op_len(&asm_s->parse->line[asm_s->pos]);
+	while (i < COMMANDS_NUM)
 	{
-		if (ft_strncmp(g_ops[i].name, &asm_s->parse->line[asm_s->pos], \
-												ft_strlen(g_ops[i].name)) == 0)
+		if (ft_strncmp(g_ops[i].name, &asm_s->parse->line[asm_s->pos], len) == 0)
 		{
 			if (EXIT_FAILURE == ft_init_n_add_operation_token(asm_s, i))
 				return (EXIT_FAILURE);
@@ -65,8 +77,9 @@ static int		ft_is_valid_op_name(t_asm *asm_s)
 				return (EXIT_FAILURE);
 			return (ft_check_n_write_op_args(asm_s));
 		}
-		i--;
+		i++;
 	}
+	asm_s->parse->err_num = UNKNOWN_OPERATOR;
 	return (EXIT_FAILURE);
 }
 
@@ -76,16 +89,12 @@ int				ft_operation_processing_n_pos_update(t_asm *asm_s)
 	{
 		if (EXIT_SUCCESS == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 			asm_s->pos++;
-		if (asm_s->parse->line[asm_s->pos] == '#')
-			return (EXIT_SUCCESS);
+		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR \
+		|| asm_s->parse->line[asm_s->pos] == ALT_COMMENT_CHAR)
+			break ;
 		if (EXIT_FAILURE == ft_is_valid_op_name(asm_s))
 			return (EXIT_FAILURE);
 	}
-	//while (skip whitespaces) - done!
-	//is operator and valid
-		//arg type
-		//arg value
-		//separator?
 	//count arg type code
 	return (EXIT_SUCCESS);
 }

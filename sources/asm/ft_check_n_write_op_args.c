@@ -15,8 +15,12 @@ static int	ft_move_pos_to_separator(t_asm *asm_s)
 			return (EXIT_SUCCESS);
 		}
 		else
+		{
+			asm_s->parse->err_num = NO_SEPARATOR;
 			return (EXIT_FAILURE);
+		}
 	}
+	asm_s->parse->err_num = FEW_ARGS;
 	return (EXIT_FAILURE);
 }
 
@@ -27,10 +31,7 @@ static int	ft_parse_arg(t_asm *asm_s, int arg_pars)
 	if ((arg_pars + 1) < g_ops[asm_s->op_list->num].n_args)
 	{
 		if (EXIT_FAILURE == ft_move_pos_to_separator(asm_s))
-		{
-			asm_s->parse->err_num = NO_SEPARATOR;
 			return (EXIT_FAILURE);
-		}
 	}
 	return (EXIT_SUCCESS);
 }
