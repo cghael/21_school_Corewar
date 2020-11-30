@@ -96,8 +96,8 @@
 
 typedef						enum
 {
-	true,
-	false
+	false,
+	true
 }							t_bool;
 
 typedef struct				s_parse

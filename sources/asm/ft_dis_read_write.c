@@ -6,17 +6,6 @@
 
 //todo refactor this to separate files, ERR_management?
 
-t_statement		*ft_dis_init_statement(void)
-{
-	t_statement	*statement;
-
-	if (!(statement = (t_statement *)ft_memalloc(sizeof(t_statement))))
-		ft_dis_error(ERR_DIS_STATEMENT, NULL);
-	statement->op = NULL;
-	statement->next = NULL;
-	return (statement);
-}
-
 int32_t			ft_dis_bytecode_to_int32(const uint8_t *bytecode, size_t size)
 {
 	int32_t		result;
@@ -102,10 +91,31 @@ int				ft_dis_parse_bytecode(t_dis *dis_s)
 
 void					ft_dis_write_file(t_dis *dis_s)
 {
+	t_statement	*current;
+	int i;
 	ft_printf("try write parsed bot!\n");
 	ft_dprintf(dis_s->fd_s, ".name \"%s\"\n", dis_s->name);
 	ft_dprintf(dis_s->fd_s, ".comment \"%s\"\n\n", dis_s->comment);
-
+	current = dis_s->statements;
+	while (current)
+	{
+		ft_dprintf(dis_s->fd_s, "%s", current->op->name);
+		i = 0;
+		while (i < current->op->n_args)
+		{
+			if (current->args_types[i] == T_DIR)
+				ft_dprintf(dis_s->fd_s, " %%%ld", (long)current->args[i]);
+			else if (current->args_types[i] == T_IND)
+				ft_dprintf(dis_s->fd_s, " %ld", (long)current->args[i]);
+			else if (current->args_types[i] == T_REG)
+				ft_dprintf(dis_s->fd_s, " r%ld", (long)current->args[i]);
+			if (i < current->op->n_args - 1)
+				ft_dprintf(dis_s->fd_s, ",");
+			i++;
+		}
+		ft_dprintf(dis_s->fd_s, "\n");
+		current = current->next;
+	}
 }
 
 int				ft_dis_read_write(t_dis *dis_s)

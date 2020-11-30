@@ -63,7 +63,7 @@ t_bool	is_arg_types_valid(t_statement *statements)
 	i = 0;
 	while (i < statements->op->n_args)
 	{
-		if (!(statements->args[i] & statements->op->args[i]))
+		if (!(statements->args_types[i] & statements->op->args[i]))
 			return (false);
 		i++;
 	}
@@ -125,7 +125,7 @@ void			process_arg_types(t_dis *dis_s, t_statement *statements)
 		validate_types_code(dis_s, is_args_type, statements->op->n_args);
 	}
 	else
-		statements->args[0] = statements->op->args[0];
+		statements->args_types[0] = statements->op->args[0];
 }
 
 
@@ -219,5 +219,8 @@ static t_statement	*process_statement(t_dis *dis_s)
 void					ft_dis_process_exec_code(t_dis *dis_s)
 {
 	while (dis_s->pos < dis_s->code_size)
+	{
+		ft_dprintf(2, "POS %d\n", dis_s->pos);//todo del
 		add_statement(&(dis_s->statements), process_statement(dis_s));
+	}
 }
