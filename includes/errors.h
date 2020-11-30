@@ -23,6 +23,7 @@
 # define ERR_NUM_CHAMP		"ERROR: Invalid champion number"
 # define ERR_MALC_INIT		"ERROR: Can\'t initialize malloc"
 # define ERR_MANY_CHAMP		"ERROR: Too many champions"
+# define ERR_FEW_CHAMP		"ERROR: Too few champions"
 # define ERR_BAD_NULL_NAME	"Error: Missing NULL after champion's name"
 # define ERR_BAD_NULL_COMM	"Error: Missing NULL after champion's comment"
 

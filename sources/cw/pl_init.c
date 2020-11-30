@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/30 13:48:33 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/30 15:56:18 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -289,6 +289,27 @@ t_list		*pl_sort_stack_champ(t_list *champions)
 	return (start);
 }
 
+void		pl_check_num_champion(t_list *champions)
+{
+	int	max_num_player;
+	t_list		*tmp;
+
+	if (!champions)
+		terminate(ERR_FEW_CHAMP);
+	tmp = champions;
+	max_num_player = (int)((t_player*)champions->content)->number;
+	while (tmp)
+	{
+		if ((int)((t_player*)tmp->content)->number == max_num_player)
+		{
+			tmp = tmp->next;
+			max_num_player--;
+		}
+		else
+			terminate(ERR_NUM_CHAMP);
+	}
+}
+
 void		pl_players_order(t_list **champions)
 {
 	t_list *tmp;
@@ -305,6 +326,7 @@ void		pl_players_order(t_list **champions)
 		terminate(ERR_MANY_CHAMP);
 	pl_number_order(*champions, quant);
 	*champions = pl_sort_stack_champ(*champions);
+	pl_check_num_champion(*champions);
 }
 
 void 	print_num_players(t_list *champ)
@@ -344,6 +366,6 @@ t_list		*pl_parsing_input(int ac, char **av)
 	}
 //	print_num_players(champions);
 	pl_players_order(&champions);
-//	print_num_players(champions);
+	print_num_players(champions);
 	return (champions);
 }
