@@ -58,7 +58,7 @@ static int			ft_parse_reg(t_asm *asm_s, int arg_pars)
 	if (asm_s->op_list->args[arg_pars].content == NULL)
 		return (EXIT_FAILURE);
 	asm_s->pos += len;
-	asm_s->op_list->args[arg_pars].type = T_REG;
+	asm_s->op_list->args[arg_pars].type = REG_CODE;
 	return (EXIT_SUCCESS);
 }
 
@@ -85,7 +85,7 @@ static int			ft_parse_direct(t_asm *asm_s, int arg_pars)
 		return (EXIT_FAILURE);
 	asm_s->pos += (sign) ? 1 : 0;
 	asm_s->pos += ft_count_num_len(&asm_s->parse->line[asm_s->pos]);
-	asm_s->op_list->args[arg_pars].type = T_DIR;
+	asm_s->op_list->args[arg_pars].type = DIR_CODE;
 	return (EXIT_SUCCESS);
 }
 
@@ -112,7 +112,7 @@ static int			ft_parse_indirect(t_asm *asm_s, int arg_pars)
 		return (EXIT_FAILURE);
 	asm_s->pos += (sign) ? 1 : 0;
 	asm_s->pos += ft_count_num_len(&asm_s->parse->line[asm_s->pos]);
-	asm_s->op_list->args[arg_pars].type = T_IND;
+	asm_s->op_list->args[arg_pars].type = IND_CODE;
 	return (EXIT_SUCCESS);
 }
 
