@@ -158,12 +158,11 @@ typedef struct				s_asm
 //	unsigned				column;
 //	t_token					*tokens;
 	t_operations			*op_list;
-	int32_t					exec_size;
 	int32_t					pos;
 	char					*name;
 	char					*comment;
 	char					*code;
-	int32_t					code_size;
+	int32_t					exec_size;
 	t_label					*labels;
 }							t_asm;
 
@@ -280,6 +279,7 @@ int							ft_check_n_write_op_args(t_asm *asm_s);
 int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
 int							ft_count_num_len(const char *str);
 int							ft_check_arg_type(t_asm *asm_s, int type, int arg_pars);
-int							ft_write_arg_type_code(t_asm *asm_s);
+void						ft_write_arg_type_code(t_asm *asm_s);
+void						ft_count_exec_code_size(t_asm *asm_s);
 
 #endif
