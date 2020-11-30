@@ -95,6 +95,6 @@ int				ft_operation_processing_n_pos_update(t_asm *asm_s)
 		if (EXIT_FAILURE == ft_is_valid_op_name(asm_s))
 			return (EXIT_FAILURE);
 	}
-	//count arg type code
+	ft_write_arg_type_code(asm_s);
 	return (EXIT_SUCCESS);
 }

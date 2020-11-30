@@ -112,7 +112,7 @@ typedef struct				s_parse
 
 typedef struct				s_args
 {
-	int						type;
+	uint8_t					type;
 	char					*content;
 	int						is_label;
 }							t_args;
@@ -122,6 +122,7 @@ typedef struct				s_operations
 	t_typo					num;
 	unsigned				n_line;
 	unsigned				pos;
+	uint8_t					args_code;
 	t_args					*args;
 	struct s_operations		*next;
 	struct s_operations		*last;
@@ -279,5 +280,6 @@ int							ft_check_n_write_op_args(t_asm *asm_s);
 int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
 int							ft_count_num_len(const char *str);
 int							ft_check_arg_type(t_asm *asm_s, int type, int arg_pars);
+int							ft_write_arg_type_code(t_asm *asm_s);
 
 #endif
