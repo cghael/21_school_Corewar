@@ -31,7 +31,14 @@ typedef						enum
 	COMMON,
 	DOUBLE_LABEL,
 	TOO_MATCH_LABELS,
-	LEXICAL_ERROR
+	LEXICAL_ERROR,
+	NO_SEPARATOR,
+	FEW_ARGS,
+	WRONG_ARG_TYPE,
+	INCORRECT_REG,
+	INCORRECT_DIR,
+	INCORRECT_IND,
+	UNKNOWN_OPERATOR,
 }							t_errors;
 
 static char				*g_error[] = {
@@ -39,6 +46,13 @@ static char				*g_error[] = {
 		"label with this name is already exist",
 		"more then one label in line",
 		"lexical error",
+		"no separator char",
+		"wrong number of arguments",
+		"wrong argument type",
+		"incorrect register argument",
+		"incorrect direct argument",
+		"incorrect indirect argument",
+		"incorrect operation name",
 };
 
 #endif //ERRORS_H

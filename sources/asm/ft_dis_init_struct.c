@@ -18,5 +18,6 @@ t_dis	*ft_dis_init_struct(void)
 
 	dis_s = ft_memalloc(sizeof(t_dis*));
 	dis_s->file_s = NULL;
+	dis_s->fd_cor = -1;
 	return (dis_s);
 }

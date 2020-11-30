@@ -12,7 +12,8 @@ int				ft_check_operation(t_asm *asm_s)
 	}
 	while (asm_s->parse->line[asm_s->pos])
 	{
-		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR) //todo add alt comment
+		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR \
+		|| asm_s->parse->line[asm_s->pos] == ALT_COMMENT_CHAR)
 			return (EXIT_SUCCESS);
 		else if (EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 		{

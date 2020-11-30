@@ -4,3 +4,9 @@
 cmake-build-debug/
 
 asm.dSYM/
+
+test.s
+
+test_
+/sources/cw/batman.s
+/sources/cw/batman.cor

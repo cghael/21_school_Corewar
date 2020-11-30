@@ -21,6 +21,8 @@ static void		ft_free_labels(t_asm *asm_struct)
 			tmp_m = NULL;
 			tmp_m = tmp->mention;
 		}
+		if (tmp->name)
+			free((void*)tmp->name);
 		free(tmp);
 		tmp = NULL;
 		tmp = asm_struct->labels;
@@ -30,12 +32,20 @@ static void		ft_free_labels(t_asm *asm_struct)
 static void		ft_free_ops(t_asm *asm_struct)
 {
 	t_operations	*tmp;
+	int				i;
 
 	tmp = asm_struct->op_list;
 	while (tmp)
 	{
 		asm_struct->op_list = asm_struct->op_list->next;
-//		free((void*)tmp->name);
+		i = 0;
+		while (tmp->args && i < g_ops[tmp->num].n_args)
+		{
+			if (tmp->args[i].content)
+				free(tmp->args[i].content);
+			i++;
+		}
+		free(tmp->args);
 		free(tmp);
 		tmp = NULL;
 		tmp = asm_struct->op_list;

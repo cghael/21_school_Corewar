@@ -12,15 +12,9 @@
 
 #include "asm.h"
 
-char *ft_dis_ask_new_filename(char *new_filename, t_dis *dis_s)
+void		ft_dis_ask_new_filename(t_dis *dis_s)
 {
-	scanf("%s", new_filename);
-	if (!(new_filename = ft_strjoin(new_filename, ".s")))
-	{
-		ft_dis_error(ERR_DIS_CHOOSE, new_filename);
-		return (NULL);
-	}
-
-	else
-		return (new_filename);
+	scanf("%s", dis_s->file_s);
+	if (EXIT_FAILURE == ft_dis_add_s(dis_s))
+		ft_dis_error(ERR_DIS_CHOOSE, dis_s->file_s);
 }

@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_check_file_exist.c                          :+:      :+:    :+:   */
+/*   ft_dis_del_cor.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:45:07 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/24 13:45:08 by ksemele          ###   ########.fr       */
+/*   Created: 2020/11/25 13:56:47 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/25 13:56:50 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-/*
-** func try open filename.
-**
-** RETURN VALUES:
-**
-** if SUCCESS - FILE_EXIST (0) && close opened FD
-** if FAILURE - FILE_NOT_EXIST (1)
-*/
-
-int		ft_dis_check_file_exist(t_dis *dis_s)
+int		ft_dis_del_cor(t_dis *dis_s)
 {
-	dis_s->fd_cor = open(dis_s->file_s, O_RDONLY);
-	if (dis_s->fd_cor >= 0)
-	{
-		close(dis_s->fd_cor);
-		return (FILE_EXIST);
-	}
-	return (FILE_NOT_EXIST);
+	char		*dot;
+
+	if (!(dot = ft_strrchr(dis_s->file_s, '.')) ||
+		!(dis_s->file_s = ft_strsub(dis_s->file_s, 0, dot - dis_s->file_s)))
+		return (ft_dis_error(ERR_DIS_FILE, dis_s->file_s));
+	return (EXIT_SUCCESS);
 }

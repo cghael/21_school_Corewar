@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_check_file_exist.c                          :+:      :+:    :+:   */
+/*   ft_dis_convert_start_filename.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 13:45:07 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/24 13:45:08 by ksemele          ###   ########.fr       */
+/*   Created: 2020/11/25 16:22:06 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/25 16:22:08 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-/*
-** func try open filename.
-**
-** RETURN VALUES:
-**
-** if SUCCESS - FILE_EXIST (0) && close opened FD
-** if FAILURE - FILE_NOT_EXIST (1)
-*/
-
-int		ft_dis_check_file_exist(t_dis *dis_s)
+int		ft_dis_convert_start_filename(char *file, t_dis *dis_s)
 {
-	dis_s->fd_cor = open(dis_s->file_s, O_RDONLY);
-	if (dis_s->fd_cor >= 0)
-	{
-		close(dis_s->fd_cor);
-		return (FILE_EXIST);
-	}
-	return (FILE_NOT_EXIST);
+	if (EXIT_FAILURE == ft_dis_copy_filename(file, dis_s) \
+		|| EXIT_FAILURE == ft_dis_del_cor(dis_s) \
+		|| EXIT_FAILURE == ft_dis_add_s(dis_s))
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }

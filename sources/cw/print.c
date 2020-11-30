@@ -18,3 +18,28 @@ void		print_result(t_player *win_player)
 		   win_player->name);
 	//TODO print_result
 }
+
+void		print_bit(uint8_t bit)
+{
+	char	a[] = "0123456789abcdef";
+
+	ft_putchar(a[bit / 16]);
+	ft_putchar(a[bit % 16]);
+}
+
+void		vm_print_arena(t_vm *vm)
+{
+	uint32_t		i;
+
+	i = 0;
+	while (i < MEM_SIZE)
+	{
+		print_bit(vm->arena[i]);
+		if ((i + 1) % 32 == 0)
+			ft_printf("\n");
+		else
+			ft_printf(" ");
+		i++;
+	}
+	ft_printf("\n\n\n");
+}

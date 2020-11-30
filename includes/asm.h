@@ -6,7 +6,7 @@
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 19:11:23 by ksemele           #+#    #+#             */
-/*   Updated: 2020/11/25 11:31:18 by ablane           ###   ########.fr       */
+/*   Updated: 2020/10/11 19:11:27 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include "libft.h"
 # include "op.h"
 # include "errors.h"
+# include "asm_op.h"
 
 /*
 ** ALLOWED funcs:
@@ -42,19 +43,23 @@
 */
 
 # define STRINGS_EQU		1
-# define ASM_STRUCT_ERR		"error in ft_init_asm_struct"
-# define MEMALLOC_ERR		"ft_memalloc() error"
 # define IS_NOT_FILE		-1
 # define IS_S_FILE			0
 # define IS_COR_FILE		1
 # define IS_BAD_FILE		2
 
+# define ERR_ASM_STRUCT		"error in ft_init_asm_struct"
+# define ERR_MEMALLOC		"ERROR in ft_memalloc()"
 # define ERR_WRITE_BYTE		"Error in ft_write_bytecode_to_file()\n"
 # define ERR_NAME_LEN		"Champion name too long (Max length 128)"
 # define ERR_DOUBLE_NAME	-1
 # define ERR_DOUBLE_COMMENT	-2
 # define ERR_UNKNOWN_CMD	-3
 # define ERR_NO_NAME		-4
+# define ERR_DIS_FILE		"Error in ft_dis_filename_treat()\n"
+# define ERR_DIS_CHOOSE		"Error in ft_dis_choose_new_filename()\n"
+# define ERR_DIS_INIT		"Error in ft_dis_init_struct()\n"
+# define ERR_DIS			"Error in ft_disassemble()\n"
 
 # define NAME_START			1
 # define NAME_END			2
@@ -73,44 +78,22 @@
 # define IS_COMMENT			3
 # define IS_NOT_COMMAND		-1
 
+# define FILE_EXIST			0
+# define FILE_NOT_EXIST		1
+# define FILE_EXIST_TXT		"[\e[1;33m%s\e[m] already exist or incorrect\n"
+# define FILE_INPUT_NEW		"input new_filename:\n>>>\t"
+# define FILE_SAVE_OK		"Ok! I save file to [\e[1;33m%s\e[m]\n"
+# define FILE_NOT_EXIST_TXT	"new_filename is: [\e[1;33m%s\e[m]\n"
+# define FILE_INCORRECT		"Srry, incorrect filename! [\e[1;33m%s\e[m]\n"
+# define WRONG_SCANF_INPUT	"Wrong input\nnew_filename is [\e[1;33m%s\e[m]\n"
+# define _IS_CORRECT		"it's correct? (Y/n)\n"
+# define Q_CORRECT_NAME		"new_filename is [\e[1;33m%s\e[m]\nit's correct? (Y/n)\n"
+# define YES				"Y"
+# define NO					"n"
+
 /*
 ** ------------------------------ Structures -----------------------------------
 */
-
-typedef						enum
-{
-	NAME,
-	COMMENT,
-	LABEL,
-	OPERATOR,
-	REGISTER,
-	DIRECT,
-	DIRECT_LABEL,
-	INDIRECT,
-	INDIRECT_LABEL,
-	SEPARATOR,
-	NEW_LINE,
-	END
-}							t_typo;
-
-static char				*g_op[] = {
-		"live",
-		"ld",
-		"st",
-		"add",
-		"sub",
-		"and",
-		"or",
-		"xor",
-		"zjmp",
-		"ldi",
-		"sti",
-		"fork",
-		"lld",
-		"lldi",
-		"lfork",
-		"aff"
-};
 
 typedef struct				s_parse
 {
@@ -122,21 +105,27 @@ typedef struct				s_parse
 	int						is_whitespace;
 }							t_parse;
 
-typedef struct				s_token
+typedef struct				s_args
 {
-	const char				*content;
-	t_typo					typo;
-	int						n_line;
-	int						pos;
-	struct s_token			*next;
-	struct s_token			*last;
-}							t_token;
+	int						type;
+	char					*content;
+	int						is_label;
+}							t_args;
+
+typedef struct				s_operations
+{
+	t_typo					num;
+	unsigned				n_line;
+	unsigned				pos;
+	t_args					*args;
+	struct s_operations		*next;
+	struct s_operations		*last;
+}							t_operations;
 
 typedef struct				s_mention
 {
-	unsigned				row;
-	unsigned				column;
-	int32_t					pos;
+	unsigned				n_line;
+	unsigned				pos;
 	int32_t					op_pos;
 	size_t					size;
 	struct s_mention		*next;
@@ -145,10 +134,11 @@ typedef struct				s_mention
 typedef struct				s_label
 {
 	const char				*name;
+	int						n_line;
 	int32_t					byte_pos;
 	struct s_mention		*mention;
 	struct s_label			*next;
-//	struct s_label			*last;
+	struct s_label			*last;
 }							t_label;
 
 typedef struct				s_asm
@@ -160,7 +150,8 @@ typedef struct				s_asm
 //	int						n_lines;
 //	unsigned				line;
 //	unsigned				column;
-	t_token					*tokens;
+//	t_token					*tokens;
+	t_operations			*op_list;
 	int32_t					exec_size;
 	int32_t					pos;
 	char					*name;
@@ -169,6 +160,30 @@ typedef struct				s_asm
 	int32_t					code_size;
 	t_label					*labels;
 }							t_asm;
+
+/*
+** ----------------------------- Disassembler ----------------------------------
+*/
+
+typedef struct				s_dis
+{
+	int						fd_cor;
+	char					*file_s;
+}							t_dis;
+
+int							ft_disassemble(char *file_cor, t_asm *asm_s);
+int							ft_dis_error(char *error_text, void *data_for_free);
+t_dis						*ft_dis_init_struct(void);
+int							ft_dis_free_struct(t_dis *dis_s);
+int							ft_dis_choose_new_filename(t_dis *dis_s);
+int							ft_dis_filename_treat(char *file_cor, t_dis *dis_s);
+int ft_dis_check_file_exist(t_dis *dis_s);
+int							ft_dis_try_create_file(t_dis *dis_s);
+void ft_dis_ask_new_filename(t_dis *dis_s);
+int		ft_dis_copy_filename(char *filename, t_dis *dis_s);
+int		ft_dis_add_s(t_dis *dis_s);
+int		ft_dis_del_cor(t_dis *dis_s);
+int		ft_dis_convert_start_filename(char *file, t_dis *dis_s);
 
 /*
 ** ------------------------------ Functions ------------------------------------
@@ -180,7 +195,6 @@ void						ft_free_asm_struct(t_asm *asm_s);
 int							ft_is_filename(char *filename, t_asm *asm_s);
 void						ft_check_read_argv_files(int argc, char **argv);
 void						ft_assemble(char *file, t_asm *asm_s);
-void						ft_disassemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
 void						ft_asm_error_in_line(t_asm *asm_s);
@@ -206,5 +220,10 @@ int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
 //int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 int							ft_label_processing_n_pos_update(t_asm *asm_s);
+int							ft_is_label_char(char ch);
+int							ft_check_n_write_op_args(t_asm *asm_s);
+int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
+int							ft_count_num_len(const char *str);
+int							ft_check_arg_type(t_asm *asm_s, int type, int arg_pars);
 
 #endif
