@@ -57,6 +57,7 @@ set(SOURCES_ASM
 		sources/asm/ft_count_num_len.c
 		sources/asm/ft_check_arg_type.c
 		sources/asm/ft_write_arg_type_code.c
+		sources/asm/ft_count_exec_code_size.c
 		sources/asm/ft_dis_read_write.c
 		sources/asm/ft_dis_process_exec_code.c)
 

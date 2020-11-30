@@ -39,6 +39,8 @@ int				ft_line_data_processing(t_asm *asm_s)
 	if (asm_s->quotes != NAME_CMT_FOUND)
 		res = ft_check_name_or_comment(asm_s);
 	else
+	{
 		res = ft_check_operation(asm_s);
+	}
 	return (res);
 }
