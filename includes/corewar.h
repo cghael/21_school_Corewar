@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:49:00 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/25 14:32:48 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/30 12:24:21 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 typedef struct				s_player
 {
 	int						number;
-	char					name[PROG_NAME_LENGTH];
-	char					comment[COMMENT_LENGTH];
+	char					*name[PROG_NAME_LENGTH];
+	char					*comment[COMMENT_LENGTH];
 	unsigned int			exec_size;
 	unsigned char			exec_code[CHAMP_MAX_SIZE];
 }							t_player;

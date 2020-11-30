@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/26 16:41:49 by ablane           ###   ########.fr       */
+/*   Updated: 2020/11/30 12:52:26 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ t_list		*pl_new_champ(int num_player)
 		terminate(ERR_MALC_INIT);
 	if(!(champion = (t_player*)malloc(sizeof(t_player))))
 		terminate(ERR_MALC_INIT);
+//	if(!(champion->name = ft_strnew(PROG_NAME_LENGTH)))
+//		terminate(ERR_MALC_INIT);
 	champion->number = num_player;
 	champion->exec_size = 0;
 	player->content = (void*)champion;
@@ -61,7 +63,7 @@ void		pl_check_null_champ(int fd, int i)
 	int r;
 
 	r = read(fd, &buff, 4);
-	if (r != 4 || (resul = pl_bytecode_to_int32(buff, 4)))
+	if (r != 4 || pl_bytecode_to_int32(buff, 4))
 	{
 		if (i == 1)
 			in_close_fd_err(fd, ERR_BAD_NULL_NAME);
@@ -83,15 +85,6 @@ void		pl_check_magic_header(int fd)
 		in_close_fd_err(fd, ERR_BAD_MAGIC);
 }
 
-void		pl_cp_char_len(uint8_t *buff, int len, t_list *player)
-{
-	while(len)
-	{
-		((t_player*)player->content)->name[len - 1] = buff[len - 1];
-		len--;
-	}
-}
-
 void		pl_cp_comment_champion(int fd, t_list *player)
 {
 	uint8_t buff[COMMENT_LENGTH];
@@ -99,7 +92,7 @@ void		pl_cp_comment_champion(int fd, t_list *player)
 
 	r = read(fd, &buff, COMMENT_LENGTH);
 	if (r == COMMENT_LENGTH)
-		pl_cp_char_len(buff, COMMENT_LENGTH, player);
+		ft_memcpy(((t_player*)player->content)->name, buff, PROG_NAME_LENGTH);
 	else
 		in_close_fd_err(fd, ERR_BAD_COMM);
 }
@@ -111,7 +104,7 @@ void		pl_cp_name_champion(int fd, t_list *player)
 
 	r = read(fd, &buff, PROG_NAME_LENGTH);
 	if (r == PROG_NAME_LENGTH)
-		pl_cp_char_len(buff, PROG_NAME_LENGTH, player);
+		ft_memcpy(((t_player*)player->content)->name, buff, PROG_NAME_LENGTH);
 	else
 		in_close_fd_err(fd, ERR_BAD_NAME);
 }
@@ -138,8 +131,9 @@ void		pl_cp_code_champion(int fd, t_list *player)
 	r = read(fd, &buff, ((t_player*)player->content)->exec_size);
 	if (r == ((t_player*)player->content)->exec_size)
 	{
-		pl_cp_char_len(buff, ((t_player*)player->content)->exec_size, player);
-		if (read(fd, &buff, 1))
+		ft_memcpy(((t_player*)player->content)->exec_code, buff,
+			PROG_NAME_LENGTH);
+		if (read(fd, &buff, 1) && r)
 			in_close_fd_err(fd, ERR_BAD_LEN);
 	}
 	else
@@ -289,7 +283,7 @@ t_list		*pl_sort_stack_champ(t_list *champions)
 	return (start);
 }
 
-void		pl_player_order(t_list **champions)
+void		pl_players_order(t_list **champions)
 {
 	t_list *tmp;
 	int quant;
@@ -307,8 +301,7 @@ void		pl_player_order(t_list **champions)
 	*champions = pl_sort_stack_champ(*champions);
 }
 
-
-void 	print_num_player(t_list *champ)
+void 	print_num_players(t_list *champ)
 {
 	t_list *cham;
 	int num;
@@ -317,7 +310,8 @@ void 	print_num_player(t_list *champ)
 	while (cham)
 	{
 		num = ((t_player*)cham->content)->number;
-		ft_printf("%s:\t%i\n", ((t_player*)cham->content)->name, num);
+		ft_printf("NUM CHAMP:\t%i\nNAME:\t\t%s\n\n", num, ((t_player*)
+		cham->content)->name);
 		cham = cham->next;
 	}
 	ft_printf("\n\n");
@@ -337,9 +331,9 @@ t_list		*pl_parsing_input(int ac, char **av)
 		champions = pl_list_champions(&i, av, champions);
 		i++;
 	}
-	print_num_player(champions);
+//	print_num_players(champions);
 
-	pl_player_order(&champions);
-	print_num_player(champions);
+	pl_players_order(&champions);
+//	print_num_players(champions);
 	return (champions);
 }
