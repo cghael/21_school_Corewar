@@ -59,9 +59,8 @@ void		vm_init_arena(t_vm *vm)
 	while (tmp)
 	{
 		player = (t_player*)tmp->content;
-		ft_memcpy_cor(&vm->arena[MEM_SIZE / vm->number_players *
-				(player->number - 1) % MEM_SIZE],
-				player->exec_code, player->exec_size, MEM_SIZE);
+		set_arena(vm->arena, MEM_SIZE / vm->number_players *
+		(player->number - 1), player->exec_code, player->exec_size);
 		tmp = tmp->next;
 	}
 }

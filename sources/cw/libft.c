@@ -52,37 +52,17 @@ u_int32_t	ft_lstlength(t_list *lst)
 	return (len);
 }
 
-void	*ft_memcpy_cor(void *dest, const void *source, size_t n, size_t max)
-{
-	uint8_t			*destp;
-	uint8_t 		*srcp;
-	size_t			i;
-
-	i = 0;
-	destp = (uint8_t*)dest;
-	srcp = (uint8_t*)source;
-	if (!dest && !source)
-		return (NULL);
-	while (n--)
-	{
-		destp[i % max] = srcp[i % max];
-		i++;
-	}
-	return (destp);
-}
-
 int32_t		ft_bitetoint(uint8_t const arg[], uint8_t len)
 {
-	int8_t		i;
 	int32_t		sum;
 	uint32_t	k;
 
-	i = 0;
 	sum = 0;
 	k = 1;
-	while (i < len)
+	while (len)
 	{
-		sum += arg[i++] * k;
+		len--;
+		sum += arg[len] * k;
 		k *= 256;
 	}
 	return (sum);

@@ -29,6 +29,14 @@ typedef struct				s_player
 	uint8_t					exec_code[CHAMP_MAX_SIZE];
 }							t_player;
 
+typedef struct				s_argument
+{
+	uint8_t					type;
+	uint32_t				pos;
+	uint8_t					*data;
+	uint8_t					len;
+}							t_argument;
+
 typedef struct				s_carriage
 {
 	uint32_t				number;
@@ -38,6 +46,7 @@ typedef struct				s_carriage
 	uint32_t				waiting_moves;
 	uint32_t				position;
 	uint8_t					reg[REG_NUMBER][REG_SIZE];
+	t_argument				args[3];
 	t_player				*player;
 }							t_carriage;
 
@@ -60,6 +69,9 @@ t_player					*vm_operation(t_vm *vm);
 void						print_result(t_player *win_player);
 void						vm_print_arena(t_vm *vm);
 t_list						*vm_init_players(int ac, char **av);
+uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
+void 						set_arena(uint8_t *array, int32_t pos,
+					 		const uint8_t *data, uint32_t len);
 
 /*
 **  commands
@@ -67,6 +79,10 @@ t_list						*vm_init_players(int ac, char **av);
 
 void						live(t_carriage *car, t_vm *vm);
 void						ld(t_carriage *car, t_vm *vm);
+void						st(t_carriage *car, t_vm *vm);
+void						zjmp(t_carriage *car, t_vm *vm);
+void						sti(t_carriage *car, t_vm *vm);
+void						ldi(t_carriage *car, t_vm *vm);
 
 /*
 **  newlibft functions
@@ -75,8 +91,6 @@ void						ld(t_carriage *car, t_vm *vm);
 t_list		*ft_lstpnew(void *content);
 void		ft_lstpdelone(t_list **alst, t_list *del);
 u_int32_t	ft_lstlength(t_list *lst);
-void		*ft_memcpy_cor(void *dest, const void *source, size_t n,
-					 size_t max);
 int32_t		ft_bitetoint(uint8_t const arg[], uint8_t len);
 
 #endif

@@ -6,8 +6,11 @@
 
 void	sti(t_carriage *car, t_vm *vm)
 {
-	if (((vm->arena[(car->position + 1) % MEM_SIZE] >> 4) & 3) == 1)
-	{
+	uint32_t	ind;
 
-	}
+	ind = (ft_bitetoint(car->args[1].data,
+			car->args[1].type == T_DIR ? 2 : REG_SIZE) +
+			ft_bitetoint(car->args[2].data,
+			car->args[2].type == T_DIR ? 2 : REG_SIZE)) % IDX_MOD;
+	set_arena(vm->arena, car->position + ind, car->args[0].data, REG_SIZE);
 }
