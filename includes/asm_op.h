@@ -15,6 +15,7 @@
 # define REG_IND		5
 # define DIR_IND		6
 # define REG_DIR_IND	7
+# define COMMANDS_NUM	16
 
 typedef					enum
 {
@@ -36,6 +37,20 @@ typedef					enum
 	AFF
 }						t_typo;
 
+/*
+** Operator
+*/
+
+/*
+** name          — name of operator
+** code          — code of operator
+** n_args        — number of arguments
+** is_args_type  — does bytecode of statement with this operator contain code
+**                 of argument's types
+** args_types    — types of arguments
+** t_dir_size    — size of T_DIR argument
+*/
+
 typedef struct			s_op
 {
 	char				*name;
@@ -44,11 +59,12 @@ typedef struct			s_op
 	int					args[3];
 	int					is_args_type;
 	int					is_small_dir;
+	uint8_t				t_dir_size;
 	int					change_carry;
 	unsigned int		cycles;
 }						t_op;
 
-static t_op				g_ops[16] = {
+static t_op				g_ops[COMMANDS_NUM] = {
 		{
 			.name = "live",
 			.code = 0x01,
@@ -56,6 +72,7 @@ static t_op				g_ops[16] = {
 			.args = {DIR, 0, 0},
 			.is_args_type = FALSE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = FALSE,
 			.cycles = 10
 		},
@@ -66,6 +83,7 @@ static t_op				g_ops[16] = {
 			.args = {DIR_IND, REG, 0},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 5
 		},
@@ -76,6 +94,7 @@ static t_op				g_ops[16] = {
 			.args = {REG, REG_IND, 0},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = FALSE,
 			.cycles = 5
 		},
@@ -86,6 +105,7 @@ static t_op				g_ops[16] = {
 			.args = {REG, REG, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 10
 		},
@@ -96,6 +116,7 @@ static t_op				g_ops[16] = {
 			.args = {REG, REG, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 10
 		},
@@ -106,6 +127,7 @@ static t_op				g_ops[16] = {
 			.args = {REG_DIR_IND, REG_DIR_IND, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 6
 		},
@@ -116,6 +138,7 @@ static t_op				g_ops[16] = {
 			.args = {REG_DIR_IND, REG_DIR_IND, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 6
 		},
@@ -126,6 +149,7 @@ static t_op				g_ops[16] = {
 			.args = {REG_DIR_IND, REG_DIR_IND, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 6
 		},
@@ -136,6 +160,7 @@ static t_op				g_ops[16] = {
 			.args = {DIR, 0, 0},
 			.is_args_type = FALSE,
 			.is_small_dir = TRUE,
+			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
 			.cycles = 20
 		},
@@ -146,6 +171,7 @@ static t_op				g_ops[16] = {
 			.args = {REG_DIR_IND, REG_DIR, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = TRUE,
+			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
 			.cycles = 25
 		},
@@ -156,6 +182,7 @@ static t_op				g_ops[16] = {
 			.args = {REG, REG_DIR_IND, REG_DIR},
 			.is_args_type = TRUE,
 			.is_small_dir = TRUE,
+			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
 			.cycles = 25
 		},
@@ -166,6 +193,7 @@ static t_op				g_ops[16] = {
 			.args = {DIR, 0, 0},
 			.is_args_type = FALSE,
 			.is_small_dir = TRUE,
+			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
 			.cycles = 800
 		},
@@ -176,6 +204,7 @@ static t_op				g_ops[16] = {
 			.args = {DIR_IND, REG, 0},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
 			.cycles = 10
 		},
@@ -186,6 +215,7 @@ static t_op				g_ops[16] = {
 			.args = {REG_DIR_IND, REG_DIR, REG},
 			.is_args_type = TRUE,
 			.is_small_dir = TRUE,
+			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = TRUE,
 			.cycles = 50
 		},
@@ -196,6 +226,7 @@ static t_op				g_ops[16] = {
 			.args = {DIR, 0, 0},
 			.is_args_type = FALSE,
 			.is_small_dir = TRUE,
+			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
 			.cycles = 1000
 		},
@@ -206,6 +237,7 @@ static t_op				g_ops[16] = {
 			.args = {REG, 0, 0},
 			.is_args_type = TRUE,
 			.is_small_dir = FALSE,
+			.t_dir_size = DIR_SIZE,
 			.change_carry = FALSE,
 			.cycles = 2
 		}

@@ -49,6 +49,7 @@ SRC_LIST_ASM = asm.c \
 				ft_dis_ask_new_filename.c \
 				ft_dis_copy_filename.c \
 				ft_dis_add_s.c \
+				ft_dis_read_write.c \
 				ft_free_asm_struct.c \
 				ft_init_asm_struct.c \
 				ft_is_filename.c \

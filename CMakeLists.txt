@@ -54,12 +54,18 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_free_struct.c
 		sources/asm/ft_dis_ask_new_filename.c
 		sources/asm/ft_check_n_write_op_args.c
+		sources/asm/ft_get_one_arg.c
 		sources/asm/ft_dis_copy_filename.c
 		sources/asm/ft_dis_add_s.c
 		sources/asm/ft_dis_del_cor.c
 		sources/asm/ft_dis_convert_start_filename.c
 		sources/asm/ft_get_one_arg.c
-		sources/asm/ft_count_num_len.c)
+		sources/asm/ft_count_num_len.c
+		sources/asm/ft_check_arg_type.c
+		sources/asm/ft_write_arg_type_code.c
+		sources/asm/ft_count_exec_code_size.c
+		sources/asm/ft_dis_read_write.c
+		sources/asm/ft_dis_process_exec_code.c)
 
 include_directories(includes)
 include_directories(libft/inc)
