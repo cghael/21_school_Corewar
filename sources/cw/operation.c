@@ -37,53 +37,58 @@ uint8_t		vm_checkout(t_vm *vm)
 		return (0);
 }
 
-void 		set_arena(uint8_t *arena, int32_t pos, const uint8_t *data,
-				 uint32_t len)
+t_data		get_t_data(uint8_t *array, int32_t pos, uint32_t max)
+{
+	t_data		data;
+
+	while (pos < 0)
+		pos += max;
+	data.data = array;
+	data.pos = max == 0 ? pos : pos % max;
+	data.max = max;
+	return (data);
+}
+
+void 		set_array(t_data dest, const t_data source, uint32_t n)
 {
 	uint32_t	i;
 
 	i = 0;
-	while (pos < 0)
-		pos += MEM_SIZE;
-	while (i < len)
+	while (dest.pos < 0)
+		dest.pos += dest.max;
+	while (i < n)
 	{
-		arena[(pos + i) % MEM_SIZE] = data[i];
+		dest.data[(dest.pos + i) % dest.max] =
+				source.data[(source.pos + i) % source.max];
 		i++;
 	}
 }
 
-uint8_t 	*get_array(uint8_t *array, int32_t pos)
+t_data		get_dir(uint8_t n, t_carriage *car, t_vm *vm)
 {
-	while (pos < 0)
-		pos += MEM_SIZE;
-	return (&array[pos % MEM_SIZE]);
+	return (get_t_data(vm->arena, car->args[n].pos, MEM_SIZE));
 }
 
-uint8_t		*get_dir(uint8_t n, t_carriage *car, t_vm *vm)
-{
-	return (get_array(vm->arena, car->args[n].pos));
-}
-
-uint8_t		*get_reg(uint8_t n, t_carriage *car, t_vm *vm)
+t_data		get_reg(uint8_t n, t_carriage *car, t_vm *vm)
 {
 	uint8_t		reg_nb;
 
-	reg_nb = *get_array(vm->arena, car->args[n].pos);
+	reg_nb = vm->arena[car->args[n].pos];
 	if (reg_nb < 1 || reg_nb > REG_NUMBER)
-		return (0);
-	return (car->reg[reg_nb - 1]);
+		return (get_t_data(0, 0, 0));
+	return (get_t_data(car->reg[reg_nb - 1], 0, REG_SIZE));
 }
 
-uint8_t		*get_ind(uint8_t n, t_carriage *car, t_vm *vm)
+t_data		get_ind(uint8_t n, t_carriage *car, t_vm *vm)
 {
 	int32_t		ind;
 
-	ind = ft_bitetoint(get_array(vm->arena, car->args[n].pos), IND_SIZE)
-			% IDX_MOD;
-	return (get_array(vm->arena, car->position + ind));
+	ind = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE),
+			IND_SIZE);
+	return (get_t_data(vm->arena, car->args[n].pos + ind, MEM_SIZE));
 }
 
-uint8_t		*get_data(uint8_t n, t_carriage *car, t_vm *vm)
+t_data		get_data(uint8_t n, t_carriage *car, t_vm *vm)
 {
 	if (car->args[n].type == T_DIR)
 		return (get_dir(n, car, vm));
@@ -153,7 +158,7 @@ void		cr_set_args_null(t_carriage *car, t_vm *vm)
 	i = 0;
 	while (i < 3)
 	{
-		car->args[i].data = 0;
+		car->args[i].data = get_t_data(0, 0, 0);
 		car->args[i].type = 0;
 		car->args[i].pos = 0;
 		car->args[i].len = 0;
@@ -172,7 +177,7 @@ uint8_t		cr_set_args(t_carriage *car, t_vm *vm)
 	i = 0;
 	while (i < g_ops[car->operation - 1].n_args)
 	{
-		if (!car->args[i].data)
+		if (car->args[i].type == T_REG && car->args[i].data.data == 0)
 			return (0);
 		i++;
 	}

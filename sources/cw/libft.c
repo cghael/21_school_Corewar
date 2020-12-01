@@ -3,6 +3,7 @@
 //
 
 #include "libft.h"
+#include "corewar.h"
 
 t_list		*ft_lstpnew(void *content)
 {
@@ -52,7 +53,7 @@ u_int32_t	ft_lstlength(t_list *lst)
 	return (len);
 }
 
-int32_t		ft_bitetoint(uint8_t const arg[], uint8_t len)
+int32_t		ft_bytetoint(const t_data arg, uint8_t len)
 {
 	int32_t		sum;
 	uint32_t	k;
@@ -62,7 +63,7 @@ int32_t		ft_bitetoint(uint8_t const arg[], uint8_t len)
 	while (len)
 	{
 		len--;
-		sum += arg[len] * k;
+		sum += arg.data[(arg.pos + len) % arg.max] * k;
 		k *= 256;
 	}
 	return (sum);

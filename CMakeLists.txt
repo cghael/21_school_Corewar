@@ -14,7 +14,8 @@ set(SOURCES_CW
 		sources/cw/commands/ld.c
 		sources/cw/commands/sti.c
 		sources/cw/commands/st.c
-		sources/cw/commands/ldi.c sources/cw/commands/zjmp.c)
+		sources/cw/commands/ldi.c
+		sources/cw/commands/zjmp.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c

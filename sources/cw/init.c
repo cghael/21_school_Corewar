@@ -59,8 +59,9 @@ void		vm_init_arena(t_vm *vm)
 	while (tmp)
 	{
 		player = (t_player*)tmp->content;
-		set_arena(vm->arena, MEM_SIZE / vm->number_players *
-		(player->number - 1), player->exec_code, player->exec_size);
+		set_array(get_t_data(vm->arena, MEM_SIZE / vm->number_players *
+			(player->number - 1), MEM_SIZE), get_t_data(player->exec_code, 0,
+			player->exec_size), player->exec_size);
 		tmp = tmp->next;
 	}
 }

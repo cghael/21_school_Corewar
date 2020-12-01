@@ -22,7 +22,7 @@ void		live(t_carriage *car, t_vm *vm)
 {
 	vm->number_live++;
 	car->number_last_live = vm->number_cycle;
-	if (pl_find(vm->players, -ft_bitetoint(car->args[0].data, DIR_SIZE)))
+	if (pl_find(vm->players, -ft_bytetoint(car->args[0].data, DIR_SIZE)))
 		vm->last_live_player = pl_find(vm->players,
-			-ft_bitetoint(car->args[0].data, DIR_SIZE));
+			-ft_bytetoint(car->args[0].data, DIR_SIZE));
 }

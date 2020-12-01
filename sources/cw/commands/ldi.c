@@ -6,22 +6,15 @@
 
 void		ldi(t_carriage *car, t_vm *vm)
 {
-	uint32_t	ind;
-	uint32_t	i;
+	int32_t	ind;
 
-	ind = car->position + (ft_bitetoint(car->args[0].data,
+	ind = car->position + (ft_bytetoint(car->args[0].data,
 			car->args[0].type == T_DIR ? 2 : REG_SIZE) +
-			ft_bitetoint(car->args[1].data,
+			ft_bytetoint(car->args[1].data,
 			car->args[1].type == T_DIR ? 2 : REG_SIZE)) % IDX_MOD;
-	i = 0;
-	while (ind < 0)
-		ind += MEM_SIZE;
-	while (i < REG_SIZE)
-	{
-		car->args[2].data[i] = vm->arena[(ind + i) % MEM_SIZE];
-		i++;
-	}
-	if (ft_bitetoint(car->args[2].data, REG_SIZE) == 0)
+	set_array(car->args[2].data, get_t_data(vm->arena, car->position + ind,
+		MEM_SIZE), REG_SIZE);
+	if (ft_bytetoint(car->args[2].data, REG_SIZE) == 0)
 		car->carry = 1;
 	else
 		car->carry = 0;
