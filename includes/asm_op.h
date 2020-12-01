@@ -62,6 +62,7 @@ typedef struct			s_op
 	uint8_t				t_dir_size;
 	int					change_carry;
 	unsigned int		cycles;
+	void				(*fun)(t_carriage *car, t_vm *vm);
 }						t_op;
 
 static t_op				g_ops[COMMANDS_NUM] = {
@@ -74,7 +75,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = FALSE,
-			.cycles = 10
+			.cycles = 10,
+			.fun = live
 		},
 		{
 			.name = "ld",
@@ -85,7 +87,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 5
+			.cycles = 5,
+			.fun = ld
 		},
 		{
 			.name = "st",
@@ -96,7 +99,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = FALSE,
-			.cycles = 5
+			.cycles = 5,
+			.fun = st
 		},
 		{
 			.name = "add",
@@ -107,7 +111,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 10
+			.cycles = 10,
+			.fun = add
 		},
 		{
 			.name = "sub",
@@ -118,7 +123,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 10
+			.cycles = 10,
+			.fun = sub
 		},
 		{
 			.name = "and",
@@ -129,7 +135,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 6
+			.cycles = 6,
+			.fun = and
 		},
 		{
 			.name = "or",
@@ -140,7 +147,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 6
+			.cycles = 6,
+			.fun = or
 		},
 		{
 			.name = "xor",
@@ -151,7 +159,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 6
+			.cycles = 6,
+			.fun = xor
 		},
 		{
 			.name = "zjmp",
@@ -162,7 +171,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = TRUE,
 			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
-			.cycles = 20
+			.cycles = 20,
+			.fun = zjmp
 		},
 		{
 			.name = "ldi",
@@ -173,7 +183,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = TRUE,
 			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
-			.cycles = 25
+			.cycles = 25,
+			.fun = ldi
 		},
 		{
 			.name = "sti",
@@ -184,7 +195,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = TRUE,
 			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
-			.cycles = 25
+			.cycles = 25,
+			.fun = sti
 		},
 		{
 			.name = "fork",
@@ -195,7 +207,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = TRUE,
 			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
-			.cycles = 800
+			.cycles = 800,
+			.fun = lfork
 		},
 		{
 			.name = "lld",
@@ -206,7 +219,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = TRUE,
-			.cycles = 10
+			.cycles = 10,
+			.fun = ld
 		},
 		{
 			.name = "lldi",
@@ -217,7 +231,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = TRUE,
 			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = TRUE,
-			.cycles = 50
+			.cycles = 50,
+			.fun = ldi
 		},
 		{
 			.name = "lfork",
@@ -228,7 +243,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = TRUE,
 			.t_dir_size = DIR_SIZE / 2,
 			.change_carry = FALSE,
-			.cycles = 1000
+			.cycles = 1000,
+			.fun = lfork
 		},
 		{
 			.name = "aff",
@@ -239,7 +255,8 @@ static t_op				g_ops[COMMANDS_NUM] = {
 			.is_small_dir = FALSE,
 			.t_dir_size = DIR_SIZE,
 			.change_carry = FALSE,
-			.cycles = 2
+			.cycles = 2,
+			.fun = aff
 		}
 };
 

@@ -17,6 +17,11 @@ uint8_t		vm_checkout(t_vm *vm)
 {
 	t_list	*tmp;
 
+	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
+	{
+		vm->cycles_to_die -= CYCLE_DELTA;
+		vm->number_checks = 0;
+	}
 	tmp = vm->carriages;
 	while (tmp)
 	{
@@ -24,11 +29,6 @@ uint8_t		vm_checkout(t_vm *vm)
 		>= vm->cycles_to_die || vm->cycles_to_die <= 0)
 			ft_lstpdelone(&vm->carriages, tmp);
 		tmp = tmp->next;
-	}
-	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
-	{
-		vm->cycles_to_die -= CYCLE_DELTA;
-		vm->number_checks = 0;
 	}
 	vm->number_live = 0;
 	if (vm->carriages)
@@ -85,6 +85,8 @@ t_data		get_ind(uint8_t n, t_carriage *car, t_vm *vm)
 
 	ind = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE),
 			IND_SIZE);
+	if (car->operation != 0x0d && car->operation != 0x0e)
+		ind %= IDX_MOD;
 	return (get_t_data(vm->arena, car->args[n].pos + ind, MEM_SIZE));
 }
 
@@ -247,18 +249,7 @@ uint32_t	check_args(t_carriage *car, t_vm *vm)
 
 void		cr_operation_make(t_carriage *car, t_vm *vm)
 {
-	if (car->operation == 0x01)
-		live(car, vm);
-	else if (car->operation == 0x02)
-		ld(car, vm);
-	else if (car->operation == 0x03)
-		st(car,vm);
-	else if (car->operation == 0x09)
-		zjmp(car,vm);
-	else if (car->operation == 0x0a)
-		ldi(car,vm);
-	else if (car->operation == 0x0b)
-		sti(car,vm);
+	g_ops[car->operation - 1].fun(car, vm);
 	if (car->operation != 0x09)
 		car->position = (car->position + len_args(car, vm)) % MEM_SIZE;
 }
@@ -304,7 +295,7 @@ t_player	*vm_operation(t_vm *vm)
 	while (vm_checkout(vm))
 	{
 		current = 0;
-		while (current < vm->cycles_to_die)
+		while (current < vm->cycles_to_die || vm->cycles_to_die <= 0)
 		{
 			vm_survey_carriages(vm);
 			current++;

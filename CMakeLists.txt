@@ -15,7 +15,14 @@ set(SOURCES_CW
 		sources/cw/commands/sti.c
 		sources/cw/commands/st.c
 		sources/cw/commands/ldi.c
-		sources/cw/commands/zjmp.c)
+		sources/cw/commands/zjmp.c
+		sources/cw/commands/add.c
+		sources/cw/commands/sub.c
+		sources/cw/commands/and.c
+		sources/cw/commands/or.c
+		sources/cw/commands/xor.c
+		sources/cw/commands/fork.c
+		sources/cw/commands/aff.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
