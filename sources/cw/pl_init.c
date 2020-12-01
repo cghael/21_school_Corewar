@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/11/30 15:56:18 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/01 14:42:39 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,6 +163,23 @@ void		pl_read_data_champion(char* file_name, t_list *player)
 	close(fd);
 }
 
+int			ft_compare_end(const char* str, const char* dest, int pos)
+{
+	int i;
+
+	i = 0;
+	if (pos < 0)
+		return (0);
+	while (str[pos])
+	{
+		if (str[pos] != dest[i])
+			return (0);
+		pos++;
+		i++;
+	}
+	return (1);
+}
+
 t_list		*pl_list_champions(int *i, char **av, t_list *champions)
 {
 	t_list *player;
@@ -172,16 +189,26 @@ t_list		*pl_list_champions(int *i, char **av, t_list *champions)
 	num_pl = 0;
 	while (!(ft_strstr(av[*i], ".cor")))
 	{
-		if (ft_strequ(av[*i], "-n")) //todo: проверить местоположение флага
-			 // todo (возможно использование флага после аргумента имени)
-		{
-			*i = *i + 1;
-			num_pl = ft_atoi(av[*i]);
-		}
+		if (ft_strequ(av[*i], "-n") || ft_strequ(av[*i], "-d") || ft_strequ
+		(av[*i], "-dump"))
+			//todo: проверить местоположение флагов
 //		if (ft_strequ(av[*i], "-dump")) //todo: put other flags;
 //		if (ft_strequ(av[*i], "-d")) //todo: put other flags;
-		*i = *i + 1;
+		{
+			if (ft_strequ(av[*i], "-n"))
+			{
+				*i = *i + 1;
+				if (!(num_pl = ft_atoi(av[*i])) || !(ft_compare_end(av[*i + 1],
+				".cor\0", ft_strlen(av[*i + 1]) - 4)))
+					terminate(ERR_NUM_CHAMP);
+			}
+			*i = *i + 1;
+		}
+		else
+			terminate(ERR_BAD_NAME);
 	}
+	if (!ft_compare_end(av[*i], ".cor\0", ft_strlen(av[*i]) - 4))
+		terminate(ERR_BAD_NAME);
 	player = pl_new_champ(num_pl);
 	pl_read_data_champion(av[*i], player);
 	if(!champions)
