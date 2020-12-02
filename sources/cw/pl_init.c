@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/01 14:42:39 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/02 13:03:43 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,9 @@ void		pl_check_magic_header(int fd)
 	int32_t resul;
 	int r;
 
-	r = read(fd, &buff, MAGIC_LEN);
-	if (r != MAGIC_LEN ||
-	(!(resul = pl_bytecode_to_int32(buff, MAGIC_LEN))) ||
+	r = read(fd, &buff, 4);
+	if (r != 4 ||
+	(!(resul = pl_bytecode_to_int32(buff, 4))) ||
 	resul != COREWAR_EXEC_MAGIC)
 		in_close_fd_err(fd, ERR_BAD_MAGIC);
 }
@@ -393,6 +393,6 @@ t_list		*pl_parsing_input(int ac, char **av)
 	}
 //	print_num_players(champions);
 	pl_players_order(&champions);
-	print_num_players(champions);
+//	print_num_players(champions); //todo output data champions;
 	return (champions);
 }

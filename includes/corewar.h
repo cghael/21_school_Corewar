@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar.h                                          :+:      :+:    :+:   */
+/*   asm.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 11:49:00 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/02 12:26:14 by ablane           ###   ########.fr       */
+/*   Created: 2020/10/11 19:11:23 by ksemele           #+#    #+#             */
+/*   Updated: 2020/12/02 13:05:06 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 # define COREWAR_H
 
 # include "libft.h"
-# include "errors.h"
 # include "op.h"
+# include "errors.h"
 # include <fcntl.h>
-# include "asm.h"
-# include "stdbool.h"
+
+
+/*
+** struct's definitions
+*/
 
 typedef struct				s_player
 {
@@ -71,21 +74,18 @@ typedef struct				s_vm
 }							t_vm;
 
 t_vm						*vm_init(int ac, char **av);
-t_player					*vm_operation(t_vm *vm);
-void						in_close_fd_err(int fd, char *err);
-void						print_result(t_player *win_player);
-void						vm_print_arena(t_vm *vm);
+t_list						*pl_parsing_input(int ac, char **av);
 t_list						*vm_init_players(int ac, char **av);
-t_carriage  				*cr_init(t_player *player, uint32_t nb);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
-void 						set_array(t_data dest, const t_data source,
-					 		uint32_t n);
+t_player					*vm_operation(t_vm *vm);
+t_carriage  				*cr_init(t_player *player, uint32_t nb);
 t_data						get_t_data(uint8_t *array, int32_t pos,
 							uint32_t max);
-void						terminate(char *s);
-t_list						*pl_parsing_input(int ac, char **av);
-t_player					*pl_max_number(t_list *players);
-void						pl_check_magic_header(int fd);
+void                    	terminate(char *s);
+void						vm_print_arena(t_vm *vm);
+void						print_result(t_player *win_player);
+void 						set_array(t_data dest, const t_data source,
+									  uint32_t n);
 
 /*
 **  commands
