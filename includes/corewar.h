@@ -15,6 +15,7 @@
 
 # include "libft.h"
 # include "op.h"
+# include "errors.h"
 
 /*
 ** struct's definitions

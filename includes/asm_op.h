@@ -49,6 +49,9 @@ typedef					enum
 **                 of argument's types
 ** args_types    — types of arguments
 ** t_dir_size    — size of T_DIR argument
+** change_carry  — change carry parameter
+** cycles        — number of wait cycles
+** fun           — function pointer
 */
 
 typedef struct			s_op

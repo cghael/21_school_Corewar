@@ -16,6 +16,7 @@
 uint8_t		vm_checkout(t_vm *vm)
 {
 	t_list	*tmp;
+	t_list	*del;
 
 	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
 	{
@@ -25,10 +26,11 @@ uint8_t		vm_checkout(t_vm *vm)
 	tmp = vm->carriages;
 	while (tmp)
 	{
-		if (vm->number_cycle - ((t_carriage*)tmp->content)->number_last_live
-		>= vm->cycles_to_die || vm->cycles_to_die <= 0)
-			ft_lstpdelone(&vm->carriages, tmp);
+		del = tmp;
 		tmp = tmp->next;
+		if (vm->number_cycle - ((t_carriage*)del->content)->number_last_live
+		>= vm->cycles_to_die || vm->cycles_to_die <= 0)
+			ft_lstpdelone(&vm->carriages, del);
 	}
 	vm->number_live = 0;
 	if (vm->carriages)
@@ -191,7 +193,7 @@ uint8_t		find_len_arg(uint8_t arg, uint8_t operation)
 	if (arg == T_REG)
 		return (1);
 	if (arg == T_DIR)
-		return (4 - 2 * g_ops[operation - 1].is_small_dir);
+		return (g_ops[operation - 1].t_dir_size);
 	if (arg == T_IND)
 		return (2);
 	return (0);
@@ -217,7 +219,7 @@ uint32_t	len_args(t_carriage *car, t_vm *vm)
 					T_IND : ((arg_code >> 2) & 3), car->operation);
 	}
 	else
-		sum = 1 + 4 - 2 * op.is_small_dir;
+		sum = 1 + op.t_dir_size;
 	return (sum);
 }
 
