@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   asm_op.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/02 11:42:57 by ablane            #+#    #+#             */
+/*   Updated: 2020/12/02 12:26:15 by ablane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 //
 // Created by Cora Ghael on 11/23/20.
 //
@@ -5,8 +18,7 @@
 #ifndef ASM_OP_H
 # define ASM_OP_H
 
-//# include "op.h"
-//# include "libft.h"
+# include "corewar.h"
 
 # define REG			1
 # define DIR			2
@@ -54,7 +66,7 @@ typedef					enum
 ** fun           — function pointer
 */
 
-typedef struct			s_op
+	typedef struct			s_op
 {
 	char				*name;
 	int					code;
