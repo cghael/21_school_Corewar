@@ -1,3 +1,8 @@
 .name       "Batman"
 .comment    "This city needs me"
-label1: sti r04  , -00000003
+
+
+        sti r14, %1, %1
+
+        live %0
+

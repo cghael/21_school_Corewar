@@ -1,10 +1,18 @@
-//
-// Created by leathertube on 12.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_filename.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/27 19:44:04 by ksemele           #+#    #+#             */
+/*   Updated: 2020/11/27 19:44:07 by ksemele          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "asm.h"
 
-int ft_is_filename(char *filename, t_asm *asm_struct)
+int		ft_is_filename(char *filename, t_asm *asm_struct)
 {
 	asm_struct->fd = open(filename, O_RDONLY);
 	if (asm_struct->fd < 0)

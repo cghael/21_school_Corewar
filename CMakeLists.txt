@@ -13,7 +13,17 @@ set(SOURCES_CW
 		sources/cw/libft.c
 		sources/cw/commands/live.c
 		sources/cw/commands/ld.c
-		sources/cw/commands/sti.c)
+		sources/cw/commands/sti.c
+		sources/cw/commands/st.c
+		sources/cw/commands/ldi.c
+		sources/cw/commands/zjmp.c
+		sources/cw/commands/add.c
+		sources/cw/commands/sub.c
+		sources/cw/commands/and.c
+		sources/cw/commands/or.c
+		sources/cw/commands/xor.c
+		sources/cw/commands/fork.c
+		sources/cw/commands/aff.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
@@ -60,7 +70,11 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_convert_start_filename.c
 		sources/asm/ft_get_one_arg.c
 		sources/asm/ft_count_num_len.c
-		sources/asm/ft_check_arg_type.c)
+		sources/asm/ft_check_arg_type.c
+		sources/asm/ft_write_arg_type_code.c
+		sources/asm/ft_count_exec_code_size.c
+		sources/asm/ft_dis_read_write.c
+		sources/asm/ft_dis_process_exec_code.c)
 
 include_directories(includes)
 include_directories(libft/inc)

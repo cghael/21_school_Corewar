@@ -6,8 +6,12 @@
 
 void	sti(t_carriage *car, t_vm *vm)
 {
-	if (((vm->arena[(car->position + 1) % MEM_SIZE] >> 4) & 3) == 1)
-	{
+	int32_t	ind;
 
-	}
+	ind = (ft_bytetoint(car->args[1].data,
+			car->args[1].type == T_DIR ? 2 : REG_SIZE) +
+			ft_bytetoint(car->args[2].data,
+			car->args[2].type == T_DIR ? 2 : REG_SIZE)) % IDX_MOD;
+	set_array(get_t_data(vm->arena, car->position + ind,
+						 MEM_SIZE), car->args[0].data, REG_SIZE);
 }
