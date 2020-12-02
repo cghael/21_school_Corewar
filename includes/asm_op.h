@@ -7,6 +7,7 @@
 
 //# include "op.h"
 //# include "libft.h"
+# include "corewar.h"
 
 # define REG			1
 # define DIR			2

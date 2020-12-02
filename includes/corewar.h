@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   asm.h                                              :+:      :+:    :+:   */
+/*   corewar.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/11 19:11:23 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/02 13:05:06 by ablane           ###   ########.fr       */
+/*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
+/*   Updated: 2020/12/02 14:08:26 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@
 /*
 ** struct's definitions
 */
+
+typedef struct				s_flag
+{
+	uint32_t				visual;
+	uint32_t				dump;
+	uint32_t				d;
+}							t_flag;
 
 typedef struct				s_player
 {
@@ -71,6 +78,7 @@ typedef struct				s_vm
 	uint32_t				number_players;
 	t_list					*carriages;
 	t_list					*players;
+	t_flag					flag;
 }							t_vm;
 
 t_vm						*vm_init(int ac, char **av);
@@ -84,6 +92,7 @@ t_data						get_t_data(uint8_t *array, int32_t pos,
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						print_result(t_player *win_player);
+void						fl_check_flags(int ac, char** av, t_vm *vm);
 void 						set_array(t_data dest, const t_data source,
 									  uint32_t n);
 

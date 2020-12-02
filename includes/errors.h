@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/02 12:57:11 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/02 15:29:41 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ERRORS_H
 
 # define USAGE				"Usage: aLL iNfo foR CW"
+# define USAGE_DUMP			"Usage: Use only -dump or -d with a number greater than zero (ex: ./corewar -dump 5 champion_name.cor)"
 # define ERR_BAD_LEN		"Error: Wrong file size!!!"
 # define ERR_BAD_FILE		"ERROR: Can\'t open file"
 # define ERR_BAD_READ		"ERROR: Can\'t read file"

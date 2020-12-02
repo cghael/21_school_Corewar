@@ -14,6 +14,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <corewar.h>
 
 t_player	*pl_init(char *filename, uint32_t number)
 {
@@ -110,9 +111,10 @@ t_vm		*vm_init(int ac, char **av)
 	if (!(vm = ft_memalloc(sizeof(t_vm))))
 		return (0);
 	vm->cycles_to_die = CYCLE_TO_DIE;
-	if (!(vm->players = vm_init_players(ac, av)))
+	if (!(vm->players = pl_parsing_input(ac, av)))
 	    return (0);
-	vm->number_players = ft_lstlength(vm->players);
+	fl_check_flags(ac, av, vm);
+	vm->number_players = ((t_player*)((t_list*)vm->players)->content)->number;
 	vm->last_live_player = vm->players->content;
 	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))
