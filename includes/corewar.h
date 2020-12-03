@@ -92,10 +92,10 @@ t_data						get_t_data(uint8_t *array, int32_t pos,
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						print_result(t_player *win_player);
+void						in_close_fd_err(int fd, char *err);
 void						fl_check_flags(int ac, char** av, t_vm *vm);
 void 						set_array(t_data dest, const t_data source,
 									  uint32_t n);
-
 /*
 **  commands
 */

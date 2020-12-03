@@ -51,7 +51,7 @@ t_data		get_t_data(uint8_t *array, int32_t pos, uint32_t max)
 	return (data);
 }
 
-void 		set_array(t_data dest, const t_data source, uint32_t n)
+void		set_array(t_data dest, const t_data source, uint32_t n)
 {
 	uint32_t	i;
 
@@ -113,7 +113,7 @@ void		cr_set_args_type(t_carriage *car, t_vm *vm)
 		while (i < g_ops[car->operation - 1].n_args)
 		{
 			car->args[i].type = ((arg_code >> (6 - i * 2)) & 3) == IND_CODE ?
-							   T_IND : ((arg_code >> (6 - i * 2)) & 3);
+					T_IND : ((arg_code >> (6 - i * 2)) & 3);
 			car->args[i].len = find_len_arg(car->args[i].type, car->operation);
 			i++;
 		}

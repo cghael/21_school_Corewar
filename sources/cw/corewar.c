@@ -19,7 +19,7 @@ int		main(int ac, char **av)
 	t_player	*win_player;
 
 	if (!(vm = vm_init(ac, av)))
-	    terminate(ERR_MALC_INIT);
+		terminate(ERR_MALC_INIT);
 	vm_print_arena(vm);
 	win_player = vm_operation(vm);
 	print_result(win_player);

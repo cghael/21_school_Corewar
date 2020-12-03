@@ -6,13 +6,13 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/02 15:35:24 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/03 12:44:20 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-void		fl_check_flags(int ac, char** av, t_vm *vm)
+void		fl_check_flags(int ac, char **av, t_vm *vm)
 {
 	int i;
 
@@ -31,7 +31,7 @@ void		fl_check_flags(int ac, char** av, t_vm *vm)
 				terminate(USAGE_DUMP);
 			vm->flag.d = ft_atoi(av[++i]);
 		}
-		if (ft_strequ(av[i], "-visual"))
+		if (ft_strequ(av[i], "-v"))
 			vm->flag.visual = 1;
 		i++;
 	}
@@ -39,25 +39,17 @@ void		fl_check_flags(int ac, char** av, t_vm *vm)
 		terminate(USAGE_DUMP);
 }
 
-void		in_close_fd_err(int fd, char *err)
-{
-	close(fd);
-	terminate(err);
-}
-
 t_list		*pl_new_champ(int num_player)
 {
-	t_list	*player;
-	t_player *champion;
+	t_list		*player;
+	t_player	*champion;
 
 	champion = NULL;
 	player = NULL;
-	if(!(player = ft_lstnew(NULL, 0)))
+	if (!(player = ft_lstnew(NULL, 0)))
 		terminate(ERR_MALC_INIT);
-	if(!(champion = (t_player*)malloc(sizeof(t_player))))
+	if (!(champion = (t_player*)malloc(sizeof(t_player))))
 		terminate(ERR_MALC_INIT);
-//	if(!(champion->name = ft_strnew(PROG_NAME_LENGTH)))
-//		terminate(ERR_MALC_INIT);
 	champion->number = num_player;
 	champion->exec_size = 0;
 	player->content = (void*)champion;
@@ -66,22 +58,19 @@ t_list		*pl_new_champ(int num_player)
 
 int32_t		pl_bytecode_to_int32(uint8_t *buff, int len)
 {
-	int32_t res;
-	int sign;
-	int i;
-	int k;
+	int		k;
+	int		sign;
+	int32_t	res;
 
-	i = 0;
 	k = 0;
 	res = 0;
 	sign = (buff[0] & 0x80);
-	while(len)
+	while (len)
 	{
-		if(sign)
+		if (sign)
 			res += (buff[len - 1] ^ 0xFF << (8 * k++));
 		else
 			res += (buff[len - 1] << (8 * k++));
-		i++;
 		len--;
 	}
 	if (sign)
@@ -91,9 +80,8 @@ int32_t		pl_bytecode_to_int32(uint8_t *buff, int len)
 
 void		pl_check_null_champ(int fd, int i)
 {
-	uint8_t buff[4];
-	int32_t resul;
-	int r;
+	int		r;
+	uint8_t	buff[4];
 
 	r = read(fd, &buff, 4);
 	if (r != 4 || pl_bytecode_to_int32(buff, 4))
@@ -107,9 +95,9 @@ void		pl_check_null_champ(int fd, int i)
 
 void		pl_check_magic_header(int fd)
 {
-	uint8_t buff[COMMENT_LENGTH];
-	int32_t resul;
-	int r;
+	int		r;
+	int32_t	resul;
+	uint8_t	buff[COMMENT_LENGTH];
 
 	r = read(fd, &buff, 4);
 	if (r != 4 ||
@@ -120,8 +108,8 @@ void		pl_check_magic_header(int fd)
 
 void		pl_cp_comment_champion(int fd, t_list *player)
 {
-	uint8_t buff[COMMENT_LENGTH];
-	int r;
+	int		r;
+	uint8_t	buff[COMMENT_LENGTH];
 
 	r = read(fd, &buff, COMMENT_LENGTH);
 	if (r == COMMENT_LENGTH)
@@ -132,8 +120,8 @@ void		pl_cp_comment_champion(int fd, t_list *player)
 
 void		pl_cp_name_champion(int fd, t_list *player)
 {
-	uint8_t buff[PROG_NAME_LENGTH];
-	int r;
+	int		r;
+	uint8_t	buff[PROG_NAME_LENGTH];
 
 	r = read(fd, &buff, PROG_NAME_LENGTH);
 	if (r == PROG_NAME_LENGTH)
@@ -144,9 +132,9 @@ void		pl_cp_name_champion(int fd, t_list *player)
 
 void		pl_cp_exec_size(int fd, t_list *player)
 {
-	uint8_t buff[4];
-	int32_t res;
-	int r;
+	int		r;
+	int32_t	res;
+	uint8_t	buff[4];
 
 	r = read(fd, &buff, 4);
 	if (r != 4)
@@ -157,9 +145,8 @@ void		pl_cp_exec_size(int fd, t_list *player)
 
 void		pl_cp_code_champion(int fd, t_list *player)
 {
-	uint8_t buff[((t_player*)player->content)->exec_size];
-
-	int r;
+	int		r;
+	uint8_t	buff[((t_player*)player->content)->exec_size];
 
 	r = read(fd, &buff, ((t_player*)player->content)->exec_size);
 	if (r == ((t_player*)player->content)->exec_size)
@@ -173,7 +160,7 @@ void		pl_cp_code_champion(int fd, t_list *player)
 		in_close_fd_err(fd, ERR_BAD_NAME);
 }
 
-void		pl_read_data_champion(char* file_name, t_list *player)
+void		pl_read_data_champion(char *file_name, t_list *player)
 {
 	int	fd;
 
@@ -190,7 +177,7 @@ void		pl_read_data_champion(char* file_name, t_list *player)
 	close(fd);
 }
 
-int			ft_compare_end(const char* str, const char* dest, int pos)
+int			ft_compare_end(const char *str, const char *dest, int pos)
 {
 	int i;
 
@@ -211,36 +198,47 @@ int			pl_next_arg(char **av, int i, int ac)
 {
 	if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump"))
 		i = i + 2;
-	else if (ft_strequ(av[i], "-visual"))
+	else if (ft_strequ(av[i], "-v"))
 		i++;
 	return (i);
 }
 
+int			fl_check_num_after_flag(char **av, int i, int *num_pl, int ac)
+{
+	size_t	len;
+
+	if (i + 1 < ac)
+		len = ft_strlen(av[i + 1]) - 4;
+	else
+		return (1);
+	if (ft_strequ(av[i], "-n"))
+	{
+		i++;
+		if (i < ac && av[i][0] >= '0' && av[i][0] <= '9')
+		{
+			*num_pl = ft_atoi(av[i]);
+			if (!(ft_compare_end(av[i + 1], ".cor\0", len)) && *num_pl < 1)
+				terminate(ERR_NUM_CHAMP);
+		}
+		else
+			terminate(ERR_NUM_CHAMP);
+		i++;
+	}
+	return (pl_next_arg(av, i, ac));
+}
+
 t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
 {
-	t_list *player;
-	int 	num_pl;
+	int		num_pl;
+	t_list	*player;
 
 	player = NULL;
 	num_pl = 0;
 	while (!(ft_strstr(av[*i], ".cor")) && *i < ac)
 	{
-		if (ft_strequ(av[*i], "-n") || ft_strequ(av[*i], "-d") || ft_strequ
-		(av[*i], "-dump") || ft_strequ(av[*i], "-visual"))
-			//todo: проверить местоположение флагов
-		{
-			if (ft_strequ(av[*i], "-n"))
-			{
-				*i = *i + 1;
-				if (!av[*i + 1] || (!(num_pl = ft_atoi(av[*i])) && av[*i, 0] >=
-				'0' &&
-				av[*i, 0] <= '9') || !(ft_compare_end(av[*i + 1],
-				".cor\0", ft_strlen(av[*i + 1]) - 4)))
-					terminate(ERR_NUM_CHAMP);
-				*i = *i + 1;
-			}
-			*i = pl_next_arg(av, *i, ac);
-		}
+		if (ft_strequ(av[*i], "-n") || ft_strequ(av[*i], "-d") ||
+		ft_strequ(av[*i], "-dump") || ft_strequ(av[*i], "-v"))
+			*i = fl_check_num_after_flag(av, *i, &num_pl, ac);
 		else
 			terminate(ERR_BAD_NAME);
 	}
@@ -249,7 +247,7 @@ t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
 	player = pl_new_champ(num_pl);
 	pl_read_data_champion(av[*i], player);
 	*i = *i + 1;
-	if(!champions)
+	if (!champions)
 		champions = player;
 	else
 		ft_lstadd(&champions, player);
@@ -281,10 +279,10 @@ void		pl_check_duplicate_num(t_list *champions)
 		tmp = this->next;
 		while (tmp)
 		{
-			if (((t_player *) this->content)->number
-				== ((t_player *) tmp->content)->number
-				|| ((t_player *) this->content)->number > MAX_PLAYERS
-				|| ((t_player *) tmp->content)->number > MAX_PLAYERS)
+			if (((t_player*)this->content)->number
+				== ((t_player*)tmp->content)->number
+				|| ((t_player*)this->content)->number > MAX_PLAYERS
+				|| ((t_player*)tmp->content)->number > MAX_PLAYERS)
 				terminate(ERR_NUM_CHAMP);
 			tmp = tmp->next;
 		}
@@ -307,7 +305,7 @@ void		pl_number_order(t_list *champions, int quant)
 	pl_check_duplicate_num(champions);
 }
 
-t_list 		*pl_swap(t_list *start, t_list *champ, t_list *tmp, t_list *prev)
+t_list		*pl_swap(t_list *start, t_list *champ, t_list *tmp, t_list *prev)
 {
 	if (prev == champ)
 	{
@@ -336,7 +334,7 @@ t_list		*pl_sort_stack_champ(t_list *champions)
 	while (champions->next)
 	{
 		tmp = champions->next;
-		if (((t_player *) champions->content)->number < ((t_player *)
+		if (((t_player*)champions->content)->number < ((t_player *)
 		tmp->content)->number)
 		{
 			if (prev == champions)
@@ -356,7 +354,7 @@ t_list		*pl_sort_stack_champ(t_list *champions)
 
 void		pl_check_num_champion(t_list *champions)
 {
-	int	max_num_player;
+	int			max_num_player;
 	t_list		*tmp;
 
 	if (!champions)
@@ -377,8 +375,8 @@ void		pl_check_num_champion(t_list *champions)
 
 void		pl_players_order(t_list **champions)
 {
-	t_list *tmp;
-	int quant;
+	int		quant;
+	t_list	*tmp;
 
 	quant = 0;
 	tmp = *champions;
@@ -394,10 +392,10 @@ void		pl_players_order(t_list **champions)
 	pl_check_num_champion(*champions);
 }
 
-void 	print_num_players(t_list *champ)
+void		print_num_players(t_list *champ)
 {
-	t_list *cham;
-	int num;
+	int		num;
+	t_list	*cham;
 
 	cham = champ;
 	while (cham)
@@ -407,9 +405,9 @@ void 	print_num_players(t_list *champ)
 			"CHAMP:\t%i\nNAME:\t\t%s\nCOMMENT:\t\t%s\nSI"
 			"ZE_CODE:\t%i\nEXEC_CODE:\t%s\n-----------------------------\n\n",
 			num, ((t_player*)cham->content)->name,
-				((t_player*)cham->content)->comment,
-				  ((t_player*)cham->content)->exec_size,
-				  ((t_player*)cham->content)->exec_code);
+			((t_player*)cham->content)->comment,
+			((t_player*)cham->content)->exec_size,
+			((t_player*)cham->content)->exec_code);
 		cham = cham->next;
 	}
 	ft_printf("\n\n");
@@ -425,12 +423,8 @@ t_list		*pl_parsing_input(int ac, char **av)
 	if (ac < 2)
 		terminate(USAGE);
 	while (i < ac)
-	{
 		champions = pl_list_champions(ac, &i, av, champions);
-	}
-
-//	print_num_players(champions);
 	pl_players_order(&champions);
-//	print_num_players(champions); //todo output data champions;
+	print_num_players(champions); //todo output data champions;
 	return (champions);
 }

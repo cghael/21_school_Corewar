@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/11/19 17:23:06 by esnowpea         ###   ########.fr       */
+/*   Updated: 2020/12/03 14:43:11 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void		print_bit(uint8_t bit)
 
 void		vm_print_arena(t_vm *vm)
 {
-	uint32_t		i;
+	uint32_t	i;
 
 	i = 0;
 	while (i < MEM_SIZE)
