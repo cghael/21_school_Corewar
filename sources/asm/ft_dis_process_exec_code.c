@@ -4,7 +4,7 @@
 
 #include "asm.h"
 
-void	validate_name(t_dis *dis_s)
+void	ft_dis_valide_name(t_dis *dis_s)
 {
 	size_t i;
 
@@ -13,14 +13,14 @@ void	validate_name(t_dis *dis_s)
 	{
 		if (dis_s->name[i])
 		{
-//			name_warning(i);
+			ft_dis_error(ERR_VALIDE_NAME, NULL);
 			return ;
 		}
 		i++;
 	}
 }
 
-void	validate_comment(t_dis *dis_s)
+void	ft_dis_valide_comment(t_dis *dis_s)
 {
 	size_t i;
 
@@ -29,7 +29,7 @@ void	validate_comment(t_dis *dis_s)
 	{
 		if (dis_s->comment[i])
 		{
-//			comment_warning(i);
+			ft_dis_error(ERR_VALIDE_COMMENT, NULL);
 			return ;
 		}
 		i++;
@@ -49,7 +49,7 @@ void	validate_types_code(t_dis *dis_s,
 		type = (int8_t)((is_args_type >> (2 * (4 - arg_num))) & 0x3);
 		if (type != 0)
 		{
-//			types_code_warning((size_t)dis_s->pos);
+			ft_dis_error(ERR_VALIDE_TYPES, NULL);
 			return ;
 		}
 		arg_num--;
@@ -184,7 +184,7 @@ t_statement	*init_statement(void)
 	return (statements);
 }
 
-static t_statement	*process_statement(t_dis *dis_s)
+static t_statement	*ft_dis_process_statement(t_dis *dis_s)
 {
 	t_statement	*new_statement;
 	uint8_t		op_code;
@@ -196,8 +196,7 @@ static t_statement	*process_statement(t_dis *dis_s)
 		dis_s->pos++;
 		new_statement->op = &g_ops[op_code - 1];//присваивание из g_ops[]
 		if (new_statement->op->is_args_type && dis_s->pos >= dis_s->code_size)
-			ft_dis_error(ERR_DIS, NULL);//todo add right func
-//			length_error(dis_s);
+			ft_dis_error(ERR_DIS_LEN_CODE, NULL);//todo add right func
 		process_arg_types(dis_s, new_statement);
 		if (is_arg_types_valid(new_statement))
 		{
@@ -220,7 +219,6 @@ void					ft_dis_process_exec_code(t_dis *dis_s)
 {
 	while (dis_s->pos < dis_s->code_size)
 	{
-		ft_dprintf(2, "POS %d\n", dis_s->pos);//todo del
-		add_statement(&(dis_s->statements), process_statement(dis_s));
+		add_statement(&(dis_s->statements), ft_dis_process_statement(dis_s));
 	}
 }

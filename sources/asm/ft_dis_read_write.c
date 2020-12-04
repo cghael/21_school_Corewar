@@ -85,7 +85,6 @@ int				ft_dis_parse_bytecode(t_dis *dis_s)
 	if (ft_dis_parse_int32(dis_s->fd_cor) != 0)
 		return (ft_dis_error(ERR_DIS_NO_NULL, NULL));
 	dis_s->code = ft_dis_parse_code(dis_s->fd_cor, (size_t) dis_s->code_size);
-	ft_printf("\n\nname: [%s]\n\ncode: [%s]\n", dis_s->name, dis_s->code);//todo del
 	return (EXIT_SUCCESS);
 }
 
@@ -93,7 +92,6 @@ void					ft_dis_write_file(t_dis *dis_s)
 {
 	t_statement	*current;
 	int i;
-	ft_printf("try write parsed bot!\n");
 	ft_dprintf(dis_s->fd_s, ".name \"%s\"\n", dis_s->name);
 	ft_dprintf(dis_s->fd_s, ".comment \"%s\"\n\n", dis_s->comment);
 	current = dis_s->statements;
@@ -121,8 +119,8 @@ void					ft_dis_write_file(t_dis *dis_s)
 int				ft_dis_read_write(t_dis *dis_s)
 {
 	ft_dis_parse_bytecode(dis_s);
-//	ft_dis_valide_name(dis_s);
-//	ft_dis_valide_comment(dis_s);
+	ft_dis_valide_name(dis_s);
+	ft_dis_valide_comment(dis_s);
 	ft_dis_process_exec_code(dis_s);//todo what is it?
 	ft_dis_write_file(dis_s);
 	return (EXIT_SUCCESS);

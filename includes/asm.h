@@ -66,6 +66,10 @@
 # define ERR_DIS_CODE_SIZE	"Error in ft_dis_parse_bytecode(): bad codesize\n"
 # define ERR_DIS_MAGIC		"Error in ft_dis_parse_bytecode(): Bad MAGIC_CODE\n"
 # define ERR_DIS_FILE_SIZE	"Too small\\wrong .name .comment"
+# define ERR_VALIDE_NAME	"Wrong symbols in .name. Must be null bytes.\n"
+# define ERR_VALIDE_COMMENT	"Wrong symbols in .comment. Must be null bytes.\n"
+# define ERR_VALIDE_TYPES	"Insignificant bits in args types not null\n"
+# define ERR_DIS_LEN_CODE	"Error in ft_dis_process_statement(): bad length\n"
 
 # define NAME_START			1
 # define NAME_END			2
