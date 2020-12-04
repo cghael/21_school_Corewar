@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "corewar.h"
+#include "asm.h"
 
 void		fl_check_flags(int ac, char **av, t_vm *vm)
 {
@@ -99,9 +100,9 @@ void		pl_check_magic_header(int fd)
 	int32_t	resul;
 	uint8_t	buff[COMMENT_LENGTH];
 
-	r = read(fd, &buff, 4);
-	if (r != 4 ||
-	(!(resul = pl_bytecode_to_int32(buff, 4))) ||
+	r = read(fd, &buff, MAGIC_LEN);
+	if (r != MAGIC_LEN ||
+	(!(resul = pl_bytecode_to_int32(buff, MAGIC_LEN))) ||
 	resul != COREWAR_EXEC_MAGIC)
 		in_close_fd_err(fd, ERR_BAD_MAGIC);
 }
