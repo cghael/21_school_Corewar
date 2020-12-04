@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/03 12:44:20 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/04 12:53:20 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_list		*pl_new_champ(int num_player)
 	return (player);
 }
 
-int32_t		pl_bytecode_to_int32(uint8_t *buff, int len)
+int32_t		pl_bytecode_to_int32(const uint8_t *buff, int len)
 {
 	int		k;
 	int		sign;
@@ -195,7 +195,7 @@ int			ft_compare_end(const char *str, const char *dest, int pos)
 	return (1);
 }
 
-int			pl_next_arg(char **av, int i, int ac)
+int			pl_next_arg(char **av, int i)
 {
 	if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump"))
 		i = i + 2;
@@ -225,7 +225,7 @@ int			fl_check_num_after_flag(char **av, int i, int *num_pl, int ac)
 			terminate(ERR_NUM_CHAMP);
 		i++;
 	}
-	return (pl_next_arg(av, i, ac));
+	return (pl_next_arg(av, i));
 }
 
 t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)

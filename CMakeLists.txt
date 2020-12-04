@@ -3,8 +3,7 @@ project(corewar C)
 
 set(CMAKE_C_STANDARD 90)
 
-set(SOURCES_CW
-        sources/cw/corewar.c
+set(SOURCES
 		sources/cw/init.c
 		sources/cw/pl_init.c
 		sources/cw/operation.c
@@ -24,6 +23,9 @@ set(SOURCES_CW
 		sources/cw/commands/xor.c
 		sources/cw/commands/fork.c
 		sources/cw/commands/aff.c)
+
+set(SOURCES_CW
+        sources/cw/corewar.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
@@ -81,8 +83,8 @@ include_directories(libft/inc)
 
 add_subdirectory(libft)
 
-add_executable(corewar ${SOURCES_CW})
-add_executable(asm ${SOURCES_ASM})
+add_executable(corewar ${SOURCES_CW} ${SOURCES})
+add_executable(asm ${SOURCES_ASM} ${SOURCES})
 
 target_link_libraries(asm libft)
 target_link_libraries(corewar libft)
