@@ -3,7 +3,7 @@ project(corewar C)
 
 set(CMAKE_C_STANDARD 90)
 
-set(SOURCES
+set (SOURCES
 		sources/cw/init.c
 		sources/cw/pl_init.c
 		sources/cw/operation.c
@@ -76,7 +76,7 @@ set(SOURCES_ASM
 		sources/asm/ft_write_arg_type_code.c
 		sources/asm/ft_count_exec_code_size.c
 		sources/asm/ft_dis_read_write.c
-		sources/asm/ft_dis_process_exec_code.c)
+		sources/asm/ft_dis_process_exec_code.c sources/asm/ft_write_exec_code_in_line.c)
 
 include_directories(includes)
 include_directories(libft/inc)
