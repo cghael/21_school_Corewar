@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/04 15:34:19 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/07 15:09:51 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@
 # include "errors.h"
 # include <fcntl.h>
 
-
-# define ERR_MALC_INIT		"ERROR: Can\'t initialize malloc"
-# define ERR_GNL_READ		"ERROR: Can\'t read gnl"
 
 /*
 ** struct's definitions
@@ -54,7 +51,7 @@ typedef struct				s_argument
 	uint8_t					type;
 	int32_t					pos;
 	t_data					data;
-	uint32_t				len;
+	uint8_t					len;
 }							t_argument;
 
 typedef struct				s_carriage
@@ -64,7 +61,7 @@ typedef struct				s_carriage
 	uint8_t					operation;
 	uint32_t				number_last_live;
 	uint32_t				waiting_moves;
-	int32_t					position;
+	uint32_t				position;
 	uint8_t					reg[REG_NUMBER][REG_SIZE];
 	t_argument				args[3];
 	t_player				*player;
@@ -92,6 +89,7 @@ t_player					*vm_operation(t_vm *vm);
 t_carriage  				*cr_init(t_player *player, uint32_t nb);
 t_data						get_t_data(uint8_t *array, int32_t pos,
 							uint32_t max);
+void						ft_inttobyte(const int32_t num, t_data arg, uint8_t len);
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						print_players(t_list *champ);
@@ -127,6 +125,5 @@ t_list		*ft_lstpnew(void *content);
 void		ft_lstpdelone(t_list **alst, t_list *del);
 u_int32_t	ft_lstlength(t_list *lst);
 int32_t		ft_bytetoint(const t_data arg, uint8_t len);
-void		ft_inttobyte(const int32_t num, t_data arg, uint8_t len);
 
 #endif

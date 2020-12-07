@@ -6,7 +6,7 @@
 #    By: ksemele <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/07 14:03:53 by ksemele           #+#    #+#              #
-#    Updated: 2020/12/07 14:03:56 by ksemele          ###   ########.fr        #
+#    Updated: 2020/12/07 15:09:51 by ablane           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,25 +39,7 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 #	ls -l | grep 'ft' | awk '{print $9 " \\"}'
 
 SRC_LIST =
-SRC_LIST_CW = corewar.c \
-                init.c \
-                operation.c \
-                print.c \
-                terminate.c \
-                libft.c \
-                commands/live.c \
-                commands/ld.c \
-                commands/sti.c \
-                commands/st.c \
-                commands/ldi.c \
-                commands/zjmp.c \
-                commands/add.c \
-                commands/sub.c \
-                commands/and.c \
-                commands/or.c \
-                commands/xor.c \
-                commands/fork.c \
-                commands/aff.c
+SRC_LIST_CW = corewar.c
 SRC_LIST_ASM = asm.c \
 				ft_asm_error.c \
 				ft_assemble.c \

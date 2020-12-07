@@ -116,7 +116,7 @@ void		pl_cp_comment_champion(int fd, t_list *player)
 
 	r = read(fd, &buff, COMMENT_LENGTH);
 	if (r == COMMENT_LENGTH)
-		ft_memcpy(((t_player*)player->content)->comment, buff, PROG_NAME_LENGTH);
+		ft_memcpy(((t_player*)player->content)->comment, buff, COMMENT_LENGTH);
 	else
 		in_close_fd_err(fd, ERR_BAD_COMM);
 }
