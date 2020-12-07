@@ -59,17 +59,22 @@
 # define ERR_DIS_FILE		"Error in ft_dis_filename_treat()\n"
 # define ERR_DIS_CHOOSE		"Error in ft_dis_choose_new_filename()\n"
 # define ERR_DIS_INIT		"Error in ft_dis_init_struct()\n"
-# define ERR_OPEN_SOL		"Error in ft_open_solution_file()\n"
-# define ERR_DIS_STATEMENT	"Error in ft_dis_init_statement()\n"
-# define ERR_READ_FILE		"Error read file\n"
+# define ERR_DIS_OPEN_SOL	"Error in ft_open_solution_file()\n"
+# define ERR_DIS_STATEMENT	"Error in ft_dis_init_elem()\n"
+# define ERR_DIS_READ_FILE	"Error read file\n"
 # define ERR_DIS_NO_NULL	"Error in ft_dis_parse_bytecode(): No NULL\n"
 # define ERR_DIS_CODE_SIZE	"Error in ft_dis_parse_bytecode(): bad codesize\n"
 # define ERR_DIS_MAGIC		"Error in ft_dis_parse_bytecode(): Bad MAGIC_CODE\n"
 # define ERR_DIS_FILE_SIZE	"Too small\\wrong .name .comment"
-# define ERR_VALIDE_NAME	"Wrong symbols in .name. Must be null bytes.\n"
-# define ERR_VALIDE_COMMENT	"Wrong symbols in .comment. Must be null bytes.\n"
-# define ERR_VALIDE_TYPES	"Insignificant bits in args types not null\n"
-# define ERR_DIS_LEN_CODE	"Error in ft_dis_process_statement(): bad length\n"
+# define ERR_DIS_NAME		"Wrong symbols in .name. Must be null bytes.\n"
+# define ERR_DIS_COMMENT	"Wrong symbols in .comment. Must be null bytes.\n"
+# define ERR_DIS_TYPES		"Insignificant bits in args types not null\n"
+# define ERR_DIS_LEN_CODE	"Error in ft_dis_elems_treat(): bad length\n"
+# define ERR_DIS_ELEMS		"Error in ft_dis_elems_treat()\n"
+# define ERR_DIS_ARGS_TREAT	"Error in ft_dis_arg_treat()\n"
+# define ERR_DIS_LENGTH		"Wrong length!\n"
+# define ERR_DIS_TYPECODE	"Wrong arguments types.\n"
+# define ERR_DIS_OPERATOR	"Wrong operator.\n"
 
 # define NAME_START			1
 # define NAME_END			2
@@ -175,13 +180,13 @@ typedef struct				s_asm
 */
 
 
-typedef struct				s_statement
+typedef struct				s_elem
 {
 	t_op					*op;
 	uint8_t					args_types[3];
 	int32_t					args[3];
-	struct s_statement		*next;
-}							t_statement;//todo?
+	struct s_elem			*next;
+}							t_elem;
 
 typedef struct				s_dis
 {
@@ -194,12 +199,12 @@ typedef struct				s_dis
 	int32_t					code_size;
 	uint8_t					*code;
 	int32_t					pos;
-	t_statement				*statements;//todo?
+	t_elem					*elems;
 }							t_dis;
 
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
 int							ft_dis_error(char *error_text, void *data_for_free);
-t_dis *ft_dis_init_struct(char *file_cor);
+t_dis						*ft_dis_init_struct(char *file_cor);
 int							ft_dis_free_struct(t_dis *dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_check_file_exist(t_dis *dis_s);
@@ -211,37 +216,30 @@ int							ft_dis_del_cor(t_dis *dis_s);
 int							ft_dis_convert_start_filename(char *file, \
 																t_dis *dis_s);
 int							ft_dis_read_write(t_dis *dis_s);
-
-////-------------------------------- to refactor
-
-
-int32_t					ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
+int32_t						ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
 																size_t size);
-int						ft_dis_parse_bytecode(t_dis *dis_s);
-void					ft_dis_valide_name(t_dis *dis_s);
-void					ft_dis_valide_comment(t_dis *dis_s);
-void					ft_dis_process_exec_code(t_dis *dis_s);
-void					ft_dis_write_file(t_dis *dis_s);
-//todo hmm?
-/*t_statement				*ft_dis_init_statement();
-void					validate_types_code(t_parser *parser,
-											int8_t args_types_code,
-											int args_num);
-t_bool					is_arg_types_valid(t_statement *statement);
-void					name_warning(size_t pos);
-void					comment_warning(size_t pos);
-void					types_code_warning(size_t pos);
-void					process_arg_types(t_parser *parser,
-										  t_statement *statement);
-void					add_statement(t_statement **list, t_statement *new);
-void					free_bytecode_parser(t_parser **parser);
-
-void					op_code_error(t_parser *parser);
-void					arg_types_code_error(t_parser *parser);
-void					length_error(t_parser *parser);
-void					register_error(t_parser *parser);*/
-
-/////////---------------------------------- end refactor
+void						ft_dis_exec_code_treat(t_dis *dis_s);
+void						ft_dis_valide_name(t_dis *dis_s);
+void						ft_dis_valide_comment(t_dis *dis_s);
+void						ft_dis_validate_types_code(int8_t is_args_type, \
+																	int n_args);
+t_bool						ft_dis_is_arg_types_valid(t_elem *elems);
+void						ft_dis_add_elem(t_elem **list, t_elem *new);
+uint8_t						ft_dis_get_arg_type(int8_t code);
+void						ft_dis_set_arg_type(int8_t arg_code, int8_t index, \
+																t_elem *elems);
+void						ft_dis_arg_types_treat(t_dis *dis_s, t_elem *elems);
+size_t						ft_dis_get_size(t_elem *elems, unsigned i);
+void						ft_dis_arg_treat(t_dis *dis_s, t_elem *elems, \
+																	unsigned i);
+void						ft_dis_args_treat(t_dis *dis_s, t_elem *elems);
+t_elem						*ft_dis_init_elem(void);
+t_elem						*ft_dis_elems_treat(t_dis *dis_s);
+int32_t						ft_dis_parse_int32(int fd);
+char						*ft_dis_parse_string(int fd, size_t len);
+uint8_t						*ft_dis_parse_code(int fd, size_t len);
+int							ft_dis_parse_bytecode(t_dis *dis_s);
+void						ft_dis_write_file(t_dis *dis_s);
 
 /*
 ** ------------------------------ Functions ------------------------------------

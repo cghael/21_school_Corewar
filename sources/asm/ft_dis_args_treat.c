@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_read_write.c                                :+:      :+:    :+:   */
+/*   ft_dis_args_treat.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 13:45:25 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/07 13:45:29 by ksemele          ###   ########.fr       */
+/*   Created: 2020/12/07 12:42:51 by ksemele           #+#    #+#             */
+/*   Updated: 2020/12/07 12:42:53 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_read_write(t_dis *dis_s)
+void		ft_dis_args_treat(t_dis *dis_s, t_elem *elems)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_valide_name(dis_s);
-	ft_dis_valide_comment(dis_s);
-	ft_dis_exec_code_treat(dis_s);
-	ft_dis_write_file(dis_s);
-	return (EXIT_SUCCESS);
+	unsigned	i;
+
+	i = 0;
+	while (i < elems->op->n_args)
+	{
+		ft_dis_arg_treat(dis_s, elems, i);
+		i++;
+	}
 }

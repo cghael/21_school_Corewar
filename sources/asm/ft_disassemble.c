@@ -26,7 +26,6 @@ int				ft_disassemble(char *file_cor, t_asm *asm_s)
 		if (EXIT_FAILURE == ft_dis_try_create_file(dis_s))
 			return (ft_dis_error(ERR_DIS_INIT, NULL));
 	}
-	ft_dprintf(2, "__ %s %d\n", dis_s->file_s, dis_s->fd_s);//todo del
 	ft_dis_read_write(dis_s);
 	if (dis_s->file_s != NULL)
 		ft_dis_free_struct(dis_s);

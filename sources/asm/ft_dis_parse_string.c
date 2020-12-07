@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_read_write.c                                :+:      :+:    :+:   */
+/*   ft_dis_parse_string.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 13:45:25 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/07 13:45:29 by ksemele          ###   ########.fr       */
+/*   Created: 2020/12/07 13:21:40 by ksemele           #+#    #+#             */
+/*   Updated: 2020/12/07 13:21:40 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_read_write(t_dis *dis_s)
+char			*ft_dis_parse_string(int fd, size_t len)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_valide_name(dis_s);
-	ft_dis_valide_comment(dis_s);
-	ft_dis_exec_code_treat(dis_s);
-	ft_dis_write_file(dis_s);
-	return (EXIT_SUCCESS);
+	ssize_t		size;
+	char		*buffer;
+
+	if (!(buffer = ft_strnew(len)))
+		ft_dis_error(ERR_MEMALLOC, NULL);
+	size = read(fd, buffer, len);
+	if (size == -1)
+		ft_dis_error(ERR_DIS_READ_FILE, NULL);
+	if (size < (ssize_t)len)
+		ft_dis_error(ERR_DIS_FILE_SIZE, NULL);
+	return (buffer);
 }
