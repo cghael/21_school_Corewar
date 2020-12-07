@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/04 12:53:20 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/04 16:06:13 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,17 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 	{
 		if (ft_strequ(av[i], "-dump"))
 		{
-			if (ft_atoi(av[++i]) < 1)
+			i++;
+			if (ft_atoi(av[i]) < 1)
 				terminate(USAGE_DUMP);
-			vm->flag.dump = ft_atoi(av[++i]);
+			vm->flag.dump = ft_atoi(av[i++]);
 		}
 		if (ft_strequ(av[i], "-d"))
 		{
-			if (ft_atoi(av[++i]) < 1)
+			i++;
+			if (ft_atoi(av[i]) < 1)
 				terminate(USAGE_DUMP);
-			vm->flag.d = ft_atoi(av[++i]);
+			vm->flag.d = ft_atoi(av[i++]);
 		}
 		if (ft_strequ(av[i], "-v"))
 			vm->flag.visual = 1;
@@ -114,7 +116,7 @@ void		pl_cp_comment_champion(int fd, t_list *player)
 
 	r = read(fd, &buff, COMMENT_LENGTH);
 	if (r == COMMENT_LENGTH)
-		ft_memcpy(((t_player*)player->content)->name, buff, PROG_NAME_LENGTH);
+		ft_memcpy(((t_player*)player->content)->comment, buff, PROG_NAME_LENGTH);
 	else
 		in_close_fd_err(fd, ERR_BAD_COMM);
 }
@@ -393,22 +395,48 @@ void		pl_players_order(t_list **champions)
 	pl_check_num_champion(*champions);
 }
 
-void		print_num_players(t_list *champ)
+t_list		*pl_sort_rev_stack_champ(t_list *champions)
 {
-	int		num;
+	t_list *start;
+	t_list *prev;
+	t_list *tmp;
+
+	prev = champions;
+	start = champions;
+	while (champions->next)
+	{
+		tmp = champions->next;
+		if (((t_player*)champions->content)->number > ((t_player *)
+				tmp->content)->number)
+		{
+			if (prev == champions)
+				start = pl_swap(start, champions, tmp, prev);
+			else
+				start = pl_swap(start, champions, tmp, prev);
+			champions = start;
+		}
+		else
+		{
+			prev = champions;
+			champions = champions->next;
+		}
+	}
+	return (start);
+}
+
+void		print_players(t_list *champ)
+{
 	t_list	*cham;
 
-	cham = champ;
+	cham = pl_sort_rev_stack_champ(champ);
+	ft_printf("Introducing contestants...\n");
 	while (cham)
 	{
-		num = ((t_player*)cham->content)->number;
-		ft_printf("_____________________________\nNUM "
-			"CHAMP:\t%i\nNAME:\t\t%s\nCOMMENT:\t\t%s\nSI"
-			"ZE_CODE:\t%i\nEXEC_CODE:\t%s\n-----------------------------\n\n",
-			num, ((t_player*)cham->content)->name,
-			((t_player*)cham->content)->comment,
+		ft_printf("* Player %i, weighing %i bytes, \"%s\" (\"%s\")\n",
+			((t_player*)cham->content)->number,
 			((t_player*)cham->content)->exec_size,
-			((t_player*)cham->content)->exec_code);
+			((t_player*)cham->content)->name,
+			((t_player*)cham->content)->comment);
 		cham = cham->next;
 	}
 	ft_printf("\n\n");
@@ -426,6 +454,5 @@ t_list		*pl_parsing_input(int ac, char **av)
 	while (i < ac)
 		champions = pl_list_champions(ac, &i, av, champions);
 	pl_players_order(&champions);
-	print_num_players(champions); //todo output data champions;
 	return (champions);
 }
