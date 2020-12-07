@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_read_write.c                                :+:      :+:    :+:   */
+/*   ft_dis_bytecode_to_int32.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 13:45:25 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/07 13:45:29 by ksemele          ###   ########.fr       */
+/*   Created: 2020/12/07 13:06:56 by ksemele           #+#    #+#             */
+/*   Updated: 2020/12/07 13:06:57 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_read_write(t_dis *dis_s)
+int32_t			ft_dis_bytecode_to_int32(const uint8_t *bytecode, size_t size)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_valide_name(dis_s);
-	ft_dis_valide_comment(dis_s);
-	ft_dis_exec_code_treat(dis_s);
-	ft_dis_write_file(dis_s);
-	return (EXIT_SUCCESS);
+	int32_t		result;
+	t_bool		sign;
+	int			i;
+
+	result = 0;
+	sign = (t_bool)(bytecode[0] & 0x80);
+	i = 0;
+	while (size)
+	{
+		if (sign)
+			result += ((bytecode[size - 1] ^ 0xFF) << (i++ * 8));
+		else
+			result += bytecode[size - 1] << (i++ * 8);
+		size--;
+	}
+	if (sign)
+		result = ~(result);
+	return (result);
 }

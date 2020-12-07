@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/02 14:08:26 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/04 15:34:19 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,11 @@ t_data						get_t_data(uint8_t *array, int32_t pos,
 							uint32_t max);
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
+void						print_players(t_list *champ);
 void						print_result(t_player *win_player);
 void						in_close_fd_err(int fd, char *err);
 void						fl_check_flags(int ac, char** av, t_vm *vm);
+void						pl_free_champions(t_list *champions, char *err);
 void 						set_array(t_data dest, const t_data source,
 									  uint32_t n);
 /*

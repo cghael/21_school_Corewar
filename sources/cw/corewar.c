@@ -6,7 +6,7 @@
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/02 13:50:18 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/07 11:44:36 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int		main(int ac, char **av)
 
 	if (!(vm = vm_init(ac, av)))
 		terminate(ERR_MALC_INIT);
-	vm_print_arena(vm);
 	win_player = vm_operation(vm);
+	if (vm->flag.d > 0 || vm->flag.dump > 0)
+		vm_print_arena(vm);
+	print_players(vm->players);
 	print_result(win_player);
 	return (0);
 }

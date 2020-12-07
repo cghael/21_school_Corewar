@@ -16,6 +16,7 @@
 # define USAGE				"Usage: aLL iNfo foR CW"
 # define USAGE_DUMP			"Usage: Use only -dump or -d with a number greater than zero (ex: ./corewar -dump 5 champion_name.cor)"
 # define ERR_BAD_LEN		"Error: Wrong file size!!!"
+# define ERR_CODE_LEN		"Error: Player code is too long"
 # define ERR_BAD_FILE		"ERROR: Can\'t open file"
 # define ERR_BAD_READ		"ERROR: Can\'t read file"
 # define ERR_BAD_NAME		"Error: File has an invalid name"

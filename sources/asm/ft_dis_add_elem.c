@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_read_write.c                                :+:      :+:    :+:   */
+/*   ft_dis_add_elem.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 13:45:25 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/07 13:45:29 by ksemele          ###   ########.fr       */
+/*   Created: 2020/12/07 12:33:33 by ksemele           #+#    #+#             */
+/*   Updated: 2020/12/07 12:33:37 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_read_write(t_dis *dis_s)
+void			ft_dis_add_elem(t_elem **list, t_elem *new)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_valide_name(dis_s);
-	ft_dis_valide_comment(dis_s);
-	ft_dis_exec_code_treat(dis_s);
-	ft_dis_write_file(dis_s);
-	return (EXIT_SUCCESS);
+	t_elem *curr;
+
+	if (list)
+	{
+		if (*list)
+		{
+			curr = *list;
+			while (curr->next)
+				curr = curr->next;
+			curr->next = new;
+		}
+		else
+			*list = new;
+	}
 }
