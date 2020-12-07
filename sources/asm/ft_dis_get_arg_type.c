@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_read_write.c                                :+:      :+:    :+:   */
+/*   ft_dis_get_arg_type.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 13:45:25 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/07 13:45:29 by ksemele          ###   ########.fr       */
+/*   Created: 2020/12/07 12:34:32 by ksemele           #+#    #+#             */
+/*   Updated: 2020/12/07 12:34:33 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_read_write(t_dis *dis_s)
+uint8_t		ft_dis_get_arg_type(int8_t code)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_valide_name(dis_s);
-	ft_dis_valide_comment(dis_s);
-	ft_dis_exec_code_treat(dis_s);
-	ft_dis_write_file(dis_s);
-	return (EXIT_SUCCESS);
+	if (code == DIR_CODE)
+		return (T_DIR);
+	else if (code == REG_CODE)
+		return (T_REG);
+	else if (code == IND_CODE)
+		return (T_IND);
+	else
+		return (0);
 }

@@ -12,9 +12,9 @@
 
 #include "asm.h"
 
-t_dis *ft_dis_init_struct(char *file_cor)
+t_dis		*ft_dis_init_struct(char *file_cor)
 {
-	t_dis		*dis_s;
+	t_dis	*dis_s;
 
 	if (!(dis_s = ft_memalloc(sizeof(t_dis))))
 	{
@@ -24,12 +24,12 @@ t_dis *ft_dis_init_struct(char *file_cor)
 	dis_s->fd_s = -1;
 	dis_s->file_s = NULL;
 	if ((dis_s->fd_cor = open(file_cor, O_RDONLY)) < 1)
-		ft_dis_error(ERR_READ_FILE, NULL);
+		ft_dis_error(ERR_DIS_READ_FILE, NULL);
 	dis_s->name = NULL;
 	dis_s->comment = NULL;
 	dis_s->code_size = 0;
 	dis_s->code = NULL;
 	dis_s->pos = 0;
-	dis_s->statements = NULL;
+	dis_s->elems = NULL;
 	return (dis_s);
 }

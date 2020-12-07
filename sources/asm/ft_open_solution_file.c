@@ -21,11 +21,11 @@ void		ft_open_solution_file(char *file, t_asm *asm_s)
 	dot = ft_strrchr(file, '.');
 
 	if (!(tmp_name = ft_strsub(file, 0, dot - file + 1)))
-		ft_asm_error(ERR_OPEN_SOL, asm_s);
+		ft_asm_error(ERR_DIS_OPEN_SOL, asm_s);
 	if (!(file_solution = ft_strjoin(tmp_name, "cor")))
 	{
 		free(tmp_name);
-		ft_asm_error(ERR_OPEN_SOL, asm_s);
+		ft_asm_error(ERR_DIS_OPEN_SOL, asm_s);
 		return ;
 	}
 	free(tmp_name);
@@ -34,7 +34,7 @@ void		ft_open_solution_file(char *file, t_asm *asm_s)
 	if (asm_s->fd_solution < 0)
 	{
 		free(file_solution);
-		ft_asm_error(ERR_OPEN_SOL, asm_s);
+		ft_asm_error(ERR_DIS_OPEN_SOL, asm_s);
 		return ;
 	}
 	free(file_solution);
