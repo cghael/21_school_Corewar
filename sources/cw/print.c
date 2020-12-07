@@ -32,11 +32,12 @@ void		vm_print_arena(t_vm *vm)
 	uint32_t	i;
 
 	i = 0;
+	ft_printf("%6d : ", vm->number_cycle);
 	while (i < MEM_SIZE)
 	{
 		print_bit(vm->arena[i]);
-		if ((i + 1) % 32 == 0)
-			ft_printf("\n");
+		if ((i + 1) % 64 == 0 && (i + 1) != MEM_SIZE)
+			ft_printf("\n0x0000 : ");
 		else
 			ft_printf(" ");
 		i++;

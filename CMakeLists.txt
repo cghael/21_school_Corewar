@@ -3,7 +3,8 @@ project(corewar C)
 
 set(CMAKE_C_STANDARD 90)
 
-set (SOURCES
+set (SOURCES_CW
+		sources/cw/corewar.c
 		sources/cw/init.c
 		sources/cw/pl_init.c
 		sources/cw/operation.c
@@ -23,9 +24,6 @@ set (SOURCES
 		sources/cw/commands/xor.c
 		sources/cw/commands/fork.c
 		sources/cw/commands/aff.c)
-
-set(SOURCES_CW
-        sources/cw/corewar.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c

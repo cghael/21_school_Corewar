@@ -27,10 +27,10 @@ uint8_t		vm_checkout(t_vm *vm)
 	while (tmp)
 	{
 		del = tmp;
-		tmp = tmp->next;
-		if (vm->number_cycle - ((t_carriage*)del->content)->number_last_live
-		>= vm->cycles_to_die || vm->cycles_to_die <= 0)
+		if (((vm->number_cycle - ((t_carriage*)del->content)->number_last_live)
+		>= vm->cycles_to_die) || (vm->cycles_to_die <= 0))
 			ft_lstpdelone(&vm->carriages, del);
+		tmp = tmp->next;
 	}
 	vm->number_live = 0;
 	if (vm->carriages)
@@ -75,7 +75,7 @@ t_data		get_reg(uint8_t n, t_carriage *car, t_vm *vm)
 {
 	uint8_t		reg_nb;
 
-	reg_nb = vm->arena[car->args[n].pos];
+	reg_nb = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE), 1);
 	if (reg_nb < 1 || reg_nb > REG_NUMBER)
 		return (get_t_data(0, 0, 0));
 	return (get_t_data(car->reg[reg_nb - 1], 0, REG_SIZE));
@@ -83,13 +83,13 @@ t_data		get_reg(uint8_t n, t_carriage *car, t_vm *vm)
 
 t_data		get_ind(uint8_t n, t_carriage *car, t_vm *vm)
 {
-	int32_t		ind;
+	int16_t		ind;
 
 	ind = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE),
 			IND_SIZE);
 	if (car->operation != 0x0d && car->operation != 0x0e)
 		ind %= IDX_MOD;
-	return (get_t_data(vm->arena, car->args[n].pos + ind, MEM_SIZE));
+	return (get_t_data(vm->arena, car->position + ind, MEM_SIZE));
 }
 
 t_data		get_data(uint8_t n, t_carriage *car, t_vm *vm)
@@ -181,7 +181,7 @@ uint8_t		cr_set_args(t_carriage *car, t_vm *vm)
 	i = 0;
 	while (i < g_ops[car->operation - 1].n_args)
 	{
-		if (car->args[i].type == T_REG && car->args[i].data.data == 0)
+		if (car->args[i].type == T_REG && car->args[i].data.max == 0)
 			return (0);
 		i++;
 	}
@@ -302,6 +302,8 @@ t_player	*vm_operation(t_vm *vm)
 			vm_survey_carriages(vm);
 			current++;
 			vm->number_cycle++;
+			if (vm->number_cycle == 25000)
+				vm_print_arena(vm);
 		}
 		vm->number_checks++;
 	}

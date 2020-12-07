@@ -19,6 +19,9 @@
 # include <fcntl.h>
 
 
+# define ERR_MALC_INIT		"ERROR: Can\'t initialize malloc"
+# define ERR_GNL_READ		"ERROR: Can\'t read gnl"
+
 /*
 ** struct's definitions
 */
@@ -51,7 +54,7 @@ typedef struct				s_argument
 	uint8_t					type;
 	int32_t					pos;
 	t_data					data;
-	uint8_t					len;
+	uint32_t				len;
 }							t_argument;
 
 typedef struct				s_carriage
@@ -61,7 +64,7 @@ typedef struct				s_carriage
 	uint8_t					operation;
 	uint32_t				number_last_live;
 	uint32_t				waiting_moves;
-	uint32_t				position;
+	int32_t					position;
 	uint8_t					reg[REG_NUMBER][REG_SIZE];
 	t_argument				args[3];
 	t_player				*player;
@@ -124,5 +127,6 @@ t_list		*ft_lstpnew(void *content);
 void		ft_lstpdelone(t_list **alst, t_list *del);
 u_int32_t	ft_lstlength(t_list *lst);
 int32_t		ft_bytetoint(const t_data arg, uint8_t len);
+void		ft_inttobyte(const int32_t num, t_data arg, uint8_t len);
 
 #endif
