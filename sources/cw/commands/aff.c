@@ -6,5 +6,5 @@
 
 void		aff(t_carriage *car, t_vm *vm)
 {
-	write(1, (char*)car->args[0].data.data, 1);
+	//write(1, (char*)car->args[0].data.data, 1);
 }
