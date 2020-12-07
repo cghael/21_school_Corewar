@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/07 13:51:59 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/07 14:03:27 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -477,3 +477,4 @@ t_list		*pl_parsing_input(int ac, char **av)
 		champions = pl_list_champions(ac, &i, av, champions);
 	return (pl_players_order(champions));
 }
+

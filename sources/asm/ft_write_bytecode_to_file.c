@@ -25,7 +25,7 @@ void		ft_write_bytecode_to_file(int fd, t_asm *asm_s)
 	pos += EXEC_SIZE;
 	ft_memcpy(&bytecode[pos], asm_s->comment, ft_strlen(asm_s->comment));
 	pos += COMMENT_LENGTH + END_SIZE;
-	ft_memcpy(&bytecode[pos], asm_s->code, (size_t)asm_s->exec_size);
+	ft_memcpy(&bytecode[pos], asm_s->code, (size_t)asm_s->exec_size); //todo SEGA!!!!
 	write(fd, bytecode, (size_t)len);
 	free(bytecode);
 }

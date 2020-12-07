@@ -283,5 +283,6 @@ int							ft_count_num_len(const char *str);
 int							ft_check_arg_type(t_asm *asm_s, int type, int arg_pars);
 void						ft_write_arg_type_code(t_asm *asm_s);
 void						ft_count_exec_code_size(t_asm *asm_s);
+int							ft_write_exec_code_in_line(t_asm *asm_s);
 
 #endif
