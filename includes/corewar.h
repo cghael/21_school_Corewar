@@ -95,6 +95,7 @@ void						print_players(t_list *champ);
 void						print_result(t_player *win_player);
 void						in_close_fd_err(int fd, char *err);
 void						fl_check_flags(int ac, char** av, t_vm *vm);
+void						pl_free_champions(t_list *champions, char *err);
 void 						set_array(t_data dest, const t_data source,
 									  uint32_t n);
 /*

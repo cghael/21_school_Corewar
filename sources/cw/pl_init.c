@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/04 16:06:13 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/07 13:51:59 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,12 +50,12 @@ t_list		*pl_new_champ(int num_player)
 	champion = NULL;
 	player = NULL;
 	if (!(player = ft_lstnew(NULL, 0)))
-		terminate(ERR_MALC_INIT);
+		return (NULL);
 	if (!(champion = (t_player*)malloc(sizeof(t_player))))
-		terminate(ERR_MALC_INIT);
+		return (NULL);
 	champion->number = num_player;
 	champion->exec_size = 0;
-	player->content = (void*)champion;
+	player->content = champion;
 	return (player);
 }
 
@@ -151,16 +151,19 @@ void		pl_cp_code_champion(int fd, t_list *player)
 	int		r;
 	uint8_t	buff[((t_player*)player->content)->exec_size];
 
+	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE)
+		terminate(ERR_CODE_LEN);
 	r = read(fd, &buff, ((t_player*)player->content)->exec_size);
 	if (r == ((t_player*)player->content)->exec_size)
 	{
+		ft_bzero(((t_player*)player->content)->exec_code, CHAMP_MAX_SIZE);
 		ft_memcpy(((t_player*)player->content)->exec_code, buff,
-			PROG_NAME_LENGTH);
+				  ((t_player*)player->content)->exec_size);
 		if (read(fd, &buff, 1) && r)
 			in_close_fd_err(fd, ERR_BAD_LEN);
 	}
 	else
-		in_close_fd_err(fd, ERR_BAD_NAME);
+		in_close_fd_err(fd, ERR_CODE_LEN);
 }
 
 void		pl_read_data_champion(char *file_name, t_list *player)
@@ -230,6 +233,23 @@ int			fl_check_num_after_flag(char **av, int i, int *num_pl, int ac)
 	return (pl_next_arg(av, i));
 }
 
+void		pl_free_champions(t_list *champions, char *err)
+{
+	t_list *tmp;
+
+	while (champions)
+	{
+		tmp = champions;
+		champions = champions->next;
+		free(tmp->content);
+		tmp->content = NULL;
+		free(tmp);
+		tmp = NULL;
+	}
+	if (err)
+		terminate(err);
+}
+
 t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
 {
 	int		num_pl;
@@ -247,7 +267,8 @@ t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
 	}
 	if (!ft_compare_end(av[*i], ".cor\0", ft_strlen(av[*i]) - 4))
 		terminate(ERR_BAD_NAME);
-	player = pl_new_champ(num_pl);
+	if(!(player = pl_new_champ(num_pl)))
+		pl_free_champions(champions, ERR_MALC_INIT);
 	pl_read_data_champion(av[*i], player);
 	*i = *i + 1;
 	if (!champions)
@@ -376,13 +397,13 @@ void		pl_check_num_champion(t_list *champions)
 	}
 }
 
-void		pl_players_order(t_list **champions)
+t_list		*pl_players_order(t_list *champions)
 {
 	int		quant;
 	t_list	*tmp;
 
 	quant = 0;
-	tmp = *champions;
+	tmp = champions;
 	while (tmp)
 	{
 		tmp = tmp->next;
@@ -390,9 +411,10 @@ void		pl_players_order(t_list **champions)
 	}
 	if (quant > MAX_PLAYERS)
 		terminate(ERR_MANY_CHAMP);
-	pl_number_order(*champions, quant);
-	*champions = pl_sort_stack_champ(*champions);
-	pl_check_num_champion(*champions);
+	pl_number_order(champions, quant);
+	champions = pl_sort_stack_champ(champions);
+	pl_check_num_champion(champions);
+	return (champions);
 }
 
 t_list		*pl_sort_rev_stack_champ(t_list *champions)
@@ -450,9 +472,8 @@ t_list		*pl_parsing_input(int ac, char **av)
 	i = 1;
 	champions = NULL;
 	if (ac < 2)
-		terminate(USAGE);
+		terminate(USAGE); //todo describe USAGE;
 	while (i < ac)
 		champions = pl_list_champions(ac, &i, av, champions);
-	pl_players_order(&champions);
-	return (champions);
+	return (pl_players_order(champions));
 }
