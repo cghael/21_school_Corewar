@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/07 14:03:27 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/07 16:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -250,31 +250,72 @@ void		pl_free_champions(t_list *champions, char *err)
 		terminate(err);
 }
 
-t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
+//t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
+//{
+//	int		num_pl;
+//	t_list	*player;
+//
+//	player = NULL;
+//	num_pl = 0;
+//	while (!(ft_strstr(av[*i], ".cor")) && *i < ac)
+//	{
+//		if (ft_strequ(av[*i], "-n") || ft_strequ(av[*i], "-d") ||
+//		ft_strequ(av[*i], "-dump") || ft_strequ(av[*i], "-v"))
+//			*i = fl_check_num_after_flag(av, *i, &num_pl, ac);
+//		else
+//			terminate(ERR_BAD_NAME);
+//	}
+//	if (!ft_compare_end(av[*i], ".cor\0", ft_strlen(av[*i]) - 4))
+//		terminate(ERR_BAD_NAME);
+//	if(!(player = pl_new_champ(num_pl)))
+//		pl_free_champions(champions, ERR_MALC_INIT);
+//	pl_read_data_champion(av[*i], player);
+//	*i = *i + 1;
+//	if (!champions)
+//		champions = player;
+//	else
+//		ft_lstadd(&champions, player);
+//	return (champions);
+//}
+
+t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 {
 	int		num_pl;
 	t_list	*player;
+	int		i;
 
+	i = 1;
 	player = NULL;
-	num_pl = 0;
-	while (!(ft_strstr(av[*i], ".cor")) && *i < ac)
+	while (i < ac)
 	{
-		if (ft_strequ(av[*i], "-n") || ft_strequ(av[*i], "-d") ||
-		ft_strequ(av[*i], "-dump") || ft_strequ(av[*i], "-v"))
-			*i = fl_check_num_after_flag(av, *i, &num_pl, ac);
-		else
+		num_pl = 0;
+		while (i < ac && !(ft_strstr(av[i], ".cor")))
+		{
+			if (ft_strequ(av[i], "-n") || ft_strequ(av[i], "-d") ||
+				ft_strequ(av[i], "-dump") || ft_strequ(av[i], "-v"))
+			{
+				if (!ft_strequ(av[i], "-n") && champions)
+					terminate((USAGE_FLAG));
+				if (ft_strequ(av[i], "-v"))
+					i++;
+				else if((i = fl_check_num_after_flag(av, i, &num_pl, ac)) >= ac)
+					terminate(USAGE_DUMP);
+			}
+			else
+				terminate(ERR_BAD_NAME);
+		}
+		if (i >= ac)
+			return (champions);
+		if (!ft_compare_end(av[i], ".cor\0", ft_strlen(av[i]) - 4))
 			terminate(ERR_BAD_NAME);
+		if (!(player = pl_new_champ(num_pl)))
+			pl_free_champions(champions, ERR_MALC_INIT);
+		pl_read_data_champion(av[i++], player);
+		if (!champions)
+			champions = player;
+		else
+			ft_lstadd(&champions, player);
 	}
-	if (!ft_compare_end(av[*i], ".cor\0", ft_strlen(av[*i]) - 4))
-		terminate(ERR_BAD_NAME);
-	if(!(player = pl_new_champ(num_pl)))
-		pl_free_champions(champions, ERR_MALC_INIT);
-	pl_read_data_champion(av[*i], player);
-	*i = *i + 1;
-	if (!champions)
-		champions = player;
-	else
-		ft_lstadd(&champions, player);
 	return (champions);
 }
 
@@ -467,14 +508,11 @@ void		print_players(t_list *champ)
 t_list		*pl_parsing_input(int ac, char **av)
 {
 	t_list	*champions;
-	int		i;
 
-	i = 1;
 	champions = NULL;
 	if (ac < 2)
 		terminate(USAGE); //todo describe USAGE;
-	while (i < ac)
-		champions = pl_list_champions(ac, &i, av, champions);
+	champions = pl_list_champions(ac, av, champions);
 	return (pl_players_order(champions));
 }
 

@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/07 15:26:37 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/07 15:28:02 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,7 @@ t_vm		*vm_init(int ac, char **av)
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	if (!(vm->players =pl_parsing_input(ac, av)))
 	    return (0);
+	fl_check_flags(ac, av, vm);
 	vm->number_players = ft_lstlength(vm->players);
 	vm->last_live_player = vm->players->content;
 	vm_init_arena(vm);
