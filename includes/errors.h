@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/07 17:02:36 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/08 13:10:40 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # define USAGE				"Usage: aLL iNfo foR CW"
 # define USAGE_DUMP			"Usage: Use only -dump or -d with a number greater than zero (ex: ./corewar -dump 5 champion_name.cor)"
-# define USAGE_FLAG			"Usage: Use the flag after the name \"corvar\" (ex1:./corewar -dump 5 champion_name.cor, ex2:./corewar -v champion_name.cor)"
+# define USAGE_FLAG			"Usage: Use the flag (-dump, -d, -v) after the \"corvar\" (ex1:./corewar -dump 5 champion_name.cor, ex2:./corewar -v champion_name.cor)"
+# define USAGE_FLAG_N		"Usage: Use the -n flag with a number from 1 to N (N is the number of players participating in this game) before the champion name (for example, 1: ./ corewar -n 3 champion-name.cor -n 2 champion-name 2.cor champion-name3 .cor)"
 # define ERR_BAD_LEN		"Error: Wrong file size!!!"
 # define ERR_CODE_LEN		"Error: Player code is too long"
 # define ERR_BAD_FILE		"ERROR: Can\'t open file"

@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/07 16:55:28 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/08 13:19:45 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,30 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 {
 	int i;
 
+	vm->flag.visual = 0;
+	vm->flag.dump = 0;
+	vm->flag.d = 0;
 	i = 1;
 	while (i < ac)
 	{
 		if (ft_strequ(av[i], "-dump"))
 		{
 			i++;
-			if (ft_atoi(av[i]) < 1)
+			if (ft_atoi(av[i]) < 1 || vm->flag.dump || vm->flag.d)
 				terminate(USAGE_DUMP);
-			vm->flag.dump = ft_atoi(av[i++]);
+			vm->flag.dump = ft_atoi(av[i]);
 		}
 		if (ft_strequ(av[i], "-d"))
 		{
 			i++;
-			if (ft_atoi(av[i]) < 1)
+			if (ft_atoi(av[i]) < 1 || vm->flag.d || vm->flag.dump)
 				terminate(USAGE_DUMP);
-			vm->flag.d = ft_atoi(av[i++]);
+			vm->flag.d = ft_atoi(av[i]);
 		}
 		if (ft_strequ(av[i], "-v"))
 			vm->flag.visual = 1;
 		i++;
 	}
-	if (vm->flag.dump && vm->flag.d)
-		terminate(USAGE_DUMP);
 }
 
 t_list		*pl_new_champ(int num_player)
@@ -166,29 +167,12 @@ void		pl_cp_code_champion(int fd, t_list *player)
 		in_close_fd_err(fd, ERR_CODE_LEN);
 }
 
-void		pl_read_data_champion(char *file_name, t_list *player)
-{
-	int	fd;
-
-	fd = open(file_name, O_RDONLY, 0777);
-	if (fd < 0)
-		terminate(ERR_BAD_FILE);
-	pl_check_magic_header(fd);
-	pl_cp_name_champion(fd, player);
-	pl_check_null_champ(fd, 1);
-	pl_cp_exec_size(fd, player);
-	pl_cp_comment_champion(fd, player);
-	pl_check_null_champ(fd, 0);
-	pl_cp_code_champion(fd, player);
-	close(fd);
-}
-
 int			ft_compare_end(const char *str, const char *dest, int pos)
 {
 	int i;
 
 	i = 0;
-	if (pos < 0)
+	if (pos < 1)
 		return (0);
 	while (str[pos])
 	{
@@ -200,121 +184,89 @@ int			ft_compare_end(const char *str, const char *dest, int pos)
 	return (1);
 }
 
-int			pl_next_arg(char **av, int i)
+t_list		*pl_read_data_champion(char *f_name, t_list *player, t_list *champs)
 {
+	int	fd;
+
+	if (!ft_compare_end(f_name, ".cor", ft_strlen(f_name) - 4))
+		terminate(ERR_BAD_NAME);
+	fd = open(f_name, O_RDONLY, 0777);
+	if (fd < 0)
+		terminate(ERR_BAD_FILE);
+	pl_check_magic_header(fd);
+	pl_cp_name_champion(fd, player);
+	pl_check_null_champ(fd, 1);
+	pl_cp_exec_size(fd, player);
+	pl_cp_comment_champion(fd, player);
+	pl_check_null_champ(fd, 0);
+	pl_cp_code_champion(fd, player);
+	close(fd);
+	if (!champs)
+		champs = player;
+	else
+		ft_lstadd(&champs, player);
+	return (champs);
+}
+
+int			pl_next_arg(char **av, int i, t_list *champions)
+{
+	if (champions)
+		terminate(USAGE_FLAG);
 	if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump"))
-		i = i + 2;
+	{
+		if (av[i + 1][0] >= '0' && av[i + 1][0] <= '9')
+			i = i + 2;
+		else
+			terminate(USAGE_DUMP);
+	}
 	else if (ft_strequ(av[i], "-v"))
 		i++;
 	return (i);
 }
 
-int			fl_check_num_after_flag(char **av, int i, int *num_pl, int ac)
+int			fl_check_num_after_flag_n(char **av, int i, int ac, int *num_pl)
 {
-	size_t	len;
-
 	if (i + 1 < ac)
-		len = ft_strlen(av[i + 1]) - 4;
-	else
-		return (1);
-	if (ft_strequ(av[i], "-n"))
 	{
 		i++;
-		if (i < ac && av[i][0] >= '0' && av[i][0] <= '9')
+		if (i < ac && av[i][0] >= '1' && av[i][0] <= '4')
 		{
 			*num_pl = ft_atoi(av[i]);
-			if (!(ft_compare_end(av[i + 1], ".cor\0", len)) && *num_pl < 1)
-				terminate(ERR_NUM_CHAMP);
+			if (++i >= ac && !(ft_strstr(av[i], ".cor")))
+				terminate(USAGE_FLAG_N);
 		}
 		else
-			terminate(ERR_NUM_CHAMP);
-		i++;
+			terminate(USAGE_FLAG_N);
 	}
-	return (pl_next_arg(av, i));
+	else
+		terminate(USAGE_FLAG_N);
+	return (i);
 }
-
-void		pl_free_champions(t_list *champions, char *err)
-{
-	t_list *tmp;
-
-	while (champions)
-	{
-		tmp = champions;
-		champions = champions->next;
-		free(tmp->content);
-		tmp->content = NULL;
-		free(tmp);
-		tmp = NULL;
-	}
-	if (err)
-		terminate(err);
-}
-
-//t_list		*pl_list_champions(int ac, int *i, char **av, t_list *champions)
-//{
-//	int		num_pl;
-//	t_list	*player;
-//
-//	player = NULL;
-//	num_pl = 0;
-//	while (!(ft_strstr(av[*i], ".cor")) && *i < ac)
-//	{
-//		if (ft_strequ(av[*i], "-n") || ft_strequ(av[*i], "-d") ||
-//		ft_strequ(av[*i], "-dump") || ft_strequ(av[*i], "-v"))
-//			*i = fl_check_num_after_flag(av, *i, &num_pl, ac);
-//		else
-//			terminate(ERR_BAD_NAME);
-//	}
-//	if (!ft_compare_end(av[*i], ".cor\0", ft_strlen(av[*i]) - 4))
-//		terminate(ERR_BAD_NAME);
-//	if(!(player = pl_new_champ(num_pl)))
-//		pl_free_champions(champions, ERR_MALC_INIT);
-//	pl_read_data_champion(av[*i], player);
-//	*i = *i + 1;
-//	if (!champions)
-//		champions = player;
-//	else
-//		ft_lstadd(&champions, player);
-//	return (champions);
-//}
 
 t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 {
-	int		num_pl;
-	t_list	*player;
-	int		i;
+	int i;
+	int num_pl;
+	t_list *player;
 
 	i = 1;
-	player = NULL;
 	while (i < ac)
 	{
 		num_pl = 0;
 		while (i < ac && !(ft_strstr(av[i], ".cor")))
 		{
-			if (ft_strequ(av[i], "-n") || ft_strequ(av[i], "-d") ||
-				ft_strequ(av[i], "-dump") || ft_strequ(av[i], "-v"))
-			{
-				if (!ft_strequ(av[i], "-n") && champions)
-					terminate((USAGE_FLAG));
-				if (ft_strequ(av[i], "-v"))
-					i++;
-				else if((i = fl_check_num_after_flag(av, i, &num_pl, ac)) >= ac)
-					terminate(USAGE_DUMP);
-			}
+			if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump") ||
+			ft_strequ(av[i], "-v"))
+				i = pl_next_arg(av, i, champions);
+			else if (ft_strequ(av[i], "-n"))
+				i = fl_check_num_after_flag_n(av, i, ac, &num_pl);
 			else
 				terminate(ERR_BAD_NAME);
 		}
-		if (i >= ac)
-			return (champions);
-		if (!ft_compare_end(av[i], ".cor\0", ft_strlen(av[i]) - 4))
-			terminate(ERR_BAD_NAME);
 		if (!(player = pl_new_champ(num_pl)))
-			pl_free_champions(champions, ERR_MALC_INIT);
-		pl_read_data_champion(av[i++], player);
-		if (!champions)
-			champions = player;
-		else
-			ft_lstadd(&champions, player);
+			terminate(ERR_MALC_INIT);
+		if (i < ac)
+			champions = pl_read_data_champion(av[i++], player, champions);
 	}
 	return (champions);
 }
@@ -515,4 +467,3 @@ t_list		*pl_parsing_input(int ac, char **av)
 	champions = pl_list_champions(ac, av, champions);
 	return (pl_players_order(champions));
 }
-
