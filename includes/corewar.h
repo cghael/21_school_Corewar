@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/09 13:44:53 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 13:47:26 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct				s_flag
 	uint32_t				visual;
 	uint32_t				dump;
 	uint32_t				d;
+	uint32_t				a;
 }							t_flag;
 
 typedef struct				s_player

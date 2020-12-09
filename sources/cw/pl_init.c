@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/09 13:47:26 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 13:50:16 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 		while (i < ac && !(ft_strstr(av[i], ".cor")))
 		{
 			if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump") ||
-			ft_strequ(av[i], "-v"))
+			ft_strequ(av[i], "-v") || ft_strequ(av[i], "-a"))
 				i = pl_next_arg(av, i, champions);
 			else if (ft_strequ(av[i], "-n"))
 				i = fl_check_num_after_flag_n(av, i, ac, &num_pl);

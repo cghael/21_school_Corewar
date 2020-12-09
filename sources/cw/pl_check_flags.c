@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:26:09 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/09 13:31:10 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 13:50:00 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 {
 	int i;
 
-	vm->flag.visual = 0;
-	vm->flag.dump = 0;
-	vm->flag.d = 0;
 	i = 1;
 	while (i < ac)
 	{
@@ -40,6 +37,12 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 			if (vm->flag.visual)
 				terminate(ERR_FLAG_V);
 			vm->flag.visual = 1;
+		}
+		if (ft_strequ(av[i], "-a"))
+		{
+			if (vm->flag.a)
+				terminate(ERR_FLAG_A);
+			vm->flag.a = 1;
 		}
 		i++;
 	}
@@ -73,7 +76,7 @@ int			pl_next_arg(char **av, int i, t_list *champions)
 		else
 			terminate(ERR_DUMP);
 	}
-	else if (ft_strequ(av[i], "-v"))
+	else if (ft_strequ(av[i], "-v") || ft_strequ(av[i], "-a"))
 		i++;
 	return (i);
 }
