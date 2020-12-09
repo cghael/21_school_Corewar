@@ -6,7 +6,7 @@
 #    By: ksemele <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/07 14:03:53 by ksemele           #+#    #+#              #
-#    Updated: 2020/12/07 15:09:51 by ablane           ###   ########.fr        #
+#    Updated: 2020/12/09 12:25:47 by ablane           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,79 +34,47 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
 #----------------------------------sources--------------------------------------
 
-#-----------------------------------Hints---------------------------------------
-# Use this trick in terminal to grep all ft_* files in ./src:
-#	ls -l | grep 'ft' | awk '{print $9 " \\"}'
-
 SRC_LIST =
-SRC_LIST_CW = corewar.c
+SRC_LIST_CW = corewar.c \
+                init.c \
+                operation.c \
+                print.c \
+                terminate.c \
+                libft.c \
+                commands/live.c \
+                commands/ld.c \
+                commands/sti.c \
+                commands/st.c \
+                commands/ldi.c \
+                commands/zjmp.c \
+                commands/add.c \
+                commands/sub.c \
+                commands/and.c \
+                commands/or.c \
+                commands/xor.c \
+                commands/fork.c \
+                commands/aff.c
 SRC_LIST_ASM = asm.c \
 				ft_asm_error.c \
 				ft_assemble.c \
-				ft_check_arg_type.c \
-				ft_check_end_newline.c \
-				ft_check_n_write_op_args.c \
-				ft_check_operation.c \
-				ft_check_quotes.c \
 				ft_check_read_argv_files.c \
-				ft_count_exec_code_size.c \
-				ft_count_num_len.c \
-				ft_dis_add_elem.c \
-				ft_dis_add_s.c \
-				ft_dis_arg_treat.c \
-				ft_dis_arg_types_treat.c \
-				ft_dis_args_treat.c \
-				ft_dis_ask_new_filename.c \
-				ft_dis_bytecode_to_int32.c \
-				ft_dis_check_file_exist.c \
-				ft_dis_choose_new_filename.c \
-				ft_dis_convert_start_filename.c \
-				ft_dis_copy_filename.c \
-				ft_dis_del_cor.c \
-				ft_dis_elems_treat.c \
-				ft_dis_error.c \
-				ft_dis_exec_code_treat.c \
-				ft_dis_free_struct.c \
-				ft_dis_get_arg_type.c \
-				ft_dis_get_size.c \
-				ft_dis_init_elem.c \
-				ft_dis_init_struct.c \
-				ft_dis_is_arg_types_valid.c \
-				ft_dis_parse_bytecode.c \
-				ft_dis_parse_code.c \
-				ft_dis_parse_int32.c \
-				ft_dis_parse_string.c \
-				ft_dis_read_write.c \
-				ft_dis_set_arg_type.c \
-				ft_dis_try_create_file.c \
-				ft_dis_validate_types_code.c \
-				ft_dis_valide_comment.c \
-				ft_dis_valide_name.c \
-				ft_dis_write_file.c \
 				ft_disassemble.c \
+				ft_dis_error.c \
+				ft_dis_init_struct.c \
+				ft_dis_choose_new_filename.c \
+				ft_dis_check_file_exist.c \
+				ft_dis_try_create_file.c \
+				ft_dis_ask_new_filename.c \
+				ft_dis_copy_filename.c \
+				ft_dis_add_s.c \
+				ft_dis_read_write.c \
 				ft_free_asm_struct.c \
-				ft_get_one_arg.c \
 				ft_init_asm_struct.c \
-				ft_init_n_add_token.c \
-				ft_int32_to_bytecode.c \
 				ft_is_filename.c \
-				ft_is_label_char.c \
-				ft_is_whitespace.c \
-				ft_label_processing_n_pos_update.c \
-				ft_label_saving_n_pos_update.c \
-				ft_line_data_processing.c \
-				ft_line_of_whitespaces_or_comment.c \
-				ft_open_quotes_processing.c \
-				ft_open_solution_file.c \
-				ft_operation_processing_n_pos_update.c \
-				ft_parse_file.c \
-				ft_parse_line.c \
-				ft_print_error.c \
 				ft_print_help.c \
-				ft_start_check_name_or_comment.c \
-				ft_strjoin_n_free.c \
-				ft_write_arg_type_code.c \
-				ft_write_bytecode_to_file.c
+				ft_open_solution_file.c \
+				ft_int32_to_bytecode.c \
+				ft_parse_file.c
 
 SRC_DIR = ./sources/
 SRC_ASM_DIR = ${SRC_DIR}asm/

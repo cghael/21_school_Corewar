@@ -6,11 +6,29 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/07 15:33:54 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 12:34:38 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
+
+void		print_players(t_list *champ)
+{
+	t_list	*cham;
+
+	cham = pl_sort_rev_stack_champ(champ);
+	ft_printf("Introducing contestants...\n");
+	while (cham)
+	{
+		ft_printf("* Player %i, weighing %i bytes, \"%s\" (\"%s\")\n",
+				  ((t_player*)cham->content)->number,
+				  ((t_player*)cham->content)->exec_size,
+				  ((t_player*)cham->content)->name,
+				  ((t_player*)cham->content)->comment);
+		cham = cham->next;
+	}
+	ft_printf("\n\n");
+}
 
 void		print_result(t_player *win_player)
 {

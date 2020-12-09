@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/07 15:28:02 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 12:39:27 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ t_vm		*vm_init(int ac, char **av)
 	if (!(vm = ft_memalloc(sizeof(t_vm))))
 		return (0);
 	vm->cycles_to_die = CYCLE_TO_DIE;
-	if (!(vm->players =pl_parsing_input(ac, av)))
+	if (!(vm->players = pl_init_players(ac, av)))
 	    return (0);
 	fl_check_flags(ac, av, vm);
 	vm->number_players = ft_lstlength(vm->players);

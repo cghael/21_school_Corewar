@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/07 15:09:51 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 13:44:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "op.h"
 # include "errors.h"
 # include <fcntl.h>
-
 
 /*
 ** struct's definitions
@@ -51,7 +50,7 @@ typedef struct				s_argument
 	uint8_t					type;
 	int32_t					pos;
 	t_data					data;
-	uint8_t					len;
+	uint32_t				len;
 }							t_argument;
 
 typedef struct				s_carriage
@@ -61,7 +60,7 @@ typedef struct				s_carriage
 	uint8_t					operation;
 	uint32_t				number_last_live;
 	uint32_t				waiting_moves;
-	uint32_t				position;
+	int32_t					position;
 	uint8_t					reg[REG_NUMBER][REG_SIZE];
 	t_argument				args[3];
 	t_player				*player;
@@ -82,21 +81,40 @@ typedef struct				s_vm
 }							t_vm;
 
 t_vm						*vm_init(int ac, char **av);
-t_list						*pl_parsing_input(int ac, char **av);
+t_list						*pl_init_players(int ac, char **av);
 t_list						*vm_init_players(int ac, char **av);
+t_list						*pl_sort_stack_champ(t_list *champions);
+t_list						*pl_sort_rev_stack_champ(t_list *champions);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
+int32_t						pl_bytecode_to_int32(const uint8_t *buff, int len);
 t_player					*vm_operation(t_vm *vm);
 t_carriage  				*cr_init(t_player *player, uint32_t nb);
 t_data						get_t_data(uint8_t *array, int32_t pos,
 							uint32_t max);
-void						ft_inttobyte(const int32_t num, t_data arg, uint8_t len);
+
+int							pl_next_arg(char **av, int i, t_list *champions);
+int							ft_compare_end(const char *str, const char *dest,
+						 	int pos);
+int							fl_check_num_after_flag_n(char **av, int i, int ac,
+							int *num_pl);
+int							pl_search_duplicate_num(t_list *champions,
+							int quantity);
+
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						print_players(t_list *champ);
+void						pl_check_magic_header(int fd);
 void						print_result(t_player *win_player);
 void						in_close_fd_err(int fd, char *err);
+void						pl_check_null_champ(int fd, int i);
+void						pl_cp_exec_size(int fd, t_list *player);
+void						pl_check_num_champion(t_list *champions);
+void						pl_check_duplicate_num(t_list *champions);
 void						fl_check_flags(int ac, char** av, t_vm *vm);
-void						pl_free_champions(t_list *champions, char *err);
+void						pl_cp_name_champion(int fd, t_list *player);
+void						pl_cp_code_champion(int fd, t_list *player);
+void						pl_number_order(t_list *champions, int quant);
+void						pl_cp_comment_champion(int fd, t_list *player);
 void 						set_array(t_data dest, const t_data source,
 									  uint32_t n);
 /*
@@ -125,5 +143,6 @@ t_list		*ft_lstpnew(void *content);
 void		ft_lstpdelone(t_list **alst, t_list *del);
 u_int32_t	ft_lstlength(t_list *lst);
 int32_t		ft_bytetoint(const t_data arg, uint8_t len);
+void		ft_inttobyte(const int32_t num, t_data arg, uint8_t len);
 
 #endif
