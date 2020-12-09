@@ -6,14 +6,14 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/08 14:57:38 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/09 14:28:27 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERRORS_H
 # define ERRORS_H
 
-# define USAGE				"Usage: ./corewar [-d N -dump N | -v | -n N] <champion_name.cor> [-n N] <...> <...>\n[-dump N]\t: Dumps memory after N cycles, then exits 32 octets\n[-d N] \t\t: Dumps memory after N cycles, then exits 64 octets\n[-n N]\t\t: Sets the player to position N (N is the number of players participating in this game)\n[-n N]\t\t: Visualization of the game"
+# define USAGE				"Usage: ./corewar [\"-d N\" or \"-dump N\"| \"-v\"| \"-n N\"] <champion_name.cor> [-n N] <...> <...>\n[-dump N]\t: Dumps memory after N cycles, then exits 32 octets\n[-d N] \t\t: Dumps memory after N cycles, then exits 64 octets\n[-v N]\t\t: Visualization of the game\n[-n N]\t\t: Sets the player to position N (N is the number of players participating in this game)"
 # define ERR_DUMP			"Error: Use only -dump or -d with a number greater than zero (ex: ./corewar -dump 5 champion_name.cor)"
 # define ERR_FLAG			"Error: Use the flag (-dump, -d, -v) after the \"corvar\" (ex1:./corewar -dump 5 champion_name.cor, ex2:./corewar -v champion_name.cor)"
 # define ERR_FLAG_N			"Error: Use the -n flag with a number from 1 to N (N is the number of players participating in this game) before the champion name (for example, 1: ./ corewar -n 3 champion-name.cor -n 2 champion-name 2.cor champion-name3 .cor)"
