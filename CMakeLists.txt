@@ -3,8 +3,7 @@ project(corewar C)
 
 set(CMAKE_C_STANDARD 90)
 
-set (SOURCES_CW
-		sources/cw/corewar.c
+set (SOURCES
 		sources/cw/init.c
 		sources/cw/pl_init.c
 		sources/cw/operation.c
@@ -24,6 +23,9 @@ set (SOURCES_CW
 		sources/cw/commands/xor.c
 		sources/cw/commands/fork.c
 		sources/cw/commands/aff.c)
+
+set (SOURCES_CW
+		sources/cw/corewar.c)
 
 set(SOURCES_ASM
 		sources/asm/asm.c
@@ -75,7 +77,26 @@ set(SOURCES_ASM
 		sources/asm/ft_count_exec_code_size.c
 		sources/asm/ft_dis_read_write.c
 		sources/asm/ft_write_exec_code_in_line.c
-		sources/asm/ft_dis_exec_code_treat.c sources/asm/ft_dis_valide_name.c sources/asm/ft_dis_valide_comment.c sources/asm/ft_dis_validate_types_code.c sources/asm/ft_dis_is_arg_types_valid.c sources/asm/ft_dis_add_elem.c sources/asm/ft_dis_get_arg_type.c sources/asm/ft_dis_set_arg_type.c sources/asm/ft_dis_arg_types_treat.c sources/asm/ft_dis_get_size.c sources/asm/ft_dis_arg_treat.c sources/asm/ft_dis_args_treat.c sources/asm/ft_dis_init_elem.c sources/asm/ft_dis_elems_treat.c sources/asm/ft_dis_bytecode_to_int32.c sources/asm/ft_dis_parse_int32.c sources/asm/ft_dis_parse_string.c sources/asm/ft_dis_parse_code.c sources/asm/ft_dis_parse_bytecode.c sources/asm/ft_dis_write_file.c)
+		sources/asm/ft_dis_exec_code_treat.c
+		sources/asm/ft_dis_valide_name.c
+		sources/asm/ft_dis_valide_comment.c
+		sources/asm/ft_dis_validate_types_code.c
+		sources/asm/ft_dis_is_arg_types_valid.c
+		sources/asm/ft_dis_add_elem.c
+		sources/asm/ft_dis_get_arg_type.c
+		sources/asm/ft_dis_set_arg_type.c
+		sources/asm/ft_dis_arg_types_treat.c
+		sources/asm/ft_dis_get_size.c
+		sources/asm/ft_dis_arg_treat.c
+		sources/asm/ft_dis_args_treat.c
+		sources/asm/ft_dis_init_elem.c
+		sources/asm/ft_dis_elems_treat.c
+		sources/asm/ft_dis_bytecode_to_int32.c
+		sources/asm/ft_dis_parse_int32.c
+		sources/asm/ft_dis_parse_string.c
+		sources/asm/ft_dis_parse_code.c
+		sources/asm/ft_dis_parse_bytecode.c
+		sources/asm/ft_dis_write_file.c)
 
 include_directories(includes)
 include_directories(libft/inc)
