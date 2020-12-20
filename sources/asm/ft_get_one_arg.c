@@ -35,10 +35,21 @@
 //	return (tmp);
 //}
 
+static int			ft_create_content(t_asm *asm_s, int arg_pars, int size)
+{
+	int		num;
+
+	asm_s->op_list->last->args[arg_pars].content = ft_memalloc(sizeof(char) * size);
+	if (asm_s->op_list->last->args[arg_pars].content == NULL)
+		return (EXIT_FAILURE);
+	num = ft_atoi(&asm_s->parse->line[asm_s->pos]);
+	ft_int32_to_bytecode(asm_s->op_list->last->args[arg_pars].content, 0, num, size);
+	return (EXIT_SUCCESS);
+}
+
 static int			ft_parse_reg(t_asm *asm_s, int arg_pars)
 {
 	int	len;
-	int	num;
 
 	if (EXIT_FAILURE == ft_check_arg_type(asm_s, T_REG, arg_pars))
 		return (EXIT_FAILURE);
@@ -49,12 +60,14 @@ static int			ft_parse_reg(t_asm *asm_s, int arg_pars)
 		return (EXIT_FAILURE);
 	}
 	len = ft_count_num_len(&asm_s->parse->line[asm_s->pos]);
-	if ((num = ft_atoi(&asm_s->parse->line[asm_s->pos])) < 1 || len > 2)
+	if (ft_atoi(&asm_s->parse->line[asm_s->pos]) < 1 || len > 2)
 	{
 		asm_s->parse->err_num = INCORRECT_REG;
 		return (EXIT_FAILURE);
 	}
-	asm_s->op_list->last->args[arg_pars].content = ft_itoa(num);
+	if (EXIT_FAILURE == ft_create_content(asm_s, arg_pars, 1)) //todo
+		return (EXIT_FAILURE);
+//	asm_s->op_list->last->args[arg_pars].content = ft_itoa(num); //todo check 40
 	if (asm_s->op_list->last->args[arg_pars].content == NULL)
 		return (EXIT_FAILURE);
 	asm_s->pos += len;
@@ -79,10 +92,12 @@ static int			ft_parse_direct(t_asm *asm_s, int arg_pars)
 		return (EXIT_FAILURE);
 	}
 	asm_s->pos += (sign) ? -1 : 0;
-	asm_s->op_list->last->args[arg_pars].content = \
-							ft_itoa(ft_atoi(&asm_s->parse->line[asm_s->pos]));
-	if (asm_s->op_list->last->args[arg_pars].content == NULL)
+	if (EXIT_FAILURE == ft_create_content(asm_s, arg_pars, g_ops[asm_s->op_list->last->num].t_dir_size)) //todo
 		return (EXIT_FAILURE);
+//	asm_s->op_list->last->args[arg_pars].content = \
+//							ft_itoa(ft_atoi(&asm_s->parse->line[asm_s->pos]));
+//	if (asm_s->op_list->last->args[arg_pars].content == NULL)
+//		return (EXIT_FAILURE);
 	asm_s->pos += (sign) ? 1 : 0;
 	asm_s->pos += ft_count_num_len(&asm_s->parse->line[asm_s->pos]);
 	asm_s->op_list->last->args[arg_pars].type = DIR_CODE;
@@ -106,10 +121,12 @@ static int			ft_parse_indirect(t_asm *asm_s, int arg_pars)
 		return (EXIT_FAILURE);
 	}
 	asm_s->pos += (sign) ? -1 : 0;
-	asm_s->op_list->last->args[arg_pars].content = \
-							ft_itoa(ft_atoi(&asm_s->parse->line[asm_s->pos]));
-	if (asm_s->op_list->last->args[arg_pars].content == NULL)
+	if (EXIT_FAILURE == ft_create_content(asm_s, arg_pars, IND_SIZE)) //todo
 		return (EXIT_FAILURE);
+//	asm_s->op_list->last->args[arg_pars].content = \
+//							ft_itoa(ft_atoi(&asm_s->parse->line[asm_s->pos]));
+//	if (asm_s->op_list->last->args[arg_pars].content == NULL)
+//		return (EXIT_FAILURE);
 	asm_s->pos += (sign) ? 1 : 0;
 	asm_s->pos += ft_count_num_len(&asm_s->parse->line[asm_s->pos]);
 	asm_s->op_list->last->args[arg_pars].type = IND_CODE;

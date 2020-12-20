@@ -58,7 +58,7 @@ typedef					enum
 typedef struct			s_op
 {
 	char				*name;
-	int					code;
+	uint8_t				code;
 	int					n_args;
 	int					args[3];
 	int					is_args_type;

@@ -11,7 +11,7 @@ void		ft_write_bytecode_to_file(int fd, t_asm *asm_s)
 
 	pos = 0;
 	len = MAGIC_LEN + PROG_NAME_LENGTH + END_SIZE + EXEC_SIZE + COMMENT_LENGTH \
- + END_SIZE + asm_s->exec_size;
+											+ END_SIZE + asm_s->exec_size;
 	if (!(bytecode = ft_strnew((size_t)len)))
 	{
 		ft_print_error(ERR_MEMALLOC, "ft_write_bytecode_to_file", 0);
