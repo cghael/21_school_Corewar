@@ -36,12 +36,6 @@ static int	ft_parse_arg(t_asm *asm_s, int arg_pars)
 	return (EXIT_SUCCESS);
 }
 
-static void	ft_write_arg_code_n_exec_size(t_asm *asm_s)
-{
-	ft_write_arg_type_code(asm_s);
-	ft_count_exec_code_size(asm_s);
-}
-
 int			ft_check_n_write_op_args(t_asm *asm_s)
 {
 	int arg_pars;
@@ -56,17 +50,11 @@ int			ft_check_n_write_op_args(t_asm *asm_s)
 			break ;
 		else if (arg_pars < g_ops[asm_s->op_list->last->num].n_args)
 		{
-				if (EXIT_FAILURE == ft_parse_arg(asm_s, arg_pars))
-					return (EXIT_FAILURE);
-				arg_pars++;
+			if (EXIT_FAILURE == ft_parse_arg(asm_s, arg_pars))
+				return (EXIT_FAILURE);
+			arg_pars++;
 		}
 	}
-	if (arg_pars != g_ops[asm_s->op_list->last->num].n_args)
-	{
-		asm_s->parse->err_num = FEW_ARGS;
-		asm_s->pos = asm_s->op_list->last->pos;
-		return (EXIT_FAILURE);
-	}
-	ft_write_arg_code_n_exec_size(asm_s);
+	ft_write_arg_type_code(asm_s);
 	return (EXIT_SUCCESS);
 }

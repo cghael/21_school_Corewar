@@ -96,7 +96,7 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_parse_string.c
 		sources/asm/ft_dis_parse_code.c
 		sources/asm/ft_dis_parse_bytecode.c
-		sources/asm/ft_dis_write_file.c)
+		sources/asm/ft_dis_write_file.c sources/asm/ft_write_code_to_exec.c)
 
 include_directories(includes)
 include_directories(libft/inc)
