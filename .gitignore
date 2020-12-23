@@ -8,7 +8,7 @@ asm.dSYM/
 test.s
 
 test_
-/sources/cw/batman.s
-/sources/cw/batman.cor
-/sources/cw/zork.cor
-/sources/cw/bigzork.cor
+/sources/cw/help_files/batman.s
+/sources/cw/help_files/batman.cor
+/sources/cw/help_files/zork.cor
+/sources/cw/help_files/bigzork.cor

@@ -51,6 +51,7 @@ typedef struct				s_data
 
 typedef struct				s_argument
 {
+	uint8_t					reg_nb;
 	uint8_t					type;
 	int32_t					pos;
 	t_data					data;
@@ -67,6 +68,7 @@ typedef struct				s_carriage
 	int32_t					position;
 	uint8_t					reg[REG_NUMBER][REG_SIZE];
 	t_argument				args[3];
+	uint8_t					args_len;
 	t_player				*player;
 }							t_carriage;
 
@@ -79,6 +81,7 @@ typedef struct				s_vm
 	int32_t					cycles_to_die;
 	uint32_t				number_checks;
 	uint32_t				number_players;
+	uint32_t				number_carriages;
 	t_list					*carriages;
 	t_list					*players;
 	t_flag					flag;
@@ -92,8 +95,10 @@ t_player					*vm_operation(t_vm *vm);
 t_carriage  				*cr_init(t_player *player, uint32_t nb);
 t_data						get_t_data(uint8_t *array, int32_t pos,
 							uint32_t max);
+uint32_t					len_args(t_carriage *car, t_vm *vm);
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
+void						vm_print_operation(t_carriage *car, t_vm *vm);
 void						print_result(t_player *win_player);
 void						in_close_fd_err(int fd, char *err);
 void						fl_check_flags(int ac, char** av, t_vm *vm);

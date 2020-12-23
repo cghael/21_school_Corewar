@@ -41,11 +41,19 @@ t_list		*vm_init_players(int ac, char **av)
 	u_int8_t	i;
 
 	players = NULL;
-	i = 1;
-	while (i < ac)
+	i = ac - 1;
+	while (i > 0)
 	{
 		ft_lstadd(&players, ft_lstpnew(pl_init(av[i], i)));
-		i++;
+		i--;
+	}
+	t_list *tmp;
+	tmp = players;
+	while (tmp)
+	{
+		ft_printf("P		[%s] [%d]\n", ((t_player*)tmp->content)->name, (
+				(t_player*)tmp->content)->number);
+		tmp = tmp->next;
 	}
 	return (players);
 }
@@ -93,8 +101,8 @@ t_list		*vm_init_carriages(t_list *players)
 	{
 		if (!(new = cr_init(tmp->content, num)))
 			return (0);
-		new->position = MEM_SIZE / ((t_player*)players->content)->number *
-				(((t_player*)tmp->content)->number - 1) % MEM_SIZE;
+		new->position = MEM_SIZE / ft_lstlength(players) *
+				(new->player->number - 1) % MEM_SIZE;
 		ft_lstadd(&carriages, ft_lstpnew(new));
 		num++;
 		tmp = tmp->next;
@@ -116,5 +124,6 @@ t_vm		*vm_init(int ac, char **av)
 	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))
 	    return (0);
+	vm->number_carriages = ft_lstlength(vm->carriages);
 	return (vm);
 }
