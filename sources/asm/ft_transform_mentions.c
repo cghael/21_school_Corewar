@@ -37,6 +37,9 @@ static int		ft_add_arg_content(t_asm *asm_s)
 
 int				ft_transform_mentions(t_asm *asm_s)
 {
+	t_label		*tmp_lbl;
+	t_mention	*tmp_mntn;
+
 	while (asm_s->labels)
 	{
 		while (asm_s->labels->mention)
@@ -45,9 +48,14 @@ int				ft_transform_mentions(t_asm *asm_s)
 				return (EXIT_FAILURE);
 			if (EXIT_FAILURE == ft_add_arg_content(asm_s))
 				return (EXIT_FAILURE);
+			tmp_mntn = asm_s->labels->mention;
 			asm_s->labels->mention = asm_s->labels->mention->next;
+			free(tmp_mntn);
 		}
+		tmp_lbl = asm_s->labels;
 		asm_s->labels = asm_s->labels->next;
+		free((void*)tmp_lbl->name);
+		free(tmp_lbl);
 	}
 	return (EXIT_SUCCESS);
 }
