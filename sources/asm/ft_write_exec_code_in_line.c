@@ -52,7 +52,6 @@ static int	ft_add_op_exec_code(t_asm *asm_s, t_operations *tmp)
 	exec = (char*)ft_memalloc(sizeof(*exec) * len + 1);
 	ft_write_code_to_exec(exec, tmp);
 	asm_s->code = ft_join_mem(asm_s, exec, len);
-//	asm_s->code = ft_strjoin_n_free(asm_s->code, exec); //todo join don't work
 	if (asm_s->code == NULL)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
@@ -62,9 +61,7 @@ int			ft_write_exec_code_in_line(t_asm *asm_s)
 {
 	t_operations	*tmp;
 
-//	asm_s->code = ft_memalloc(sizeof(char) * asm_s->exec_size + 1);
-//	if (asm_s->code == NULL)
-//		return (EXIT_FAILURE);
+	asm_s->exec_size = 0; //todo check
 	tmp = asm_s->op_list;
 	while (tmp)
 	{

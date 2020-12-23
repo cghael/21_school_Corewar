@@ -45,6 +45,12 @@ int			ft_parse_file(t_asm *asm_s)
 		ft_printf("Error in ft_parse_file()\n");//todo del
 		return (PARSING_ERR);
 	}
+	if (EXIT_FAILURE == ft_transform_mentions(asm_s))
+	{
+		asm_s->parse->err_num = NO_SUCH_LABEL; //todo move into transform_mention
+		ft_asm_error_no_label(asm_s);
+		return (PARSING_ERR);
+	}
 	if (EXIT_FAILURE == ft_write_exec_code_in_line(asm_s))
 		return (PARSING_ERR);
 	return (PARSING_OK);

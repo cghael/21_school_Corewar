@@ -139,10 +139,12 @@ typedef struct				s_operations
 
 typedef struct				s_mention
 {
-	unsigned				n_line;
+	int						n_line;
+	t_operations			*op;
+	int						arg_num;
 	unsigned				pos;
 	int32_t					op_pos;
-	size_t					size;
+//	size_t					size;
 	struct s_mention		*next;
 }							t_mention;
 
@@ -285,5 +287,12 @@ void						ft_write_arg_type_code(t_asm *asm_s);
 void						ft_count_exec_code_size(t_asm *asm_s);
 int							ft_write_exec_code_in_line(t_asm *asm_s);
 void						ft_write_code_to_exec(char *exec, t_operations *tmp);
+int							ft_get_label_mention(t_asm *asm_s, int arg_pars, int type);
+int							ft_init_n_add_label(t_asm *asm_s, const char *name, int n_line);
+t_label						*ft_search_label_exist(t_asm *asm_s, char *name);
+int							ft_init_n_add_mention(t_asm *asm_s, int arg_pars, t_label *label);
+int							ft_transform_mentions(t_asm *asm_s);
+void						ft_asm_error_no_label(t_asm *asm_s);
+//int							ft_create_arg_content(t_asm *asm_s, int arg_pars, int size);
 
 #endif

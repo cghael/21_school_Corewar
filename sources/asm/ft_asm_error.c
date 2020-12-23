@@ -4,6 +4,17 @@
 
 #include "asm.h"
 
+void	ft_asm_error_no_label(t_asm *asm_s)
+{
+	if (asm_s != NULL)
+	{
+		ft_dprintf(2, "\e[1;31mERROR IN LINE \e[1;33m[%d, %d]:\e[m%s%s" \
+			"\e[1;34m (ಠ╭╮ಠ)< fix it!\e[m\n\e[1;13m\n", \
+			asm_s->labels->mention->n_line, asm_s->labels->mention->pos, \
+			g_error[(int)asm_s->parse->err_num], asm_s->labels->name);
+	}
+}
+
 void	ft_asm_error_in_line(t_asm *asm_s)
 {
 	if (asm_s != NULL)

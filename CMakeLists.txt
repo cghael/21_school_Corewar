@@ -96,7 +96,7 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_parse_string.c
 		sources/asm/ft_dis_parse_code.c
 		sources/asm/ft_dis_parse_bytecode.c
-		sources/asm/ft_dis_write_file.c sources/asm/ft_write_code_to_exec.c)
+		sources/asm/ft_dis_write_file.c sources/asm/ft_write_code_to_exec.c sources/asm/ft_get_label_mention.c sources/asm/ft_init_n_add_label.c sources/asm/ft_search_label_exist.c sources/asm/ft_init_n_add_mention.c sources/asm/ft_transform_mentions.c sources/asm/ft_create_arg_content.c)
 
 include_directories(includes)
 include_directories(libft/inc)

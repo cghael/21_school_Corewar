@@ -30,7 +30,8 @@ static int			ft_is_mention(t_asm *asm_s, const char *colon, int *pos)
 	&& asm_s->parse->line[*pos - 1] != SEPARATOR_CHAR)
 		return (ft_error_label_name(asm_s, *pos - 1, LEXICAL_ERROR));
 	i = *pos + 1;
-	while (EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[i]) \
+	while (asm_s->parse->line[i] && \
+	EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[i]) \
 	&& asm_s->parse->line[i] != SEPARATOR_CHAR \
 	&& asm_s->parse->line[i] != COMMENT_CHAR \
 	&& asm_s->parse->line[i] != ALT_COMMENT_CHAR)

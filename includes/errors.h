@@ -44,6 +44,7 @@ typedef						enum
 	INCORRECT_DIR,
 	INCORRECT_IND,
 	UNKNOWN_OPERATOR,
+	NO_SUCH_LABEL,
 }							t_errors;
 
 static char				*g_error[] = {
@@ -58,6 +59,7 @@ static char				*g_error[] = {
 		"incorrect direct argument",
 		"incorrect indirect argument",
 		"incorrect operation name",
+		"no such label"
 };
 
 #endif //ERRORS_H
