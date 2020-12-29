@@ -6,17 +6,14 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/09 12:34:38 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/29 13:03:14 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-void		print_players(t_list *champ)
+void		print_players(t_list *cham)
 {
-	t_list	*cham;
-
-	cham = pl_sort_rev_stack_champ(champ);
 	ft_printf("Introducing contestants...\n");
 	while (cham)
 	{

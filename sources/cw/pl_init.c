@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/09 13:50:16 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/29 12:40:19 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ t_list		*pl_new_champ(int num_player)
 	if (!(player = ft_lstnew(NULL, 0)))
 		return (NULL);
 	if (!(champion = (t_player*)malloc(sizeof(t_player))))
+	{
+		free(player);
 		return (NULL);
+	}
 	champion->number = num_player;
 	champion->exec_size = 0;
 	player->content = champion;
@@ -49,8 +52,9 @@ t_list		*pl_read_data_champion(char *f_name, t_list *player, t_list *champs)
 	if (!champs)
 		champs = player;
 	else
-		ft_lstadd(&champs, player);
-	return (champs);
+		player->next = champs;
+//		ft_lstadd(&champs, player);
+	return (player);
 }
 
 t_list		*pl_list_champions(int ac, char **av, t_list *champions)
@@ -73,7 +77,7 @@ t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 			else
 				terminate(ERR_BAD_NAME);
 		}
-		if (!(player = pl_new_champ(num_pl)))
+		if (i < ac && !(player = pl_new_champ(num_pl)))
 			terminate(ERR_MALC_INIT);
 		if (i < ac)
 			champions = pl_read_data_champion(av[i++], player, champions);

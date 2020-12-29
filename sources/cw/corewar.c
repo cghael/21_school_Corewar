@@ -6,7 +6,7 @@
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/11 19:45:48 by ksemele           #+#    #+#             */
-/*   Updated: 2020/12/07 15:39:23 by ablane           ###   ########.fr       */
+/*   Updated: 2020/12/29 13:02:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		main(int ac, char **av)
 	win_player = vm_operation(vm);
 	if (vm->flag.d > 0 || vm->flag.dump > 0)
 		vm_print_arena(vm);
-	print_players(vm->players);
+	print_players((vm->players = pl_sort_rev_stack_champ(vm->players)));
 	print_result(win_player);
 	return (0);
 }
