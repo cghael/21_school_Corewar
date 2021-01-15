@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/29 12:49:41 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/15 12:36:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,5 +117,6 @@ t_vm		*vm_init(int ac, char **av)
 	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))
 	    return (0);
+	vm->number_carriages = ft_lstlength(vm->carriages);
 	return (vm);
 }
