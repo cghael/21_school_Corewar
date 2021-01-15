@@ -22,4 +22,5 @@ int		main(int ac, char **av)
 	win_player = vm_operation(vm);
 	print_result(win_player);
 	return (0);
+
 }

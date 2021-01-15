@@ -11,4 +11,5 @@ void		ld(t_carriage *car, t_vm *vm)
 		car->carry = 1;
 	else
 		car->carry = 0;
+
 }

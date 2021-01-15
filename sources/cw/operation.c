@@ -25,10 +25,7 @@ uint8_t		vm_checkout(t_vm *vm)
 		tmp = tmp->next;
 		if (((vm->number_cycle - ((t_carriage*)del->content)->number_last_live)
 		>= vm->cycles_to_die) || (vm->cycles_to_die <= 0))
-		{
-		//	ft_printf("Process %d hasn't lived for %d cycles (CTD %d)\n", ((t_carriage*)del->content)->number, vm->number_cycle - ((t_carriage*)del->content)->cycle_create, vm->cycles_to_die);// todo delete
-			ft_lstpdelone(&vm->carriages, del);
-		}
+			ft_lstpdelone(&vm->carriages, del); //todo fix del function
 	}
 	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
 	{
@@ -256,7 +253,6 @@ uint32_t	check_args(t_carriage *car, t_vm *vm)
 void		cr_operation_make(t_carriage *car, t_vm *vm)
 {
 	g_ops[car->operation - 1].fun(car, vm);
-//	vm_print_operation(car, vm);//todo delete
 	if (car->operation != 0x09)
 		car->position = (car->position + car->args_len) % MEM_SIZE;
 }
@@ -302,13 +298,11 @@ t_player	*vm_operation(t_vm *vm)
 	while (vm_checkout(vm))
 	{
 		current = 0;
-		while (current < vm->cycles_to_die)
+		while (current < vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
 			vm_survey_carriages(vm);
 			current++;
 			vm->number_cycle++;
-			if (vm->cycles_to_die <= 0)
-				break ;
 		}
 		vm->number_checks++;
 	}

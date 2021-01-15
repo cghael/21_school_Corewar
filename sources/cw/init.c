@@ -126,4 +126,5 @@ t_vm		*vm_init(int ac, char **av)
 	    return (0);
 	vm->number_carriages = ft_lstlength(vm->carriages);
 	return (vm);
+
 }

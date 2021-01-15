@@ -80,4 +80,5 @@ void		ft_inttobyte(const int32_t num, t_data arg, uint8_t len)
 		arg.data[(arg.pos + len) % arg.max] = (num >> k) & 0xFF;
 		k += 8;
 	}
+
 }

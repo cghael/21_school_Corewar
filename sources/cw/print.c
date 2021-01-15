@@ -37,29 +37,29 @@ void		print_bit(uint8_t bit, char *st, char *end)
 	ft_putstr(end);
 }
 
-void		vm_print_operation(t_carriage *car, t_vm *vm)
-{
-	ft_printf("P%5d | %s", car->number + 1, g_ops[car->operation - 1].name);
-	int i = 0;
-
-	while (i < g_ops[car->operation - 1].n_args)
-	{
-		if (car->args[i].type == T_REG)
-			ft_printf(" r%d", car->args[i].reg_nb);
-		else if (car->args[i].type == T_IND)
-			ft_printf(" %d", (int16_t)ft_bytetoint(
-					get_t_data(vm->arena, car->args[i].pos, MEM_SIZE),
-										  car->args[i].len));
-		else if (g_ops[car->operation - 1].t_dir_size == 4)
-			ft_printf(" %d",
-				ft_bytetoint(car->args[i].data, car->args[i].len));
-		else
-			ft_printf(" %d",
-				(int16_t)ft_bytetoint(car->args[i].data, car->args[i].len));
-		i++;
-	}
-	ft_printf("  [current = %6d]\n", vm->number_cycle);
-}
+//void		vm_print_operation(t_carriage *car, t_vm *vm)
+//{
+//	ft_printf("P%5d | %s", car->number + 1, g_ops[car->operation - 1].name);
+//	int i = 0;
+//
+//	while (i < g_ops[car->operation - 1].n_args)
+//	{
+//		if (car->args[i].type == T_REG)
+//			ft_printf(" r%d", car->args[i].reg_nb);
+//		else if (car->args[i].type == T_IND)
+//			ft_printf(" %d", (int16_t)ft_bytetoint(
+//					get_t_data(vm->arena, car->args[i].pos, MEM_SIZE),
+//										  car->args[i].len));
+//		else if (g_ops[car->operation - 1].t_dir_size == 4)
+//			ft_printf(" %d",
+//				ft_bytetoint(car->args[i].data, car->args[i].len));
+//		else
+//			ft_printf(" %d",
+//				(int16_t)ft_bytetoint(car->args[i].data, car->args[i].len));
+//		i++;
+//	}
+//	ft_printf("  [current = %6d]\n", vm->number_cycle);
+//}
 
 void		vm_print_arena(t_vm *vm)
 {
