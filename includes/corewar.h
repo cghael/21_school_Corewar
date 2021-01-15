@@ -96,7 +96,7 @@ t_carriage  				*cr_init(t_player *player, uint32_t nb);
 t_data						get_t_data(uint8_t *array, int32_t pos,
 							uint32_t max);
 uint32_t					len_args(t_carriage *car, t_vm *vm);
-void                    	terminate(char *s);
+void						terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						vm_print_operation(t_carriage *car, t_vm *vm);
 void						print_result(t_player *win_player);
