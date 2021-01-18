@@ -27,6 +27,7 @@ t_list		*ft_lstpnew(void *content)
 void		ft_lstpdelone(t_list **alst, t_list *del)
 {
 	t_list	*tmp;
+
 	if (!alst || !(*alst) || !del)
 		return ;
 	if (*alst == del)

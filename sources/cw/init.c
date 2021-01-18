@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/15 12:36:53 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/18 12:00:08 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,42 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-t_player	*pl_init(char *filename, uint32_t number)
-{
-	int			fd;
-	uint8_t		buf[4];
-	t_player	*player;
+//todo dell this |
+//               V
+//t_player	*pl_init(char *filename, uint32_t number)
+//{
+//	int			fd;
+//	uint8_t		buf[4];
+//	t_player	*player;
+//
+//	player = ft_memalloc(sizeof(t_player));
+//	fd = open(filename, O_RDONLY, S_IREAD | S_IWRITE);
+//	read(fd, buf, 4);
+//	read(fd, player->name, PROG_NAME_LENGTH);
+//	read(fd, buf, 4);
+//	read(fd, buf, 4);
+//	player->exec_size = ft_bytetoint(get_t_data(buf, 0, 4), 4);
+//	read(fd, player->comment, COMMENT_LENGTH);
+//	read(fd, buf, 4);
+//	read(fd, player->exec_code, CHAMP_MAX_SIZE);
+//	player->number = number;
+//	return (player);
+//}
 
-	player = ft_memalloc(sizeof(t_player));
-	fd = open(filename, O_RDONLY, S_IREAD | S_IWRITE);
-	read(fd, buf, 4);
-	read(fd, player->name, PROG_NAME_LENGTH);
-	read(fd, buf, 4);
-	read(fd, buf, 4);
-	player->exec_size = ft_bytetoint(get_t_data(buf, 0, 4), 4);
-	read(fd, player->comment, COMMENT_LENGTH);
-	read(fd, buf, 4);
-	read(fd, player->exec_code, CHAMP_MAX_SIZE);
-	player->number = number;
-	return (player);
-}
-
-t_list		*vm_init_players(int ac, char **av)
-{
-	t_list		*players;
-	u_int8_t	i;
-
-	players = NULL;
-	i = 1;
-	while (i < ac)
-	{
-		ft_lstadd(&players, ft_lstpnew(pl_init(av[i], i)));
-		i++;
-	}
-	return (players);
-}
+//t_list		*vm_init_players(int ac, char **av)
+//{
+//	t_list		*players;
+//	u_int8_t	i;
+//
+//	players = NULL;
+//	i = 1;
+//	while (i < ac)
+//	{
+//		ft_lstadd(&players, ft_lstpnew(pl_init(av[i], i)));
+//		i++;
+//	}
+//	return (players);
+//}
 
 void		vm_init_arena(t_vm *vm)
 {
@@ -70,11 +72,11 @@ t_carriage	*cr_init(t_player *player, uint32_t nb)
 {
 	t_carriage	*carriage;
 
-    if (!(carriage = ft_memalloc(sizeof(t_carriage))))
-        return (0);
-    carriage->number = nb;
-    ft_inttobyte(-player->number,
-		get_t_data(carriage->reg[0], 0, REG_SIZE), REG_SIZE);
+	if (!(carriage = ft_memalloc(sizeof(t_carriage))))
+		return (0);
+	carriage->number = nb;
+	ft_inttobyte(-player->number, get_t_data(carriage->reg[0], 0, REG_SIZE),
+		REG_SIZE);
 	carriage->player = player;
 	return (carriage);
 }
@@ -110,13 +112,13 @@ t_vm		*vm_init(int ac, char **av)
 		return (0);
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	if (!(vm->players = pl_init_players(ac, av)))
-	    return (0);
+		return (0);
 	fl_check_flags(ac, av, vm);
 	vm->number_players = ft_lstlength(vm->players);
 	vm->last_live_player = vm->players->content;
 	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))
-	    return (0);
+		return (0);
 	vm->number_carriages = ft_lstlength(vm->carriages);
 	return (vm);
 }

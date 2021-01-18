@@ -23,7 +23,7 @@ typedef struct		s_car
 void		print_result(t_player *win_player)
 {
 	ft_printf("Contestant %d, \"%s\", has won !", win_player->number,
-		   win_player->name);
+		win_player->name);
 	//TODO print_result
 }
 
