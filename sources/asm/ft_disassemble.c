@@ -16,6 +16,7 @@ int				ft_disassemble(char *file_cor, t_asm *asm_s)
 {
 	t_dis		*dis_s;
 
+	(void)asm_s;
 	if (!(dis_s = ft_dis_init_struct(file_cor))
 		|| EXIT_FAILURE == ft_dis_convert_start_filename(file_cor, dis_s))
 		return (ft_dis_error(ERR_DIS_INIT, NULL));

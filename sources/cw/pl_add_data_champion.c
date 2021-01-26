@@ -73,8 +73,8 @@ void		pl_cp_exec_size(int fd, t_list *player)
 
 void		pl_cp_code_champion(int fd, t_list *player)
 {
-	int		r;
-	uint8_t	buff[((t_player*)player->content)->exec_size];
+	uint32_t	r;
+	uint8_t		buff[((t_player*)player->content)->exec_size];
 
 	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE)
 		terminate(ERR_CODE_LEN);

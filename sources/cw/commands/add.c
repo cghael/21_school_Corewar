@@ -16,6 +16,7 @@ void		add(t_carriage *car, t_vm *vm)
 {
 	int32_t		num;
 
+	(void)vm;
 	num = ft_bytetoint(car->args[0].data, REG_SIZE) +
 	ft_bytetoint(car->args[1].data, REG_SIZE);
 	ft_inttobyte(num, car->args[2].data, REG_SIZE);

@@ -12,7 +12,7 @@
 
 #include "corewar.h"
 
-int			pl_search_duplicate_num(t_list *champions, int quantity)
+int			pl_search_duplicate_num(t_list *champions, uint32_t quantity)
 {
 	t_list *tmp;
 

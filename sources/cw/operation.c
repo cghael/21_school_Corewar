@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/11/19 17:16:54 by esnowpea         ###   ########.fr       */
+/*   Updated: 2021/01/26 14:15:06 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ uint8_t		vm_checkout(t_vm *vm)
 		del = tmp;
 		tmp = tmp->next;
 		if (((vm->number_cycle - ((t_carriage*)del->content)->number_last_live)
-		>= vm->cycles_to_die) || (vm->cycles_to_die <= 0))
+		>= (uint32_t)vm->cycles_to_die) || (vm->cycles_to_die <= 0))
 			ft_lstpdelone(&vm->carriages, del); //todo fix del function
 	}
 	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
@@ -131,6 +131,7 @@ void		cr_set_args_pos(t_carriage *car, t_vm *vm)
 	uint32_t	pos;
 
 	i = 0;
+	(void)vm;
 	pos = (car->position + 2) % MEM_SIZE;
 	if (g_ops[car->operation - 1].is_args_type)
 		while (i < g_ops[car->operation - 1].n_args)
@@ -161,6 +162,7 @@ void		cr_set_args_null(t_carriage *car, t_vm *vm)
 	uint8_t		i;
 
 	i = 0;
+	(void)vm;
 	while (i < 3)
 	{
 		car->args[i].data = get_t_data(0, 0, 0);
@@ -239,13 +241,13 @@ uint32_t	check_args(t_carriage *car, t_vm *vm)
 		(op.args[1] &
 		(((byte >> 4) & 3) == IND_CODE ? T_IND : ((byte >> 4) & 3))) &&
 		(op.args[2] &
-		(((byte >> 2) & 3) == IND_CODE ? T_IND : ((byte >> 2) & 3)))) ||
+		(((byte >> 2) & 3) == IND_CODE ? T_IND : ((byte >> 2) & 3))))) ||
 		(op.n_args == 2 && (op.args[0] &
 		(((byte >> 6) & 3) == IND_CODE ? T_IND : ((byte >> 6) & 3))) &&
 		(op.args[1] &
 		(((byte >> 4) & 3) == IND_CODE ? T_IND : ((byte >> 4) & 3)))) ||
 		(op.n_args == 1 && (op.args[0] &
-		(((byte >> 6) & 3) == IND_CODE ? T_IND : ((byte >> 6) & 3))))))
+		(((byte >> 6) & 3) == IND_CODE ? T_IND : ((byte >> 6) & 3)))))
 		return (1);
 	return (0);
 }
@@ -298,7 +300,7 @@ t_player	*vm_operation(t_vm *vm)
 	while (vm_checkout(vm))
 	{
 		current = 0;
-		while (current < vm->cycles_to_die && vm->cycles_to_die > 0)
+		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
 			vm_survey_carriages(vm);
 			current++;

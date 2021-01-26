@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2020/12/02 14:08:26 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/26 14:50:20 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int							ft_compare_end(const char *str, const char *dest,
 int							fl_check_num_after_flag_n(char **av, int i, int ac,
 							int *num_pl);
 int							pl_search_duplicate_num(t_list *champions,
-							int quantity);
+							uint32_t quantity);
 int							pl_next_arg(char **av, int i, t_list *champions);
 
 void                    	terminate(char *s);
@@ -135,11 +135,11 @@ void						or(t_carriage *car, t_vm *vm);
 void						add(t_carriage *car, t_vm *vm);
 void						sub(t_carriage *car, t_vm *vm);
 void						and(t_carriage *car, t_vm *vm);
-void						xor(t_carriage *car, t_vm *vm);;
+void						xor(t_carriage *car, t_vm *vm);
 void						ldi(t_carriage *car, t_vm *vm);
 void						sti(t_carriage *car, t_vm *vm);
 void						aff(t_carriage *car, t_vm *vm);
-void						zjmp(t_carriage *car, t_vm *vm)
+void						zjmp(t_carriage *car, t_vm *vm);
 void						live(t_carriage *car, t_vm *vm);
 void						lfork(t_carriage *car, t_vm *vm);
 

@@ -6,7 +6,7 @@
 #    By: ksemele <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/07 14:03:53 by ksemele           #+#    #+#              #
-#    Updated: 2021/01/15 11:55:49 by ablane           ###   ########.fr        #
+#    Updated: 2021/01/26 15:04:39 by ablane           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME_CW = corewar
 NAME_ASM = asm
 
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
+#FLAGS = -Wall -Werror -Wextra
 LIBRARIES = -lft -L$(LIBFT_DIR)
 INCLUDES = -I$(HEADERS_DIR) -I$(LIBFT_HEADERS)
 
@@ -37,23 +37,29 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 SRC_LIST =
 SRC_LIST_CW = corewar.c \
                 init.c \
-                operation.c \
                 print.c \
+                pl_init.c \
+                operation.c \
                 terminate.c \
-                libft.c \
-                commands/live.c \
+                pl_check_flags.c \
+                pl_order_of_number.c \
+				pl_order_of_players.c \
+                pl_add_data_champion.c \
+                pl_check_magic_header.c \
                 commands/ld.c \
-                commands/sti.c \
                 commands/st.c \
-                commands/ldi.c \
-                commands/zjmp.c \
+                commands/or.c \
+                commands/sti.c \
                 commands/add.c \
                 commands/sub.c \
                 commands/and.c \
-                commands/or.c \
+                commands/aff.c \
                 commands/xor.c \
+                commands/ldi.c \
+				commands/zjmp.c \
+                commands/live.c \
                 commands/fork.c \
-                commands/aff.c
+                libft.c
 SRC_LIST_ASM = asm.c \
 				ft_asm_error.c \
 				ft_assemble.c \
@@ -87,6 +93,7 @@ SRC_ASM = $(addprefix $(SRC_ASM_DIR), $(SRC_LIST_ASM))
 #----------------------------------objects--------------------------------------
 
 OBJ_DIR = ./objects/
+OBJ_CW_COMMANDS_DIR = ${OBJ_CW_DIR}commands/
 OBJ_CW_DIR = ${OBJ_DIR}cw/
 OBJ_ASM_DIR = ${OBJ_DIR}asm/
 
@@ -123,11 +130,12 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 	@echo "$(GRN)$(OBJ_DIR) created$(END)"
 
-$(OBJ_CW_DIR):
+$(OBJ_CW_DIR): $(OBJ_DIR)
 	@mkdir -p $(OBJ_CW_DIR)
+	@mkdir -p $(OBJ_CW_COMMANDS_DIR)
 	@echo "$(GRN)$(OBJ_CW DIR) created$(END)"
 
-$(OBJ_ASM_DIR):
+$(OBJ_ASM_DIR): $(OBJ_ASM_DIR)
 	@mkdir -p $(OBJ_ASM_DIR)
 	@echo "$(GRN)$(OBJ_ASM_DIR) created$(END)"
 

@@ -14,6 +14,7 @@
 
 void		ld(t_carriage *car, t_vm *vm)
 {
+	(void)vm;
 	set_array(car->args[1].data, car->args[0].data, REG_SIZE);
 	if (ft_bytetoint(car->args[1].data, REG_SIZE) == 0)
 		car->carry = 1;
