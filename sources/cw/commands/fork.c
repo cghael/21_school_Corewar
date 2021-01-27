@@ -36,4 +36,5 @@ void		lfork(t_carriage *car, t_vm *vm)
 		new_car->position += MEM_SIZE;
 	new_car->position %= MEM_SIZE;
 	ft_lstadd(&vm->carriages, ft_lstpnew(new_car));
+
 }

@@ -17,4 +17,5 @@ void		aff(t_carriage *car, t_vm *vm)
 	(void)vm;
 	(void)car;
 	//write(1, (char*)car->args[0].data.data, 1);
+
 }

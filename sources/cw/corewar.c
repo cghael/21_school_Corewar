@@ -23,4 +23,5 @@ int		main(int ac, char **av)
 	print_result(win_player);
 	exit(0);
 	return (0);
+
 }
