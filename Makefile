@@ -6,7 +6,7 @@
 #    By: ksemele <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/07 14:03:53 by ksemele           #+#    #+#              #
-#    Updated: 2020/12/07 15:09:51 by ablane           ###   ########.fr        #
+#    Updated: 2021/01/26 15:04:39 by ablane           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME_CW = corewar
 NAME_ASM = asm
 
 CC = gcc
-FLAGS = -Wall -Werror -Wextra
+#FLAGS = -Wall -Werror -Wextra
 LIBRARIES = -lft -L$(LIBFT_DIR)
 INCLUDES = -I$(HEADERS_DIR) -I$(LIBFT_HEADERS)
 
@@ -34,79 +34,53 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
 #----------------------------------sources--------------------------------------
 
-#-----------------------------------Hints---------------------------------------
-# Use this trick in terminal to grep all ft_* files in ./src:
-#	ls -l | grep 'ft' | awk '{print $9 " \\"}'
-
 SRC_LIST =
-SRC_LIST_CW = corewar.c
+SRC_LIST_CW = corewar.c \
+                init.c \
+                print.c \
+                pl_init.c \
+                operation.c \
+                terminate.c \
+                pl_check_flags.c \
+                pl_order_of_number.c \
+				pl_order_of_players.c \
+                pl_add_data_champion.c \
+                pl_check_magic_header.c \
+                commands/ld.c \
+                commands/st.c \
+                commands/or.c \
+                commands/sti.c \
+                commands/add.c \
+                commands/sub.c \
+                commands/and.c \
+                commands/aff.c \
+                commands/xor.c \
+                commands/ldi.c \
+				commands/zjmp.c \
+                commands/live.c \
+                commands/fork.c \
+                libft.c
 SRC_LIST_ASM = asm.c \
 				ft_asm_error.c \
 				ft_assemble.c \
-				ft_check_arg_type.c \
-				ft_check_end_newline.c \
-				ft_check_n_write_op_args.c \
-				ft_check_operation.c \
-				ft_check_quotes.c \
 				ft_check_read_argv_files.c \
-				ft_count_exec_code_size.c \
-				ft_count_num_len.c \
-				ft_dis_add_elem.c \
-				ft_dis_add_s.c \
-				ft_dis_arg_treat.c \
-				ft_dis_arg_types_treat.c \
-				ft_dis_args_treat.c \
-				ft_dis_ask_new_filename.c \
-				ft_dis_bytecode_to_int32.c \
-				ft_dis_check_file_exist.c \
-				ft_dis_choose_new_filename.c \
-				ft_dis_convert_start_filename.c \
-				ft_dis_copy_filename.c \
-				ft_dis_del_cor.c \
-				ft_dis_elems_treat.c \
-				ft_dis_error.c \
-				ft_dis_exec_code_treat.c \
-				ft_dis_free_struct.c \
-				ft_dis_get_arg_type.c \
-				ft_dis_get_size.c \
-				ft_dis_init_elem.c \
-				ft_dis_init_struct.c \
-				ft_dis_is_arg_types_valid.c \
-				ft_dis_parse_bytecode.c \
-				ft_dis_parse_code.c \
-				ft_dis_parse_int32.c \
-				ft_dis_parse_string.c \
-				ft_dis_read_write.c \
-				ft_dis_set_arg_type.c \
-				ft_dis_try_create_file.c \
-				ft_dis_validate_types_code.c \
-				ft_dis_valide_comment.c \
-				ft_dis_valide_name.c \
-				ft_dis_write_file.c \
 				ft_disassemble.c \
+				ft_dis_error.c \
+				ft_dis_init_struct.c \
+				ft_dis_choose_new_filename.c \
+				ft_dis_check_file_exist.c \
+				ft_dis_try_create_file.c \
+				ft_dis_ask_new_filename.c \
+				ft_dis_copy_filename.c \
+				ft_dis_add_s.c \
+				ft_dis_read_write.c \
 				ft_free_asm_struct.c \
-				ft_get_one_arg.c \
 				ft_init_asm_struct.c \
-				ft_init_n_add_token.c \
-				ft_int32_to_bytecode.c \
 				ft_is_filename.c \
-				ft_is_label_char.c \
-				ft_is_whitespace.c \
-				ft_label_processing_n_pos_update.c \
-				ft_label_saving_n_pos_update.c \
-				ft_line_data_processing.c \
-				ft_line_of_whitespaces_or_comment.c \
-				ft_open_quotes_processing.c \
-				ft_open_solution_file.c \
-				ft_operation_processing_n_pos_update.c \
-				ft_parse_file.c \
-				ft_parse_line.c \
-				ft_print_error.c \
 				ft_print_help.c \
-				ft_start_check_name_or_comment.c \
-				ft_strjoin_n_free.c \
-				ft_write_arg_type_code.c \
-				ft_write_bytecode_to_file.c
+				ft_open_solution_file.c \
+				ft_int32_to_bytecode.c \
+				ft_parse_file.c
 
 SRC_DIR = ./sources/
 SRC_ASM_DIR = ${SRC_DIR}asm/
@@ -119,6 +93,7 @@ SRC_ASM = $(addprefix $(SRC_ASM_DIR), $(SRC_LIST_ASM))
 #----------------------------------objects--------------------------------------
 
 OBJ_DIR = ./objects/
+OBJ_CW_COMMANDS_DIR = ${OBJ_CW_DIR}commands/
 OBJ_CW_DIR = ${OBJ_DIR}cw/
 OBJ_ASM_DIR = ${OBJ_DIR}asm/
 
@@ -155,11 +130,12 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 	@echo "$(GRN)$(OBJ_DIR) created$(END)"
 
-$(OBJ_CW_DIR):
+$(OBJ_CW_DIR): $(OBJ_DIR)
 	@mkdir -p $(OBJ_CW_DIR)
+	@mkdir -p $(OBJ_CW_COMMANDS_DIR)
 	@echo "$(GRN)$(OBJ_CW DIR) created$(END)"
 
-$(OBJ_ASM_DIR):
+$(OBJ_ASM_DIR): $(OBJ_ASM_DIR)
 	@mkdir -p $(OBJ_ASM_DIR)
 	@echo "$(GRN)$(OBJ_ASM_DIR) created$(END)"
 

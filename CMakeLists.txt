@@ -22,7 +22,7 @@ set (SOURCES
 		sources/cw/commands/or.c
 		sources/cw/commands/xor.c
 		sources/cw/commands/fork.c
-		sources/cw/commands/aff.c)
+		sources/cw/commands/aff.c sources/cw/pl_order_of_players.c sources/cw/pl_check_flags.c sources/cw/pl_order_of_number.c sources/cw/pl_add_data_champion.c sources/cw/pl_check_magic_header.c)
 
 set (SOURCES_CW
 		sources/cw/corewar.c)

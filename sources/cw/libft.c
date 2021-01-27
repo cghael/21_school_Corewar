@@ -1,6 +1,14 @@
-//
-// Created by esnowpea on 27.11.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/15 12:38:48 by ablane            #+#    #+#             */
+/*   Updated: 2021/01/15 12:38:48 by ablane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 #include "corewar.h"
@@ -19,6 +27,7 @@ t_list		*ft_lstpnew(void *content)
 void		ft_lstpdelone(t_list **alst, t_list *del)
 {
 	t_list	*tmp;
+
 	if (!alst || !(*alst) || !del)
 		return ;
 	if (*alst == del)

@@ -1,6 +1,14 @@
-//
-// Created by esnowpea on 01.12.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fork.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/15 12:37:15 by ablane            #+#    #+#             */
+/*   Updated: 2021/01/15 12:37:15 by ablane           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "corewar.h"
 
@@ -8,9 +16,9 @@ void		lfork(t_carriage *car, t_vm *vm)
 {
 	t_carriage	*new_car;
 	uint8_t 	i;
-	int16_t		ind;
+	int32_t		ind;
 
-	if (!(new_car = cr_init(car->player, ft_lstlength(vm->carriages))))
+	if (!(new_car = cr_init(car->player, vm->number_carriages++)))
 		terminate(ERR_MALC_INIT);
 	new_car->carry = car->carry;
 	new_car->number_last_live = car->number_last_live;
@@ -20,7 +28,7 @@ void		lfork(t_carriage *car, t_vm *vm)
 		ft_memcpy(new_car->reg[i], car->reg[i], REG_SIZE);
 		i++;
 	}
-	ind = (int16_t)ft_bytetoint(car->args[0].data, car->args[0].len);
+	ind = (int16_t)ft_bytetoint(car->args[0].data, IND_SIZE);
 	if (car->operation != 0x0f)
 		ind %= IDX_MOD;
 	new_car->position = car->position + ind;
