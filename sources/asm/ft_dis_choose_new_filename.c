@@ -34,7 +34,7 @@ static int		ft_init_strings(char *answer, t_dis *dis_s)
 int				ft_dis_choose_new_filename(t_dis *dis_s)
 {
 	char		*answer;
-	char		*tmp;
+//	char		*tmp;
 
 	answer = ft_strnew(0);
 	if (EXIT_FAILURE == ft_init_strings(answer, dis_s))

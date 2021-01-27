@@ -5,7 +5,7 @@
 #ifndef ASM_OP_H
 # define ASM_OP_H
 
-//# include "op.h"
+# include "op.h"
 //# include "libft.h"
 # include "corewar.h"
 
