@@ -93,7 +93,7 @@ t_carriage  				*cr_init(t_player *player, uint32_t nb);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
 int32_t						pl_bytecode_to_int32(const uint8_t *buff, int len);
 t_data						get_t_data(uint8_t *array, int32_t pos,
-							uint32_t max);
+					   		uint32_t max);
 
 //t_list						*vm_init_players(int ac, char **av); todo dell
 //t_list						*pl_sort_rev_stack_champ(t_list *champions);
@@ -109,10 +109,9 @@ int							pl_search_duplicate_num(t_list *champions,
 							uint32_t quantity);
 int							pl_next_arg(char **av, int i, t_list *champions);
 
-void						terminate(char *s);
+void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						pl_check_magic_header(int fd);
-void						vm_print_operation(t_carriage *car, t_vm *vm);
 void						print_result(t_player *win_player);
 void						in_close_fd_err(int fd, char *err);
 void						pl_check_null_champ(int fd, int i);

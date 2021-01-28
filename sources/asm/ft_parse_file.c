@@ -41,13 +41,13 @@ int			ft_parse_file(t_asm *asm_s)
 	&& asm_s->parse->endline == TRUE \
 	&& asm_s->parse->is_whitespace == FALSE)
 	{
-		ft_asm_error_in_line(asm_s); //todo forget newline
-		ft_printf("Error in ft_parse_file()\n");//todo del
+		asm_s->parse->err_num = NO_NEWLINE;
+		ft_asm_error_in_line(asm_s);
 		return (PARSING_ERR);
 	}
 	if (EXIT_FAILURE == ft_transform_mentions(asm_s))
 	{
-		asm_s->parse->err_num = NO_SUCH_LABEL; //todo move into transform_mention
+		asm_s->parse->err_num = NO_SUCH_LABEL;
 		ft_asm_error_no_label(asm_s);
 		return (PARSING_ERR);
 	}

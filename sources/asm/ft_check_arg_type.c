@@ -61,6 +61,7 @@ int			ft_check_arg_type(t_asm *asm_s, int type, int arg_pars)
 	}
 	else
 		return (EXIT_FAILURE);
-	asm_s->pos++;
+	if (type != T_IND)
+		asm_s->pos++;
 	return (EXIT_SUCCESS);
 }

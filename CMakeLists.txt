@@ -10,19 +10,24 @@ set (SOURCES
 		sources/cw/print.c
 		sources/cw/terminate.c
 		sources/cw/libft.c
-		sources/cw/commands/live.c
-		sources/cw/commands/ld.c
-		sources/cw/commands/sti.c
-		sources/cw/commands/st.c
-		sources/cw/commands/ldi.c
-		sources/cw/commands/zjmp.c
-		sources/cw/commands/add.c
-		sources/cw/commands/sub.c
-		sources/cw/commands/and.c
-		sources/cw/commands/or.c
-		sources/cw/commands/xor.c
-		sources/cw/commands/fork.c
-		sources/cw/commands/aff.c sources/cw/pl_order_of_players.c sources/cw/pl_check_flags.c sources/cw/pl_order_of_number.c sources/cw/pl_add_data_champion.c sources/cw/pl_check_magic_header.c)
+		sources/commands/live.c
+		sources/commands/ld.c
+		sources/commands/sti.c
+		sources/commands/st.c
+		sources/commands/ldi.c
+		sources/commands/zjmp.c
+		sources/commands/add.c
+		sources/commands/sub.c
+		sources/commands/and.c
+		sources/commands/or.c
+		sources/commands/xor.c
+		sources/commands/fork.c
+		sources/commands/aff.c
+		sources/cw/pl_order_of_players.c
+		sources/cw/pl_check_flags.c
+		sources/cw/pl_order_of_number.c
+		sources/cw/pl_add_data_champion.c
+		sources/cw/pl_check_magic_header.c)
 
 set (SOURCES_CW
 		sources/cw/corewar.c)
@@ -96,7 +101,14 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_parse_string.c
 		sources/asm/ft_dis_parse_code.c
 		sources/asm/ft_dis_parse_bytecode.c
-		sources/asm/ft_dis_write_file.c sources/asm/ft_write_code_to_exec.c sources/asm/ft_get_label_mention.c sources/asm/ft_init_n_add_label.c sources/asm/ft_search_label_exist.c sources/asm/ft_init_n_add_mention.c sources/asm/ft_transform_mentions.c sources/asm/ft_create_arg_content.c)
+		sources/asm/ft_dis_write_file.c
+		sources/asm/ft_write_code_to_exec.c
+		sources/asm/ft_get_label_mention.c
+		sources/asm/ft_init_n_add_label.c
+		sources/asm/ft_search_label_exist.c
+		sources/asm/ft_init_n_add_mention.c
+		sources/asm/ft_transform_mentions.c
+		sources/asm/ft_create_arg_content.c)
 
 include_directories(includes)
 include_directories(libft/inc)

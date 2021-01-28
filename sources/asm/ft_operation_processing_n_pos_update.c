@@ -89,10 +89,10 @@ int				ft_operation_processing_n_pos_update(t_asm *asm_s)
 	{
 		if (EXIT_SUCCESS == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 			asm_s->pos++;
-		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR \
+		else if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR \
 		|| asm_s->parse->line[asm_s->pos] == ALT_COMMENT_CHAR)
 			break ;
-		if (EXIT_FAILURE == ft_is_valid_op_name(asm_s))
+		else if (EXIT_FAILURE == ft_is_valid_op_name(asm_s))
 			return (EXIT_FAILURE);
 	}
 //	ft_write_arg_type_code(asm_s);
