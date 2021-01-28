@@ -44,13 +44,25 @@ static int			ft_is_mention(t_asm *asm_s, const char *colon, int *pos)
 	return (EXIT_SUCCESS);
 }
 
-int					ft_label_processing_n_pos_update(t_asm *asm_s)
+static int			ft_check_comment_pos(char *colon, char *line, int pos)
+{
+	char *comment;
+
+	comment = ft_strchr(&line[pos], COMMENT_CHAR);
+	if (comment && colon > comment)
+		return (EXIT_FAILURE);
+	comment = ft_strchr(&line[pos], ALT_COMMENT_CHAR);
+	if (comment && colon > comment)
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
+}
+
+int					ft_label_processing_n_pos_update(t_asm *asm_s, int pos)
 {
 	char	*colon;
-	int		pos;
 
-	pos = asm_s->pos;
-	while ((colon = ft_strchr(&asm_s->parse->line[pos], LABEL_CHAR)) != NULL)
+	while ((colon = ft_strchr(&asm_s->parse->line[pos], LABEL_CHAR)) != NULL\
+	&& EXIT_SUCCESS == ft_check_comment_pos(colon, asm_s->parse->line, pos))
 	{
 		if (EXIT_SUCCESS == ft_is_whitespace(asm_s->parse->line[pos]))
 		{

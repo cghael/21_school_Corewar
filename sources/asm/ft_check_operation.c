@@ -18,7 +18,7 @@ int				ft_check_operation(t_asm *asm_s)
 		else if (EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 		{
 			//is ':' in line and is it label or mention
-			if (EXIT_FAILURE == ft_label_processing_n_pos_update(asm_s))
+			if (EXIT_FAILURE == ft_label_processing_n_pos_update(asm_s, asm_s->pos))
 				return (EXIT_FAILURE);
 			//is it operation and is it single
 			if (EXIT_FAILURE == ft_operation_processing_n_pos_update(asm_s))

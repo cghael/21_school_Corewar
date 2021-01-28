@@ -44,6 +44,7 @@
 		sub	r12,r8,r12
 fork1:		live	%42
 		fork	%:fork_live
+fork1:
 fork2:		live	%42
 		fork	%:leon
 fork3:		live	%42

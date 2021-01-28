@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OG_COREWAR="../vm_champs/corewar"
-MY_COREWAR="../corewar"
+OG_COREWAR="/Users/cghael/21_school_Corewar/scripts/vm_champs/corewar"
+MY_COREWAR="/Users/cghael/21_school_Corewar/corewar"
 
 if [ -z "$1" ] ;
 	then echo "Usage: corewar_checker.sh filenames ..."

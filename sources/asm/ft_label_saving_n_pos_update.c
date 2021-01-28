@@ -46,6 +46,7 @@ static int	ft_warning_if_label_exist(t_asm *asm_s, char *content)
 			asm_s->parse->n_line, pos, \
 			g_error[(int)asm_s->parse->err_num], pos, \
 			'v', asm_s->parse->line);
+			free(content);
 			return (EXIT_FAILURE);
 		}
 		begin = begin->next;
@@ -93,6 +94,7 @@ int			ft_label_saving_n_pos_update(t_asm *asm_s, char *colon)
 		{
 			tmp->n_line = asm_s->parse->n_line;
 			tmp->byte_pos = asm_s->exec_size;
+			free(content);
 			return (EXIT_SUCCESS);
 		}
 		if (EXIT_FAILURE == ft_init_n_add_label(asm_s, content, asm_s->parse->n_line))

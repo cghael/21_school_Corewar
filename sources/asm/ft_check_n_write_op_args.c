@@ -54,6 +54,11 @@ int			ft_check_n_write_op_args(t_asm *asm_s)
 				return (EXIT_FAILURE);
 			arg_pars++;
 		}
+		else
+		{
+			asm_s->parse->err_num = LEXICAL_ERROR; //todo MAYBE NOT???
+			return (EXIT_FAILURE);
+		}
 	}
 	ft_write_arg_type_code(asm_s);
 	ft_count_exec_code_size(asm_s);

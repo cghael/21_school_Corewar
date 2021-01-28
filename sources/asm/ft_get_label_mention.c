@@ -32,6 +32,7 @@ int				ft_get_label_mention(t_asm *asm_s, int arg_pars, int type)
 	name = ft_get_mention_name(asm_s);
 	if (name == NULL)
 		return (EXIT_FAILURE);
+	asm_s->pos += ft_strlen(name) + 1;
 	label = ft_search_label_exist(asm_s, name);
 	if (label == NULL)
 	{
@@ -39,9 +40,10 @@ int				ft_get_label_mention(t_asm *asm_s, int arg_pars, int type)
 			return (EXIT_FAILURE);
 		label = asm_s->labels->last;
 	}
+	else
+		free(name);
 	if (EXIT_FAILURE == ft_init_n_add_mention(asm_s, arg_pars, label))
 		return (EXIT_FAILURE);
-	asm_s->pos += ft_strlen(name) + 1;
 	asm_s->op_list->last->args[arg_pars].type = type;
 	return (EXIT_SUCCESS);
 }

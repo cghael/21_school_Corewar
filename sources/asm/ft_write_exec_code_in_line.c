@@ -39,7 +39,7 @@ static char	*ft_join_mem(t_asm *asm_s, char *exec, int len)
 	ft_memcpy(&code[asm_s->exec_size], exec, len);
 	asm_s->exec_size += len;
 	free(asm_s->code);
-
+	free(exec);
 	return (code);
 }
 
