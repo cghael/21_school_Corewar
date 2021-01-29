@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/29 13:54:05 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/29 13:58:20 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -307,9 +307,9 @@ t_player	*vm_operation(t_vm *vm)
 			|| (vm->flag.dump && vm->flag.dump == vm->number_cycle))
 			{
 				if (vm->flag.d)
-					vm_print_arena(vm, 64); //todo ввод в функцию ширины поля(32/64)
+					vm_print_arena(vm); //todo ввод в функцию ширины поля(32/64)
 				else if (vm->flag.dump)
-					vm_print_arena(vm, 32); //todo ввод в функцию ширины поля(32/64)
+					vm_print_arena(vm); //todo ввод в функцию ширины поля(32/64)
 				exit(0);
 			}
 			current++;

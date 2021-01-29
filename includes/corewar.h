@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/28 17:06:59 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/29 14:42:07 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ t_data						get_t_data(uint8_t *array, int32_t pos,
 					   		uint32_t max);
 
 //t_list						*vm_init_players(int ac, char **av); todo dell
-//t_list						*pl_sort_rev_stack_champ(t_list *champions);
+t_list						*pl_sort_rev_stack_champ(t_list *champions);
 
 //void 						print_players(t_list *champ); todo non function
 //void						vm_print_operation(t_carriage *car, t_vm *vm);
@@ -112,6 +112,7 @@ int							pl_next_arg(char **av, int i, t_list *champions);
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);
 void						pl_check_magic_header(int fd);
+void						pl_print_players(t_list *players);
 void						print_result(t_player *win_player);
 void						in_close_fd_err(int fd, char *err);
 void						pl_check_null_champ(int fd, int i);

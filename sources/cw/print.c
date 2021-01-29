@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/29 13:05:02 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/29 14:57:42 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct		s_car
 
 void		print_result(t_player *win_player)
 {
-	ft_printf("Contestant %d, \"%s\", has won !", win_player->number,
+	ft_printf("Contestant %d, \"%s\", has won !\n", win_player->number,
 		win_player->name);
 	//TODO print_result
 }
@@ -37,6 +37,22 @@ void		print_bit(uint8_t bit, char *st, char *end)
 	ft_putstr(end);
 }
 
+
+void 		pl_print_players(t_list *players)
+{
+	t_list *player = pl_sort_rev_stack_champ(players);
+	players = player;
+	while (player)
+	{
+		ft_printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n", \
+		((t_player*)player->content)->number, \
+		((t_player*)player->content)->exec_size, \
+		((t_player*)player->content)->name, \
+		((t_player*)player->content)->comment);
+		player = player->next;
+	}
+	players = pl_sort_stack_champ(players);
+}
 //void		vm_print_operation(t_carriage *car, t_vm *vm)
 //{
 //	ft_printf("P%5d | %s", car->number + 1, g_ops[car->operation - 1].name);
