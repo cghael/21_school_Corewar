@@ -23,7 +23,7 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 #----------------------------------sources--------------------------------------
 # to update lists: ls -l ./sources/asm | awk '{print $9}'
 
-SRC_CW_MAIN = $(SRC_CW_DIR)corewar.c
+SRC_CW_MAIN = corewar.c
 SRC_LIST_CW = init.c \
 				print.c \
 				pl_init.c \
@@ -35,7 +35,7 @@ SRC_LIST_CW = init.c \
 				pl_add_data_champion.c \
 				pl_check_magic_header.c \
 				libft.c
-SRC_ASM_MAIN = $(SRC_ASM_DIR)asm.c
+SRC_ASM_MAIN = asm.c
 SRC_LIST_ASM = ft_asm_error.c\
 				ft_assemble.c\
 				ft_check_arg_type.c\
@@ -144,13 +144,17 @@ OBJ_COMMS_DIR = ${OBJ_DIR}commands/
 
 OBJ_LIST = $(patsubst %.c, %.o, $(SRC_LIST))
 OBJ_LIST_CW = $(patsubst %.c, %.o, $(SRC_LIST_CW))
+OBJ_LIST_CW_MAIN = $(patsubst %.c, %.o, $(SRC_CW_MAIN))
 OBJ_LIST_ASM = $(patsubst %.c, %.o, $(SRC_LIST_ASM))
+OBJ_LIST_ASM_MAIN = $(patsubst %.c, %.o, $(SRC_ASM_MAIN))
 OBJ_LIST_COMMS = $(patsubst %.c, %.o, $(SRC_LIST_COMMS))
 
 
 OBJ	= $(addprefix $(OBJ_DIR), $(OBJ_LIST))
 OBJ_CW	= $(addprefix $(OBJ_CW_DIR), $(OBJ_LIST_CW))
+OBJ_CW_MAIN = $(addprefix $(OBJ_CW_DIR), $(OBJ_LIST_CW_MAIN))
 OBJ_ASM	= $(addprefix $(OBJ_ASM_DIR), $(OBJ_LIST_ASM))
+OBJ_ASM_MAIN = $(addprefix $(OBJ_ASM_DIR), $(OBJ_LIST_ASM_MAIN))
 OBJ_COMMS = $(addprefix $(OBJ_COMMS_DIR), $(OBJ_LIST_COMMS))
 
 # COLORS
@@ -164,14 +168,14 @@ END = \033[0m
 
 all: $(NAME_CW) $(NAME_ASM)
 # todo remake *.c -> *.o
-$(NAME_CW): $(LIBFT) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_COMMS_DIR) $(OBJ_COMMS)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) $(OBJ_COMMS) ./sources/cw/corewar.c -o $(NAME_CW)
+$(NAME_CW): $(LIBFT) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_CW_MAIN)
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) $(OBJ_COMMS) $(OBJ_CW_MAIN) -o $(NAME_CW)
 	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
 	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
 
 # todo remake *.c -> *.o
-$(NAME_ASM): $(LIBFT) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_ASM_DIR) $(OBJ_ASM) $(OBJ_CW_DIR) $(OBJ_CW)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) $(OBJ_COMMS) $(OBJ_CW) ./sources/asm/asm.c -o $(NAME_ASM)
+$(NAME_ASM): $(LIBFT) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_ASM_DIR) $(OBJ_ASM) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_ASM_MAIN)
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) $(OBJ_COMMS) $(OBJ_CW) $(OBJ_ASM_MAIN) -o $(NAME_ASM)
 	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
 	@echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
 

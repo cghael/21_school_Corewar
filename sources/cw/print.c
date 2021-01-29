@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/03 14:43:11 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/29 13:05:02 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,20 +78,20 @@ void		vm_print_arena(t_vm *vm)
 	while (tmp)
 	{
 		car[i].pos = ((t_carriage*)tmp->content)->position;
-		car[i].end = "\x1b[0m";
+		car[i].end = "";
 		if (((t_carriage*)tmp->content)->player->number == 1)
-			car[i].st = "\x1b[46m"; //blue
+			car[i].st = ""; //blue
 		else if (((t_carriage*)tmp->content)->player->number == 2)
-			car[i].st = "\x1b[43m"; //yellow
+			car[i].st = ""; //yellow
 		else if (((t_carriage*)tmp->content)->player->number == 3)
-			car[i].st = "\x1b[42m"; // green
+			car[i].st = ""; // green
 		else if (((t_carriage*)tmp->content)->player->number == 4)
-			car[i].st = "\x1b[41m"; // red
+			car[i].st = ""; // red
 		i++;
 		tmp = tmp->next;
 	}
 	i = 0;
-	ft_printf("%6d : ", vm->number_cycle);
+	ft_printf("%6s : ", "0x0000");
 	int line = 64;
 	while (i < MEM_SIZE)
 	{
@@ -104,12 +104,12 @@ void		vm_print_arena(t_vm *vm)
 			print_bit(vm->arena[i], "", "");
 		if ((i + 1) % 64 == 0 && (i + 1) != MEM_SIZE)
 		{
-			ft_printf("\n%#5.4x : ", line);
+			ft_printf(" \n%#5.4x : ", line); //todo разобраться с пробелом
 			line += 64;
 		}
 		else
 			ft_printf(" ");
 		i++;
 	}
-	ft_printf("\n\n\n");
+//	ft_printf("\n\n\n");
 }

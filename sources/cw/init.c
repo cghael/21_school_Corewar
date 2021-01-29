@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/18 12:00:08 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/28 17:06:59 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,29 +48,6 @@
 //	{
 //		ft_lstadd(&players, ft_lstpnew(pl_init(av[i], i)));
 //		i++;
-//	}
-//	return (players);
-//}
-
-//t_list		*vm_init_players(int ac, char **av)
-//{
-//	t_list		*players;
-//	u_int8_t	i;
-//
-//	players = NULL;
-//	i = ac - 1;
-//	while (i > 0)
-//	{
-//		ft_lstadd(&players, ft_lstpnew(pl_init(av[i], i)));
-//		i--;
-//	}
-//	t_list *tmp;
-//	tmp = players;
-//	while (tmp)
-//	{
-//		ft_printf("P		[%s] [%d]\n", ((t_player*)tmp->content)->name, (
-//				(t_player*)tmp->content)->number);
-//		tmp = tmp->next;
 //	}
 //	return (players);
 //}
@@ -118,8 +95,8 @@ t_list		*vm_init_carriages(t_list *players)
 	{
 		if (!(new = cr_init(tmp->content, num)))
 			return (0);
-		new->position = MEM_SIZE / ft_lstlength(players) *
-				(new->player->number - 1) % MEM_SIZE;
+		new->position = MEM_SIZE / ((t_player*)players->content)->number *
+				(((t_player*)tmp->content)->number - 1) % MEM_SIZE;
 		ft_lstadd(&carriages, ft_lstpnew(new));
 		num++;
 		tmp = tmp->next;
@@ -133,6 +110,10 @@ t_vm		*vm_init(int ac, char **av)
 
 	if (!(vm = ft_memalloc(sizeof(t_vm))))
 		return (0);
+	vm->flag.visual = 0;
+	vm->flag.dump = 0;
+	vm->flag.d = 0;
+	vm->flag.a = 0;
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	if (!(vm->players = pl_init_players(ac, av)))
 		return (0);
@@ -141,8 +122,7 @@ t_vm		*vm_init(int ac, char **av)
 	vm->last_live_player = vm->players->content;
 	vm_init_arena(vm);
 	if (!(vm->carriages = vm_init_carriages(vm->players)))
-	    return (0);
+		return (0);
 	vm->number_carriages = ft_lstlength(vm->carriages);
 	return (vm);
-
 }

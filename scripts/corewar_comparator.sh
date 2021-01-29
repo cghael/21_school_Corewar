@@ -1,7 +1,7 @@
 #!/bin/bash
 
-OG_COREWAR="/Users/cghael/21_school_Corewar/scripts/vm_champs/corewar"
-MY_COREWAR="/Users/cghael/21_school_Corewar/corewar"
+OG_COREWAR="/Users/ablane/CLionProjects/CoreWar/scripts/my_champ/corewar"
+MY_COREWAR="/Users/ablane/CLionProjects/CoreWar/corewar"
 
 if [ -z "$1" ]; then
 	echo "Usage: corewar_comparator.sh filenames ..."
