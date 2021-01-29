@@ -167,13 +167,12 @@ END = \033[0m
 .PHONY: all clean fclean re
 
 all: $(NAME_CW) $(NAME_ASM)
-# todo remake *.c -> *.o
+
 $(NAME_CW): $(LIBFT) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_CW_MAIN)
 	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) $(OBJ_COMMS) $(OBJ_CW_MAIN) -o $(NAME_CW)
 	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
 	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
 
-# todo remake *.c -> *.o
 $(NAME_ASM): $(LIBFT) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_ASM_DIR) $(OBJ_ASM) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_ASM_MAIN)
 	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) $(OBJ_COMMS) $(OBJ_CW) $(OBJ_ASM_MAIN) -o $(NAME_ASM)
 	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
