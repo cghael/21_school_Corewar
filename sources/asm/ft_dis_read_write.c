@@ -14,10 +14,13 @@
 
 int		ft_dis_read_write(t_dis *dis_s)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_valide_name(dis_s);
-	ft_dis_valide_comment(dis_s);
-	ft_dis_exec_code_treat(dis_s);
+	//todo REFACTOR! all to new code
+	ft_parse_bytecode(dis_s);
+	ft_validate_name(dis_s);
+	ft_validate_comment(dis_s);
+	ft_process_exec_code(dis_s);
+
+	ft_dprintf(2, "parser: %s\n%s\n", dis_s->name, dis_s->comment);//todo del
 	ft_dis_write_file(dis_s);
 	return (EXIT_SUCCESS);
 }

@@ -21,7 +21,7 @@ HEADERS_DIR = includes/
 HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
 #----------------------------------sources--------------------------------------
-# to update lists: ls -l ./sources/asm | awk '{print $9}'
+# to update lists: ls -l ./sources/asm | awk '{print $9, "\\"}'
 
 SRC_CW_MAIN = corewar.c
 SRC_LIST_CW = init.c \
@@ -36,80 +36,93 @@ SRC_LIST_CW = init.c \
 				pl_check_magic_header.c \
 				libft.c
 SRC_ASM_MAIN = asm.c
-SRC_LIST_ASM = ft_asm_error.c\
-				ft_assemble.c\
-				ft_check_arg_type.c\
-				ft_check_end_newline.c\
-				ft_check_n_write_op_args.c\
-				ft_check_operation.c\
-				ft_check_quotes.c\
-				ft_check_read_argv_files.c\
-				ft_count_exec_code_size.c\
-				ft_count_num_len.c\
-				ft_create_arg_content.c\
-				ft_dis_add_elem.c\
-				ft_dis_add_s.c\
-				ft_dis_arg_treat.c\
-				ft_dis_arg_types_treat.c\
-				ft_dis_args_treat.c\
-				ft_dis_ask_new_filename.c\
-				ft_dis_bytecode_to_int32.c\
-				ft_dis_check_file_exist.c\
-				ft_dis_choose_new_filename.c\
-				ft_dis_convert_start_filename.c\
-				ft_dis_copy_filename.c\
-				ft_dis_del_cor.c\
-				ft_dis_elems_treat.c\
-				ft_dis_error.c\
-				ft_dis_exec_code_treat.c\
-				ft_dis_free_struct.c\
-				ft_dis_get_arg_type.c\
-				ft_dis_get_size.c\
-				ft_dis_init_elem.c\
-				ft_dis_init_struct.c\
-				ft_dis_is_arg_types_valid.c\
-				ft_dis_parse_bytecode.c\
-				ft_dis_parse_code.c\
-				ft_dis_parse_int32.c\
-				ft_dis_parse_string.c\
-				ft_dis_read_write.c\
-				ft_dis_set_arg_type.c\
-				ft_dis_try_create_file.c\
-				ft_dis_validate_types_code.c\
-				ft_dis_valide_comment.c\
-				ft_dis_valide_name.c\
-				ft_dis_write_file.c\
-				ft_disassemble.c\
-				ft_free_asm_struct.c\
-				ft_get_label_mention.c\
-				ft_get_one_arg.c\
-				ft_init_asm_struct.c\
-				ft_init_n_add_label.c\
-				ft_init_n_add_mention.c\
-				ft_init_n_add_token.c\
-				ft_int32_to_bytecode.c\
-				ft_is_filename.c\
-				ft_is_label_char.c\
-				ft_is_whitespace.c\
-				ft_label_processing_n_pos_update.c\
-				ft_label_saving_n_pos_update.c\
-				ft_line_data_processing.c\
-				ft_line_of_whitespaces_or_comment.c\
-				ft_open_quotes_processing.c\
-				ft_open_solution_file.c\
-				ft_operation_processing_n_pos_update.c\
-				ft_parse_file.c\
-				ft_parse_line.c\
-				ft_print_error.c\
-				ft_print_help.c\
-				ft_search_label_exist.c\
-				ft_start_check_name_or_comment.c\
-				ft_strjoin_n_free.c\
-				ft_transform_mentions.c\
-				ft_write_arg_type_code.c\
-				ft_write_bytecode_to_file.c\
-				ft_write_code_to_exec.c\
-				ft_write_exec_code_in_line.c
+SRC_LIST_ASM = disassemble.c \
+               ft_add_statement.c \
+               ft_arg_types_code_error.c \
+               ft_asm_error.c \
+               ft_assemble.c \
+               ft_check_arg_type.c \
+               ft_check_end_newline.c \
+               ft_check_n_write_op_args.c \
+               ft_check_operation.c \
+               ft_check_quotes.c \
+               ft_check_read_argv_files.c \
+               ft_code_types_warning.c \
+               ft_comment_warning.c \
+               ft_count_exec_code_size.c \
+               ft_count_num_len.c \
+               ft_create_arg_content.c \
+               ft_dis_add_s.c \
+               ft_dis_ask_new_filename.c \
+               ft_dis_check_file_exist.c \
+               ft_dis_choose_new_filename.c \
+               ft_dis_convert_start_filename.c \
+               ft_dis_copy_filename.c \
+               ft_dis_del_cor.c \
+               ft_dis_error.c \
+               ft_dis_free_struct.c \
+               ft_dis_init_struct.c \
+               ft_dis_read_write.c \
+               ft_dis_try_create_file.c \
+               ft_dis_write_file.c \
+               ft_disassemble.c \
+               ft_free_asm_struct.c \
+               ft_free_bytecode_parser.c \
+               ft_get_arg_type.c \
+               ft_get_label_mention.c \
+               ft_get_one_arg.c \
+               ft_get_size.c \
+               ft_init_asm_struct.c \
+               ft_init_bytecode_parser.c \
+               ft_init_n_add_label.c \
+               ft_init_n_add_mention.c \
+               ft_init_n_add_token.c \
+               ft_init_statement.c \
+               ft_int32_to_bytecode.c \
+               ft_is_arg_types_valide.c \
+               ft_is_filename.c \
+               ft_is_label_char.c \
+               ft_is_whitespace.c \
+               ft_label_processing_n_pos_update.c \
+               ft_label_saving_n_pos_update.c \
+               ft_length_error.c \
+               ft_line_data_processing.c \
+               ft_line_of_whitespaces_or_comment.c \
+               ft_name_warning.c \
+               ft_opcode_error.c \
+               ft_open_quotes_processing.c \
+               ft_open_solution_file.c \
+               ft_operation_processing_n_pos_update.c \
+               ft_parse_bytecode.c \
+               ft_parse_code.c \
+               ft_parse_file.c \
+               ft_parse_int32.c \
+               ft_parse_line.c \
+               ft_parse_str.c \
+               ft_print_error.c \
+               ft_print_help.c \
+               ft_process_arg.c \
+               ft_process_arg_types.c \
+               ft_process_args.c \
+               ft_process_statement.c \
+               ft_register_error.c \
+               ft_search_label_exist.c \
+               ft_set_arg_type.c \
+               ft_start_check_name_or_comment.c \
+               ft_strjoin_n_free.c \
+               ft_terminate.c \
+               ft_transform_mentions.c \
+               ft_validate_code_types.c \
+               ft_validate_comment.c \
+               ft_validate_name.c \
+               ft_write_arg_type_code.c \
+               ft_write_asm_file.c \
+               ft_write_bytecode_to_file.c \
+               ft_write_code_to_exec.c \
+               ft_write_exec_code_in_line.c \
+               process_code.c \
+               utils.c
+
 SRC_LIST_COMMS = ld.c \
 				st.c \
 				or.c \

@@ -1,7 +1,3 @@
-//
-// Created by Cora Ghael on 11/23/20.
-//
-
 #ifndef ASM_OP_H
 # define ASM_OP_H
 
@@ -38,6 +34,12 @@ typedef					enum
 	AFF
 }						t_typo;
 
+typedef						enum
+{
+	false,
+	true
+}							t_bool;
+
 /*
 ** Operator
 */
@@ -60,6 +62,7 @@ typedef struct			s_op
 	char				*name;
 	uint8_t				code;
 	int					n_args;
+//	uint8_t				args_types[3];
 	int					args[3];
 	int					is_args_type;
 	int					is_small_dir;
@@ -264,4 +267,4 @@ static t_op				g_ops[COMMANDS_NUM] = {
 		}
 };
 
-#endif //ASM_OP_H
+#endif
