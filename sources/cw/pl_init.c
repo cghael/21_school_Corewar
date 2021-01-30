@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 12:10:56 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 12:32:43 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ t_list		*pl_read_data_champion(char *f_name, t_list *player, t_list *champs)
 		champs = player;
 	else
 		player->next = champs;
-//		ft_lstadd(&champs, player);
 	return (player);
 }
 
@@ -88,7 +87,7 @@ t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 t_list		*pl_order_of_players(t_list *champions)
 {
 	uint32_t	max_num;
-	uint32_t 	quant;
+	uint32_t	quant;
 	t_list		*tmp;
 
 	quant = 0;
@@ -118,7 +117,7 @@ t_list		*pl_init_players(int ac, char **av)
 	champions = NULL;
 	if (ac < 2)
 	{
-		ft_printf(USAGE); //todo describe USAGE;
+		ft_printf(USAGE);
 		exit(0);
 	}
 	champions = pl_list_champions(ac, av, champions);

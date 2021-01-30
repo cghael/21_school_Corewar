@@ -33,5 +33,4 @@ void		live(t_carriage *car, t_vm *vm)
 	if (pl_find(vm->players, -ft_bytetoint(car->args[0].data, DIR_SIZE)))
 		vm->last_live_player = pl_find(vm->players,
 			-ft_bytetoint(car->args[0].data, DIR_SIZE));
-
 }

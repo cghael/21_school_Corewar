@@ -26,6 +26,5 @@ void	sti(t_carriage *car, t_vm *vm)
 		ind += ft_bytetoint(car->args[2].data, REG_SIZE);
 	ind %= IDX_MOD;
 	set_array(get_t_data(vm->arena, car->position + ind,
-						 MEM_SIZE), car->args[0].data, REG_SIZE);
-
+		MEM_SIZE), car->args[0].data, REG_SIZE);
 }

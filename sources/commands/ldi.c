@@ -27,11 +27,10 @@ void		ldi(t_carriage *car, t_vm *vm)
 	if (car->operation != 0x0e)
 		ind %= IDX_MOD;
 	set_array(car->args[2].data,
-		   get_t_data(vm->arena, car->position + ind, MEM_SIZE), REG_SIZE);
+		get_t_data(vm->arena, car->position + ind, MEM_SIZE), REG_SIZE);
 	if (ft_bytetoint(car->args[2].data, REG_SIZE) == 0 &&
 		car->operation != 0x0a)
 		car->carry = 1;
 	else
 		car->carry = 0;
-
 }

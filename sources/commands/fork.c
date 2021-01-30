@@ -15,7 +15,7 @@
 void		lfork(t_carriage *car, t_vm *vm)
 {
 	t_carriage	*new_car;
-	uint8_t 	i;
+	uint8_t		i;
 	int32_t		ind;
 
 	if (!(new_car = cr_init(car->player, vm->number_carriages++)))
@@ -36,5 +36,4 @@ void		lfork(t_carriage *car, t_vm *vm)
 		new_car->position += MEM_SIZE;
 	new_car->position %= MEM_SIZE;
 	ft_lstadd(&vm->carriages, ft_lstpnew(new_car));
-
 }
