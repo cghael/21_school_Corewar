@@ -12,14 +12,14 @@
 
 #include "asm.h"
 
-t_bool	ft_is_arg_types_valide(t_elem *statement)
+t_bool			ft_is_arg_types_valide(t_elem *elem)
 {
-	int32_t i;
+	int32_t		i;
 
 	i = 0;
-	while (i < statement->op->n_args)
+	while (i < elem->op->n_args)
 	{
-		if (!(statement->args_types[i] & statement->op->args[i]))
+		if (!(elem->args_types[i] & elem->op->args[i]))
 			return (false);
 		i++;
 	}

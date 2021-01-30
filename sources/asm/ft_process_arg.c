@@ -27,5 +27,5 @@ void			ft_process_arg(t_dis *parser, t_elem *statement, unsigned i)
 			ft_register_error(parser);
 	}
 	else
-		ft_length_error(parser);
+		ft_dis_length_error(parser);
 }

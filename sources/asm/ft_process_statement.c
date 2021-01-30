@@ -1,41 +1,33 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_process_statement.c                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:45:51 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "asm.h"
 
-t_elem	*ft_process_statement(t_dis *parser)
-{
-	t_elem	*statement;
-	uint8_t		op_code;
+/*
+** func treating all elems by a args_type
+*/
 
-	statement = ft_init_statement();
-	op_code = parser->code[parser->pos];
-	if (op_code >= 0x01 && op_code <= 0x10)
+t_elem			*ft_args_treat(t_dis *dis_s)
+{
+	t_elem		*elem;
+	uint8_t		opcode;
+
+	elem = ft_init_element();
+	opcode = dis_s->code[dis_s->pos];
+	if (opcode >= 0x01 && opcode <= 0x10)
 	{
-		parser->pos++;
-		statement->op = &g_ops[op_code - 1];
-		if (statement->op->is_args_type && parser->pos >= parser->code_size)
-			ft_length_error(parser);
-		ft_process_arg_types(parser, statement);
-		if (ft_is_arg_types_valide(statement))
+		dis_s->pos++;
+		elem->op = &g_ops[opcode - 1];
+		if (elem->op->is_args_type && dis_s->pos >= dis_s->code_size)
+			ft_dis_length_error(dis_s);
+		ft_dis_treat_arg_types(dis_s, elem);
+		if (ft_is_arg_types_valide(elem))
 		{
-			if (statement->op->is_args_type)
-				parser->pos++;
-			ft_process_args(parser, statement);
+			if (elem->op->is_args_type)
+				dis_s->pos++;
+			ft_process_args(dis_s, elem);
 		}
 		else
-			ft_arg_types_code_error(parser);
+			ft_arg_types_code_error(dis_s);
 	}
 	else
-		ft_op_code_error(parser);
-	return (statement);
+		ft_op_code_error(dis_s);
+	return (elem);
 }

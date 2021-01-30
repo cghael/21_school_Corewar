@@ -12,9 +12,9 @@
 
 #include "asm.h"
 
-void	ft_validate_name(t_dis *parser)
+void		ft_validate_name(t_dis *parser)
 {
-	size_t i;
+	size_t	i;
 
 	i = ft_strlen(parser->name);
 	while (i < PROG_NAME_LENGTH)

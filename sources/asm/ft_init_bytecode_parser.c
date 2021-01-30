@@ -17,7 +17,7 @@ t_dis	*ft_init_bytecode_parser(int fd) //todo del???
 	t_dis *parser;
 
 	if (!(parser = (t_dis *)ft_memalloc(sizeof(t_dis))))
-		ft_terminate(ERR_PARSER_INIT);
+		ft_terminate(ERR_DIS_INIT);
 	parser->fd_cor = fd;
 	parser->name = NULL;
 	parser->comment = NULL;

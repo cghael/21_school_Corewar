@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_statement.c                                :+:      :+:    :+:   */
+/*   ft_init_element.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:30:05 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/30 16:30:26 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/30 16:30:28 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-t_elem	*ft_init_statement(void)
+t_elem	*ft_init_element(void)
 {
-	t_elem *statement;
+	t_elem *elem;
 
-	if (!(statement = (t_elem *)ft_memalloc(sizeof(t_elem))))
-		ft_terminate(ERR_STATEMENT_INIT);
-	statement->op = NULL;
-	statement->next = NULL;
-	return (statement);
+	if (!(elem = (t_elem *)ft_memalloc(sizeof(t_elem))))
+		ft_terminate(ERR_DIS_ELEM_INIT);
+	elem->op = NULL;
+	elem->next = NULL;
+	return (elem);
 }
