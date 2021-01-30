@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/30 15:53:53 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 19:55:37 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void		pl_print_players(t_list *players)
 
 	player = pl_sort_rev_stack_champ(players);
 	players = player;
+	ft_printf("Introducing contestants...\n");
 	while (player)
 	{
 		ft_printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n",\
@@ -43,6 +44,7 @@ void		pl_print_players(t_list *players)
 		player = player->next;
 	}
 	players = pl_sort_stack_champ(players);
+	player = players;
 }
 
 void		vm_print_arena(t_vm *vm, uint32_t length)
