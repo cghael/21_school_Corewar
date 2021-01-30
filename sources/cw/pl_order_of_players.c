@@ -38,7 +38,7 @@ t_list	*pl_sort_stack_champ(t_list *champions)
 
 	prev = champions;
 	start = champions;
-	while (champions->next)
+	while (champions && champions->next)
 	{
 		tmp = champions->next;
 		if (((t_player*)champions->content)->number < ((t_player *)

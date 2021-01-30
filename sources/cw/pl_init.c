@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/26 14:49:13 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 12:10:56 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 		{
 			if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump") ||
 			ft_strequ(av[i], "-v") || ft_strequ(av[i], "-a"))
-				i = pl_next_arg(av, i, champions);
+				i = pl_next_arg(av, i, ac, champions);
 			else if (ft_strequ(av[i], "-n"))
 				i = fl_check_num_after_flag_n(av, i, ac, &num_pl);
 			else
@@ -87,16 +87,22 @@ t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 
 t_list		*pl_order_of_players(t_list *champions)
 {
-	int		quant;
-	t_list	*tmp;
+	uint32_t	max_num;
+	uint32_t 	quant;
+	t_list		*tmp;
 
 	quant = 0;
+	max_num = 0;
 	tmp = champions;
 	while (tmp)
 	{
+		if (max_num < ((t_player*)tmp->content)->number)
+			max_num = ((t_player*)tmp->content)->number;
 		tmp = tmp->next;
 		quant++;
 	}
+	if (max_num > quant)
+		terminate(ERR_FLAG_N);
 	if (quant > MAX_PLAYERS)
 		terminate(ERR_MANY_CHAMP);
 	pl_number_order(champions, quant);

@@ -107,7 +107,8 @@ int							fl_check_num_after_flag_n(char **av, int i, int ac,
 							int *num_pl);
 int							pl_search_duplicate_num(t_list *champions,
 							uint32_t quantity);
-int							pl_next_arg(char **av, int i, t_list *champions);
+int							pl_next_arg(char **av, int i, int ac,
+					  		t_list *champions);
 
 void                    	terminate(char *s);
 void						vm_print_arena(t_vm *vm);

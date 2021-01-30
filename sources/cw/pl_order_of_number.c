@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:37:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/15 11:55:49 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 12:48:00 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void		pl_check_duplicate_num(t_list *champions)
 	t_list *this;
 
 	this = champions;
-	while (this->next)
+	while (this && this->next)
 	{
 		tmp = this->next;
 		while (tmp)

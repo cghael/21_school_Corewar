@@ -65,12 +65,14 @@ int			ft_compare_end(const char *str, const char *dest, int pos)
 	return (1);
 }
 
-int			pl_next_arg(char **av, int i, t_list *champions)
+int			pl_next_arg(char **av, int i, int ac, t_list *champions)
 {
 	if (champions)
 		terminate(ERR_FLAG);
 	if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump"))
 	{
+		if (i + 1 >= ac)
+			terminate(ERR_DUMP);
 		if (av[i + 1][0] >= '0' && av[i + 1][0] <= '9')
 			i = i + 2;
 		else
