@@ -12,9 +12,8 @@
 
 #include "asm.h"
 
-void	ft_validate_code_types(t_dis *parser,
-							   int8_t args_types_code,
-							   int args_num)
+void	ft_validate_code_types(t_dis *parser, int8_t args_types_code, \
+																int args_num)
 {
 	int		arg_num;
 	int8_t	type;

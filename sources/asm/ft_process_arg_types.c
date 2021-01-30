@@ -20,13 +20,13 @@ void			ft_process_arg_types(t_dis *parser, t_elem *statement)
 	{
 		args_types_code = parser->code[parser->pos];
 		if (statement->op->n_args >= 1)
-			ft_set_arg_type((int8_t) ((args_types_code & 0xC0)
+			ft_set_arg_type((int8_t)((args_types_code & 0xC0)
 					>> 6), 1, statement);
 		if (statement->op->n_args >= 2)
-			ft_set_arg_type((int8_t) ((args_types_code & 0x30)
+			ft_set_arg_type((int8_t)((args_types_code & 0x30)
 					>> 4), 2, statement);
 		if (statement->op->n_args >= 3)
-			ft_set_arg_type((int8_t) ((args_types_code & 0xC)
+			ft_set_arg_type((int8_t)((args_types_code & 0xC)
 					>> 2), 3, statement);
 		ft_validate_code_types(parser, args_types_code, statement->op->n_args);
 	}

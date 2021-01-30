@@ -60,7 +60,7 @@ static void		ft_free_ops(t_asm *asm_struct)
 	}
 }
 
-void	ft_free_asm_struct(t_asm *asm_struct)
+void			ft_free_asm_struct(t_asm *asm_struct)
 {
 	if (asm_struct)
 	{

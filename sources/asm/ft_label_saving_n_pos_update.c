@@ -80,7 +80,8 @@ int			ft_label_saving_n_pos_update(t_asm *asm_s, char *colon)
 			free(content);
 			return (EXIT_SUCCESS);
 		}
-		if (EXIT_FAILURE == ft_init_n_add_label(asm_s, content, asm_s->parse->n_line))
+		if (EXIT_FAILURE == ft_init_n_add_label(asm_s, content, \
+														asm_s->parse->n_line))
 			return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);

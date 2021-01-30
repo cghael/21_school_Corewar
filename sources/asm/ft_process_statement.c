@@ -12,9 +12,9 @@
 
 #include "asm.h"
 
-t_elem	*ft_process_statement(t_dis *parser)
+t_elem			*ft_process_statement(t_dis *parser)
 {
-	t_elem	*statement;
+	t_elem		*statement;
 	uint8_t		op_code;
 
 	statement = ft_init_statement();

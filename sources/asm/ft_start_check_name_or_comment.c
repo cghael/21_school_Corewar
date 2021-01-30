@@ -70,6 +70,5 @@ int			ft_start_check_name_or_comment(t_asm *asm_s)
 		res = ft_check_quotes(asm_s);
 		return (res);
 	}
-	//todo error position
 	return (EXIT_FAILURE);
 }

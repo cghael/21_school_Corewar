@@ -65,7 +65,7 @@ int			ft_check_n_write_op_args(t_asm *asm_s)
 		}
 		else
 		{
-			asm_s->parse->err_num = LEXICAL_ERROR; //todo MAYBE NOT???
+			asm_s->parse->err_num = LEXICAL_ERROR;
 			return (EXIT_FAILURE);
 		}
 	}

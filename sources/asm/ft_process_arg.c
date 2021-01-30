@@ -21,7 +21,7 @@ void			ft_process_arg(t_dis *parser, t_elem *statement, unsigned i)
 	if (parser->code_size - parser->pos >= (int32_t)size)
 	{
 		statement->args[i] = ft_bytecode_to_int32(&parser->code[parser->pos],
-												  size);
+																	size);
 		parser->pos += size;
 		if (statement->args_types[i] == T_REG && statement->args[i] <= 0)
 			ft_register_error(parser);
