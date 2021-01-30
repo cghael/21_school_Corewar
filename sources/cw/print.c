@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2020/12/03 14:43:11 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/29 14:57:42 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct		s_car
 
 void		print_result(t_player *win_player)
 {
-	ft_printf("Contestant %d, \"%s\", has won !", win_player->number,
+	ft_printf("Contestant %d, \"%s\", has won !\n", win_player->number,
 		win_player->name);
 	//TODO print_result
 }
@@ -37,6 +37,22 @@ void		print_bit(uint8_t bit, char *st, char *end)
 	ft_putstr(end);
 }
 
+
+void 		pl_print_players(t_list *players)
+{
+	t_list *player = pl_sort_rev_stack_champ(players);
+	players = player;
+	while (player)
+	{
+		ft_printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n", \
+		((t_player*)player->content)->number, \
+		((t_player*)player->content)->exec_size, \
+		((t_player*)player->content)->name, \
+		((t_player*)player->content)->comment);
+		player = player->next;
+	}
+	players = pl_sort_stack_champ(players);
+}
 //void		vm_print_operation(t_carriage *car, t_vm *vm)
 //{
 //	ft_printf("P%5d | %s", car->number + 1, g_ops[car->operation - 1].name);
@@ -78,20 +94,20 @@ void		vm_print_arena(t_vm *vm)
 	while (tmp)
 	{
 		car[i].pos = ((t_carriage*)tmp->content)->position;
-		car[i].end = "\x1b[0m";
+		car[i].end = "";
 		if (((t_carriage*)tmp->content)->player->number == 1)
-			car[i].st = "\x1b[46m"; //blue
+			car[i].st = ""; //blue
 		else if (((t_carriage*)tmp->content)->player->number == 2)
-			car[i].st = "\x1b[43m"; //yellow
+			car[i].st = ""; //yellow
 		else if (((t_carriage*)tmp->content)->player->number == 3)
-			car[i].st = "\x1b[42m"; // green
+			car[i].st = ""; // green
 		else if (((t_carriage*)tmp->content)->player->number == 4)
-			car[i].st = "\x1b[41m"; // red
+			car[i].st = ""; // red
 		i++;
 		tmp = tmp->next;
 	}
 	i = 0;
-	ft_printf("%6d : ", vm->number_cycle);
+	ft_printf("%6s : ", "0x0000");
 	int line = 64;
 	while (i < MEM_SIZE)
 	{
@@ -104,12 +120,12 @@ void		vm_print_arena(t_vm *vm)
 			print_bit(vm->arena[i], "", "");
 		if ((i + 1) % 64 == 0 && (i + 1) != MEM_SIZE)
 		{
-			ft_printf("\n%#5.4x : ", line);
+			ft_printf(" \n%#5.4x : ", line); //todo разобраться с пробелом
 			line += 64;
 		}
 		else
 			ft_printf(" ");
 		i++;
 	}
-	ft_printf("\n\n\n");
+//	ft_printf("\n\n\n");
 }

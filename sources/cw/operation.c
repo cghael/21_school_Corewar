@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/26 14:15:06 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/29 13:58:20 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -303,11 +303,20 @@ t_player	*vm_operation(t_vm *vm)
 		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
 			vm_survey_carriages(vm);
+			if ((vm->flag.d && vm->flag.d == vm->number_cycle)\
+			|| (vm->flag.dump && vm->flag.dump == vm->number_cycle))
+			{
+				if (vm->flag.d)
+					vm_print_arena(vm); //todo ввод в функцию ширины поля(32/64)
+				else if (vm->flag.dump)
+					vm_print_arena(vm); //todo ввод в функцию ширины поля(32/64)
+				exit(0);
+			}
 			current++;
 			vm->number_cycle++;
 		}
 		vm->number_checks++;
 	}
-	vm_print_arena(vm);
+//	vm_print_arena(vm);
 	return (vm->last_live_player);
 }
