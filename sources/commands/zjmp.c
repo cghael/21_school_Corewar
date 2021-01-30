@@ -24,5 +24,4 @@ void		zjmp(t_carriage *car, t_vm *vm)
 	}
 	else
 		car->position = (car->position + len_args(car, vm)) % MEM_SIZE;
-
 }

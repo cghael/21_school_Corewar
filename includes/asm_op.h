@@ -14,7 +14,7 @@
 # define REG_DIR_IND	7
 # define COMMANDS_NUM	16
 
-typedef					enum
+typedef						enum
 {
 	LIVE,
 	LD,
@@ -32,7 +32,7 @@ typedef					enum
 	LLDI,
 	LFORK,
 	AFF
-}						t_typo;
+}							t_typo;
 
 typedef						enum
 {

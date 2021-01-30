@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 14:12:20 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/30 14:19:10 by esnowpea         ###   ########.fr       */
+/*   Updated: 2021/01/30 15:50:39 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,13 @@ uint32_t	len_args(t_carriage *car, t_vm *vm)
 	if (op.is_args_type)
 	{
 		sum = 2 + find_len_arg(((arg_code >> 6) & 3) == IND_CODE ?
-							   T_IND : ((arg_code >> 6) & 3), car->operation);
+					T_IND : ((arg_code >> 6) & 3), car->operation);
 		if (op.n_args > 1)
 			sum += find_len_arg(((arg_code >> 4) & 3) == IND_CODE ?
-								T_IND : ((arg_code >> 4) & 3), car->operation);
+					T_IND : ((arg_code >> 4) & 3), car->operation);
 		if (op.n_args > 2)
 			sum += find_len_arg(((arg_code >> 2) & 3) == IND_CODE ?
-								T_IND : ((arg_code >> 2) & 3), car->operation);
+					T_IND : ((arg_code >> 2) & 3), car->operation);
 	}
 	else
 		sum = 1 + op.t_dir_size;
@@ -78,9 +78,9 @@ uint32_t	check_args(t_carriage *car, t_vm *vm)
 			(((byte >> 2) & 3) == IND_CODE ? T_IND : ((byte >> 2) & 3))))) ||
 			(op.n_args == 2 && (op.args[0] &
 			(((byte >> 6) & 3) == IND_CODE ? T_IND : ((byte >> 6) & 3))) &&
-		 	(op.args[1] &
-		 	(((byte >> 4) & 3) == IND_CODE ? T_IND : ((byte >> 4) & 3)))) ||
-		 	(op.n_args == 1 && (op.args[0] &
+			(op.args[1] &
+			(((byte >> 4) & 3) == IND_CODE ? T_IND : ((byte >> 4) & 3)))) ||
+			(op.n_args == 1 && (op.args[0] &
 			(((byte >> 6) & 3) == IND_CODE ? T_IND : ((byte >> 6) & 3)))))
 		return (1);
 	return (0);

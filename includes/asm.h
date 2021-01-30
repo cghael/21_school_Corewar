@@ -257,7 +257,7 @@ int							ft_check_quotes(t_asm *asm_s);
 int							ft_open_quotes_processing(t_asm *asm_s);
 char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
-int 						ft_check_end_newline(t_asm *asm_s);
+int							ft_check_end_newline(t_asm *asm_s);
 int							ft_label_saving_n_pos_update(t_asm *asm_s, \
 																char *colon);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);

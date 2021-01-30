@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:36:58 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/15 12:36:58 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 16:09:58 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ void		aff(t_carriage *car, t_vm *vm)
 {
 	(void)vm;
 	(void)car;
-	//write(1, (char*)car->args[0].data.data, 1);
-
+	//write(1, (char*)car->args[0].data.data, 1); //todo aff;
 }

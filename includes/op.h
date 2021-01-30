@@ -6,7 +6,7 @@
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:50:08 by ksemele           #+#    #+#             */
-/*   Updated: 2021/01/30 15:03:08 by esnowpea         ###   ########.fr       */
+/*   Updated: 2020/10/12 18:50:12 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 # define DIRECT_CHAR			'%'
 # define SEPARATOR_CHAR			','
 # define LABEL_CHARS			"abcdefghijklmnopqrstuvwxyz_0123456789"
+# define LABEL_CHARS_SIZE		37
 # define NAME_CMD_STRING		".name"
 # define COMMENT_CMD_STRING		".comment"
 # define REG_NUMBER				16

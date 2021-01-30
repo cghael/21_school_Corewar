@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 15:53:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,22 @@ void		print_result(t_player *win_player)
 {
 	ft_printf("Contestant %d, \"%s\", has won !\n", win_player->number,
 		win_player->name);
-	//TODO print_result
 }
 
 void		print_bit(uint8_t bit)
 {
-	char	a[] = "0123456789abcdef";
+	char	*a;
 
+	a = "0123456789abcdef";
 	ft_putchar(a[bit / 16]);
 	ft_putchar(a[bit % 16]);
 }
 
-void 		pl_print_players(t_list *players)
+void		pl_print_players(t_list *players)
 {
-	t_list *player = pl_sort_rev_stack_champ(players);
+	t_list	*player;
+
+	player = pl_sort_rev_stack_champ(players);
 	players = player;
 	while (player)
 	{
