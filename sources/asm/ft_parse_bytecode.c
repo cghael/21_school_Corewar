@@ -20,7 +20,7 @@ void			ft_parse_bytecode(t_dis *parser)
 	if (ft_parse_int32(parser->fd_cor) != 0)
 		ft_terminate(ERR_NO_NULL);
 	if ((parser->code_size = ft_parse_int32(parser->fd_cor)) < 0)
-		ft_terminate(ERR_INVALID_CODE_SIZE);
+		ft_terminate(ERR_INVD_CODE_SIZE);
 	parser->comment = ft_parse_str(parser->fd_cor, COMMENT_LENGTH);
 	if (ft_parse_int32(parser->fd_cor) != 0)
 		ft_terminate(ERR_NO_NULL);

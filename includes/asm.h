@@ -19,7 +19,6 @@
 
 # include <fcntl.h>
 # include "libft.h"
-//# include "op.h"
 # include "errors.h"
 # include "asm_op.h"
 # include <stdio.h>
@@ -52,55 +51,37 @@
 
 # define ERR_ASM_STRUCT		"Error in ft_init_asm_struct"
 # define ERR_MEMALLOC		"Error in ft_memalloc()"
-# define ERR_NAME_LEN		"Champion name too long (Max length 128)" // ?
-# define ERR_DOUBLE_NAME	-1
-# define ERR_DOUBLE_COMMENT	-2
-# define ERR_UNKNOWN_CMD	-3
-# define ERR_NO_NAME		-4
-# define ERR_DIS			"Error in ft_disassemble()\n"
 # define ERR_DIS_FILE		"Error in ft_dis_filename_treat()\n"
 # define ERR_DIS_CHOOSE		"Error in ft_dis_choose_new_filename()\n"
 # define ERR_DIS_INIT		"Error in ft_dis_init_struct()\n"
 # define ERR_DIS_OPEN_SOL	"Error in ft_open_solution_file()\n"
-# define ERR_DIS_STATEMENT	"Error in ft_dis_init_elem()\n"
 # define ERR_DIS_READ_FILE	"Error read file\n"
-# define ERR_DIS_INV_FILE	"Invalid champion file."
-# define ERR_DIS_NO_NULL	"Error in ft_dis_parse_bytecode(): No NULL\n"
-# define ERR_DIS_CODE_SIZE	"Error in ft_dis_parse_bytecode(): bad codesize\n"
-# define ERR_DIS_MAGIC		"Error in ft_dis_parse_bytecode(): Bad MAGIC_CODE\n"
-# define ERR_DIS_FILE_SIZE	"Too small\\wrong .name .comment"
-# define ERR_DIS_NAME		"Wrong symbols in .name. Must be null bytes.\n"
-# define ERR_DIS_COMMENT	"Wrong symbols in .comment. Must be null bytes.\n"
-# define ERR_DIS_TYPES		"Insignificant bits in args types not null\n"
-# define ERR_DIS_LEN_CODE	"Error in ft_dis_elems_treat(): bad length\n"
-# define ERR_DIS_ELEMS		"Error in ft_dis_elems_treat()\n"
-# define ERR_DIS_ARGS_TREAT	"Error in ft_dis_arg_treat()\n"
-# define ERR_DIS_LENGTH		"Wrong length!\n"
-# define ERR_DIS_TYPECODE	"Wrong arguments types.\n"
-# define ERR_DIS_OPERATOR	"Wrong operator.\n"
 
 # define NAME_START			1
-# define NAME_END			2
 # define CMT_START			3
-# define CMT_END			4
 # define NAME_CMT_FOUND		5
 
-# define OK_WRITE_BYTE		0
 # define MAGIC_LEN			4
 # define END_SIZE			4
 # define EXEC_SIZE			END_SIZE
 # define PARSING_ERR		-1
 # define PARSING_OK			0
 
-# define IS_NAME			2
-# define IS_COMMENT			3
-# define IS_NOT_COMMAND		-1
-
 # define FILE_EXIST			0
 # define FILE_NOT_EXIST		1
 # define FILE_EXIST_TXT		"[\e[1;33m%s\e[m] already exist or incorrect\n"
 # define FILE_INPUT_NEW		"input new_filename:\n>>>\t"
 # define FILE_SAVE_OK		"Ok! I save file to [\e[1;33m%s\e[m]\n"
+
+# define ERR_STR_INIT		"ERROR: Can\'t initialize string"
+# define ERR_PARSER_INIT	"ERROR: Can\'t initialize parser"
+# define ERR_STATEMENT_INIT	"ERROR: Can\'t initialize statement"
+# define ERR_READ_FILE		"ERROR: Can\'t read file with champion"
+# define ERR_INVALID_FILE	"ERROR: Invalid file with champion"
+# define ERR_INVALID_MAGIC	"ERROR: Invalid magic header"
+# define ERR_NO_NULL		"ERROR: No null control bytes"
+# define ERR_CODE_INIT		"ERROR: Can\'t initialize string of code"
+# define ERR_INVD_CODE_SIZE	"ERROR: Invalid code size"
 
 /*
 ** ------------------------------ Structures -----------------------------------
@@ -120,13 +101,11 @@ typedef struct				s_args
 {
 	uint8_t					type;
 	char					*content;
-	int						is_label;
 }							t_args;
 
 typedef struct				s_operations
 {
 	t_typo					num;
-	unsigned				n_line;
 	unsigned				pos;
 	uint8_t					args_code;
 	t_args					*args;
@@ -141,7 +120,6 @@ typedef struct				s_mention
 	int						arg_num;
 	unsigned				pos;
 	int32_t					op_pos;
-//	size_t					size;
 	struct s_mention		*next;
 }							t_mention;
 
@@ -161,10 +139,6 @@ typedef struct				s_asm
 	int						fd_solution;
 	t_parse					*parse;
 	int						quotes;
-//	int						n_lines;
-//	unsigned				line;
-//	unsigned				column;
-//	t_token					*tokens;
 	t_operations			*op_list;
 	int32_t					pos;
 	char					*name;
@@ -177,12 +151,6 @@ typedef struct				s_asm
 /*
 ** ----------------------------- Disassembler ----------------------------------
 */
-
-//typedef						enum
-//{
-//	false,
-//	true
-//}							t_bool;
 
 typedef struct				s_elem
 {
@@ -221,63 +189,41 @@ int							ft_dis_convert_start_filename(char *file, \
 int							ft_dis_read_write(t_dis *dis_s);
 void						ft_dis_write_file(t_dis *dis_s);
 
-
-# define ERR_STR_INIT			"ERROR: Can\'t initialize string"
-# define ERR_PARSER_INIT		"ERROR: Can\'t initialize parser"
-# define ERR_TOKEN_INIT			"ERROR: Can\'t initialize token"
-# define ERR_LABEL_INIT			"ERROR: Can\'t initialize label"
-# define ERR_MENTION_INIT		"ERROR: Can\'t initialize mention"
-# define ERR_STATEMENT_INIT		"ERROR: Can\'t initialize statement"
-# define ERR_OPEN_FILE			"ERROR: Can\'t open file with champion"
-# define ERR_READ_FILE			"ERROR: Can\'t read file with champion"
-# define ERR_CREATE_FILE		"ERROR: Can\'t create file"
-# define ERR_INVALID_FILE		"ERROR: Invalid file with champion"
-# define ERR_INVALID_MAGIC		"ERROR: Invalid magic header"
-# define ERR_NO_NULL			"ERROR: No null control bytes"
-# define ERR_CODE_INIT			"ERROR: Can\'t initialize string of code"
-# define ERR_INVALID_CODE_SIZE	"ERROR: Invalid code size"
-
-t_dis				*ft_init_bytecode_parser(int fd);
-t_elem				*ft_init_statement(void);
-void					ft_parse_bytecode(t_dis *parser);
-void					ft_validate_name(t_dis *parser);
-void					ft_validate_comment(t_dis *parser);
-void					ft_validate_code_types(t_dis *parser,
-											   int8_t args_types_code,
-											   int args_num);
-t_bool					ft_is_arg_types_valide(t_elem *statement);
-void					ft_name_warning(size_t pos);
-void					ft_comment_warning(size_t pos);
-void					ft_code_types_warning(size_t pos);
-void					ft_process_exec_code(t_dis *parser);
-void					ft_process_arg_types(t_dis *parser,
-											 t_elem *statement);
-void					ft_add_statement(t_elem **list, t_elem *new);
-void					ft_write_asm_file(int fd, t_dis *parser);
-void					ft_free_bytecode_parser(t_dis **parser);
-void					ft_op_code_error(t_dis *parser);
-void					ft_arg_types_code_error(t_dis *parser);
-void					ft_length_error(t_dis *parser);
-void					ft_register_error(t_dis *parser);
-int32_t					ft_bytecode_to_int32(const uint8_t *bytecode, size_t size);
-int32_t					ft_parse_int32(int fd);
-char					*ft_parse_str(int fd, size_t len);
-uint8_t					*ft_parse_code(int fd, size_t len);
-t_elem				*ft_process_statement(t_dis *parser);
-size_t					ft_get_size(t_elem *statement, unsigned i);
-void					ft_process_arg(t_dis *parser,
-									   t_elem *statement,
-									   unsigned i);
-void					ft_process_args(t_dis *parser, t_elem *statement);
-uint8_t					ft_get_arg_type(int8_t code);
-void					ft_set_arg_type(int8_t arg_code,
-										int8_t index,
-										t_elem *statement);
-void	ft_terminate(char *s);
-
+t_elem						*ft_init_statement(void);
+void						ft_parse_bytecode(t_dis *parser);
+void						ft_validate_name(t_dis *parser);
+void						ft_validate_comment(t_dis *parser);
+void						ft_validate_code_types(t_dis *parser, \
+										int8_t args_types_code, int args_num);
+t_bool						ft_is_arg_types_valide(t_elem *statement);
+void						ft_name_warning(size_t pos);
+void						ft_comment_warning(size_t pos);
+void						ft_code_types_warning(size_t pos);
+void						ft_process_exec_code(t_dis *parser);
+void						ft_process_arg_types(t_dis *parser, \
+															t_elem *statement);
+void						ft_add_statement(t_elem **list, t_elem *new);
+void						ft_op_code_error(t_dis *parser);
+void						ft_arg_types_code_error(t_dis *parser);
+void						ft_length_error(t_dis *parser);
+void						ft_register_error(t_dis *parser);
+int32_t						ft_bytecode_to_int32(const uint8_t *bytecode, \
+																size_t size);
+int32_t						ft_parse_int32(int fd);
+char						*ft_parse_str(int fd, size_t len);
+uint8_t						*ft_parse_code(int fd, size_t len);
+t_elem						*ft_process_statement(t_dis *parser);
+size_t						ft_get_size(t_elem *statement, unsigned i);
+void						ft_process_arg(t_dis *parser, \
+												t_elem *statement, unsigned i);
+void						ft_process_args(t_dis *parser, t_elem *statement);
+uint8_t						ft_get_arg_type(int8_t code);
+void						ft_set_arg_type(int8_t arg_code, int8_t index, \
+														t_elem *statement);
+void						ft_terminate(char *s);
 
 /*
-** ------------------------------ Functions ------------------------------------
+** ------------------------------ Assembler ------------------------------------
 */
 
 t_asm						*ft_init_asm_struct();
@@ -303,29 +249,31 @@ int							ft_check_quotes(t_asm *asm_s);
 int							ft_open_quotes_processing(t_asm *asm_s);
 char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
-int							ft_init_n_add_token(t_asm *asm_s, t_typo typo, char *content);
 int 						ft_check_end_newline(t_asm *asm_s);
-//int							ft_is_label_char(char ch);
-//int							ft_is_label_in_line(t_asm *asm_s, const char *colon);
-int							ft_label_saving_n_pos_update(t_asm *asm_s, char *colon);
-//int							ft_is_mention(t_asm *asm_s, const char *colon, int *pos);
+int							ft_label_saving_n_pos_update(t_asm *asm_s, \
+																char *colon);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
-int							ft_label_processing_n_pos_update(t_asm *asm_s, int pos);
+int							ft_label_processing_n_pos_update(t_asm *asm_s, \
+																	int pos);
 int							ft_is_label_char(char ch);
 int							ft_check_n_write_op_args(t_asm *asm_s);
 int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
 int							ft_count_num_len(const char *str);
-int							ft_check_arg_type(t_asm *asm_s, int type, int arg_pars);
+int							ft_check_arg_type(t_asm *asm_s, int type, \
+																int arg_pars);
 void						ft_write_arg_type_code(t_asm *asm_s);
 void						ft_count_exec_code_size(t_asm *asm_s);
 int							ft_write_exec_code_in_line(t_asm *asm_s);
-void						ft_write_code_to_exec(char *exec, t_operations *tmp);
-int							ft_get_label_mention(t_asm *asm_s, int arg_pars, int type);
-int							ft_init_n_add_label(t_asm *asm_s, const char *name, int n_line);
+void						ft_write_code_to_exec(char *exec, \
+														t_operations *tmp);
+int							ft_get_label_mention(t_asm *asm_s, int arg_pars, \
+																	int type);
+int							ft_init_n_add_label(t_asm *asm_s, \
+												const char *name, int n_line);
 t_label						*ft_search_label_exist(t_asm *asm_s, char *name);
-int							ft_init_n_add_mention(t_asm *asm_s, int arg_pars, t_label *label);
+int							ft_init_n_add_mention(t_asm *asm_s, int arg_pars, \
+															t_label *label);
 int							ft_transform_mentions(t_asm *asm_s);
 void						ft_asm_error_no_label(t_asm *asm_s);
-//int							ft_create_arg_content(t_asm *asm_s, int arg_pars, int size);
 
 #endif

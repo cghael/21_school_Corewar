@@ -36,8 +36,7 @@ SRC_LIST_CW = init.c \
 				pl_check_magic_header.c \
 				libft.c
 SRC_ASM_MAIN = asm.c
-SRC_LIST_ASM = disassemble.c \
-               ft_add_statement.c \
+SRC_LIST_ASM = ft_add_statement.c \
                ft_arg_types_code_error.c \
                ft_asm_error.c \
                ft_assemble.c \
@@ -51,7 +50,6 @@ SRC_LIST_ASM = disassemble.c \
                ft_comment_warning.c \
                ft_count_exec_code_size.c \
                ft_count_num_len.c \
-               ft_create_arg_content.c \
                ft_dis_add_s.c \
                ft_dis_ask_new_filename.c \
                ft_dis_check_file_exist.c \
@@ -76,7 +74,6 @@ SRC_LIST_ASM = disassemble.c \
                ft_init_bytecode_parser.c \
                ft_init_n_add_label.c \
                ft_init_n_add_mention.c \
-               ft_init_n_add_token.c \
                ft_init_statement.c \
                ft_int32_to_bytecode.c \
                ft_is_arg_types_valide.c \
