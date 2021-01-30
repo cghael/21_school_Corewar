@@ -1,10 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_process_arg.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:44:45 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:44:47 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm_op.h"
 #include "asm.h"
 
-
-void			ft_process_arg(t_dis *parser,
-							   t_elem *statement,
-							   unsigned i)
+void			ft_process_arg(t_dis *parser, t_elem *statement, unsigned i)
 {
 	size_t size;
 

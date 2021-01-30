@@ -1,6 +1,14 @@
-//
-// Created by Cora Ghael on 12/4/20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_write_exec_code_in_line.c                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:54:05 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:54:06 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "asm.h"
 
@@ -61,7 +69,7 @@ int			ft_write_exec_code_in_line(t_asm *asm_s)
 {
 	t_operations	*tmp;
 
-	asm_s->exec_size = 0; //todo check
+	asm_s->exec_size = 0;
 	tmp = asm_s->op_list;
 	while (tmp)
 	{

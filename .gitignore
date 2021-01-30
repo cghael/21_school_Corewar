@@ -5,7 +5,7 @@ cmake-build-debug/
 
 asm.dSYM/
 
-test.s
+test1.s
 
 test_
 /sources/cw/help_files/batman.s

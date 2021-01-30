@@ -1,6 +1,15 @@
-//
-// Created by Cora Ghael on 11/25/20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_one_arg.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:23:49 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:23:51 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 static int			ft_create_arg_content(t_asm *asm_s, int arg_pars, int size)
@@ -22,7 +31,7 @@ static int			ft_parse_reg(t_asm *asm_s, int arg_pars)
 	if (EXIT_FAILURE == ft_check_arg_type(asm_s, T_REG, arg_pars))
 		return (EXIT_FAILURE);
 	if (asm_s->parse->line[asm_s->pos] < 48 \
-	|| asm_s->parse->line[asm_s->pos] > 59) //todo r03
+	|| asm_s->parse->line[asm_s->pos] > 59)
 	{
 		asm_s->parse->err_num = INCORRECT_REG;
 		return (EXIT_FAILURE);
@@ -33,7 +42,7 @@ static int			ft_parse_reg(t_asm *asm_s, int arg_pars)
 		asm_s->parse->err_num = INCORRECT_REG;
 		return (EXIT_FAILURE);
 	}
-	if (EXIT_FAILURE == ft_create_arg_content(asm_s, arg_pars, 1)) //todo
+	if (EXIT_FAILURE == ft_create_arg_content(asm_s, arg_pars, 1))
 		return (EXIT_FAILURE);
 	if (asm_s->op_list->last->args[arg_pars].content == NULL)
 		return (EXIT_FAILURE);
@@ -48,7 +57,7 @@ static int			ft_parse_direct(t_asm *asm_s, int arg_pars)
 
 	if (EXIT_FAILURE == ft_check_arg_type(asm_s, T_DIR, arg_pars))
 		return (EXIT_FAILURE);
-	if (asm_s->parse->line[asm_s->pos] == LABEL_CHAR) //todo
+	if (asm_s->parse->line[asm_s->pos] == LABEL_CHAR)
 		return (ft_get_label_mention(asm_s, arg_pars, DIR_CODE));
 	sign = asm_s->parse->line[asm_s->pos] == '-' ? -1 : 0;
 	asm_s->pos += (sign) ? 1 : 0;
@@ -74,7 +83,7 @@ static int			ft_parse_indirect(t_asm *asm_s, int arg_pars)
 
 	if (EXIT_FAILURE == ft_check_arg_type(asm_s, T_IND, arg_pars))
 		return (EXIT_FAILURE);
-	if (asm_s->parse->line[asm_s->pos] == LABEL_CHAR) //todo
+	if (asm_s->parse->line[asm_s->pos] == LABEL_CHAR)
 		return (ft_get_label_mention(asm_s, arg_pars, IND_CODE));
 	sign = asm_s->parse->line[asm_s->pos] == '-' ? -1 : 0;
 	asm_s->pos += (sign) ? 1 : 0;

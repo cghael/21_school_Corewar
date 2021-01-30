@@ -1,33 +1,16 @@
-//
-// Created by Cora Ghael on 11/17/20.
-//
-#include "asm.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_label_saving_n_pos_update.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:33:20 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:33:22 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//static int	ft_init_n_add_label(t_asm *asm_s, const char *name, int n_line)
-//{
-//	t_label	*tmp;
-//	t_label	*begin;
-//
-//	tmp = (t_label*)ft_memalloc(sizeof(t_label));
-//	if (tmp == NULL)
-//		return (EXIT_FAILURE);
-//	tmp->next = NULL;
-//	tmp->mention = NULL;
-//	tmp->name = name;
-//	tmp->n_line = n_line;
-//	tmp->byte_pos = asm_s->exec_size;
-//	begin = asm_s->labels;
-//	if (begin == NULL)
-//		asm_s->labels = tmp;
-//	else
-//	{
-//		while (begin->next != NULL)
-//			begin = begin->next;
-//		begin->next = tmp;
-//	}
-//	asm_s->labels->last = tmp;
-//	return (EXIT_SUCCESS);
-//}
+#include "asm.h"
 
 static int	ft_warning_if_label_exist(t_asm *asm_s, char *content)
 {

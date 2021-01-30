@@ -1,6 +1,14 @@
-//
-// Created by  Anton Gorobets on 21.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_quotes.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:05:26 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:05:29 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "asm.h"
 
@@ -17,10 +25,10 @@ int			ft_check_quotes(t_asm *asm_s)
 		}
 		else
 		{
-			//todo error position
-			return (EXIT_FAILURE); //если нашел не whitespace и не ковычку
+			asm_s->parse->err_num = SYNTAX_ERROR;
+			return (EXIT_FAILURE);
 		}
 	}
-	//todo error position
-	return (EXIT_FAILURE); //если до конца строки одни whitespaces
+	asm_s->parse->err_num = SYNTAX_ERROR;
+	return (EXIT_FAILURE);
 }

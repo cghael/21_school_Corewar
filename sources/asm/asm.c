@@ -14,15 +14,8 @@
 
 int		main(int argc, char **argv)
 {
-
-	ft_printf("start asm! argc: %d\n", argc - 1);//todo del
 	if (argc < 2)
 		return (ft_print_help());
-	// get all files from argv
-	// parse && valide all files
-	// if .s -> assemble all valide files to .cor
-	// if .cor -> disassemble
-
 	ft_check_read_argv_files(argc, argv);
 	return (0);
 }

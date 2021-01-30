@@ -1,6 +1,14 @@
-//
-// Created by leathertube on 14.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_file.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:41:43 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:41:45 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "asm.h"
 
@@ -10,10 +18,8 @@ static int	ft_parsing_processing(t_asm *asm_s)
 	while (asm_s->parse->res > 0)
 	{
 		asm_s->parse->is_whitespace = FALSE;
-		ft_printf("Read line [%s] gnl return: %d\n", asm_s->parse->line, asm_s->parse->res);//todo del
 		if (EXIT_FAILURE == ft_line_data_processing(asm_s))
 		{
-			ft_printf("Error in ft_parsing_processing()\n");//todo del
 			ft_asm_error_in_line(asm_s);
 			return (PARSING_ERR);
 		}
@@ -35,8 +41,6 @@ int			ft_parse_file(t_asm *asm_s)
 		return (PARSING_ERR);
 	if (PARSING_ERR == ft_parsing_processing(asm_s))
 		return (PARSING_ERR);
-
-	//check end newline
 	if (asm_s->parse->res == 0 \
 	&& asm_s->parse->endline == TRUE \
 	&& asm_s->parse->is_whitespace == FALSE)

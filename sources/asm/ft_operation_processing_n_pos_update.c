@@ -1,6 +1,15 @@
-//
-// Created by Cora Ghael on 11/17/20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_operation_processing_n_pos_update.c             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:40:34 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:40:35 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 static t_args	*ft_add_args_array(t_typo num)
@@ -95,6 +104,5 @@ int				ft_operation_processing_n_pos_update(t_asm *asm_s)
 		else if (EXIT_FAILURE == ft_is_valid_op_name(asm_s))
 			return (EXIT_FAILURE);
 	}
-//	ft_write_arg_type_code(asm_s);
 	return (EXIT_SUCCESS);
 }

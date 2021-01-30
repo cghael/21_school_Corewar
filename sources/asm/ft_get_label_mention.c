@@ -1,6 +1,15 @@
-//
-// Created by  Anton Gorobets on 21.12.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_label_mention.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:23:26 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:23:28 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 static char		*ft_get_mention_name(t_asm *asm_s)
@@ -11,7 +20,6 @@ static char		*ft_get_mention_name(t_asm *asm_s)
 
 	len = 0;
 	pos = asm_s->pos + 1;
-//	asm_s->pos++;
 	while (EXIT_SUCCESS == ft_is_label_char(asm_s->parse->line[pos]))
 	{
 		len++;

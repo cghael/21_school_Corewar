@@ -1,6 +1,15 @@
-//
-// Created by leathertube on 13.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_write_bytecode_to_file.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:52:47 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:52:49 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 void		ft_write_bytecode_to_file(int fd, t_asm *asm_s)
@@ -25,7 +34,7 @@ void		ft_write_bytecode_to_file(int fd, t_asm *asm_s)
 	pos += EXEC_SIZE;
 	ft_memcpy(&bytecode[pos], asm_s->comment, ft_strlen(asm_s->comment));
 	pos += COMMENT_LENGTH + END_SIZE;
-	ft_memcpy(&bytecode[pos], asm_s->code, (size_t)asm_s->exec_size); //todo SEGA!!!!
+	ft_memcpy(&bytecode[pos], asm_s->code, (size_t)asm_s->exec_size);
 	write(fd, bytecode, (size_t)len);
 	free(bytecode);
 }
