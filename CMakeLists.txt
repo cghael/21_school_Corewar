@@ -27,7 +27,7 @@ set (SOURCES
 		sources/cw/pl_check_flags.c
 		sources/cw/pl_order_of_number.c
 		sources/cw/pl_add_data_champion.c
-		sources/cw/pl_check_magic_header.c)
+		sources/cw/pl_check_magic_header.c sources/cw/vm_parce_args.c sources/cw/cr_set_args.c sources/cw/get_data.c)
 
 set (SOURCES_CW
 		sources/cw/corewar.c)
@@ -72,7 +72,7 @@ set(SOURCES_ASM
 		sources/asm/ft_init_bytecode_parser.c
 		sources/asm/ft_init_n_add_label.c
 		sources/asm/ft_init_n_add_mention.c
-		sources/asm/ft_init_statement.c
+		sources/asm/ft_init_element.c
 		sources/asm/ft_int32_to_bytecode.c
 		sources/asm/ft_is_arg_types_valide.c
 		sources/asm/ft_is_label_char.c

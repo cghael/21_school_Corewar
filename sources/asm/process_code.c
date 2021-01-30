@@ -12,8 +12,8 @@
 
 #include "asm.h"
 
-void				ft_process_exec_code(t_dis *parser)
+void				ft_process_exec_code(t_dis *dis_s)
 {
-	while (parser->pos < parser->code_size)
-		ft_add_statement(&(parser->elems), ft_process_statement(parser));
+	while (dis_s->pos < dis_s->code_size)
+		ft_add_statement(&(dis_s->elems), ft_args_treat(dis_s));
 }

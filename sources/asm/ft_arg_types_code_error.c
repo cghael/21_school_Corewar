@@ -12,12 +12,11 @@
 
 #include "asm.h"
 
-void	ft_arg_types_code_error(t_dis *parser)
+void			ft_arg_types_code_error(t_dis *dis_s)
 {
-	int32_t	prefix;
+	int32_t		prefix;
 
 	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
-	ft_dprintf(2, "Incorrect code of arguments types at %u byte\n",
-			   prefix + parser->pos);
+	ft_dprintf(2, ERR_DIS_CODE_TYPE, prefix + dis_s->pos);
 	exit(0);
 }

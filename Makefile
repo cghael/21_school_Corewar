@@ -39,8 +39,11 @@ SRC_CW_MAIN = corewar.c
 SRC_LIST_CW = init.c \
 				print.c \
 				pl_init.c \
+				get_data.c \
 				operation.c \
 				terminate.c \
+				cr_set_args.c \
+				vm_parce_args.c \
 				pl_check_flags.c \
 				pl_order_of_number.c \
 				pl_order_of_players.c \

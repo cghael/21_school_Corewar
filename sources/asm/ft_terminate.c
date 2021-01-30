@@ -12,11 +12,15 @@
 
 #include "asm.h"
 
-void	ft_terminate(char *s)
+/*
+** func print error text and exit with perror if it is.
+*/
+
+void	ft_terminate(char *text)
 {
 	if (errno == 0)
-		ft_putendl_fd(s, 2);
+		ft_dis_error(text, NULL);
 	else
-		perror(s);
+		perror(text);
 	exit(1);
 }

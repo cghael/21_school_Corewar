@@ -17,6 +17,6 @@ void	ft_name_warning(size_t pos)
 	size_t prefix;
 
 	prefix = 4;
-	ft_dprintf(2, "Warning: Name was completed with not null bytes — [%zu]\n",
-			   prefix + pos + 1);
+	ft_dprintf(2, WARN_DIS);
+	ft_dprintf(2, WARN_DIS_NAME, prefix + pos + 1);
 }

@@ -15,14 +15,14 @@
 void			ft_parse_bytecode(t_dis *parser)
 {
 	if (ft_parse_int32(parser->fd_cor) != COREWAR_EXEC_MAGIC)
-		ft_terminate(ERR_INVALID_MAGIC);
+		ft_terminate(ERR_DIS_MAGIC);
 	parser->name = ft_parse_str(parser->fd_cor, PROG_NAME_LENGTH);
 	if (ft_parse_int32(parser->fd_cor) != 0)
-		ft_terminate(ERR_NO_NULL);
+		ft_terminate(ERR_DIS_NO_NULL);
 	if ((parser->code_size = ft_parse_int32(parser->fd_cor)) < 0)
-		ft_terminate(ERR_INVD_CODE_SIZE);
+		ft_terminate(ERR_DIS_CODE_SIZE);
 	parser->comment = ft_parse_str(parser->fd_cor, COMMENT_LENGTH);
 	if (ft_parse_int32(parser->fd_cor) != 0)
-		ft_terminate(ERR_NO_NULL);
+		ft_terminate(ERR_DIS_NO_NULL);
 	parser->code = ft_parse_code(parser->fd_cor, (size_t) parser->code_size);
 }

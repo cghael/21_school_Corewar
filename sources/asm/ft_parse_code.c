@@ -15,15 +15,15 @@
 uint8_t	*ft_parse_code(int fd, size_t len)
 {
 	ssize_t	size;
-	uint8_t	*buffer;
+	uint8_t	*buf;
 	uint8_t	byte;
 
-	if (!(buffer = ft_memalloc(len)))
-		ft_terminate(ERR_CODE_INIT);
-	size = read(fd, buffer, len);
+	if (!(buf = ft_memalloc(len)))
+		ft_terminate(ERR_DIS_CODE_INIT);
+	size = read(fd, buf, len);
 	if (size == -1)
-		ft_terminate(ERR_READ_FILE);
+		ft_terminate(ERR_DIS_READ_FILE);
 	if (size < (ssize_t)len || read(fd, &byte, 1) != 0)
-		ft_terminate(ERR_INVALID_FILE);
-	return (buffer);
+		ft_terminate(ERR_DIS_INVLD_FILE);
+	return (buf);
 }
