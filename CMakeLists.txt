@@ -48,8 +48,7 @@ set(SOURCES_ASM
 		sources/asm/ft_comment_warning.c
 		sources/asm/ft_count_exec_code_size.c
 		sources/asm/ft_count_num_len.c
-		sources/asm/ft_create_arg_content.c
-		sources/asm/ft_dis_add_s.c
+        sources/asm/ft_dis_add_s.c
 		sources/asm/ft_dis_ask_new_filename.c
 		sources/asm/ft_dis_check_file_exist.c
 		sources/asm/ft_dis_choose_new_filename.c
@@ -73,7 +72,6 @@ set(SOURCES_ASM
 		sources/asm/ft_init_bytecode_parser.c
 		sources/asm/ft_init_n_add_label.c
 		sources/asm/ft_init_n_add_mention.c
-		sources/asm/ft_init_n_add_token.c
 		sources/asm/ft_init_statement.c
 		sources/asm/ft_int32_to_bytecode.c
 		sources/asm/ft_is_arg_types_valide.c

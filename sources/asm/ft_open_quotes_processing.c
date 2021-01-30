@@ -1,6 +1,15 @@
-//
-// Created by  Anton Gorobets on 23.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_open_quotes_processing.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:38:22 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:38:23 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 static void	ft_update_quotes_status(t_asm *asm_s)
@@ -29,10 +38,7 @@ static int	ft_copy_len(t_asm *asm_s, int start, int len, int is_quotes)
 	else if (asm_s->quotes == CMT_START)
 		asm_s->comment = ft_strjoin_n_free(asm_s->comment, str);
 	else
-	{
-		//todo error
 		return (EXIT_FAILURE);
-	}
 	if (is_quotes == TRUE)
 		ft_update_quotes_status(asm_s);
 	return (EXIT_SUCCESS);
@@ -48,14 +54,14 @@ int			ft_open_quotes_processing(t_asm *asm_s)
 	start = asm_s->pos;
 	while (asm_s->parse->line[asm_s->pos])
 	{
-		if (asm_s->parse->line[asm_s->pos] == '"') //нашли закрывающую ковычку
+		if (asm_s->parse->line[asm_s->pos] == '"')
 		{
 			if (EXIT_FAILURE == (res = ft_copy_len(asm_s, start, len, TRUE)))
 				return (res);
 			asm_s->pos++;
 			if (EXIT_FAILURE == ft_line_of_whitespaces_or_comment(asm_s))
 			{
-				//todo add error
+				asm_s->parse->err_num = SYNTAX_ERROR;
 				return (EXIT_FAILURE);
 			}
 			return (res);

@@ -1,6 +1,15 @@
-//
-// Created by  Anton Gorobets on 02.11.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_operation.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:04:26 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:04:55 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 int				ft_check_operation(t_asm *asm_s)
@@ -17,10 +26,8 @@ int				ft_check_operation(t_asm *asm_s)
 			return (EXIT_SUCCESS);
 		else if (EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 		{
-			//is ':' in line and is it label or mention
 			if (EXIT_FAILURE == ft_label_processing_n_pos_update(asm_s, asm_s->pos))
 				return (EXIT_FAILURE);
-			//is it operation and is it single
 			if (EXIT_FAILURE == ft_operation_processing_n_pos_update(asm_s))
 				return (EXIT_FAILURE);
 		}

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_write_asm_file.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:52:14 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:52:15 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
-void	ft_write_asm_file(int fd, t_dis *parser)
+void	ft_write_asm_file(int fd, t_dis *parser) //todo is need?
 {
 	t_elem	*current;
 	unsigned int	i;

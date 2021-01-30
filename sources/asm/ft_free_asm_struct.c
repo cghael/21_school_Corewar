@@ -1,6 +1,14 @@
-//
-// Created by leathertube on 12.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free_asm_struct.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:21:10 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:21:12 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "asm.h"
 
@@ -54,8 +62,7 @@ static void		ft_free_ops(t_asm *asm_struct)
 
 void	ft_free_asm_struct(t_asm *asm_struct)
 {
-	ft_dprintf(2, "free asm_struct\n");
-	if (asm_struct) // todo free all data
+	if (asm_struct)
 	{
 		if (asm_struct->parse)
 		{

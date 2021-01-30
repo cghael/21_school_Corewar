@@ -1,6 +1,15 @@
-//
-// Created by  Anton Gorobets on 20.10.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_line_data_processing.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/30 12:34:00 by cghael            #+#    #+#             */
+/*   Updated: 2021/01/30 12:34:02 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "asm.h"
 
 static int		ft_check_name_comment_size(t_asm *asm_s)
@@ -8,7 +17,7 @@ static int		ft_check_name_comment_size(t_asm *asm_s)
 	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH + 1 \
 	|| ft_strlen(asm_s->comment) > COMMENT_LENGTH + 1)
 	{
-		//todo error add
+		asm_s->parse->err_num = TOO_LONG;
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
