@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 14:12:05 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,16 +90,14 @@ t_list						*pl_init_players(int ac, char **av);
 uint32_t					len_args(t_carriage *car, t_vm *vm);
 t_list						*pl_sort_stack_champ(t_list *champions);
 t_carriage					*cr_init(t_player *player, uint32_t nb);
+uint32_t					check_args(t_carriage *car, t_vm *vm);
+uint8_t						cr_set_args(t_carriage *car, t_vm *vm);
+t_data						get_data(uint8_t n, t_carriage *car, t_vm *vm);
 t_list						*pl_sort_rev_stack_champ(t_list *champions);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
 int32_t						pl_bytecode_to_int32(const uint8_t *buff, int len);
 t_data						get_t_data(uint8_t *array, int32_t pos, \
 							uint32_t max);
-
-//t_list					*vm_init_players(int ac, char **av); todo dell
-
-//void 						print_players(t_list *champ); todo non function
-//void						vm_print_operation(t_carriage *car, t_vm *vm);
 
 int							ft_compare_end(const char *str, const char *dest, \
 							int pos);
