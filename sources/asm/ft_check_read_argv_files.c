@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void ft_check_read_argv_files(int argc, char **argv)
+void		ft_check_read_argv_files(int argc, char **argv)
 {
 	int		i;
 	int		filename_res;
