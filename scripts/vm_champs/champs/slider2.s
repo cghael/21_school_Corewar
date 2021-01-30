@@ -1,5 +1,5 @@
 .name		"Slider"
-.comment	"And the winner is ..." hh
+.comment	"And the winner is ..."
 
 		sti     r01,%:leon_live,%1
 		sti	r1,%:fork1,%1
@@ -44,7 +44,6 @@
 		sub	r12,r8,r12
 fork1:		live	%42
 		fork	%:fork_live
-fork1:
 fork2:		live	%42
 		fork	%:leon
 fork3:		live	%42
