@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:38:48 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/28 17:06:59 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 12:12:41 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void		ft_lstpdelone(t_list **alst, t_list *del)
 	if (*alst == del)
 	{
 		*alst = (*alst)->next;
+		free(del->content);
 		free(del);
 		return ;
 	}
@@ -42,6 +43,7 @@ void		ft_lstpdelone(t_list **alst, t_list *del)
 		while (tmp->next && tmp->next != del)
 			tmp = tmp->next;
 		tmp->next = del->next;
+		free(del->content);
 		free(del);
 		return ;
 	}

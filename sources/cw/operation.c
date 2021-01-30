@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/29 13:58:20 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 12:52:08 by esnowpea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ t_data		get_reg(uint8_t n, t_carriage *car, t_vm *vm)
 {
 	uint8_t		reg_nb;
 
-	reg_nb = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE), 1);
+	reg_nb = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos,
+								  MEM_SIZE), 1);
 	car->args[n].reg_nb = reg_nb;
 	if (reg_nb < 1 || reg_nb > REG_NUMBER)
 		return (get_t_data(0, 0, 0));
@@ -307,9 +308,9 @@ t_player	*vm_operation(t_vm *vm)
 			|| (vm->flag.dump && vm->flag.dump == vm->number_cycle))
 			{
 				if (vm->flag.d)
-					vm_print_arena(vm); //todo ввод в функцию ширины поля(32/64)
+					vm_print_arena(vm, 64);
 				else if (vm->flag.dump)
-					vm_print_arena(vm); //todo ввод в функцию ширины поля(32/64)
+					vm_print_arena(vm, 32);
 				exit(0);
 			}
 			current++;
@@ -317,6 +318,5 @@ t_player	*vm_operation(t_vm *vm)
 		}
 		vm->number_checks++;
 	}
-//	vm_print_arena(vm);
 	return (vm->last_live_player);
 }

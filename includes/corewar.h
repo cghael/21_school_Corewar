@@ -111,7 +111,7 @@ int							pl_next_arg(char **av, int i, int ac,
 					  		t_list *champions);
 
 void                    	terminate(char *s);
-void						vm_print_arena(t_vm *vm);
+void						vm_print_arena(t_vm *vm, uint32_t length);
 void						pl_check_magic_header(int fd);
 void						pl_print_players(t_list *players);
 void						print_result(t_player *win_player);
