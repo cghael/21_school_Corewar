@@ -52,7 +52,6 @@
 # define ERR_ASM_STRUCT		"ERROR: in ft_init_asm_struct"
 # define ERR_MEMALLOC		"ERROR: in ft_memalloc()"
 # define ERR_DIS_FILE		"ERROR: in ft_dis_filename_treat()\n"
-# define ERR_CLOSE_FILE		"ERROR: closing file in ft_assemble()\n"
 # define ERR_DIS_CHOOSE		"ERROR: in ft_dis_choose_new_filename()\n"
 # define ERR_DIS_INIT		"ERROR: in ft_dis_init_struct()\n"
 # define ERR_DIS_OPEN_SOL	"ERROR: in ft_open_solution_file()\n"
@@ -82,7 +81,7 @@
 # define EXEC_SIZE			END_SIZE
 # define PARSING_ERR		-1
 # define PARSING_OK			0
-# define OP_CHAR			"abcdefghijklmnopqrstuvwxyz"
+# define OP_CHARS			"abcdefghijklmnopqrstuvwxyz"
 
 # define FILE_EXIST			0
 # define FILE_NOT_EXIST		1
@@ -283,5 +282,6 @@ int							ft_init_n_add_mention(t_asm *asm_s, int arg_pars, \
 															t_label *label);
 int							ft_transform_mentions(t_asm *asm_s);
 void						ft_asm_error_no_label(t_asm *asm_s);
+int							ft_is_op_char(char ch);
 
 #endif

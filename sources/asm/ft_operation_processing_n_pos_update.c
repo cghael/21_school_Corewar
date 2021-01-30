@@ -57,12 +57,29 @@ static int		ft_init_n_add_operation_token(t_asm *asm_s, t_typo num)
 
 static int		ft_get_op_len(char *str)
 {
-	int len;
+	int		len;
+	int		i;
+	char	name[6];
 
 	len = 0;
+	ft_bzero(name, 6);
 	while (str[len] && EXIT_FAILURE == ft_is_whitespace(str[len]) \
-	&& str[len] != DIRECT_CHAR)
+	&& EXIT_SUCCESS == ft_is_op_char(str[len]))
+	{
+		if (str[len] == 'r')
+		{
+			i = 0;
+			ft_strncpy(name, str, len);
+			while (i < COMMANDS_NUM)
+			{
+				if (ft_strequ(g_ops[i].name, name) == 1)
+					return (len);
+				i++;
+			}
+			ft_bzero(name, 6);
+		}
 		len++;
+	}
 	return (len);
 }
 
@@ -80,11 +97,7 @@ static int		ft_is_valid_op_name(t_asm *asm_s)
 		{
 			if (EXIT_FAILURE == ft_init_n_add_operation_token(asm_s, i))
 				return (EXIT_FAILURE);
-			//asm_s->pos += ft_strlen(g_ops[i].name);
 			asm_s->pos += len;
-			if (asm_s->parse->line[asm_s->pos] != DIRECT_CHAR \
-			&& EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
-				return (EXIT_FAILURE);
 			return (ft_check_n_write_op_args(asm_s));
 		}
 		i++;

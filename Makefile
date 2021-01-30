@@ -89,11 +89,12 @@ SRC_LIST_ASM = ft_add_statement.c \
                ft_init_bytecode_parser.c \
                ft_init_n_add_label.c \
                ft_init_n_add_mention.c \
-               ft_init_statement.c \
+               ft_init_element.c \
                ft_int32_to_bytecode.c \
                ft_is_arg_types_valide.c \
                ft_is_filename.c \
                ft_is_label_char.c \
+               ft_is_op_char.c \
                ft_is_whitespace.c \
                ft_label_processing_n_pos_update.c \
                ft_label_saving_n_pos_update.c \

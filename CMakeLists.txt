@@ -117,7 +117,7 @@ set(SOURCES_ASM
 		sources/asm/process_code.c
 		sources/asm/utils.c
 		sources/asm/ft_is_filename.c
-		)
+        sources/asm/ft_is_op_char.c)
 
 include_directories(includes)
 include_directories(libft/inc)
