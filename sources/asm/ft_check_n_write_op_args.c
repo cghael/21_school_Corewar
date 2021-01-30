@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:03:30 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:03:34 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:56:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int			ft_check_n_write_op_args(t_asm *asm_s)
 		}
 		else
 		{
-			asm_s->parse->err_num = LEXICAL_ERROR;
+			asm_s->parse->err_num = LEXICAL_ERROR; //todo MAYBE NOT???
 			return (EXIT_FAILURE);
 		}
 	}

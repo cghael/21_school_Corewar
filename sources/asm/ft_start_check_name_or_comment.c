@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:49:47 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:49:49 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,6 @@ int			ft_start_check_name_or_comment(t_asm *asm_s)
 		res = ft_check_quotes(asm_s);
 		return (res);
 	}
+	//todo error position
 	return (EXIT_FAILURE);
 }

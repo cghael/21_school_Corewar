@@ -6,15 +6,15 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:45:51 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:45:53 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-t_elem			*ft_process_statement(t_dis *parser)
+t_elem	*ft_process_statement(t_dis *parser)
 {
-	t_elem		*statement;
+	t_elem	*statement;
 	uint8_t		op_code;
 
 	statement = ft_init_statement();

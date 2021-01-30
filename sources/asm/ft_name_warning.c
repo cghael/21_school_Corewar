@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:37:44 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:37:45 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_name_warning(size_t pos)
 
 	prefix = 4;
 	ft_dprintf(2, "Warning: Name was completed with not null bytes — [%zu]\n",
-				prefix + pos + 1);
+			   prefix + pos + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:21:10 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:21:12 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void		ft_free_ops(t_asm *asm_struct)
 	}
 }
 
-void			ft_free_asm_struct(t_asm *asm_struct)
+void	ft_free_asm_struct(t_asm *asm_struct)
 {
 	if (asm_struct)
 	{

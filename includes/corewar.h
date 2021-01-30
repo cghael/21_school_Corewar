@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/29 14:42:07 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,29 +89,28 @@ t_vm						*vm_init(int ac, char **av);
 t_list						*pl_init_players(int ac, char **av);
 uint32_t					len_args(t_carriage *car, t_vm *vm);
 t_list						*pl_sort_stack_champ(t_list *champions);
-t_carriage  				*cr_init(t_player *player, uint32_t nb);
+t_carriage					*cr_init(t_player *player, uint32_t nb);
+t_list						*pl_sort_rev_stack_champ(t_list *champions);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
 int32_t						pl_bytecode_to_int32(const uint8_t *buff, int len);
-t_data						get_t_data(uint8_t *array, int32_t pos,
-					   		uint32_t max);
+t_data						get_t_data(uint8_t *array, int32_t pos, \
+							uint32_t max);
 
-//t_list						*vm_init_players(int ac, char **av); todo dell
-t_list						*pl_sort_rev_stack_champ(t_list *champions);
+//t_list					*vm_init_players(int ac, char **av); todo dell
 
 //void 						print_players(t_list *champ); todo non function
 //void						vm_print_operation(t_carriage *car, t_vm *vm);
 
-int							ft_compare_end(const char *str, const char *dest,
-						 	int pos);
-int							fl_check_num_after_flag_n(char **av, int i, int ac,
-							int *num_pl);
-int							pl_search_duplicate_num(t_list *champions,
+int							ft_compare_end(const char *str, const char *dest, \
+							int pos);
+int							fl_check_num_after_flag_n(char **av, int i, \
+							int ac, int *num_pl);
+int							pl_search_duplicate_num(t_list *champions, \
 							uint32_t quantity);
-int							pl_next_arg(char **av, int i, int ac,
-					  		t_list *champions);
+int							pl_next_arg(char **av, int i, int ac, \
+							t_list *champions);
 
-void                    	terminate(char *s);
-void						vm_print_arena(t_vm *vm, uint32_t length);
+void						terminate(char *s);
 void						pl_check_magic_header(int fd);
 void						pl_print_players(t_list *players);
 void						print_result(t_player *win_player);
@@ -119,13 +118,14 @@ void						in_close_fd_err(int fd, char *err);
 void						pl_check_null_champ(int fd, int i);
 void						pl_cp_exec_size(int fd, t_list *player);
 void						pl_check_num_champion(t_list *champions);
+void						vm_print_arena(t_vm *vm, uint32_t length);
 void						pl_check_duplicate_num(t_list *champions);
-void						fl_check_flags(int ac, char** av, t_vm *vm);
+void						fl_check_flags(int ac, char **av, t_vm *vm);
 void						pl_cp_name_champion(int fd, t_list *player);
 void						pl_cp_code_champion(int fd, t_list *player);
 void						pl_number_order(t_list *champions, int quant);
 void						pl_cp_comment_champion(int fd, t_list *player);
-void 						set_array(t_data dest, const t_data source,
+void						set_array(t_data dest, const t_data source,\
 							uint32_t n);
 /*
 **  commands
@@ -149,10 +149,11 @@ void						lfork(t_carriage *car, t_vm *vm);
 **  newlibft functions
 */
 
-u_int32_t	ft_lstlength(t_list *lst);
-t_list		*ft_lstpnew(void *content);
-void		ft_lstpdelone(t_list **alst, t_list *del);
-int32_t		ft_bytetoint(const t_data arg, uint8_t len);
-void		ft_inttobyte(const int32_t num, t_data arg, uint8_t len);
+u_int32_t					ft_lstlength(t_list *lst);
+t_list						*ft_lstpnew(void *content);
+void						ft_lstpdelone(t_list **alst, t_list *del);
+int32_t						ft_bytetoint(const t_data arg, uint8_t len);
+void						ft_inttobyte(const int32_t num, t_data arg, \
+							uint8_t len);
 
 #endif

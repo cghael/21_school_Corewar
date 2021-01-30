@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:41:05 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:41:07 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void			ft_parse_bytecode(t_dis *parser)
 	parser->comment = ft_parse_str(parser->fd_cor, COMMENT_LENGTH);
 	if (ft_parse_int32(parser->fd_cor) != 0)
 		ft_terminate(ERR_NO_NULL);
-	parser->code = ft_parse_code(parser->fd_cor, (size_t)parser->code_size);
+	parser->code = ft_parse_code(parser->fd_cor, (size_t) parser->code_size);
 }
