@@ -14,8 +14,8 @@
 
 static int		ft_check_name_comment_size(t_asm *asm_s)
 {
-	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH + 1 \
-	|| ft_strlen(asm_s->comment) > COMMENT_LENGTH + 1)
+	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH \
+	|| ft_strlen(asm_s->comment) > COMMENT_LENGTH)
 	{
 		asm_s->parse->err_num = TOO_LONG;
 		return (EXIT_FAILURE);

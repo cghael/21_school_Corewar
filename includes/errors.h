@@ -54,9 +54,10 @@ typedef						enum
 							NO_NEWLINE,
 							SYNTAX_ERROR,
 							TOO_LONG,
+							NO_OP
 }							t_errors;
 
-static char				*g_error[] = {
+static char					*g_error[] = {
 							"something goes wrong :'(",
 							"label with this name is already exist",
 							"more then one label in line",
@@ -71,7 +72,8 @@ static char				*g_error[] = {
 							"no such label",
 							"no new line at the end of the file",
 							"syntax error",
-							"too long"
+							"too long",
+							"syntax error, no operations"
 };
 
 #endif

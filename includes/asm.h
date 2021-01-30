@@ -66,6 +66,7 @@
 # define EXEC_SIZE			END_SIZE
 # define PARSING_ERR		-1
 # define PARSING_OK			0
+# define OP_CHAR			"abcdefghijklmnopqrstuvwxyz"
 
 # define FILE_EXIST			0
 # define FILE_NOT_EXIST		1

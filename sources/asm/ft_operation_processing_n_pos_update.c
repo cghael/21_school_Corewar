@@ -80,7 +80,8 @@ static int		ft_is_valid_op_name(t_asm *asm_s)
 		{
 			if (EXIT_FAILURE == ft_init_n_add_operation_token(asm_s, i))
 				return (EXIT_FAILURE);
-			asm_s->pos += ft_strlen(g_ops[i].name);
+			//asm_s->pos += ft_strlen(g_ops[i].name);
+			asm_s->pos += len;
 			if (asm_s->parse->line[asm_s->pos] != DIRECT_CHAR \
 			&& EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 				return (EXIT_FAILURE);

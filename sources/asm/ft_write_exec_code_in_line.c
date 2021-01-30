@@ -71,6 +71,12 @@ int			ft_write_exec_code_in_line(t_asm *asm_s)
 
 	asm_s->exec_size = 0;
 	tmp = asm_s->op_list;
+	if (tmp == NULL)
+	{
+		asm_s->parse->err_num = NO_OP;
+		ft_asm_error_in_line(asm_s);
+		return (EXIT_FAILURE);
+	}
 	while (tmp)
 	{
 		if (EXIT_FAILURE == ft_add_op_exec_code(asm_s, tmp))
