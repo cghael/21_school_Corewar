@@ -6,14 +6,23 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 16:12:24 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 18:46:46 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERRORS_H
 # define ERRORS_H
 
-# define USAGE				"Usage: ./corewar [\"-d N\" or \"-dump N\"| \"-v\"| \"-n N\"| \"-a\"] <champion_name.cor> [-n N] <...> <...>\n[-dump N]\t: Dumps memory after N cycles, then exits 32 octets\n[-d N] \t\t: Dumps memory after N cycles, then exits 64 octets\n[-v]\t\t: Visualization of the game\n[-n N]\t\t: Sets the player to position N (N is the number of players participating in this game)\n[-a]\t\t: Prints output from \"aff\" (Default is to hide it)"
+# define USAGE0				"Usage: ./corewar [\"-d N\" or \"-dump N\"| "
+# define USAGE1				"\"-v\"| \"-n N\"| \"-a\"] <champion_name.cor> "
+# define USAGE2				"[-n N] <...> <...>\n[-dump N]\t: Dumps memory "
+# define USAGE3				"after N cycles, then exits 32 octets\n[-d N] "
+# define USAGE4				"\t\t: Dumps memory after N cycles, then exits 64"
+# define USAGE5				" octets\n[-v]\t\t: Visualization of the "
+# define USAGE6				"game\n[-n N]\t\t: Sets the player to position N "
+# define USAGE7				"(N is the number of players participating in "
+# define USAGE8				"this game)\n[-a]\t\t: Prints output from \"aff\""
+# define USAGE9				" (Default is to hide it)\n"
 # define ERR_DUMP			"Error: Use only -dump or -d with a number greater than zero (ex: ./corewar -dump 5 champion_name.cor)"
 # define ERR_FLAG			"Error: Use the flag (-dump, -d, -v, -a) after the \"corvar\" (ex1:./corewar -dump 5 -a champion_name.cor, ex2:./corewar -v -d 12 champion_name.cor)"
 # define ERR_FLAG_N			"Error: Use the -n flag with a number from 1 to N (N is the number of players participating in this game) before the champion name (for example, 1: ./ corewar -n 3 champion-name.cor -n 2 champion-name 2.cor champion-name3 .cor)"

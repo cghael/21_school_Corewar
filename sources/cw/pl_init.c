@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 12:32:43 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 18:47:13 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,8 @@ t_list		*pl_init_players(int ac, char **av)
 	champions = NULL;
 	if (ac < 2)
 	{
-		ft_printf(USAGE);
+		ft_printf(USAGE0 USAGE1 USAGE2 USAGE3 USAGE4 USAGE5 USAGE6 USAGE7
+			USAGE8 USAGE9);
 		exit(0);
 	}
 	champions = pl_list_champions(ac, av, champions);

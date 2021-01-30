@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:26:09 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/15 11:55:49 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 18:51:37 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 uint32_t	fl_add_d(t_vm *vm, char **av, int i, int ac)
 {
 	if (i >= ac)
-		terminate(ERR_DUMP);
+		terminate(ERR_DUMP USAGE0);
 	if (ft_atoi(av[i]) < 1 || vm->flag.dump || vm->flag.d)
-		terminate(ERR_DUMP);
+		terminate(ERR_DUMP USAGE1);
 	return (ft_atoi(av[i]));
 }
 

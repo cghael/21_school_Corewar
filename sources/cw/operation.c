@@ -90,6 +90,8 @@ t_player	*vm_operation(t_vm *vm)
 		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
 			vm_survey_carriages(vm);
+			current++;
+			vm->number_cycle++;
 			if ((vm->flag.d && vm->flag.d == vm->number_cycle)\
 			|| (vm->flag.dump && vm->flag.dump == vm->number_cycle))
 			{
@@ -99,8 +101,6 @@ t_player	*vm_operation(t_vm *vm)
 					vm_print_arena(vm, 32);
 				exit(0);
 			}
-			current++;
-			vm->number_cycle++;
 		}
 		vm->number_checks++;
 	}
