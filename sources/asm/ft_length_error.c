@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:33:34 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:33:36 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_length_error(t_dis *parser)
 
 	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
 	ft_dprintf(2, "There is not enough bytes at %u byte\n",
-				prefix + parser->pos);
+			   prefix + parser->pos);
 	exit(0);
 }

@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:32:35 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:32:36 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:56:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,7 @@ int					ft_label_processing_n_pos_update(t_asm *asm_s, int pos)
 		{
 			if (asm_s->labels \
 			&& asm_s->labels->last->n_line == asm_s->parse->n_line)
-				return (ft_error_label_name(asm_s, asm_s->pos, \
-														TOO_MATCH_LABELS));
+				return (ft_error_label_name(asm_s, asm_s->pos, TOO_MATCH_LABELS));
 			else if (EXIT_FAILURE == ft_label_saving_n_pos_update(asm_s, colon))
 				return (EXIT_FAILURE);
 			pos = asm_s->pos;

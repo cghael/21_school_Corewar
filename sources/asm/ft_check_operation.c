@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:04:26 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:04:55 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:56:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,9 @@ int				ft_check_operation(t_asm *asm_s)
 		if (asm_s->parse->line[asm_s->pos] == COMMENT_CHAR \
 		|| asm_s->parse->line[asm_s->pos] == ALT_COMMENT_CHAR)
 			return (EXIT_SUCCESS);
-		else if (EXIT_FAILURE == \
-							ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
+		else if (EXIT_FAILURE == ft_is_whitespace(asm_s->parse->line[asm_s->pos]))
 		{
-			if (EXIT_FAILURE == \
-							ft_label_processing_n_pos_update(asm_s, asm_s->pos))
+			if (EXIT_FAILURE == ft_label_processing_n_pos_update(asm_s, asm_s->pos))
 				return (EXIT_FAILURE);
 			if (EXIT_FAILURE == ft_operation_processing_n_pos_update(asm_s))
 				return (EXIT_FAILURE);

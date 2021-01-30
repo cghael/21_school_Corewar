@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:33:20 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:33:22 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:56:53 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,7 @@ int			ft_label_saving_n_pos_update(t_asm *asm_s, char *colon)
 			free(content);
 			return (EXIT_SUCCESS);
 		}
-		if (EXIT_FAILURE == ft_init_n_add_label(asm_s, content, \
-														asm_s->parse->n_line))
+		if (EXIT_FAILURE == ft_init_n_add_label(asm_s, content, asm_s->parse->n_line))
 			return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);

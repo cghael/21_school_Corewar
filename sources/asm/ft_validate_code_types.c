@@ -6,14 +6,15 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:51:06 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 12:51:07 by cghael           ###   ########.fr       */
+/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	ft_validate_code_types(t_dis *parser, int8_t args_types_code, \
-																int args_num)
+void	ft_validate_code_types(t_dis *parser,
+							   int8_t args_types_code,
+							   int args_num)
 {
 	int		arg_num;
 	int8_t	type;
