@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:27:41 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/31 13:48:32 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/30 12:27:43 by cghael           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ t_asm		*ft_init_asm_struct(void)
 	asm_struct = ft_memalloc(sizeof(t_asm));
 	if (asm_struct == NULL)
 	{
-		ft_dprintf(2, ERR_MEMALLOC);
-		ft_dprintf(2, " in ft_init asm_struct\n");
+		ft_dprintf(STDERR_FILENO, ERR_MEMALLOC);
+		ft_dprintf(STDERR_FILENO, " in ft_init asm_struct\n");
 	}
 	asm_struct->name = NULL;
 	asm_struct->comment = NULL;
@@ -28,8 +28,8 @@ t_asm		*ft_init_asm_struct(void)
 	asm_struct->parse = ft_memalloc(sizeof(t_parse));
 	if (asm_struct->parse == NULL)
 	{
-		ft_dprintf(2, ERR_MEMALLOC);
-		ft_dprintf(2, " in ft_init asm_struct\n");
+		ft_dprintf(STDERR_FILENO, ERR_MEMALLOC);
+		ft_dprintf(STDERR_FILENO, " in ft_init asm_struct\n");
 	}
 	asm_struct->parse->line = NULL;
 	asm_struct->op_list = NULL;

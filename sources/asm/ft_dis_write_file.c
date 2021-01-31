@@ -6,16 +6,16 @@
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/07 13:45:15 by ksemele           #+#    #+#             */
-/*   Updated: 2021/01/31 13:48:32 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/15 11:55:49 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void		ft_dis_write_file(t_dis *dis_s)
+void			ft_dis_write_file(t_dis *dis_s)
 {
-	t_elem	*current;
-	int		i;
+	t_elem		*current;
+	int			i;
 
 	ft_dprintf(dis_s->fd_s, ".name \"%s\"\n", dis_s->name);
 	ft_dprintf(dis_s->fd_s, ".comment \"%s\"\n\n", dis_s->comment);
