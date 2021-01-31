@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_process_args.c                                  :+:      :+:    :+:   */
+/*   ft_dis_validate_comment.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:45:37 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:34:31 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:34:31 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void			ft_process_args(t_dis *parser, t_elem *statement)
+void			ft_dis_validate_comment(t_dis *dis_s)
 {
-	unsigned int i;
+	size_t		i;
 
-	i = 0;
-	while (i < (unsigned int)(statement->op->n_args))
+	i = ft_strlen(dis_s->comment);
+	while (i < COMMENT_LENGTH)
 	{
-		ft_process_arg(parser, statement, i);
+		if (dis_s->comment[i])
+		{
+			ft_dis_warning_comment(i);
+			return ;
+		}
 		i++;
 	}
 }

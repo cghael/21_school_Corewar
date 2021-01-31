@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_statement.c                                 :+:      :+:    :+:   */
+/*   ft_dis_error_length.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 11:58:22 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:45:03 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:45:03 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	ft_add_statement(t_elem **list, t_elem *new)
+void			ft_dis_error_length(t_dis *dis_s)
 {
-	t_elem *current;
+	int32_t		prefix;
 
-	if (list)
-	{
-		if (*list)
-		{
-			current = *list;
-			while (current->next)
-				current = current->next;
-			current->next = new;
-		}
-		else
-			*list = new;
-	}
+	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
+	ft_dprintf(STDERR_FILENO, ERR_DIS_LENGTH, prefix + dis_s->pos);
+	exit(0);
 }

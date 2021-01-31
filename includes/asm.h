@@ -63,14 +63,16 @@
 # define ERR_DIS_NO_NULL	"ERROR: No NULL control bytes in file\n"
 # define ERR_DIS_CODE_INIT	"ERROR: initialize string of code FAIL\n"
 # define ERR_DIS_CODE_SIZE	"ERROR: Invalid code size\n"
+# define ERR_DIS_CODE_TYPE	"ERROR: Wrong code of arg types at [%u] byte\n"
+# define ERR_DIS_OPCODE		"ERROR: Wrong operator code at [%u] byte\n"
+# define ERR_DIS_LENGTH		"ERROR: Not enough bytes at [%u] byte\n"
+# define ERR_DIS_REGISTER	"ERROR: Wrong register id at [%u] byte\n"
+
 # define WARN_DIS			"WARNING: "
-# define WARN_DIS_NAME		"Name was completed with not NULL bytes: [%zu]\n"
-# define WARN_DIS_COMM		"Comment was completed with not NULL bytes: [%zu]\n"
+# define WARN_DIS_NAME		"Name ending not NULL bytes: [%zu]\n"
+# define WARN_DIS_COMM		"Comment ending not NULL bytes: [%zu]\n"
 # define WARN_DIS_CODE_TYP1	"Insignificant bits in code of args types are "
 # define WARN_DIS_CODE_TYP2	"not NULL: [%zu]\n"
-# define ERR_DIS_CODE_TYPE	"Incorrect code of arguments types at %u byte\n"
-# define ERR_DIS_OPCODE		"Incorrect operator code at %u byte\n"
-# define ERR_DIS_LENGTH		"There is not enough bytes at %u byte\n"
 
 # define NAME_START			1
 # define CMT_START			3
@@ -195,38 +197,38 @@ int							ft_dis_convert_start_filename(char *file, \
 int							ft_dis_read_write(t_dis *dis_s);
 void						ft_dis_write_file(t_dis *dis_s);
 
-t_elem						*ft_init_element(void);
-void						ft_parse_bytecode(t_dis *parser);
-void						ft_validate_name(t_dis *parser);
-void						ft_validate_comment(t_dis *parser);
-void						ft_validate_code_types(t_dis *dis_s, \
+t_elem						*ft_dis_init_element(void);
+void						ft_dis_parse_bytecode(t_dis *dis_s);
+void						ft_dis_validate_name(t_dis *dis_s);
+void						ft_dis_validate_comment(t_dis *dis_s);
+void						ft_dis_validate_code_types(t_dis *dis_s, \
 										int8_t args_types_code, int args_num);
-t_bool						ft_is_arg_types_valide(t_elem *elem);
-void						ft_name_warning(size_t pos);
-void						ft_comment_warning(size_t pos);
-void						ft_code_types_warning(size_t pos);
-void						ft_process_exec_code(t_dis *dis_s);
+t_bool						ft_dis_is_arg_types_valide(t_elem *elem);
+void						ft_dis_warning_name(size_t pos);
+void						ft_dis_warning_comment(size_t pos);
+void						ft_dis_code_types_warning(size_t pos);
+void						ft_dis_treat_exec_code(t_dis *dis_s);
 void						ft_dis_treat_arg_types(t_dis *dis_s, \
 															t_elem *elem);
-void						ft_add_statement(t_elem **list, t_elem *new);
-void						ft_op_code_error(t_dis *parser);
-void						ft_arg_types_code_error(t_dis *dis_s);
-void						ft_dis_length_error(t_dis *dis_s);
-void						ft_register_error(t_dis *parser);
-int32_t						ft_bytecode_to_int32(const uint8_t *bytecode, \
+void						ft_dis_add_elem(t_elem **list, t_elem *new);
+void						ft_dis_error_opcode(t_dis *dis_s);
+void						ft_dis_error_arg_types_code(t_dis *dis_s);
+void						ft_dis_error_length(t_dis *dis_s);
+void						ft_dis_error_register(t_dis *dis_s);
+int32_t						ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
 																size_t size);
-int32_t						ft_parse_int32(int fd);
-char						*ft_parse_str(int fd, size_t len);
-uint8_t						*ft_parse_code(int fd, size_t len);
-t_elem						*ft_args_treat(t_dis *dis_s);
-size_t						ft_get_size(t_elem *statement, unsigned i);
-void						ft_process_arg(t_dis *parser, \
-												t_elem *statement, unsigned i);
-void						ft_process_args(t_dis *parser, t_elem *statement);
-uint8_t						ft_get_arg_type(int8_t code);
-void						ft_set_arg_type(int8_t arg_code, int8_t index, \
+int32_t						ft_dis_parse_int32(int fd);
+char						*ft_dis_parse_str(int fd, size_t len);
+uint8_t						*ft_dis_parse_code(int fd, size_t len);
+t_elem						*ft_dis_args_treat(t_dis *dis_s);
+size_t						ft_dis_get_size(t_elem *elem, unsigned int i);
+void						ft_dis_treat_arg(t_dis *dis_s, \
+												t_elem *elem, unsigned int i);
+void						ft_dis_treat_args(t_dis *dis_s, t_elem *elem);
+uint8_t						ft_dis_get_arg_type(int8_t code);
+void						ft_dis_set_arg_type(int8_t arg_code, int8_t index, \
 														t_elem *elem);
-void						ft_terminate(char *text);
+void						ft_dis_terminate(char *error_text);
 
 /*
 ** ------------------------------ Assembler ------------------------------------

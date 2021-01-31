@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_name_warning.c                                  :+:      :+:    :+:   */
+/*   ft_dis_treat_args.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:37:44 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:20:16 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:20:17 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	ft_name_warning(size_t pos)
+void				ft_dis_treat_args(t_dis *dis_s, t_elem *elem)
 {
-	size_t prefix;
+	unsigned int	i;
 
-	prefix = 4;
-	ft_dprintf(2, WARN_DIS);
-	ft_dprintf(2, WARN_DIS_NAME, prefix + pos + 1);
+	i = 0;
+	while (i < (unsigned int)(elem->op->n_args))
+	{
+		ft_dis_treat_arg(dis_s, elem, i);
+		i++;
+	}
 }

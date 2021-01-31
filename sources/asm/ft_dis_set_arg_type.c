@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   process_code.c                                     :+:      :+:    :+:   */
+/*   ft_dis_set_arg_type.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:54:45 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:37:39 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:37:40 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void				ft_process_exec_code(t_dis *dis_s)
+void	ft_dis_set_arg_type(int8_t arg_code, int8_t index, t_elem *elem)
 {
-	while (dis_s->pos < dis_s->code_size)
-		ft_add_statement(&(dis_s->elems), ft_args_treat(dis_s));
+	elem->args_types[index - 1] = ft_dis_get_arg_type(arg_code);
 }

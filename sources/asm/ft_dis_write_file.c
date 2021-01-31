@@ -12,10 +12,10 @@
 
 #include "asm.h"
 
-void		ft_dis_write_file(t_dis *dis_s)
+void			ft_dis_write_file(t_dis *dis_s)
 {
-	t_elem	*current;
-	int		i;
+	t_elem		*current;
+	int			i;
 
 	ft_dprintf(dis_s->fd_s, ".name \"%s\"\n", dis_s->name);
 	ft_dprintf(dis_s->fd_s, ".comment \"%s\"\n\n", dis_s->comment);

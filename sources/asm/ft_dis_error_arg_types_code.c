@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_validate_comment.c                              :+:      :+:    :+:   */
+/*   ft_dis_error_arg_types_code.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:51:23 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:46:05 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:46:05 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void		ft_validate_comment(t_dis *parser)
+void			ft_dis_error_arg_types_code(t_dis *dis_s)
 {
-	size_t	i;
+	int32_t		prefix;
 
-	i = ft_strlen(parser->comment);
-	while (i < COMMENT_LENGTH)
-	{
-		if (parser->comment[i])
-		{
-			ft_comment_warning(i);
-			return ;
-		}
-		i++;
-	}
+	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
+	ft_dprintf(STDERR_FILENO, ERR_DIS_CODE_TYPE, prefix + dis_s->pos);
+	exit(0);
 }

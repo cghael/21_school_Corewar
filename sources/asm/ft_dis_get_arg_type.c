@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_validate_name.c                                 :+:      :+:    :+:   */
+/*   ft_dis_get_arg_type.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:51:40 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:36:53 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:36:54 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void		ft_validate_name(t_dis *parser)
+uint8_t		ft_dis_get_arg_type(int8_t code)
 {
-	size_t	i;
-
-	i = ft_strlen(parser->name);
-	while (i < PROG_NAME_LENGTH)
-	{
-		if (parser->name[i])
-		{
-			ft_name_warning(i);
-			return ;
-		}
-		i++;
-	}
+	if (code == DIR_CODE)
+		return (T_DIR);
+	else if (code == REG_CODE)
+		return (T_REG);
+	else if (code == IND_CODE)
+		return (T_IND);
+	else
+		return (0);
 }
