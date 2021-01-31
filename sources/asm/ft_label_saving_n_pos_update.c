@@ -6,7 +6,7 @@
 /*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:33:20 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:56:53 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 13:48:32 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	ft_warning_if_label_exist(t_asm *asm_s, char *content)
 		if (TRUE == ft_strequ(content, begin->name) && begin->n_line)
 		{
 			asm_s->parse->err_num = DOUBLE_LABEL;
-			ft_dprintf(STDERR_FILENO, "!WARNING! IN LINE \e[1;33m[%d, %d]:\e[m%s\n\n" \
+			ft_dprintf(2, "!WARNING! IN LINE \e[1;33m[%d, %d]:\e[m%s\n\n" \
 			"\e[1;34m%*cへ(⊙︿⊙)< it's not OK!\e[m\n\e[1;13m%s\n\n", \
 			asm_s->parse->n_line, pos, \
 			g_error[(int)asm_s->parse->err_num], pos, \
