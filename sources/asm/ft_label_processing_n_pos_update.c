@@ -82,7 +82,8 @@ int					ft_label_processing_n_pos_update(t_asm *asm_s, int pos)
 		{
 			if (asm_s->labels \
 			&& asm_s->labels->last->n_line == asm_s->parse->n_line)
-				return (ft_error_label_name(asm_s, asm_s->pos, TOO_MATCH_LABELS));
+				return (ft_error_label_name(asm_s, asm_s->pos, \
+														TOO_MATCH_LABELS));
 			else if (EXIT_FAILURE == ft_label_saving_n_pos_update(asm_s, colon))
 				return (EXIT_FAILURE);
 			pos = asm_s->pos;

@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-static char	*ft_create_label_chars_str()
+static char	*ft_create_label_chars_str(void)
 {
 	char *str;
 

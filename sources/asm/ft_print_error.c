@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void	ft_print_error(char *error, char *func, int line) //todo is need?
+void	ft_print_error(char *error, char *func, int line)
 {
 	ft_dprintf(STDERR_FILENO, "line %d:\n\t%s in %s()\n", line, error, func);
 }

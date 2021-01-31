@@ -20,7 +20,7 @@ void			ft_dis_treat_arg(t_dis *dis_s, t_elem *elem, unsigned int i)
 	if (dis_s->code_size - dis_s->pos >= (int32_t)size)
 	{
 		elem->args[i] = ft_dis_bytecode_to_int32(&dis_s->code[dis_s->pos],
-												 size);
+												size);
 		dis_s->pos += size;
 		if (elem->args_types[i] == T_REG && elem->args[i] <= 0)
 			ft_dis_error_register(dis_s);

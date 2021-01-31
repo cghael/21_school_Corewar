@@ -24,5 +24,5 @@ void			ft_dis_parse_bytecode(t_dis *dis_s)
 	dis_s->comment = ft_dis_parse_str(dis_s->fd_cor, COMMENT_LENGTH);
 	if (ft_dis_parse_int32(dis_s->fd_cor) != 0)
 		ft_dis_terminate(ERR_DIS_NO_NULL);
-	dis_s->code = ft_dis_parse_code(dis_s->fd_cor, (size_t) dis_s->code_size);
+	dis_s->code = ft_dis_parse_code(dis_s->fd_cor, (size_t)dis_s->code_size);
 }

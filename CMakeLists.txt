@@ -63,7 +63,6 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_write_file.c
 		sources/asm/ft_disassemble.c
 		sources/asm/ft_free_asm_struct.c
-		sources/asm/ft_free_bytecode_parser.c
 		sources/asm/ft_dis_get_arg_type.c
 		sources/asm/ft_get_label_mention.c
 		sources/asm/ft_get_one_arg.c
@@ -109,7 +108,6 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_validate_comment.c
 		sources/asm/ft_dis_validate_name.c
 		sources/asm/ft_write_arg_type_code.c
-		sources/asm/ft_write_asm_file.c
 		sources/asm/ft_write_bytecode_to_file.c
 		sources/asm/ft_write_code_to_exec.c
 		sources/asm/ft_write_exec_code_in_line.c

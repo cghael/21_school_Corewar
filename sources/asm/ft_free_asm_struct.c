@@ -12,10 +12,10 @@
 
 #include "asm.h"
 
-static void		ft_free_labels(t_asm *asm_struct)
+static void			ft_free_labels(t_asm *asm_struct)
 {
-	t_label		*tmp;
-	t_mention	*tmp_m;
+	t_label			*tmp;
+	t_mention		*tmp_m;
 
 	tmp = asm_struct->labels;
 	while (tmp)
@@ -37,7 +37,7 @@ static void		ft_free_labels(t_asm *asm_struct)
 	}
 }
 
-static void		ft_free_ops(t_asm *asm_struct)
+static void			ft_free_ops(t_asm *asm_struct)
 {
 	t_operations	*tmp;
 	int				i;
@@ -60,7 +60,7 @@ static void		ft_free_ops(t_asm *asm_struct)
 	}
 }
 
-void	ft_free_asm_struct(t_asm *asm_struct)
+void				ft_free_asm_struct(t_asm *asm_struct)
 {
 	if (asm_struct)
 	{

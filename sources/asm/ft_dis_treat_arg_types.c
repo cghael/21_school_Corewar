@@ -20,13 +20,13 @@ void			ft_dis_treat_arg_types(t_dis *dis_s, t_elem *elem)
 	{
 		args_types_code = dis_s->code[dis_s->pos];
 		if (elem->op->n_args >= 1)
-			ft_dis_set_arg_type((int8_t) ((args_types_code & 0xC0)
+			ft_dis_set_arg_type((int8_t)((args_types_code & 0xC0)
 					>> 6), 1, elem);
 		if (elem->op->n_args >= 2)
-			ft_dis_set_arg_type((int8_t) ((args_types_code & 0x30)
+			ft_dis_set_arg_type((int8_t)((args_types_code & 0x30)
 					>> 4), 2, elem);
 		if (elem->op->n_args >= 3)
-			ft_dis_set_arg_type((int8_t) ((args_types_code & 0xC)
+			ft_dis_set_arg_type((int8_t)((args_types_code & 0xC)
 					>> 2), 3, elem);
 		ft_dis_validate_code_types(dis_s, args_types_code, elem->op->n_args);
 	}
