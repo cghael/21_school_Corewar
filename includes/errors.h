@@ -46,43 +46,43 @@
 # define PLAYERS			"-n 2 /Users/ablane/Desktop/vm_champs/ex.cor /Users/ablane/Desktop/vm_champs/ultima.cor /Users/ablane/Desktop/vm_champs/Explosive_Kitty.cor /Users/ablane/Desktop/vm_champs/katchup.cor"
 //todo KILL STR*
 
-typedef						enum
+typedef	enum
 {
-							COMMON,
-							DOUBLE_LABEL,
-							TOO_MATCH_LABELS,
-							LEXICAL_ERROR,
-							NO_SEPARATOR,
-							FEW_ARGS,
-							WRONG_ARG_TYPE,
-							INCORRECT_REG,
-							INCORRECT_DIR,
-							INCORRECT_IND,
-							UNKNOWN_OPERATOR,
-							NO_SUCH_LABEL,
-							NO_NEWLINE,
-							SYNTAX_ERROR,
-							TOO_LONG,
-							NO_OP
-}							t_errors;
+	COMMON,
+	DOUBLE_LABEL,
+	TOO_MATCH_LABELS,
+	LEXICAL_ERROR,
+	NO_SEPARATOR,
+	FEW_ARGS,
+	WRONG_ARG_TYPE,
+	INCORRECT_REG,
+	INCORRECT_DIR,
+	INCORRECT_IND,
+	UNKNOWN_OPERATOR,
+	NO_SUCH_LABEL,
+	NO_NEWLINE,
+	SYNTAX_ERROR,
+	TOO_LONG,
+	NO_OP
+}	t_errors;
 
-static char					*g_error[] = {
-							"something goes wrong :'(",
-							"label with this name is already exist",
-							"more then one label in line",
-							"lexical error",
-							"no separator char",
-							"wrong number of arguments",
-							"wrong argument type",
-							"incorrect register argument",
-							"incorrect direct argument",
-							"incorrect indirect argument",
-							"incorrect operation name",
-							"no such label",
-							"no new line at the end of the file",
-							"syntax error",
-							"too long",
-							"syntax error, no operations"
+static char	*g_error[] = {
+	"something goes wrong :'(",
+	"label with this name is already exist",
+	"more then one label in line",
+	"lexical error",
+	"no separator char",
+	"wrong number of arguments",
+	"wrong argument type",
+	"incorrect register argument",
+	"incorrect direct argument",
+	"incorrect indirect argument",
+	"incorrect operation name",
+	"no such label",
+	"no new line at the end of the file",
+	"syntax error",
+	"too long",
+	"syntax error, no operations"
 };
 
 #endif

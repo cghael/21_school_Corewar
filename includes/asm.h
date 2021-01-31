@@ -89,7 +89,6 @@
 # define FILE_INPUT_NEW		"input new_filename:\n>>>\t"
 # define FILE_SAVE_OK		"Ok! I save file to [\e[1;33m%s\e[m]\n"
 
-
 /*
 ** ------------------------------ Structures -----------------------------------
 */
