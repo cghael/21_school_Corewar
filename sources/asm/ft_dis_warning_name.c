@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_set_arg_type.c                                  :+:      :+:    :+:   */
+/*   ft_dis_warning_name.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:46:47 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:52:22 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:52:23 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void		ft_set_arg_type(int8_t arg_code, int8_t index, t_elem *elem)
+void			ft_dis_warning_name(size_t pos)
 {
-	elem->args_types[index - 1] = ft_get_arg_type(arg_code);
+	size_t		prefix;
+
+	prefix = 4;
+	ft_dprintf(STDERR_FILENO, WARN_DIS);
+	ft_dprintf(STDERR_FILENO, WARN_DIS_NAME, prefix + pos + 1);
 }

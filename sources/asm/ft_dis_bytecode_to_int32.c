@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   ft_dis_bytecode_to_int32.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:55:21 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:27:18 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:27:19 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 /*
 ** "magic" func - convert bytecode to int32 by a size parts.
 ** sign used for byte inverse if [0] elem is 1
+** [size - 1] - because in g_ops[16] only 15 elems, lol
 */
 
-int32_t		ft_bytecode_to_int32(const uint8_t *bytecode, size_t size)
+int32_t		ft_dis_bytecode_to_int32(const uint8_t *bytecode, size_t size)
 {
 	int32_t	res;
 	t_bool	sign;

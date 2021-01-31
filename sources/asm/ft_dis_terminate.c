@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_length_error.c                                  :+:      :+:    :+:   */
+/*   ft_dis_terminate.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 16:44:08 by ksemele           #+#    #+#             */
-/*   Updated: 2021/01/30 16:44:09 by ksemele          ###   ########.fr       */
+/*   Created: 2021/01/31 12:24:41 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:24:42 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void			ft_dis_length_error(t_dis *dis_s)
-{
-	int32_t		prefix;
+/*
+** func print error_text and exit with perror if it is.
+*/
 
-	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
-	ft_dprintf(2, ERR_DIS_LENGTH, prefix + dis_s->pos);
-	exit(0);
+void	ft_dis_terminate(char *error_text)
+{
+	if (errno == 0)
+		ft_dis_error(error_text, NULL);
+	else
+		perror(error_text);
+	exit(1);
 }

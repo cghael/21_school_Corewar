@@ -20,7 +20,7 @@ void		ft_assemble(char *file, t_asm *asm_s)
 		ft_write_bytecode_to_file(asm_s->fd_solution, asm_s);
 	}
 	if (close(asm_s->fd) < 0)
-		ft_dprintf(2, ERR_CLOSE_FILE);
+		ft_dprintf(STDERR_FILENO, ERR_CLOSE_FILE);
 	if (close(asm_s->fd_solution) < 0)
-		ft_dprintf(2, ERR_CLOSE_FILE);
+		ft_dprintf(STDERR_FILENO, ERR_CLOSE_FILE);
 }

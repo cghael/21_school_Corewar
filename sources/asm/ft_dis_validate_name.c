@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_terminate.c                                     :+:      :+:    :+:   */
+/*   ft_dis_validate_name.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:50:28 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:32:08 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:32:08 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-/*
-** func print error text and exit with perror if it is.
-*/
-
-void	ft_terminate(char *text)
+void			ft_dis_validate_name(t_dis *dis_s)
 {
-	if (errno == 0)
-		ft_dis_error(text, NULL);
-	else
-		perror(text);
-	exit(1);
+	size_t		i;
+
+	i = ft_strlen(dis_s->name);
+	while (i < PROG_NAME_LENGTH)
+	{
+		if (dis_s->name[i])
+		{
+			ft_dis_warning_name(i);
+			return ;
+		}
+		i++;
+	}
 }

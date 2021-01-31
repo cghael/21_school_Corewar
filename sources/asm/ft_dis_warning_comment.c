@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_arg_types_code_error.c                          :+:      :+:    :+:   */
+/*   ft_dis_warning_comment.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 11:58:58 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:53:12 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:53:13 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void			ft_arg_types_code_error(t_dis *dis_s)
+void			ft_dis_warning_comment(size_t pos)
 {
-	int32_t		prefix;
+	size_t		prefix;
 
-	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
-	ft_dprintf(2, ERR_DIS_CODE_TYPE, prefix + dis_s->pos);
-	exit(0);
+	prefix = 4 + PROG_NAME_LENGTH + 4 + 4;
+	ft_dprintf(STDERR_FILENO, WARN_DIS);
+	ft_dprintf(STDERR_FILENO, WARN_DIS_COMM, prefix + pos + 1);
 }

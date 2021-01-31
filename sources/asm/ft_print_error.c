@@ -14,5 +14,5 @@
 
 void	ft_print_error(char *error, char *func, int line) //todo is need?
 {
-	ft_dprintf(2, "line %d:\n\t%s in %s()\n", line, error, func);
+	ft_dprintf(STDERR_FILENO, "line %d:\n\t%s in %s()\n", line, error, func);
 }

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dis_read_write.c                                :+:      :+:    :+:   */
+/*   ft_dis_code_types_warning.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/07 13:45:25 by ksemele           #+#    #+#             */
-/*   Updated: 2021/01/15 11:55:49 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:39:30 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:39:31 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-int		ft_dis_read_write(t_dis *dis_s)
+void			ft_dis_code_types_warning(size_t pos)
 {
-	ft_dis_parse_bytecode(dis_s);
-	ft_dis_validate_name(dis_s);
-	ft_dis_validate_comment(dis_s);
-	ft_dis_treat_exec_code(dis_s);
-	ft_dis_write_file(dis_s);
-	return (EXIT_SUCCESS);
+	size_t		prefix;
+
+	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
+	ft_dprintf(STDERR_FILENO, WARN_DIS);
+	ft_dprintf(STDERR_FILENO, WARN_DIS_CODE_TYP1);
+	ft_dprintf(STDERR_FILENO, WARN_DIS_CODE_TYP2, prefix + pos + 1);
 }

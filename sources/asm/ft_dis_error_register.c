@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_comment_warning.c                               :+:      :+:    :+:   */
+/*   ft_dis_error_register.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:17:01 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:43:56 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:43:57 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	ft_comment_warning(size_t pos)
+void			ft_dis_error_register(t_dis *dis_s)
 {
-	size_t prefix;
+	int32_t		prefix;
 
-	prefix = 4 + PROG_NAME_LENGTH + 4 + 4;
-	ft_dprintf(2, WARN_DIS);
-	ft_dprintf(2, WARN_DIS_COMM, prefix + pos + 1);
+	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
+	ft_dprintf(STDERR_FILENO, ERR_DIS_REGISTER, prefix + dis_s->pos);
+	exit(0);
 }

@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_register_error.c                                :+:      :+:    :+:   */
+/*   ft_dis_init_element.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:46:08 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:35:26 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:35:28 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void	ft_register_error(t_dis *parser)
+t_elem		*ft_dis_init_element(void)
 {
-	int32_t	prefix;
+	t_elem	*elem;
 
-	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
-	ft_dprintf(2, "Incorrect register's id at %u byte\n",
-														prefix + parser->pos);
-	exit(0);
+	if (!(elem = (t_elem *)ft_memalloc(sizeof(t_elem))))
+		ft_dis_terminate(ERR_DIS_ELEM_INIT);
+	elem->op = NULL;
+	elem->next = NULL;
+	return (elem);
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_code_types_warning.c                            :+:      :+:    :+:   */
+/*   ft_dis_is_arg_types_valide.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/30 12:16:29 by cghael            #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Created: 2021/01/31 12:41:10 by ksemele           #+#    #+#             */
+/*   Updated: 2021/01/31 12:41:11 by ksemele          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "asm.h"
 
-void		ft_code_types_warning(size_t pos)
+t_bool			ft_dis_is_arg_types_valide(t_elem *elem)
 {
-	size_t	prefix;
+	int32_t		i;
 
-	prefix = 4 + PROG_NAME_LENGTH + 4 + 4 + COMMENT_LENGTH + 4;
-	ft_dprintf(2, WARN_DIS);
-	ft_dprintf(2, WARN_DIS_CODE_TYP1);
-	ft_dprintf(2, WARN_DIS_CODE_TYP2, prefix + pos + 1);
+	i = 0;
+	while (i < elem->op->n_args)
+	{
+		if (!(elem->args_types[i] & elem->op->args[i]))
+			return (false);
+		i++;
+	}
+	return (true);
 }
