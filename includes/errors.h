@@ -6,15 +6,16 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 16:09:11 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 16:53:49 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERRORS_H
 # define ERRORS_H
 
+# define ERR_NO_CODE		"Error: No Code"
+# define ERR_TO_BIGG		"Error: To big champion"
 # define ERR_BAD_LEN		"Error: Wrong file size!!!"
-# define ERR_CODE_LEN		"Error: Player code is too long"
 # define ERR_BAD_FILE		"Error: Can\'t open file"
 # define ERR_BAD_READ		"Error: Can\'t read file"
 # define ERR_BAD_NAME		"Error: File has an invalid name"
@@ -22,8 +23,8 @@
 # define ERR_BAD_MAGIC		"Error: File has an invalid header"
 # define ERR_NUM_CHAMP		"Error: Invalid champion number"
 # define ERR_MALC_INIT		"Error: Can\'t initialize malloc"
-# define ERR_MANY_CHAMP		"Error: Too many champions"
 # define ERR_FEW_CHAMP		"Error: Too few champions"
+# define ERR_MANY_CHAMP		"Error: Too many champions"
 # define ERR_BAD_NULL_NAME	"Error: Missing NULL after champion's name"
 # define ERR_BAD_NULL_COMM	"Error: Missing NULL after champion's comment"
 # define ERR_CLOSE_FILE		"Error: close file"
