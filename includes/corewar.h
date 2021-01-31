@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 13:15:17 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 15:45:20 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 
 typedef struct				s_flag
 {
-	uint32_t				visual;
 	uint32_t				dump;
 	uint32_t				d;
 	uint32_t				a;
@@ -105,8 +104,7 @@ int							fl_check_num_after_flag_n(char **av, int i, \
 							int ac, int *num_pl);
 int							pl_search_duplicate_num(t_list *champions, \
 							uint32_t quantity);
-int							pl_next_arg(char **av, int i, int ac, \
-							t_list *champions);
+int							pl_next_arg(char **av, int i, int ac);
 
 void						err_flag(char c);
 void						terminate(char *s);

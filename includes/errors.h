@@ -13,7 +13,6 @@
 #ifndef ERRORS_H
 # define ERRORS_H
 
-# define ERR_FLAG_V			"Error: The -v flag is used many times"
 # define ERR_FLAG_A			"Error: The -a flag is used many times"
 # define ERR_BAD_LEN		"Error: Wrong file size!!!"
 # define ERR_CODE_LEN		"Error: Player code is too long"

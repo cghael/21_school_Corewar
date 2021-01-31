@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:26:09 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 13:15:17 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 16:06:52 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,6 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 			vm->flag.dump = fl_add_d(vm, av, ++i, ac);
 		if (ft_strequ(av[i], "-d"))
 			vm->flag.d = fl_add_d(vm, av, ++i, ac);
-		if (ft_strequ(av[i], "-v"))
-		{
-			if (vm->flag.visual)
-				terminate(ERR_FLAG_V);
-			vm->flag.visual = 1;
-		}
 		if (ft_strequ(av[i], "-a"))
 		{
 			if (vm->flag.a)
@@ -65,10 +59,8 @@ int			ft_compare_end(const char *str, const char *dest, int pos)
 	return (1);
 }
 
-int			pl_next_arg(char **av, int i, int ac, t_list *champions)
+int			pl_next_arg(char **av, int i, int ac)
 {
-	if (champions)
-		err_flag('q');
 	if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump"))
 	{
 		if (i + 1 >= ac)
