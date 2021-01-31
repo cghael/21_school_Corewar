@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:26:09 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 16:06:52 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 16:07:08 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 		if (ft_strequ(av[i], "-a"))
 		{
 			if (vm->flag.a)
-				terminate(ERR_FLAG_A);
+				err_flag('a');
 			vm->flag.a = 1;
 		}
 		i++;

@@ -6,14 +6,13 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:25:58 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 13:24:34 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 16:09:11 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ERRORS_H
 # define ERRORS_H
 
-# define ERR_FLAG_A			"Error: The -a flag is used many times"
 # define ERR_BAD_LEN		"Error: Wrong file size!!!"
 # define ERR_CODE_LEN		"Error: Player code is too long"
 # define ERR_BAD_FILE		"Error: Can\'t open file"
