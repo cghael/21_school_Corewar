@@ -28,6 +28,26 @@
 
 typedef	enum
 {
+	LIVE,
+	LD,
+	ST,
+	ADD,
+	SUB,
+	AND,
+	OR,
+	XOR,
+	ZJMP,
+	LDI,
+	STI,
+	FORK,
+	LLD,
+	LLDI,
+	LFORK,
+	AFF
+}	t_typo;
+
+typedef	enum
+{
 	false,
 	true
 }	t_bool;
