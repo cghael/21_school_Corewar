@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 14:12:05 by esnowpea         ###   ########.fr       */
+/*   Updated: 2021/01/31 13:15:17 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ int							pl_search_duplicate_num(t_list *champions, \
 int							pl_next_arg(char **av, int i, int ac, \
 							t_list *champions);
 
+void						err_flag(char c);
 void						terminate(char *s);
 void						pl_check_magic_header(int fd);
 void						pl_print_players(t_list *players);

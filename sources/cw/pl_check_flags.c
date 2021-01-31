@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:26:09 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 18:51:37 by ablane           ###   ########.fr       */
+/*   Updated: 2021/01/31 13:15:17 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 uint32_t	fl_add_d(t_vm *vm, char **av, int i, int ac)
 {
 	if (i >= ac)
-		terminate(ERR_DUMP USAGE0);
+		err_flag('d');
 	if (ft_atoi(av[i]) < 1 || vm->flag.dump || vm->flag.d)
-		terminate(ERR_DUMP USAGE1);
+		err_flag('d');
 	return (ft_atoi(av[i]));
 }
 
@@ -68,15 +68,15 @@ int			ft_compare_end(const char *str, const char *dest, int pos)
 int			pl_next_arg(char **av, int i, int ac, t_list *champions)
 {
 	if (champions)
-		terminate(ERR_FLAG);
+		err_flag('q');
 	if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump"))
 	{
 		if (i + 1 >= ac)
-			terminate(ERR_DUMP);
+			err_flag('d');
 		if (av[i + 1][0] >= '0' && av[i + 1][0] <= '9')
 			i = i + 2;
 		else
-			terminate(ERR_DUMP);
+			err_flag('d');
 	}
 	else if (ft_strequ(av[i], "-v") || ft_strequ(av[i], "-a"))
 		i++;
@@ -92,12 +92,12 @@ int			fl_check_num_after_flag_n(char **av, int i, int ac, int *num_pl)
 		{
 			*num_pl = ft_atoi(av[i++]);
 			if (i >= ac || !(ft_strstr(av[i], ".cor")))
-				terminate(ERR_FLAG_N);
+				err_flag('n');
 		}
 		else
-			terminate(ERR_FLAG_N);
+			err_flag('n');
 	}
 	else
-		terminate(ERR_FLAG_N);
+		err_flag('n');
 	return (i);
 }
