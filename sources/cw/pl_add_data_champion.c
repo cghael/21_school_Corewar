@@ -69,10 +69,10 @@ void		pl_cp_exec_size(int fd, t_list *player)
 		in_close_fd_err(fd, ERR_BAD_READ);
 	res = pl_bytecode_to_int32(buff, 4);
 	((t_player*)player->content)->exec_size = (unsigned int)res;
-	if (((t_player*)player->content)->exec_size < 1)
-		terminate(ERR_NO_CODE);
-	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE)
-		terminate(ERR_TO_BIGG);
+//	if (((t_player*)player->content)->exec_size < 1)
+//		terminate(ERR_NO_CODE);
+//	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE)
+//		terminate(ERR_TO_BIGG);
 }
 
 void		pl_cp_code_champion(int fd, t_list *player)

@@ -32,5 +32,8 @@ void		ldi(t_carriage *car, t_vm *vm)
 		car->operation != 0x0a)
 		car->carry = 1;
 	else
-		car->carry = 0;
+	{
+		if (car->operation != 0x0a)
+			car->carry = 0;
+	}
 }

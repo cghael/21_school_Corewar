@@ -47,7 +47,7 @@ t_data		get_ind(uint8_t n, t_carriage *car, t_vm *vm)
 
 	ind = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE),
 			IND_SIZE);
-	if (car->operation != 0x0d && car->operation != 0x0e)
+	if (car->operation != 0x0d /*&& car->operation != 0x0e*/)
 		ind %= IDX_MOD;
 	return (get_t_data(vm->arena, car->position + ind, MEM_SIZE));
 }
