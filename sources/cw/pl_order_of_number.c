@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:37:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/30 12:48:00 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 15:52:16 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,14 @@ void		pl_check_num_champion(t_list *champions)
 	if (!champions)
 		terminate(ERR_FEW_CHAMP);
 	tmp = champions;
-	max_num_player = 1;
+//	max_num_player = 1;
+	max_num_player = (int)((t_player*)champions->content)->number;
 	while (tmp)
 	{
 		if ((int)((t_player*)tmp->content)->number == max_num_player)
 		{
 			tmp = tmp->next;
-			max_num_player++;
+			max_num_player--;
 		}
 		else
 			terminate(ERR_NUM_CHAMP);

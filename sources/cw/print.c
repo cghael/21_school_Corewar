@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:19:32 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/02/03 14:57:05 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 15:41:07 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void		pl_print_players(t_list *players)
 {
 	t_list	*player;
 
-	player = players; //todo
+	player = pl_sort_rev_stack_champ(players); //todo
 //	players = player;
 	ft_printf("Introducing contestants...\n");
 	while (player)
@@ -43,8 +43,7 @@ void		pl_print_players(t_list *players)
 		((t_player*)player->content)->comment);
 		player = player->next;
 	}
-//	players = pl_sort_stack_champ(players); //todo
-//	player = players;
+	players = pl_sort_stack_champ(players); //todo
 }
 
 void		vm_print_arena(t_vm *vm, uint32_t length)

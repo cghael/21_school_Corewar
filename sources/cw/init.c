@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:10:52 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/30 13:55:28 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 15:55:13 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_list		*vm_init_carriages(t_list *players)
 			return (0);
 		new->position = MEM_SIZE / ((t_player*)players->content)->number *
 				(((t_player*)tmp->content)->number - 1) % MEM_SIZE;
-		ft_lstadd(&carriages, ft_lstpnew(new));
+		ft_lstaddend(&carriages, ft_lstpnew(new));
 		num++;
 		tmp = tmp->next;
 	}
