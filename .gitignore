@@ -17,8 +17,6 @@ corewar
 
 .Makefile.swp
 
-42-Corewar-Checker
-
 corewar.dSYM/Contents/Info.plist
 
 corewarBRA
@@ -204,5 +202,3 @@ tests/vm_dump.sh
 tests/vm_leaks.sh
 
 tests/zork.cor
-
-asm
