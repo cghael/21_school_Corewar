@@ -51,6 +51,8 @@ void	err_flag(char c)
 	}
 	else if (c == 'a')
 		ft_printf("Error: The -a flag is used many times");
+	else if (c == 'v')
+		ft_printf("Error: The -v flag is used many times");
 	else if (c == 'u')
 		usage();
 	terminate("");

@@ -27,6 +27,7 @@ typedef struct				s_flag
 	uint32_t				dump;
 	uint32_t				d;
 	uint32_t				a;
+	uint32_t				v;
 }							t_flag;
 
 typedef struct				s_player

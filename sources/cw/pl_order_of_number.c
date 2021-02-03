@@ -71,13 +71,13 @@ void		pl_check_num_champion(t_list *champions)
 	if (!champions)
 		terminate(ERR_FEW_CHAMP);
 	tmp = champions;
-	max_num_player = (int)((t_player*)champions->content)->number;
+	max_num_player = 1;
 	while (tmp)
 	{
 		if ((int)((t_player*)tmp->content)->number == max_num_player)
 		{
 			tmp = tmp->next;
-			max_num_player--;
+			max_num_player++;
 		}
 		else
 			terminate(ERR_NUM_CHAMP);

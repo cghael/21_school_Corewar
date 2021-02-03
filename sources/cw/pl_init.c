@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 15:47:23 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 15:28:40 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ t_list		*pl_list_champions(int ac, char **av, t_list *champions)
 		while (i < ac && !(ft_strstr(av[i], ".cor")))
 		{
 			if (ft_strequ(av[i], "-d") || ft_strequ(av[i], "-dump") ||
-			ft_strequ(av[i], "-a"))
+			ft_strequ(av[i], "-a") || ft_strequ(av[i], "-v"))
 				i = pl_next_arg(av, i, ac);
 			else if (ft_strequ(av[i], "-n"))
 				i = fl_check_num_after_flag_n(av, i, ac, &num_pl);
@@ -105,7 +105,7 @@ t_list		*pl_order_of_players(t_list *champions)
 	if (quant > MAX_PLAYERS)
 		terminate(ERR_MANY_CHAMP);
 	pl_number_order(champions, quant);
-	champions = pl_sort_stack_champ(champions);
+	champions = pl_sort_rev_stack_champ(champions);
 	pl_check_num_champion(champions);
 	return (champions);
 }

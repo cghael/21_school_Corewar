@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:26:09 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 16:07:08 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 15:33:01 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,12 @@ void		fl_check_flags(int ac, char **av, t_vm *vm)
 			vm->flag.dump = fl_add_d(vm, av, ++i, ac);
 		if (ft_strequ(av[i], "-d"))
 			vm->flag.d = fl_add_d(vm, av, ++i, ac);
+		if (ft_strequ(av[i], "-v"))
+		{
+			if (vm->flag.v)
+				err_flag('v');
+			vm->flag.v = 1;
+		}
 		if (ft_strequ(av[i], "-a"))
 		{
 			if (vm->flag.a)

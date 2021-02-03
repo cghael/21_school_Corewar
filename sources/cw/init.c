@@ -73,6 +73,7 @@ t_vm		*vm_init(int ac, char **av)
 	vm->flag.dump = 0;
 	vm->flag.d = 0;
 	vm->flag.a = 0;
+	vm->flag.v = 0;
 	vm->cycles_to_die = CYCLE_TO_DIE;
 	if (!(vm->players = pl_init_players(ac, av)))
 		return (0);
