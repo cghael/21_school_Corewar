@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/31 13:15:17 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 13:48:42 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,9 @@ t_player	*vm_operation(t_vm *vm)
 
 	while (vm_checkout(vm))
 	{
-		current = 0;
+		vm_survey_carriages(vm);
+		vm->number_cycle++;
+		current = 1;
 		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
 //			if (vm->number_cycle == 5295)

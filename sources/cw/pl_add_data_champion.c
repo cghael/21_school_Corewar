@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:41:08 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 16:57:34 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/03 12:29:29 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ void		pl_cp_exec_size(int fd, t_list *player)
 		in_close_fd_err(fd, ERR_BAD_READ);
 	res = pl_bytecode_to_int32(buff, 4);
 	((t_player*)player->content)->exec_size = (unsigned int)res;
-//	if (((t_player*)player->content)->exec_size < 1)
+//	if (((t_player*)player->content)->exec_size < 1) //todo ВКЛ
 //		terminate(ERR_NO_CODE);
-//	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE)
+//	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE) //todo ВКЛ
 //		terminate(ERR_TO_BIGG);
 }
 
