@@ -30,20 +30,27 @@ void		print_bit(uint8_t bit)
 void		pl_print_players(t_list *players)
 {
 	t_list	*player;
+	int		n_players;
+	int		n_step;
 
-	player = pl_sort_rev_stack_champ(players); //todo
-//	players = player;
+	n_players = ft_lstlength(players);
 	ft_printf("Introducing contestants...\n");
-	while (player)
+	while (n_players)
 	{
+		player = players;
+		n_step = n_players - 1;
+		while (n_step)
+		{
+			player = player->next;
+			n_step--;
+		}
 		ft_printf("* Player %d, weighing %d bytes, \"%s\" (\"%s\") !\n",\
 		((t_player*)player->content)->number, \
 		((t_player*)player->content)->exec_size, \
 		((t_player*)player->content)->name, \
 		((t_player*)player->content)->comment);
-		player = player->next;
+		n_players--;
 	}
-	players = pl_sort_stack_champ(players); //todo
 }
 
 void		vm_print_arena(t_vm *vm, uint32_t length)

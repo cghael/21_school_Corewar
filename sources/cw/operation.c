@@ -91,8 +91,8 @@ t_player	*vm_operation(t_vm *vm)
 		current = 1;
 		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
-//			if (vm->number_cycle == 5295)
-//				ft_printf("\n");
+			if (vm->number_cycle == 3021) //todo del
+				ft_printf("\n");
 			vm_survey_carriages(vm);
 			current++;
 			vm->number_cycle++;
