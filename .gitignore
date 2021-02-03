@@ -204,3 +204,5 @@ tests/vm_dump.sh
 tests/vm_leaks.sh
 
 tests/zork.cor
+
+asm
