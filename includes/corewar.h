@@ -116,7 +116,7 @@ void						in_close_fd_err(int fd, char *err);
 void						pl_check_null_champ(int fd, int i);
 void						pl_cp_exec_size(int fd, t_list *player);
 void						pl_check_num_champion(t_list *champions);
-void						vm_print_arena(t_vm *vm, uint32_t length);
+void vm_print_arena(t_vm *vm);
 void						pl_check_duplicate_num(t_list *champions);
 void						fl_check_flags(int ac, char **av, t_vm *vm);
 void						pl_cp_name_champion(int fd, t_list *player);
@@ -125,6 +125,7 @@ void						pl_number_order(t_list *champions, int quant);
 void						pl_cp_comment_champion(int fd, t_list *player);
 void						set_array(t_data dest, const t_data source,\
 							uint32_t n);
+int		ft_visualiser(t_vm *vm);
 /*
 **  commands
 */

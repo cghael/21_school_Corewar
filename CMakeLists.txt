@@ -27,7 +27,8 @@ set (SOURCES
 		sources/cw/pl_check_flags.c
 		sources/cw/pl_order_of_number.c
 		sources/cw/pl_add_data_champion.c
-		sources/cw/pl_check_magic_header.c sources/cw/vm_parce_args.c sources/cw/cr_set_args.c sources/cw/get_data.c)
+		sources/cw/pl_check_magic_header.c sources/cw/vm_parce_args.c sources/cw/cr_set_args.c sources/cw/get_data.c
+		sources/cw/ft_visualiser.c)
 
 set (SOURCES_CW
 		sources/cw/corewar.c)
@@ -124,6 +125,6 @@ add_subdirectory(libft)
 add_executable(corewar ${SOURCES_CW} ${SOURCES})
 add_executable(asm ${SOURCES_ASM} ${SOURCES})
 
-target_link_libraries(asm libft)
-target_link_libraries(corewar libft)
+target_link_libraries(asm libft ncurses)
+target_link_libraries(corewar libft ncurses)
 

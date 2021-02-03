@@ -91,18 +91,14 @@ t_player	*vm_operation(t_vm *vm)
 		current = 1;
 		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
 		{
-			if (vm->number_cycle == 3021) //todo del
-				ft_printf("\n");
+			ft_visualiser(vm);
 			vm_survey_carriages(vm);
 			current++;
 			vm->number_cycle++;
 			if ((vm->flag.d && vm->flag.d == vm->number_cycle)\
 			|| (vm->flag.dump && vm->flag.dump == vm->number_cycle))
 			{
-				if (vm->flag.d)
-					vm_print_arena(vm, 64);
-				else if (vm->flag.dump)
-					vm_print_arena(vm, 32);
+				vm_print_arena(vm);
 				exit(0);
 			}
 		}

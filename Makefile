@@ -15,7 +15,7 @@ NAME_ASM = asm
 
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
-LIBRARIES = -lft -L$(LIBFT_DIR)
+LIBRARIES = -lft -L$(LIBFT_DIR) -lncurses
 INCLUDES = -I$(HEADERS_DIR) -I$(LIBFT_HEADERS)
 
 #----------------------------------library--------------------------------------
@@ -50,6 +50,7 @@ SRC_LIST_CW = init.c \
 				pl_order_of_players.c \
 				pl_add_data_champion.c \
 				pl_check_magic_header.c \
+				ft_visualiser.c \
 				libft.c
 SRC_ASM_MAIN = asm.c
 

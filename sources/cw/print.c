@@ -53,13 +53,18 @@ void		pl_print_players(t_list *players)
 	}
 }
 
-void		vm_print_arena(t_vm *vm, uint32_t length)
+void vm_print_arena(t_vm *vm)
 {
 	uint32_t	i;
 	uint32_t	line;
+	uint32_t	length;
 
 	i = 0;
 	ft_printf("%6s : ", "0x0000");
+	if (vm->flag.d)
+		length = 64;
+	if (vm->flag.dump)
+		length = 32;
 	line = length;
 	while (i < MEM_SIZE)
 	{
