@@ -33,7 +33,7 @@ void		ft_check_read_argv_files(int argc, char **argv)
 			else if (IS_BAD_FILE == filename_res)
 				ft_dprintf(STDERR_FILENO, "invalid file [%s]\n", argv[i]);
 			else if (IS_NOT_FILE == filename_res)
-				ft_dprintf(STDERR_FILENO, "is not file [%s]\n", argv[i]);
+				ft_dprintf(STDERR_FILENO, "it's not file [%s]\n", argv[i]);
 			if (asm_s != NULL)
 				ft_free_asm_struct(asm_s);
 		}
