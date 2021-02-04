@@ -1,4 +1,4 @@
-./test.sh "01 FF FF FF FF 02 D0 00 64 10 09 00 00" "$inf_loop"
+./test.sh "01 FF FF FF FF $inf_loop" "$inf_loop"
 ./test.sh "$inf_loop" "01 FF FF FF FE $inf_loop"
 ./test.sh "01 FF FF FF FE $inf_loop" "$inf_loop"
 ./test.sh "$inf_loop" "01 FF FF FF FF $inf_loop"

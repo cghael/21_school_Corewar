@@ -1,4 +1,4 @@
-/Users/cghael/21_school_Corewar/           path to corewar folder
+../                                        path to corewar folder
 __CHAMPS__                                 command line args (regular usage)
 -dump __CYCLE__ __CHAMPS__                 command line args (dump after cycles)
 128                                        number of lines in dump

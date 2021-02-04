@@ -6,14 +6,14 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/02/03 13:48:55 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/04 10:47:18 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
-#include "asm_op.h"
+#include "asm.h"
 
-uint8_t		vm_checkout(t_vm *vm)
+void		vm_checkout(t_vm *vm)
 {
 	t_list	*tmp;
 	t_list	*del;
@@ -24,7 +24,7 @@ uint8_t		vm_checkout(t_vm *vm)
 		del = tmp;
 		tmp = tmp->next;
 		if (((vm->number_cycle - ((t_carriage*)del->content)->number_last_live)
-		>= (uint32_t)vm->cycles_to_die) || (vm->cycles_to_die <= 0))
+			 >= (uint32_t)vm->cycles_to_die) || (vm->cycles_to_die <= 0))
 			ft_lstpdelone(&vm->carriages, del);
 	}
 	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
@@ -33,10 +33,6 @@ uint8_t		vm_checkout(t_vm *vm)
 		vm->number_checks = 0;
 	}
 	vm->number_live = 0;
-	if (vm->carriages)
-		return (1);
-	else
-		return (0);
 }
 
 void		cr_operation_make(t_carriage *car, t_vm *vm)
@@ -84,25 +80,25 @@ t_player	*vm_operation(t_vm *vm)
 {
 	uint32_t	current;
 
-	while (vm_checkout(vm))
+	current = 0;
+	while (vm->carriages)
 	{
+		ft_visualiser(vm);
 		vm_survey_carriages(vm);
+		current++;
 		vm->number_cycle++;
-		current = 1;
-		while (current < (uint32_t)vm->cycles_to_die && vm->cycles_to_die > 0)
-		{
-			ft_visualiser(vm);
-			vm_survey_carriages(vm);
-			current++;
-			vm->number_cycle++;
-			if ((vm->flag.d && vm->flag.d == vm->number_cycle)\
+		if ((vm->flag.d && vm->flag.d == vm->number_cycle)
 			|| (vm->flag.dump && vm->flag.dump == vm->number_cycle))
-			{
-				vm_print_arena(vm);
-				exit(0);
-			}
+		{
+			vm_print_arena(vm);
+			exit(0);
 		}
-		vm->number_checks++;
+		if (vm->cycles_to_die <= 0 || current == (uint32_t)vm->cycles_to_die)
+		{
+			vm->number_checks++;
+			current = 0;
+			vm_checkout(vm);
+		}
 	}
 	return (vm->last_live_player);
 }
