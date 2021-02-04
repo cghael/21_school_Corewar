@@ -8,34 +8,21 @@
 //#define PLAYER_1		1
 #define BIT_PAIR		02
 
-static void ft_vi_print_bit(uint8_t bit, short color)
+static void ft_vi_print_bit(uint8_t bit, short num_player)
 {
 	char		*a;
 
 	a = "0123456789abcdef";
-	start_color();			/* Start color 			*/
+	start_color();
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	init_pair(2, COLOR_GREEN, COLOR_BLACK);
 	init_pair(3, COLOR_BLUE, COLOR_BLACK);
 	init_pair(4, COLOR_CYAN, COLOR_BLACK);
 	init_pair(5, COLOR_YELLOW, COLOR_BLACK);
-
-	if (bit != 0)
-	{
-		attron(COLOR_PAIR(color));
-		addch(a[bit / 16] | A_BOLD);
-		addch(a[bit % 16] | A_BOLD);
-		attroff(COLOR_PAIR(color));
-//		addch(a[bit / 16] | A_BOLD | A_STANDOUT);
-//		addch(a[bit % 16] | A_BOLD | A_STANDOUT);
-	}
-	else
-	{
-//		use_default_colors();
-		addch(a[bit / 16]);
-		addch(a[bit % 16]);
-	}
-//	printw("%c", a[bit % 16]);
+	attron(COLOR_PAIR(num_player));
+	addch(a[bit / 16] | A_BOLD);
+	addch(a[bit % 16] | A_BOLD);
+	attroff(COLOR_PAIR(num_player));
 }
 
 static void		ft_vi_print_arena(t_vm *vm)
@@ -43,10 +30,8 @@ static void		ft_vi_print_arena(t_vm *vm)
 	uint32_t	i;
 	uint32_t	line;
 	uint32_t	length;
-	short			color;
 
 	i = 0;
-	color = 1;
 	printw("%6s : ", "0x0000");
 	if (vm->flag.d)
 		length = 64;
@@ -55,7 +40,7 @@ static void		ft_vi_print_arena(t_vm *vm)
 	line = length;
 	while (i < MEM_SIZE)
 	{
-		ft_vi_print_bit(vm->arena[i].byte, color);
+		ft_vi_print_bit(vm->arena[i].byte, vm->arena[i].num_player);
 		if ((i + 1) % length == 0 && (i + 1) != MEM_SIZE)
 		{
 			printw(" \n%#5.4x : ", line);
@@ -64,9 +49,6 @@ static void		ft_vi_print_arena(t_vm *vm)
 		else
 			printw(" ");
 		i++;
-		color++;
-		if (color > 5)
-			color = 1;
 	}
 	printw("\n");
 }
@@ -94,7 +76,6 @@ int		ft_visualiser(t_vm *vm)
 				break ;
 		}
 		endwin();
-		ft_printf("FLAG V!\n");//todo del
 	}
 	return (0);
 }
