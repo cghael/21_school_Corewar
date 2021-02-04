@@ -68,7 +68,7 @@ void vm_print_arena(t_vm *vm)
 	line = length;
 	while (i < MEM_SIZE)
 	{
-		print_bit(vm->arena[i]);
+		print_bit(vm->arena[i].byte);
 		if ((i + 1) % length == 0 && (i + 1) != MEM_SIZE)
 		{
 			ft_printf(" \n%#5.4x : ", line);

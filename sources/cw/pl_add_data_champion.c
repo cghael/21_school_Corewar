@@ -78,14 +78,13 @@ void		pl_cp_exec_size(int fd, t_list *player)
 void		pl_cp_code_champion(int fd, t_list *player)
 {
 	uint32_t	r;
-	uint8_t		buff[((t_player*)player->content)->exec_size];
+	uint8_t		buff[CHAMP_MAX_SIZE];
 
 	if (((t_player*)player->content)->exec_size > CHAMP_MAX_SIZE)
 		terminate(ERR_TO_BIGG);
 	r = read(fd, &buff, ((t_player*)player->content)->exec_size);
 	if (r == ((t_player*)player->content)->exec_size)
 	{
-		ft_bzero(((t_player*)player->content)->exec_code, CHAMP_MAX_SIZE);
 		ft_memcpy(((t_player*)player->content)->exec_code, buff,
 			((t_player*)player->content)->exec_size);
 		if (read(fd, &buff, 1) && r)

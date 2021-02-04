@@ -18,7 +18,7 @@ void		cr_set_args_type(t_carriage *car, t_vm *vm)
 	uint8_t		arg_code;
 	uint8_t		i;
 
-	arg_code = vm->arena[(car->position + 1) % MEM_SIZE];
+	arg_code = vm->arena[(car->position + 1) % MEM_SIZE].byte;
 	i = 0;
 	if (g_ops[car->operation - 1].is_args_type)
 		while (i < g_ops[car->operation - 1].n_args)
