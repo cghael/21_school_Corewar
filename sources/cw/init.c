@@ -16,7 +16,7 @@ void		vm_init_arena(t_vm *vm)
 {
 	t_list			*tmp;
 	t_player		*player;
-	int				i;
+	uint32_t		i;
 	t_arena			exec_code[CHAMP_MAX_SIZE];
 
 	tmp = vm->players;

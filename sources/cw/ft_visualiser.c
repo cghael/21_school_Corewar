@@ -55,7 +55,7 @@ static void		ft_vi_print_arena(t_vm *vm)
 	line = length;
 	while (i < MEM_SIZE)
 	{
-		ft_vi_print_bit(vm->arena[i], color);
+		ft_vi_print_bit(vm->arena[i].byte, color);
 		if ((i + 1) % length == 0 && (i + 1) != MEM_SIZE)
 		{
 			printw(" \n%#5.4x : ", line);
