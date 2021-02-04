@@ -21,7 +21,7 @@ t_list		*pl_new_champ(int num_player)
 	player = NULL;
 	if (!(player = ft_lstnew(NULL, 0)))
 		return (NULL);
-	if (!(champion = (t_player*)malloc(sizeof(t_player))))
+	if (!(champion = (t_player*)ft_memalloc(sizeof(t_player))))
 	{
 		free(player);
 		return (NULL);

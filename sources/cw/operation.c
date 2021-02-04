@@ -46,7 +46,7 @@ void		cr_operation(t_carriage *car, t_vm *vm)
 {
 	if (car->waiting_moves == 0)
 	{
-		car->operation = vm->arena[car->position];
+		car->operation = vm->arena[car->position].byte;
 		if (car->operation >= 0x01 && car->operation <= 0x10)
 			car->waiting_moves = g_ops[car->operation - 1].cycles;
 	}

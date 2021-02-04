@@ -74,7 +74,7 @@ int32_t		ft_bytetoint(const t_data arg, uint8_t len)
 	while (len)
 	{
 		len--;
-		sum += arg.data[(arg.pos + len) % arg.max] << k;
+		sum += arg.data[(arg.pos + len) % arg.max].byte << k;
 		k += 8;
 	}
 	return (sum);
@@ -88,7 +88,7 @@ void		ft_inttobyte(const int32_t num, t_data arg, uint8_t len)
 	while (len)
 	{
 		len--;
-		arg.data[(arg.pos + len) % arg.max] = (num >> k) & 0xFF;
+		arg.data[(arg.pos + len) % arg.max].byte = (num >> k) & 0xFF;
 		k += 8;
 	}
 }

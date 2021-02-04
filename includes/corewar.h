@@ -30,6 +30,12 @@ typedef struct				s_flag
 	uint32_t				v;
 }							t_flag;
 
+typedef struct				s_arena
+{
+	uint8_t					byte;
+	uint32_t 				num_player;
+}							t_arena;
+
 typedef struct				s_player
 {
 	uint32_t				number;
@@ -43,7 +49,7 @@ typedef struct				s_data
 {
 	uint32_t				max;
 	int32_t					pos;
-	uint8_t					*data;
+	t_arena					*data;
 }							t_data;
 
 typedef struct				s_argument
@@ -63,7 +69,7 @@ typedef struct				s_carriage
 	uint32_t				number_last_live;
 	uint32_t				waiting_moves;
 	int32_t					position;
-	uint8_t					reg[REG_NUMBER][REG_SIZE];
+	t_arena					reg[REG_NUMBER][REG_SIZE];
 	t_argument				args[3];
 	uint8_t					args_len;
 	t_player				*player;
@@ -71,7 +77,7 @@ typedef struct				s_carriage
 
 typedef struct				s_vm
 {
-	uint8_t					arena[MEM_SIZE];
+	t_arena					arena[MEM_SIZE];
 	t_player				*last_live_player;
 	uint32_t				number_cycle;
 	uint32_t				number_live;
@@ -96,7 +102,7 @@ t_data						get_data(uint8_t n, t_carriage *car, t_vm *vm);
 t_list						*pl_sort_rev_stack_champ(t_list *champions);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
 int32_t						pl_bytecode_to_int32(const uint8_t *buff, int len);
-t_data						get_t_data(uint8_t *array, int32_t pos, \
+t_data						get_t_data(t_arena *array, int32_t pos, \
 							uint32_t max);
 
 int							ft_compare_end(const char *str, const char *dest, \

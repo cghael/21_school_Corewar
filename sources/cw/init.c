@@ -16,14 +16,23 @@ void		vm_init_arena(t_vm *vm)
 {
 	t_list			*tmp;
 	t_player		*player;
+	int				i;
+	t_arena			exec_code[CHAMP_MAX_SIZE];
 
 	tmp = vm->players;
 	while (tmp)
 	{
 		player = (t_player*)tmp->content;
+		i = 0;
+		while (i < player->exec_size)
+		{
+			exec_code[i].byte = player->exec_code[i];
+			exec_code[i].num_player = player->number;
+			i++;
+		}
 		set_array(get_t_data(vm->arena,\
 		MEM_SIZE / vm->number_players * (player->number - 1), MEM_SIZE),
-		get_t_data(player->exec_code, 0, player->exec_size), player->exec_size);
+		get_t_data(exec_code, 0, player->exec_size), player->exec_size);
 		tmp = tmp->next;
 	}
 }

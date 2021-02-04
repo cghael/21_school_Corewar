@@ -45,7 +45,7 @@ uint32_t	len_args(t_carriage *car, t_vm *vm)
 	t_op			op;
 	uint8_t			arg_code;
 
-	arg_code = vm->arena[(car->position + 1) % MEM_SIZE];
+	arg_code = vm->arena[(car->position + 1) % MEM_SIZE].byte;
 	op = g_ops[car->operation - 1];
 	if (op.is_args_type)
 	{
@@ -68,7 +68,7 @@ uint32_t	check_args(t_carriage *car, t_vm *vm)
 	t_op			op;
 	uint8_t			byte;
 
-	byte = vm->arena[(car->position + 1) % MEM_SIZE];
+	byte = vm->arena[(car->position + 1) % MEM_SIZE].byte;
 	op = g_ops[car->operation - 1];
 	if (!op.is_args_type || (op.n_args == 3 && (op.args[0] &
 			(((byte >> 6) & 3) == IND_CODE ? T_IND : ((byte >> 6) & 3)) &&

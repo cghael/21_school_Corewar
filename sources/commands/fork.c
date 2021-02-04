@@ -25,7 +25,8 @@ void		lfork(t_carriage *car, t_vm *vm)
 	i = 0;
 	while (i < REG_NUMBER)
 	{
-		ft_memcpy(new_car->reg[i], car->reg[i], REG_SIZE);
+		set_array(get_t_data(new_car->reg[i], 0, REG_SIZE),
+			get_t_data(car->reg[i], 0, REG_SIZE),REG_SIZE);
 		i++;
 	}
 	ind = (int16_t)ft_bytetoint(car->args[0].data, IND_SIZE);

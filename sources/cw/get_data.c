@@ -12,13 +12,13 @@
 
 #include "corewar.h"
 
-t_data		get_t_data(uint8_t *array, int32_t pos, uint32_t max)
+t_data		get_t_data(t_arena *arena, int32_t pos, uint32_t max)
 {
 	t_data		data;
 
 	while (pos < 0)
 		pos += max;
-	data.data = array;
+	data.data = arena;
 	data.pos = max == 0 ? pos : pos % max;
 	data.max = max;
 	return (data);

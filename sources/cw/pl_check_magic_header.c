@@ -32,7 +32,7 @@ void		pl_check_magic_header(int fd)
 {
 	int		r;
 	int32_t	resul;
-	uint8_t	buff[COMMENT_LENGTH];
+	uint8_t	buff[MAGIC_LEN];
 
 	r = read(fd, &buff, MAGIC_LEN);
 	if (r != MAGIC_LEN ||
