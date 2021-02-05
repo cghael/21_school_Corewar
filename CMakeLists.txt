@@ -29,6 +29,124 @@ set (SOURCES
 		sources/cw/pl_add_data_champion.c
 		sources/cw/pl_check_magic_header.c sources/cw/vm_parce_args.c sources/cw/cr_set_args.c sources/cw/get_data.c
 		sources/cw/ft_visualiser.c
+		sources/lib/ft_abs.c
+		sources/lib/ft_add_dig_to_int.c
+		sources/lib/ft_add_float_to_str.c
+		sources/lib/ft_add_specials.c
+		sources/lib/ft_atoi.c
+		sources/lib/ft_b.c
+		sources/lib/ft_buff_finded_percent.c
+		sources/lib/ft_buff_free.c
+		sources/lib/ft_buff_no_percent.c
+		sources/lib/ft_buff_print_free.c
+		sources/lib/ft_buff_print_n_len.c
+		sources/lib/ft_buff_treated_percent.c
+		sources/lib/ft_bzero.c
+		sources/lib/ft_bzero_buf_n_set_pointers.c
+		sources/lib/ft_c.c
+		sources/lib/ft_choose_func.c
+		sources/lib/ft_count_float.c
+		sources/lib/ft_di.c
+		sources/lib/ft_dollar_arg.c
+		sources/lib/ft_dollar_treat.c
+		sources/lib/ft_error_exit.c
+		sources/lib/ft_exeption_treat.c
+		sources/lib/ft_f.c
+		sources/lib/ft_final_print_n_free_rt_len.c
+		sources/lib/ft_find_digit.c
+		sources/lib/ft_find_in_def.c
+		sources/lib/ft_free_tdarr.c
+		sources/lib/ft_free_two_dem_str.c
+		sources/lib/ft_get_divisional.c
+		sources/lib/ft_get_integer.c
+		sources/lib/ft_get_next_line.c
+		sources/lib/ft_i64toa_base.c
+		sources/lib/ft_integer_to_str.c
+		sources/lib/ft_isalnum.c
+		sources/lib/ft_isalpha.c
+		sources/lib/ft_isascii.c
+		sources/lib/ft_isbigger.c
+		sources/lib/ft_isdigit.c
+		sources/lib/ft_isprint.c
+		sources/lib/ft_itoa.c
+		sources/lib/ft_list_clear.c
+		sources/lib/ft_list_size.c
+		sources/lib/ft_lstadd.c
+		sources/lib/ft_lstaddend.c
+		sources/lib/ft_lstdel.c
+		sources/lib/ft_lstdelone.c
+		sources/lib/ft_lstiter.c
+		sources/lib/ft_lstmap.c
+		sources/lib/ft_lstnew.c
+		sources/lib/ft_memalloc.c
+		sources/lib/ft_memccpy.c
+		sources/lib/ft_memchr.c
+		sources/lib/ft_memcmp.c
+		sources/lib/ft_memcpy.c
+		sources/lib/ft_memdel.c
+		sources/lib/ft_memmove.c
+		sources/lib/ft_memset.c
+		sources/lib/ft_node_del.c
+		sources/lib/ft_num_to_str.c
+		sources/lib/ft_o.c
+		sources/lib/ft_p.c
+		sources/lib/ft_parse_flags.c
+		sources/lib/ft_parse_spec.c
+		sources/lib/ft_parsing.c
+		sources/lib/ft_percent_treat.c
+		sources/lib/ft_precision_treat.c
+		sources/lib/ft_printf.c
+		sources/lib/ft_put_div_by_one.c
+		sources/lib/ft_putchar.c
+		sources/lib/ft_putchar_fd.c
+		sources/lib/ft_putendl.c
+		sources/lib/ft_putendl_fd.c
+		sources/lib/ft_putnbr.c
+		sources/lib/ft_putnbr_fd.c
+		sources/lib/ft_putstr.c
+		sources/lib/ft_putstr_fd.c
+		sources/lib/ft_round_float.c
+		sources/lib/ft_s.c
+		sources/lib/ft_str_is_int.c
+		sources/lib/ft_strcat.c
+		sources/lib/ft_strchr.c
+		sources/lib/ft_strclr.c
+		sources/lib/ft_strcmp.c
+		sources/lib/ft_strcpy.c
+		sources/lib/ft_strcpy_dptp.c
+		sources/lib/ft_strdel.c
+		sources/lib/ft_strdup.c
+		sources/lib/ft_strequ.c
+		sources/lib/ft_striter.c
+		sources/lib/ft_striteri.c
+		sources/lib/ft_strjoin.c
+		sources/lib/ft_strlcat.c
+		sources/lib/ft_strlen.c
+		sources/lib/ft_strmap.c
+		sources/lib/ft_strmapi.c
+		sources/lib/ft_strncat.c
+		sources/lib/ft_strncmp.c
+		sources/lib/ft_strncpy.c
+		sources/lib/ft_strnequ.c
+		sources/lib/ft_strnew.c
+		sources/lib/ft_strnstr.c
+		sources/lib/ft_strpcpy.c
+		sources/lib/ft_strrchr.c
+		sources/lib/ft_strsepcut.c
+		sources/lib/ft_strsplit.c
+		sources/lib/ft_strstr.c
+		sources/lib/ft_strsub.c
+		sources/lib/ft_strtrim.c
+		sources/lib/ft_to_pow.c
+		sources/lib/ft_tolower.c
+		sources/lib/ft_toupper.c
+		sources/lib/ft_u.c
+		sources/lib/ft_u64toa_base.c
+		sources/lib/ft_width_n_precision.c
+		sources/lib/ft_width_treat.c
+		sources/lib/ft_word_count.c
+		sources/lib/ft_x.c
+		sources/cw/ft_visualiser.c
 		sources/cw/vi_operation.c)
 
 set (SOURCES_CW
@@ -119,13 +237,10 @@ set(SOURCES_ASM
         sources/asm/ft_is_op_char.c)
 
 include_directories(includes)
-include_directories(libft/inc)
-
-add_subdirectory(libft)
 
 add_executable(corewar ${SOURCES_CW} ${SOURCES})
 add_executable(asm ${SOURCES_ASM} ${SOURCES})
 
-target_link_libraries(asm libft ncurses)
-target_link_libraries(corewar libft ncurses)
+target_link_libraries(asm ncurses)
+target_link_libraries(corewar ncurses)
 

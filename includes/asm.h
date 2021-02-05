@@ -96,6 +96,12 @@
 ** ------------------------------ Structures -----------------------------------
 */
 
+typedef struct				s_pos
+{
+	int						line;
+	int						pos;
+}							t_pos;
+
 typedef struct				s_parse
 {
 	char					*line;
@@ -104,6 +110,8 @@ typedef struct				s_parse
 	t_errors				err_num;
 	int						endline;
 	int						is_whitespace;
+	t_pos					name;
+	t_pos					comment;
 }							t_parse;
 
 typedef struct				s_args

@@ -24,6 +24,8 @@ static int	ft_find_name_in_line(t_asm *asm_s)
 		else
 		{
 			asm_s->pos += ft_strlen(NAME_CMD_STRING);
+			asm_s->parse->name.line = asm_s->parse->n_line;
+			asm_s->parse->name.pos = asm_s->pos;
 			asm_s->quotes = NAME_START;
 			return (EXIT_SUCCESS);
 		}
@@ -43,6 +45,8 @@ static int	ft_find_comment_in_line(t_asm *asm_s)
 		else
 		{
 			asm_s->pos += ft_strlen(COMMENT_CMD_STRING);
+			asm_s->parse->comment.line = asm_s->parse->n_line;
+			asm_s->parse->comment.pos = asm_s->pos;
 			asm_s->quotes = CMT_START;
 			return (EXIT_SUCCESS);
 		}

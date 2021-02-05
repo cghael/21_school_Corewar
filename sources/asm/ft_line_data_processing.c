@@ -14,10 +14,18 @@
 
 static int		ft_check_name_comment_size(t_asm *asm_s)
 {
-	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH \
-	|| ft_strlen(asm_s->comment) > COMMENT_LENGTH)
+	if (ft_strlen(asm_s->name) > PROG_NAME_LENGTH)
 	{
-		asm_s->parse->err_num = TOO_LONG;
+		asm_s->parse->err_num = TOO_LONG_NAME;
+		asm_s->parse->n_line = asm_s->parse->name.line;
+		asm_s->pos = asm_s->parse->name.pos;
+		return (EXIT_FAILURE);
+	}
+	if (ft_strlen(asm_s->comment) > COMMENT_LENGTH)
+	{
+		asm_s->parse->err_num = TOO_LONG_COMMENT;
+		asm_s->parse->n_line = asm_s->parse->comment.line;
+		asm_s->pos = asm_s->parse->comment.pos;
 		return (EXIT_FAILURE);
 	}
 	return (EXIT_SUCCESS);
@@ -35,9 +43,11 @@ static int		ft_check_name_or_comment(t_asm *asm_s)
 		if (EXIT_FAILURE == ft_start_check_name_or_comment(asm_s))
 			return (EXIT_FAILURE);
 	}
-	if (asm_s->quotes == NAME_CMT_FOUND \
-	&& EXIT_FAILURE == ft_check_name_comment_size(asm_s))
-		return (EXIT_FAILURE);
+	if (asm_s->quotes == NAME_CMT_FOUND)
+	{
+		if (EXIT_FAILURE == ft_check_name_comment_size(asm_s))
+			return (EXIT_FAILURE);
+	}
 	return (EXIT_SUCCESS);
 }
 

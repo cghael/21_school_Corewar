@@ -45,7 +45,8 @@ typedef	enum
 	NO_SUCH_LABEL,
 	NO_NEWLINE,
 	SYNTAX_ERROR,
-	TOO_LONG,
+	TOO_LONG_NAME,
+	TOO_LONG_COMMENT,
 	NO_OP
 }	t_errors;
 
@@ -64,7 +65,8 @@ static char	*g_error[] = {
 	"no such label ",
 	"no new line at the end of the file",
 	"syntax error",
-	"too long",
+	"name is too long",
+	"comment is too long",
 	"syntax error, no operations"
 };
 

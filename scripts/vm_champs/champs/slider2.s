@@ -24,7 +24,7 @@
 		sti	r1,%:live,%61
 		sti	r1,%:live,%66
 		sti	r1,%:live,%71
-		stir1,%:live,%76
+		sti r1,%:live,%76
 		sti	r1,%:live,%81
 		sti	r1,%:live,%86
 		sti	r1,%:live,%91

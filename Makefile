@@ -1,13 +1,13 @@
 # **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ksemele <marvin@42.fr>                     +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/01/31 13:26:45 by ksemele           #+#    #+#              #
-#    Updated: 2021/01/31 13:43:32 by ksemele          ###   ########.fr        #
-#                                                                              #
+#																												        #
+#																				       :::      ::::::::    #
+#    Makefile																   :+:      :+:    :+:    #
+#																				   +:+ +:+         +:+      #
+#    By: ksemele <marvin@42.fr>								 +#+  +:+       +#+         #
+#																         +#+#+#+#+#+   +#+				  #
+#    Created: 2021/01/31 13:26:45 by ksemele				 #+#    #+#				    #
+#    Updated: 2021/01/31 13:43:32 by ksemele				###   ########.fr        #
+#																												        #
 # **************************************************************************** #
 
 NAME_CW = corewar
@@ -15,14 +15,8 @@ NAME_ASM = asm
 
 CC = gcc
 FLAGS = -Wall -Werror -Wextra
-LIBRARIES = -lft -L$(LIBFT_DIR) -lncurses
-INCLUDES = -I$(HEADERS_DIR) -I$(LIBFT_HEADERS)
-
-#----------------------------------library--------------------------------------
-
-LIBFT = $(LIBFT_DIR)libft.a
-LIBFT_DIR = ./libft/
-LIBFT_HEADERS = $(LIBFT_DIR)inc/
+LIBRARIES = -lncurses
+INCLUDES = -I$(HEADERS_DIR)
 
 #----------------------------------headers--------------------------------------
 
@@ -37,7 +31,7 @@ HEADERS = $(addprefix $(HEADERS_DIR), $(HEADERS_LIST))
 
 SRC_CW_MAIN = corewar.c
 
-SRC_LIST_CW = init.c \
+SRC_LIST_CW =	init.c \
 				print.c \
 				pl_init.c \
 				get_data.c \
@@ -55,7 +49,7 @@ SRC_LIST_CW = init.c \
 				libft.c
 SRC_ASM_MAIN = asm.c
 
-SRC_LIST_ASM = ft_asm_error.c \
+SRC_LIST_ASM =	ft_asm_error.c \
 				ft_assemble.c \
 				ft_check_arg_type.c \
 				ft_check_end_newline.c \
@@ -151,16 +145,134 @@ SRC_LIST_COMMS = ld.c \
 				live.c \
 				fork.c
 
+SRC_LIST_LIB = 	ft_atoi.c\
+				ft_bzero.c\
+				ft_isalnum.c\
+				ft_isalpha.c\
+				ft_isascii.c\
+				ft_isdigit.c\
+				ft_isprint.c\
+				ft_itoa.c\
+				ft_memalloc.c\
+				ft_memccpy.c\
+				ft_memchr.c\
+				ft_memcmp.c\
+				ft_memcpy.c\
+				ft_memdel.c\
+				ft_memmove.c\
+				ft_memset.c\
+				ft_putchar.c\
+				ft_putchar_fd.c\
+				ft_putendl.c\
+				ft_putendl_fd.c\
+				ft_putnbr.c\
+				ft_putnbr_fd.c\
+				ft_putstr.c\
+				ft_putstr_fd.c\
+				ft_strcat.c\
+				ft_strchr.c\
+				ft_strclr.c\
+				ft_strcmp.c\
+				ft_strcpy.c\
+				ft_strdel.c\
+				ft_strdup.c\
+				ft_strequ.c\
+				ft_striter.c\
+				ft_striteri.c\
+				ft_strjoin.c\
+				ft_strlcat.c\
+				ft_strlen.c\
+				ft_strmap.c\
+				ft_strmapi.c\
+				ft_strncat.c\
+				ft_strncmp.c\
+				ft_strncpy.c\
+				ft_strnequ.c\
+				ft_strnew.c\
+				ft_strnstr.c\
+				ft_strrchr.c\
+				ft_strsepcut.c\
+				ft_strsplit.c\
+				ft_strstr.c\
+				ft_strsub.c\
+				ft_strtrim.c\
+				ft_tolower.c\
+				ft_toupper.c\
+				ft_lstnew.c\
+				ft_lstdelone.c\
+				ft_lstdel.c\
+				ft_lstadd.c\
+				ft_lstiter.c\
+				ft_lstmap.c\
+				ft_lstaddend.c\
+				ft_list_size.c\
+				ft_list_clear.c\
+				ft_word_count.c\
+				ft_free_tdarr.c\
+				ft_node_del.c\
+				ft_get_next_line.c \
+				ft_free_two_dem_str.c \
+				ft_str_is_int.c \
+						ft_abs.c \
+						ft_add_specials.c \
+						ft_buff_finded_percent.c \
+						ft_buff_free.c \
+						ft_buff_no_percent.c \
+						ft_buff_print_free.c \
+						ft_buff_print_n_len.c \
+						ft_buff_treated_percent.c \
+						ft_bzero_buf_n_set_pointers.c \
+						ft_choose_func.c \
+						ft_dollar_arg.c \
+						ft_dollar_treat.c \
+						ft_error_exit.c \
+						ft_final_print_n_free_rt_len.c \
+						ft_find_digit.c \
+						ft_find_in_def.c \
+						ft_isbigger.c \
+						ft_i64toa_base.c \
+						ft_num_to_str.c \
+						ft_parse_flags.c \
+						ft_parse_spec.c \
+						ft_parsing.c \
+						ft_percent_treat.c \
+						ft_precision_treat.c \
+						ft_printf.c \
+						ft_strcpy_dptp.c \
+						ft_strpcpy.c \
+						ft_width_treat.c \
+						ft_u64toa_base.c \
+						ft_c.c \
+						ft_di.c \
+						ft_o.c \
+						ft_p.c \
+						ft_s.c \
+						ft_u.c \
+						ft_x.c \
+						ft_b.c \
+						ft_f.c \
+						ft_count_float.c \
+						ft_get_integer.c \
+						ft_get_divisional.c \
+						ft_round_float.c \
+						ft_exeption_treat.c \
+						ft_integer_to_str.c \
+						ft_add_dig_to_int.c \
+						ft_width_n_precision.c \
+						ft_add_float_to_str.c \
+						ft_put_div_by_one.c
 
 SRC_DIR = ./sources/
 SRC_ASM_DIR = ${SRC_DIR}asm/
 SRC_CW_DIR = ${SRC_DIR}cw/
 SRC_COMMS_DIR = ${SRC_DIR}commands/
+SRC_LIB_DIR = ${SRC_DIR}lib/
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_LIST))
 SRC_CW = $(addprefix $(SRC_CW_DIR), $(SRC_LIST_CW))
 SRC_ASM = $(addprefix $(SRC_ASM_DIR), $(SRC_LIST_ASM))
 SRC_COMMS = $(addprefix $(SRC_COMMS_DIR), $(SRC_LIST_COMMS))
+SRC_LIB = $(addprefix $(SRC_LIB_DIR), $(SRC_LIST_LIB))
 
 #----------------------------------objects--------------------------------------
 
@@ -168,21 +280,21 @@ OBJ_DIR = ./objects/
 OBJ_CW_DIR = ${OBJ_DIR}cw/
 OBJ_ASM_DIR = ${OBJ_DIR}asm/
 OBJ_COMMS_DIR = ${OBJ_DIR}commands/
+OBJ_LIB_DIR = ${OBJ_DIR}lib/
 
-OBJ_LIST = $(patsubst %.c, %.o, $(SRC_LIST))
 OBJ_LIST_CW = $(patsubst %.c, %.o, $(SRC_LIST_CW))
 OBJ_LIST_CW_MAIN = $(patsubst %.c, %.o, $(SRC_CW_MAIN))
 OBJ_LIST_ASM = $(patsubst %.c, %.o, $(SRC_LIST_ASM))
 OBJ_LIST_ASM_MAIN = $(patsubst %.c, %.o, $(SRC_ASM_MAIN))
 OBJ_LIST_COMMS = $(patsubst %.c, %.o, $(SRC_LIST_COMMS))
+OBJ_LIST_LIB = $(patsubst %.c, %.o, $(SRC_LIST_LIB))
 
-
-OBJ	= $(addprefix $(OBJ_DIR), $(OBJ_LIST))
 OBJ_CW	= $(addprefix $(OBJ_CW_DIR), $(OBJ_LIST_CW))
 OBJ_CW_MAIN = $(addprefix $(OBJ_CW_DIR), $(OBJ_LIST_CW_MAIN))
 OBJ_ASM	= $(addprefix $(OBJ_ASM_DIR), $(OBJ_LIST_ASM))
 OBJ_ASM_MAIN = $(addprefix $(OBJ_ASM_DIR), $(OBJ_LIST_ASM_MAIN))
 OBJ_COMMS = $(addprefix $(OBJ_COMMS_DIR), $(OBJ_LIST_COMMS))
+OBJ_LIB = $(addprefix $(OBJ_LIB_DIR), $(OBJ_LIST_LIB))
 
 # COLORS
 
@@ -195,31 +307,30 @@ END = \033[0m
 
 all: $(NAME_CW) $(NAME_ASM)
 
-$(NAME_CW): $(LIBFT) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_CW_MAIN)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) $(OBJ_COMMS) $(OBJ_CW_MAIN) -o $(NAME_CW)
+$(NAME_CW): $(OBJ_LIB_DIR) $(OBJ_LIB) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_CW_MAIN)
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_CW) $(OBJ_COMMS) $(OBJ_CW_MAIN) $(OBJ_LIB) -o $(NAME_CW)
 	@echo "\n$(NAME_CW): $(GRN)$(NAME_CW) object files were created$(END)"
 	@echo "$(NAME_CW): $(GRN)$(NAME_CW) was created$(END)"
 
-$(NAME_ASM): $(LIBFT) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_ASM_DIR) $(OBJ_ASM) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_ASM_MAIN)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) $(OBJ_COMMS) $(OBJ_CW) $(OBJ_ASM_MAIN) -o $(NAME_ASM)
+$(NAME_ASM): $(OBJ_LIB_DIR) $(OBJ_LIB) $(OBJ_COMMS_DIR) $(OBJ_COMMS) $(OBJ_ASM_DIR) $(OBJ_ASM) $(OBJ_CW_DIR) $(OBJ_CW) $(OBJ_ASM_MAIN)
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJ_ASM) $(OBJ_COMMS) $(OBJ_CW) $(OBJ_ASM_MAIN) $(OBJ_LIB) -o $(NAME_ASM)
 	@echo "\n$(NAME_ASM): $(GRN)$(NAME_ASM) object files were created$(END)"
 	@echo "$(NAME_ASM): $(GRN)$(NAME_ASM) was created$(END)"
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
-	@echo "\n$(GRN)$(OBJ_DIR) created$(END)"
+
+$(OBJ_LIB_DIR): $(OBJ_DIR)
+	@mkdir -p $(OBJ_LIB_DIR)
 
 $(OBJ_COMMS_DIR): $(OBJ_DIR)
 	@mkdir -p $(OBJ_COMMS_DIR)
-	@echo "\n$(GRN)$(OBJ_COMMS_DIR) created$(END)"
 
 $(OBJ_CW_DIR): $(OBJ_DIR)
 	@mkdir -p $(OBJ_CW_DIR)
-	@echo "\n$(GRN)$(OBJ_CW DIR) created$(END)"
 
 $(OBJ_ASM_DIR): $(OBJ_DIR)
 	@mkdir -p $(OBJ_ASM_DIR)
-	@echo "\n$(GRN)$(OBJ_ASM_DIR) created$(END)"
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c $(HEADERS)
 	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
@@ -237,19 +348,16 @@ $(OBJ_COMMS_DIR)%.o : $(SRC_COMMS_DIR)%.c $(HEADERS)
 	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
 	@echo "$(GRN).$(END)\c"
 
-$(LIBFT):
-	@echo "$(GRN)Creating $(LIBFT)...$(END)"
-	@$(MAKE) -C $(LIBFT_DIR)
+$(OBJ_LIB_DIR)%.o : $(SRC_LIB_DIR)%.c $(HEADERS)
+	@$(CC) $(FLAGS) -c $(INCLUDES) $< -o $@
+	@echo "$(GRN).$(END)\c"
 
 clean:
-	@$(MAKE) -C $(LIBFT_DIR) clean
 	@rm -rf $(OBJ_DIR)
 	@echo "$(RED)$(OBJ_DIR) deleted$(END)"
 	@echo "$(RED)*.o files deleted$(END)"
 
 fclean: clean
-	@rm -f $(LIBFT)
-	@echo "$(RED)$(LIBFT) deleted$(END)"
 	@rm -f $(NAME_CW)
 	@echo "$(NAME_CW): $(RED)$(NAME_CW) deleted$(END)"
 	@rm -f $(NAME_ASM)
