@@ -28,6 +28,6 @@ int			ft_disassemble(char *file_cor, t_asm *asm_s)
 			return (ft_dis_error_free_dis_s(ERR_DIS_CRT_FILE, NULL, dis_s));
 	}
 	ft_dis_read_write(dis_s);
-	ft_dis_free_dis(dis_s);
+	ft_dis_free_struct(dis_s);
 	return (EXIT_SUCCESS);
 }

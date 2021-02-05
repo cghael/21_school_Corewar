@@ -25,7 +25,7 @@ ft_dis_terminate(
 		ft_dis_error_free_dis_s(error_text, NULL, dis_s);
 	else
 	{
-		ft_dis_free_dis(dis_s);
+		ft_dis_free_struct(dis_s);
 		perror(error_text);
 	}
 	exit(1);

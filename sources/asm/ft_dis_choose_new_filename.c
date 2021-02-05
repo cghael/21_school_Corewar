@@ -12,36 +12,8 @@
 
 #include "asm.h"
 
-static int		ft_init_strings(char *answer, t_dis *dis_s)
-{
-	if (!dis_s->file_s || !answer)
-	{
-		if (dis_s->file_s != NULL)
-		{
-			free(dis_s->file_s);
-			dis_s->file_s = NULL;
-		}
-		if (answer != NULL)
-		{
-			free(answer);
-			answer = NULL;
-		}
-		return (ft_dis_error_free_dis_s(ERR_DIS_CHOOSE, NULL, dis_s));
-	}
-	return (EXIT_SUCCESS);
-}
-
 int				ft_dis_choose_new_filename(t_dis *dis_s)
 {
-//	char		*answer;
-//
-//	if (!(answer = ft_strnew(0)))
-//		return (EXIT_FAILURE);
-//	if (EXIT_FAILURE == ft_init_strings(answer, dis_s))
-//	{
-//		free(answer);
-//		return (EXIT_FAILURE);
-//	}
 	while (FILE_EXIST == ft_dis_check_file_exist(dis_s) || dis_s->fd_s < 0)
 	{
 		ft_printf(FILE_EXIST_TXT, dis_s->file_s);
@@ -54,6 +26,5 @@ int				ft_dis_choose_new_filename(t_dis *dis_s)
 		}
 	}
 	ft_printf(FILE_SAVE_OK, dis_s->file_s);
-//	free(answer);
 	return (EXIT_SUCCESS);
 }

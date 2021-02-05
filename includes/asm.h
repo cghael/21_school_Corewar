@@ -193,7 +193,7 @@ typedef struct				s_dis
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
 int ft_dis_error_free_dis_s(char *error_text, void *data_for_free, t_dis *dis_s);
 t_dis						*ft_dis_init_struct(char *file_cor);
-int							ft_dis_free_dis(t_dis *dis_s);
+int							ft_dis_free_struct(t_dis *dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_check_file_exist(t_dis *dis_s);
 int							ft_dis_try_create_file(t_dis *dis_s);
