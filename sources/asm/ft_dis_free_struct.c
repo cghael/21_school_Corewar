@@ -29,15 +29,20 @@ int			ft_dis_free_elems(t_elem **elems)
 
 int			ft_dis_free_struct(t_dis *dis_s)
 {
-	if (dis_s->name)
-		free(dis_s->name);
-	if (dis_s->comment)
-		free(dis_s->comment);
-	if (dis_s->file_s)
-		free(dis_s->file_s);
-	if (dis_s->elems)
-		ft_dis_free_elems(&dis_s->elems);
-	if (dis_s->code)
-		free(dis_s->code);
+	if (dis_s)
+	{
+		if (dis_s->name)
+			free(dis_s->name);
+		if (dis_s->comment)
+			free(dis_s->comment);
+		if (dis_s->file_s)
+			free(dis_s->file_s);
+		if (dis_s->elems)
+			ft_dis_free_elems(&dis_s->elems);
+		if (dis_s->code)
+			free(dis_s->code);
+		free(dis_s);
+		dis_s = NULL;
+	}
 	return (EXIT_SUCCESS);
 }

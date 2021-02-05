@@ -19,11 +19,14 @@ uint8_t			*ft_dis_parse_code(int fd, size_t len, t_dis *dis_s)
 	uint8_t		byte;
 
 	if (!(buf = ft_memalloc(len)))
-		ft_dis_terminate(ERR_DIS_CODE_INIT, dis_s);
+//		ft_dis_terminate(ERR_DIS_CODE_INIT, dis_s);
+		return (NULL);
 	size = read(fd, buf, len);
 	if (size == -1)
-		ft_dis_terminate(ERR_DIS_READ_FILE, dis_s);
+//		ft_dis_terminate(ERR_DIS_READ_FILE, dis_s);
+		return (NULL);
 	if (size < (ssize_t)len || read(fd, &byte, 1) != 0)
-		ft_dis_terminate(ERR_DIS_INVLD_FILE, dis_s);
+//		ft_dis_terminate(ERR_DIS_INVLD_FILE, dis_s);
+		return (NULL);
 	return (buf);
 }

@@ -12,14 +12,16 @@
 
 #include "asm.h"
 
-void				ft_dis_treat_args(t_dis *dis_s, t_elem *elem)
+int					ft_dis_treat_args(t_dis *dis_s, t_elem *elem)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (i < (unsigned int)(elem->op->n_args))
 	{
-		ft_dis_treat_arg(dis_s, elem, i);
+		if (EXIT_FAILURE == ft_dis_treat_arg(dis_s, elem, i))
+			return (EXIT_FAILURE);
 		i++;
 	}
+	return (EXIT_SUCCESS);
 }

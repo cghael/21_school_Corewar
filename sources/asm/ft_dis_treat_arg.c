@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-void			ft_dis_treat_arg(t_dis *dis_s, t_elem *elem, unsigned int i)
+int				ft_dis_treat_arg(t_dis *dis_s, t_elem *elem, unsigned int i)
 {
 	size_t		size;
 
@@ -23,8 +23,12 @@ void			ft_dis_treat_arg(t_dis *dis_s, t_elem *elem, unsigned int i)
 												size);
 		dis_s->pos += size;
 		if (elem->args_types[i] == T_REG && elem->args[i] <= 0)
-			ft_dis_error_register(dis_s);
+			return (ft_dis_error_register(dis_s));
 	}
 	else
+	{
 		ft_dis_error_length(dis_s);
+		return (EXIT_FAILURE);
+	}
+	return (EXIT_SUCCESS);
 }

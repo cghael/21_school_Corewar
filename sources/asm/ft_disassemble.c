@@ -12,25 +12,19 @@
 
 #include "asm.h"
 
-int			ft_disassemble(char *file_cor, t_asm *asm_s)
+int				ft_disassemble(char *file_cor)
 {
 	t_dis	*dis_s;
 
 	if (!(dis_s = ft_dis_init_struct(file_cor))
 		|| EXIT_FAILURE == ft_dis_convert_start_filename(file_cor, dis_s))
-	{
-		ft_free_asm_struct(asm_s);
 		return (ft_dis_error_free(ERR_DIS_INIT, NULL, dis_s));
-	}
 	if (FILE_EXIST == ft_dis_check_file_exist(dis_s))
 		ft_dis_choose_new_filename(dis_s);
 	else
 	{
 		if (EXIT_FAILURE == ft_dis_try_create_file(dis_s))
-		{
-			ft_free_asm_struct(asm_s);
 			return (ft_dis_error_free(ERR_DIS_CRT_FILE, NULL, dis_s));
-		}
 	}
 	if (EXIT_SUCCESS == ft_dis_read_write(dis_s))
 	{

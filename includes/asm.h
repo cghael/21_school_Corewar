@@ -192,7 +192,9 @@ typedef struct				s_dis
 	int						corr_name;
 }							t_dis;
 
-int							ft_disassemble(char *file_cor, t_asm *asm_s);
+int
+ft_disassemble(
+		char *file_cor);
 int							ft_dis_error_free(char *error_text, \
 											void *data_for_free, t_dis *dis_s);
 t_dis						*ft_dis_init_struct(char *file_cor);
@@ -210,7 +212,8 @@ int							ft_dis_read_write(t_dis *dis_s);
 void						ft_dis_write_file(t_dis *dis_s);
 
 t_elem						*ft_dis_init_element(t_dis *dis_s);
-void						ft_dis_parse_bytecode(t_dis *dis_s);
+int
+ft_dis_parse_bytecode(t_dis *dis_s);
 void						ft_dis_validate_name(t_dis *dis_s);
 void						ft_dis_validate_comment(t_dis *dis_s);
 void						ft_dis_validate_code_types(t_dis *dis_s, \
@@ -219,14 +222,19 @@ t_bool						ft_dis_is_arg_types_valide(t_elem *elem);
 void						ft_dis_warning_name(size_t pos);
 void						ft_dis_warning_comment(size_t pos);
 void						ft_dis_code_types_warning(size_t pos);
-void						ft_dis_treat_exec_code(t_dis *dis_s);
+int
+ft_dis_treat_exec_code(t_dis *dis_s);
 void						ft_dis_treat_arg_types(t_dis *dis_s, \
 															t_elem *elem);
 void						ft_dis_add_elem(t_elem **list, t_elem *new);
-void						ft_dis_error_opcode(t_dis *dis_s);
-void						ft_dis_error_arg_types_code(t_dis *dis_s);
-void						ft_dis_error_length(t_dis *dis_s);
-void						ft_dis_error_register(t_dis *dis_s);
+void *
+ft_dis_error_opcode(t_dis *dis_s);
+void *
+ft_dis_error_arg_types_code(t_dis *dis_s);
+void *
+ft_dis_error_length(t_dis *dis_s);
+int
+ft_dis_error_register(t_dis *dis_s);
 int32_t						ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
 																size_t size);
 int32_t						ft_dis_parse_int32(int fd, t_dis *dis_s);
@@ -235,9 +243,11 @@ uint8_t						*ft_dis_parse_code(int fd, size_t len, \
 																t_dis *dis_s);
 t_elem						*ft_dis_args_treat(t_dis *dis_s);
 size_t						ft_dis_get_size(t_elem *elem, unsigned int i);
-void						ft_dis_treat_arg(t_dis *dis_s, \
+int
+ft_dis_treat_arg(t_dis *dis_s, \
 												t_elem *elem, unsigned int i);
-void						ft_dis_treat_args(t_dis *dis_s, t_elem *elem);
+int
+ft_dis_treat_args(t_dis *dis_s, t_elem *elem);
 uint8_t						ft_dis_get_arg_type(int8_t code);
 void						ft_dis_set_arg_type(int8_t arg_code, int8_t index, \
 														t_elem *elem);

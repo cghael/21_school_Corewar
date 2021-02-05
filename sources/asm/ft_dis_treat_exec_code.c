@@ -12,8 +12,17 @@
 
 #include "asm.h"
 
-void		ft_dis_treat_exec_code(t_dis *dis_s)
+int			ft_dis_treat_exec_code(t_dis *dis_s)
 {
+	t_elem	*tmp;
+
 	while (dis_s->pos < dis_s->code_size)
-		ft_dis_add_elem(&(dis_s->elems), ft_dis_args_treat(dis_s));
+	{
+		tmp = ft_dis_args_treat(dis_s);
+		if (tmp == NULL)
+			return (EXIT_FAILURE);
+		ft_dis_add_elem(&(dis_s->elems), tmp);
+	}
+	return (EXIT_SUCCESS);
+//		ft_dis_add_elem(&(dis_s->elems), ft_dis_args_treat(dis_s));
 }
