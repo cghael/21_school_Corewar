@@ -37,5 +37,7 @@ int		ft_dis_free_dis(t_dis *dis_s)
 		free(dis_s->file_s);
 	if (dis_s->elems)
 		ft_dis_free_elems(&dis_s->elems);
+	if (dis_s->code)
+		free(dis_s->code);
 	return (EXIT_SUCCESS);
 }
