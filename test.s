@@ -1,7 +1,10 @@
 
 #comment
-    .name ""
-.comment ""
+    .name "sfhs"
+    .comment "gfh"
+life:
 
-penis777:
-live %:penis777
+zjmp
+
+fork
+live

@@ -18,7 +18,7 @@ static void		ft_asm_print(char *file)
 	ft_printf("Writing output program to %s.cor\n", file);
 }
 
-int ft_assemble(char *file, t_asm *asm_s)
+int				ft_assemble(char *file, t_asm *asm_s)
 {
 	if (PARSING_OK == ft_parse_file(asm_s))
 	{
@@ -26,10 +26,10 @@ int ft_assemble(char *file, t_asm *asm_s)
 		ft_write_bytecode_to_file(asm_s->fd_solution, asm_s);
 		ft_asm_print(file);
 		if (close(asm_s->fd_solution) < 0)
-			return(ft_dprintf(STDERR_FILENO, ERR_CLOSE_FILE));
+			return (ft_dprintf(STDERR_FILENO, ERR_CLOSE_FILE));
 	}
 	if (close(asm_s->fd) < 0)
-		return(ft_dprintf(STDERR_FILENO, ERR_CLOSE_FILE));
+		return (ft_dprintf(STDERR_FILENO, ERR_CLOSE_FILE));
 	else
 		return (EXIT_SUCCESS);
 }

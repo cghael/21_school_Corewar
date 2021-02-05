@@ -295,7 +295,10 @@ int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 int							ft_label_processing_n_pos_update(t_asm *asm_s, \
 																	int pos);
 int							ft_is_label_char(char ch);
-int							ft_check_n_write_op_args(t_asm *asm_s);
+int
+ft_check_n_write_op_args(
+		t_asm *asm_s,
+		int args_num);
 int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
 int							ft_count_num_len(const char *str);
 int							ft_check_arg_type(t_asm *asm_s, int type, \

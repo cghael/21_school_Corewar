@@ -29,8 +29,7 @@ void		ft_check_read_argv_files(int argc, char **argv)
 			if (IS_S_FILE == filename_res)
 				ft_assemble(argv[i], asm_s);
 			else if (IS_COR_FILE == filename_res)
-				ft_disassemble(
-						argv[i]);
+				ft_disassemble(argv[i]);
 			else if (IS_BAD_FILE == filename_res)
 				ft_dprintf(STDERR_FILENO, "invalid file [%s]\n", argv[i]);
 			else if (IS_NOT_FILE == filename_res)

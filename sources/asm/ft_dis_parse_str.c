@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-char			*ft_dis_parse_str(int fd,size_t len)
+char			*ft_dis_parse_str(int fd, size_t len)
 {
 	ssize_t		size;
 	char		*buf;

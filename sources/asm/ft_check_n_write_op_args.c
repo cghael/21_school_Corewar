@@ -45,7 +45,19 @@ static int	ft_parse_arg(t_asm *asm_s, int arg_pars)
 	return (EXIT_SUCCESS);
 }
 
-int			ft_check_n_write_op_args(t_asm *asm_s)
+int			ft_check_parsed_args(t_asm *asm_s, int args_num, int arg_pars)
+{
+	if (arg_pars != args_num)
+	{
+		asm_s->parse->err_num = LEXICAL_ERROR;
+		return (EXIT_FAILURE);
+	}
+	ft_write_arg_type_code(asm_s);
+	ft_count_exec_code_size(asm_s);
+	return (EXIT_SUCCESS);
+}
+
+int			ft_check_n_write_op_args(t_asm *asm_s, int args_num)
 {
 	int arg_pars;
 
@@ -69,7 +81,7 @@ int			ft_check_n_write_op_args(t_asm *asm_s)
 			return (EXIT_FAILURE);
 		}
 	}
-	ft_write_arg_type_code(asm_s);
-	ft_count_exec_code_size(asm_s);
+	if (EXIT_FAILURE == ft_check_parsed_args(asm_s, args_num, arg_pars))
+		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

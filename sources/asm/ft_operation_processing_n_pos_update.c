@@ -98,7 +98,7 @@ static int		ft_is_valid_op_name(t_asm *asm_s)
 			if (EXIT_FAILURE == ft_init_n_add_operation_token(asm_s, i))
 				return (EXIT_FAILURE);
 			asm_s->pos += len;
-			return (ft_check_n_write_op_args(asm_s));
+			return (ft_check_n_write_op_args(asm_s, g_ops[i].n_args));
 		}
 		i++;
 	}
