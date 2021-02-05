@@ -16,7 +16,7 @@ void	sti(t_carriage *car, t_vm *vm)
 {
 	int32_t		ind;
 	t_data		data;
-	int 		i;
+	int			i;
 
 	if (car->args[1].type == T_DIR)
 		ind = (int16_t)ft_bytetoint(car->args[1].data, IND_SIZE);

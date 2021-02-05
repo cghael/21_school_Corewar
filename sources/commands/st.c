@@ -22,7 +22,7 @@ void	st(t_carriage *car, t_vm *vm)
 	while (i < REG_SIZE)
 	{
 		car->args[1].data.data[(car->args[1].data.pos + i) %
-		car->args[1].data.max].num_player =	car->player->number;
+		car->args[1].data.max].num_player = car->player->number;
 		i++;
 	}
 }

@@ -33,8 +33,7 @@ t_elem			*ft_dis_args_treat(t_dis *dis_s)
 		ft_dis_treat_arg_types(dis_s, elem);
 		if (ft_dis_is_arg_types_valide(elem))
 		{
-			if (elem->op->is_args_type)
-				dis_s->pos++;
+			dis_s->pos += (elem->op->is_args_type) ? 1 : 0;
 			if (EXIT_FAILURE == ft_dis_treat_args(dis_s, elem))
 				return (NULL);
 		}

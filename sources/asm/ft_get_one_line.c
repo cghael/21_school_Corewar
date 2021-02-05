@@ -1,6 +1,14 @@
-//
-// Created by Cora Ghael on 2/5/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_get_one_line.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cghael <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/05 20:43:40 by cghael            #+#    #+#             */
+/*   Updated: 2021/02/05 20:43:43 by cghael           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "asm.h"
 
@@ -136,4 +144,3 @@ int					ft_get_one_line(const int fd, char **line)
 		ft_node_del(&st_list, fd_node, (void*)(-1));
 	return ((int)ft_node_del(&st_list, fd_node, (void*)0));
 }
-

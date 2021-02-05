@@ -24,5 +24,4 @@ int			ft_dis_treat_exec_code(t_dis *dis_s)
 		ft_dis_add_elem(&(dis_s->elems), tmp);
 	}
 	return (EXIT_SUCCESS);
-//		ft_dis_add_elem(&(dis_s->elems), ft_dis_args_treat(dis_s));
 }
