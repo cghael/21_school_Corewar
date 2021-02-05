@@ -16,13 +16,10 @@
 ** func print error_text and exit with perror if it is.
 */
 
-void
-ft_dis_terminate(
-		char *error_text,
-		t_dis *dis_s)
+void	ft_dis_terminate(char *error_text, t_dis *dis_s)
 {
 	if (errno == 0)
-		ft_dis_error_free_dis_s(error_text, NULL, dis_s);
+		ft_dis_error_free(error_text, NULL, dis_s);
 	else
 	{
 		ft_dis_free_struct(dis_s);

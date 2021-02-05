@@ -40,7 +40,7 @@ typedef struct				s_flag
 typedef struct				s_arena
 {
 	uint8_t					byte;
-	uint32_t 				num_player;
+	uint32_t				num_player;
 }							t_arena;
 
 typedef struct				s_player

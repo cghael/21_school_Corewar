@@ -70,7 +70,7 @@ SRC_LIST_ASM =	ft_asm_error.c \
 				ft_dis_convert_start_filename.c \
 				ft_dis_copy_filename.c \
 				ft_dis_del_cor.c \
-				ft_dis_error.c \
+				ft_dis_error_free.c \
 				ft_dis_error_arg_types_code.c \
 				ft_dis_error_length.c \
 				ft_dis_error_opcode.c \

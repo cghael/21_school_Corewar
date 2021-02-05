@@ -12,26 +12,26 @@
 
 #include "corewar.h"
 
-void		print_result(t_player *win_player)
+void			print_result(t_player *win_player)
 {
 	ft_printf("Contestant %d, \"%s\", has won !\n", win_player->number,
 		win_player->name);
 }
 
-void		print_bit(uint8_t bit)
+void			print_bit(uint8_t bit)
 {
-	char	*a;
+	char		*a;
 
 	a = "0123456789abcdef";
 	ft_putchar(a[bit / 16]);
 	ft_putchar(a[bit % 16]);
 }
 
-void		pl_print_players(t_list *players)
+void			pl_print_players(t_list *players)
 {
-	t_list	*player;
-	int		n_players;
-	int		n_step;
+	t_list		*player;
+	int			n_players;
+	int			n_step;
 
 	n_players = ft_lstlength(players);
 	ft_printf("Introducing contestants...\n");
@@ -53,7 +53,7 @@ void		pl_print_players(t_list *players)
 	}
 }
 
-void vm_print_arena(t_vm *vm)
+void			vm_print_arena(t_vm *vm)
 {
 	uint32_t	i;
 	uint32_t	line;

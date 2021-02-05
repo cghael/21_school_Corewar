@@ -24,7 +24,7 @@ void		vm_checkout(t_vm *vm)
 		del = tmp;
 		tmp = tmp->next;
 		if (((vm->number_cycle - ((t_carriage*)del->content)->number_last_live)
-			 >= (uint32_t)vm->cycles_to_die) || (vm->cycles_to_die <= 0))
+			>= (uint32_t)vm->cycles_to_die) || (vm->cycles_to_die <= 0))
 			ft_lstpdelone(&vm->carriages, del);
 	}
 	if (vm->number_live >= NBR_LIVE || vm->number_checks >= MAX_CHECKS)
@@ -71,7 +71,7 @@ void		vm_survey_carriages(t_vm *vm)
 	tmp = vm->carriages;
 	while (tmp)
 	{
-		cr_operation(tmp->content, vm);//todo print arena
+		cr_operation(tmp->content, vm);
 		if (vm->flag.v)
 			ft_vi_print_arena(vm);
 		tmp = tmp->next;

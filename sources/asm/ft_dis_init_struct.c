@@ -18,14 +18,14 @@ t_dis		*ft_dis_init_struct(char *file_cor)
 
 	if (!(dis_s = ft_memalloc(sizeof(t_dis))))
 	{
-		ft_dis_error_free_dis_s(ERR_MEMALLOC, NULL, dis_s);
+		ft_dis_error_free(ERR_MEMALLOC, NULL, dis_s);
 		return (NULL);
 	}
 	dis_s->fd_s = -1;
 	dis_s->file_s = NULL;
 	if ((dis_s->fd_cor = open(file_cor, O_RDONLY)) < 1)
 	{
-		ft_dis_error_free_dis_s(ERR_DIS_READ_FILE, NULL, dis_s);
+		ft_dis_error_free(ERR_DIS_READ_FILE, NULL, dis_s);
 		return (NULL);
 	}
 	dis_s->name = NULL;
