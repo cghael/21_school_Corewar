@@ -22,3 +22,6 @@ int		ft_dis_read_write(t_dis *dis_s)
 	ft_printf("Writing output program to %s\n", dis_s->file_s);
 	return (EXIT_SUCCESS);
 }
+
+
+//(int)ft_node_del(st_list, fd_node, (void*)0)

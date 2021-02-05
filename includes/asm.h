@@ -297,5 +297,6 @@ int							ft_init_n_add_mention(t_asm *asm_s, int arg_pars, \
 int							ft_transform_mentions(t_asm *asm_s);
 void						ft_asm_error_no_label(t_asm *asm_s);
 int							ft_is_op_char(char ch);
+int							ft_get_one_line(const int fd, char **line);
 
 #endif

@@ -36,7 +36,7 @@
 # define MAX_LINT 9223372036854775807
 # define TRUE 1
 # define FALSE 0
-# define BUFF_SIZE 64
+# define BUFF_SIZE 1024
 
 /*
 ** ft_printf
