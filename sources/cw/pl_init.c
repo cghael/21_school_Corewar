@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 11:55:51 by ablane            #+#    #+#             */
-/*   Updated: 2021/02/03 15:41:07 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 17:02:07 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ t_list		*pl_read_data_champion(char *f_name, t_list *player, t_list *champs)
 	pl_cp_comment_champion(fd, player);
 	pl_check_null_champ(fd, 0);
 	pl_cp_code_champion(fd, player);
-	close(fd);
+	if (close(fd) != 0)
+		terminate(ERR_CLOSE_FILE);
 	if (!champs)
 		champs = player;
 	else

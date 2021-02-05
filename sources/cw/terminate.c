@@ -14,7 +14,8 @@
 
 void	in_close_fd_err(int fd, char *err)
 {
-	close(fd);
+	if (close(fd) != 0)
+		ft_dprintf(2, ERR_CLOSE_FILE);
 	terminate(err);
 }
 
@@ -39,20 +40,20 @@ void	err_flag(char c)
 {
 	if (c == 'd')
 	{
-		ft_printf("Error: Use only -dump or -d with a number greater than "
-			"zero (ex: ./corewar -dump 5 champion_name.cor)");
+		ft_dprintf(2, "Error: Use only -dump or -d with a number greater than"
+				" zero (ex: ./corewar -dump 5 champion_name.cor)");
 	}
 	else if (c == 'n')
 	{
-		ft_printf("Error: Use the -n flag with a number from 1 to N (N is the"
-			" number of players participating in this game) before the "
+		ft_dprintf(2, "Error: Use the -n flag with a number from 1 to N (N is "
+			   "the number of players participating in this game) before the "
 			"champion name (for example, 1: ./ corewar -n 3 champion-name.cor"
 			" -n 2 champion-name 2.cor champion-name3 .cor)");
 	}
 	else if (c == 'a')
-		ft_printf("Error: The -a flag is used many times");
+		ft_dprintf(2, "Error: The -a flag is used many times");
 	else if (c == 'v')
-		ft_printf("Error: The -v flag is used many times");
+		ft_dprintf(2, "Error: The -v flag is used many times");
 	else if (c == 'u')
 		usage();
 	terminate("");
