@@ -28,7 +28,8 @@ set (SOURCES
 		sources/cw/pl_order_of_number.c
 		sources/cw/pl_add_data_champion.c
 		sources/cw/pl_check_magic_header.c sources/cw/vm_parce_args.c sources/cw/cr_set_args.c sources/cw/get_data.c
-		sources/cw/ft_visualiser.c)
+		sources/cw/ft_visualiser.c
+		sources/cw/vi_operation.c)
 
 set (SOURCES_CW
 		sources/cw/corewar.c)

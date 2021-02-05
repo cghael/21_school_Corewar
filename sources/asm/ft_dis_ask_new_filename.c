@@ -16,5 +16,5 @@ void		ft_dis_ask_new_filename(t_dis *dis_s)
 {
 	scanf("%s", dis_s->file_s);
 	if (EXIT_FAILURE == ft_dis_add_s(dis_s))
-		ft_dis_error(ERR_DIS_CHOOSE, dis_s->file_s);
+		ft_dis_error_free_dis_s(ERR_DIS_CHOOSE, dis_s->file_s, dis_s);
 }

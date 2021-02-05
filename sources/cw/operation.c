@@ -71,7 +71,9 @@ void		vm_survey_carriages(t_vm *vm)
 	tmp = vm->carriages;
 	while (tmp)
 	{
-		cr_operation(tmp->content, vm);
+		cr_operation(tmp->content, vm);//todo print arena
+		if (vm->flag.v)
+			ft_vi_print_arena(vm);
 		tmp = tmp->next;
 	}
 }
@@ -83,7 +85,6 @@ t_player	*vm_operation(t_vm *vm)
 	current = 0;
 	while (vm->carriages)
 	{
-		ft_visualiser(vm);
 		vm_survey_carriages(vm);
 		current++;
 		vm->number_cycle++;

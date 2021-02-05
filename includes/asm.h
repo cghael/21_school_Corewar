@@ -51,9 +51,10 @@
 
 # define ERR_ASM_STRUCT		"ERROR: in ft_init_asm_struct"
 # define ERR_MEMALLOC		"ERROR: in ft_memalloc()"
+# define ERR_DIS_INIT		"ERROR: in ft_dis_init_struct()\n"
 # define ERR_DIS_FILE		"ERROR: in ft_dis_filename_treat()\n"
 # define ERR_DIS_CHOOSE		"ERROR: in ft_dis_choose_new_filename()\n"
-# define ERR_DIS_INIT		"ERROR: in ft_dis_init_struct()\n"
+# define ERR_DIS_CRT_FILE	"ERROR: can't create file\n"
 # define ERR_DIS_OPEN_SOL	"ERROR: in ft_open_solution_file()\n"
 # define ERR_DIS_READ_FILE	"ERROR: read file FAIL\n"
 # define ERR_DIS_STR_INIT	"ERROR: initialize string FAIL\n"
@@ -182,9 +183,9 @@ typedef struct				s_dis
 }							t_dis;
 
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
-int							ft_dis_error(char *error_text, void *data_for_free);
+int ft_dis_error_free_dis_s(char *error_text, void *data_for_free, t_dis *dis_s);
 t_dis						*ft_dis_init_struct(char *file_cor);
-int							ft_dis_free_struct(t_dis *dis_s);
+int							ft_dis_free_dis(t_dis *dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_check_file_exist(t_dis *dis_s);
 int							ft_dis_try_create_file(t_dis *dis_s);

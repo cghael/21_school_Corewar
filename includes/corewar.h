@@ -19,6 +19,13 @@
 # include <fcntl.h>
 
 /*
+** Visualiser buttons
+*/
+
+# define ESC					27
+# define SPACE					' '
+
+/*
 ** struct's definitions
 */
 
@@ -75,6 +82,13 @@ typedef struct				s_carriage
 	t_player				*player;
 }							t_carriage;
 
+typedef struct				s_vi
+{
+	int				is_running;
+	int				speed;
+	int				button;
+}							t_vi;
+
 typedef struct				s_vm
 {
 	t_arena					arena[MEM_SIZE];
@@ -88,6 +102,7 @@ typedef struct				s_vm
 	t_list					*carriages;
 	t_list					*players;
 	t_flag					flag;
+	t_vi					*vi;
 }							t_vm;
 
 t_player					*vm_operation(t_vm *vm);
@@ -122,7 +137,7 @@ void						in_close_fd_err(int fd, char *err);
 void						pl_check_null_champ(int fd, int i);
 void						pl_cp_exec_size(int fd, t_list *player);
 void						pl_check_num_champion(t_list *champions);
-void vm_print_arena(t_vm *vm);
+void						vm_print_arena(t_vm *vm);
 void						pl_check_duplicate_num(t_list *champions);
 void						fl_check_flags(int ac, char **av, t_vm *vm);
 void						pl_cp_name_champion(int fd, t_list *player);
@@ -131,7 +146,21 @@ void						pl_number_order(t_list *champions, int quant);
 void						pl_cp_comment_champion(int fd, t_list *player);
 void						set_array(t_data dest, const t_data source,\
 							uint32_t n);
-int		ft_visualiser(t_vm *vm);
+
+/*
+** visualiser
+*/
+
+void						vm_checkout(t_vm *vm);
+void						cr_operation_make(t_carriage *car, t_vm *vm);
+void						cr_operation(t_carriage *car, t_vm *vm);
+void						vm_survey_carriages(t_vm *vm);
+int							ft_visualiser(t_vm *vm);
+t_player					*vi_operation(t_vm *vm);
+void						ft_vi_print_arena(t_vm *vm);
+void						ft_vi_print_bit(uint8_t bit, short num_player);
+void						vi_handle_buttons(t_vm *vm);
+
 /*
 **  commands
 */

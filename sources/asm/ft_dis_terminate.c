@@ -19,7 +19,7 @@
 void	ft_dis_terminate(char *error_text)
 {
 	if (errno == 0)
-		ft_dis_error(error_text, NULL);
+		ft_dis_error_free_dis_s(error_text, NULL, NULL);
 	else
 		perror(error_text);
 	exit(1);

@@ -20,7 +20,10 @@ int		main(int ac, char **av)
 	if (!(vm = vm_init(ac, av)))
 		terminate(ERR_MALC_INIT);
 	pl_print_players(vm->players);
-	win_player = vm_operation(vm);
+	if (vm->flag.v)
+		win_player = vi_operation(vm);
+	else
+		win_player = vm_operation(vm);
 	print_result(win_player);
 	exit(0);
 }

@@ -4,11 +4,16 @@
 
 #include "corewar.h"
 #include "asm_op.h"
-#include <ncurses.h>
-//#define PLAYER_1		1
-#define BIT_PAIR		02
+# include <ncurses.h>
 
-static void ft_vi_print_bit(uint8_t bit, short num_player)
+
+void			vi_print_help()
+{
+	printw("Hello! Press Enter to start visualiser, "
+		"Space for pause, Esc to exit\n\n");
+}
+
+void ft_vi_print_bit(uint8_t bit, short num_player)
 {
 	char		*a;
 
@@ -25,13 +30,14 @@ static void ft_vi_print_bit(uint8_t bit, short num_player)
 	attroff(COLOR_PAIR(num_player));
 }
 
-static void		ft_vi_print_arena(t_vm *vm)
+void		ft_vi_print_arena(t_vm *vm)
 {
 	uint32_t	i;
 	uint32_t	line;
 	uint32_t	length;
 
 	i = 0;
+	clear();
 	printw("%6s : ", "0x0000");
 	if (vm->flag.d)
 		length = 64;
@@ -51,6 +57,20 @@ static void		ft_vi_print_arena(t_vm *vm)
 		i++;
 	}
 	printw("\n");
+	refresh();
+}
+
+void	vi_handle_buttons(t_vm *vm)
+{
+	if (vm->vi->button == KEY_ENTER)
+	{
+		printw("ERNRNFG!!!!!!!\n\n\n");
+		vm->vi->is_running = 1;
+	}
+	if (vm->vi->button == SPACE)
+		vm->vi->is_running = !(vm->vi->is_running);
+	if (vm->vi->button == ESC)
+		exit(0);
 }
 
 int		ft_visualiser(t_vm *vm)
@@ -61,21 +81,12 @@ int		ft_visualiser(t_vm *vm)
 		vm->flag.dump = 0;
 		initscr();
 		curs_set(0);
-//		raw();
+		nodelay(stdscr, true);
+		cbreak();
+		scrollok(stdscr, false);
 		keypad(stdscr, true);
-		refresh();
-
-		while (true)
-		{
-			clear();
-			ft_vi_print_arena(vm);
-			//Получаем нажатие пользователя
-			if (getch() == KEY_RIGHT)
-				printw("KEY RIGHT!\n");
-			if (getch() == KEY_ENTER)
-				break ;
-		}
-		endwin();
+		noecho();
+		vi_print_help();
 	}
 	return (0);
 }

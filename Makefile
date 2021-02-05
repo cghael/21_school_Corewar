@@ -51,6 +51,7 @@ SRC_LIST_CW = init.c \
 				pl_add_data_champion.c \
 				pl_check_magic_header.c \
 				ft_visualiser.c \
+				vi_operation.c \
 				libft.c
 SRC_ASM_MAIN = asm.c
 

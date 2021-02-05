@@ -77,7 +77,8 @@ t_vm		*vm_init(int ac, char **av)
 {
 	t_vm	*vm;
 
-	if (!(vm = ft_memalloc(sizeof(t_vm))))
+	if (!(vm = ft_memalloc(sizeof(t_vm))) || \
+		!(vm->vi = ft_memalloc(sizeof(t_vi))))
 		return (0);
 	vm->flag.dump = 0;
 	vm->flag.d = 0;
