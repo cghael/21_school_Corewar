@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-int32_t			ft_dis_parse_int32(int fd, t_dis *dis_s)
+int32_t			ft_dis_parse_int32(int fd)
 {
 	ssize_t		size;
 	uint8_t		buf[4];

@@ -21,7 +21,7 @@ t_elem			*ft_dis_args_treat(t_dis *dis_s)
 	t_elem		*elem;
 	uint8_t		opcode;
 
-	elem = ft_dis_init_element(dis_s);
+	elem = ft_dis_init_element();
 	if (elem == NULL)
 		return (NULL);
 	opcode = dis_s->code[dis_s->pos];

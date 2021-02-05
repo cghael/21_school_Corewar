@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-t_elem		*ft_dis_init_element(t_dis *dis_s)
+t_elem		*ft_dis_init_element()
 {
 	t_elem	*elem;
 

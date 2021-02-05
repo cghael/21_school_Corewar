@@ -211,7 +211,8 @@ int							ft_dis_convert_start_filename(char *file, \
 int							ft_dis_read_write(t_dis *dis_s);
 void						ft_dis_write_file(t_dis *dis_s);
 
-t_elem						*ft_dis_init_element(t_dis *dis_s);
+t_elem *
+ft_dis_init_element();
 int
 ft_dis_parse_bytecode(t_dis *dis_s);
 void						ft_dis_validate_name(t_dis *dis_s);
@@ -237,10 +238,17 @@ int
 ft_dis_error_register(t_dis *dis_s);
 int32_t						ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
 																size_t size);
-int32_t						ft_dis_parse_int32(int fd, t_dis *dis_s);
-char						*ft_dis_parse_str(int fd, size_t len, t_dis *dis_s);
-uint8_t						*ft_dis_parse_code(int fd, size_t len, \
-																t_dis *dis_s);
+int32_t
+ft_dis_parse_int32(
+		int fd);
+char *
+ft_dis_parse_str(
+		int fd,
+		size_t len);
+uint8_t *
+ft_dis_parse_code(
+		int fd,
+		size_t len);
 t_elem						*ft_dis_args_treat(t_dis *dis_s);
 size_t						ft_dis_get_size(t_elem *elem, unsigned int i);
 int

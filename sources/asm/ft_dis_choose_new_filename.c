@@ -14,8 +14,6 @@
 
 int				ft_dis_choose_new_filename(t_dis *dis_s)
 {
-	char *tmp;
-
 	while (FILE_EXIST == ft_dis_check_file_exist(dis_s) || dis_s->fd_s < 0)
 	{
 		ft_printf(FILE_EXIST_TXT, dis_s->file_s);
