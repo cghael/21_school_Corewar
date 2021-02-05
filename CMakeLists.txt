@@ -175,7 +175,7 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_convert_start_filename.c
 		sources/asm/ft_dis_copy_filename.c
 		sources/asm/ft_dis_del_cor.c
-		sources/asm/ft_dis_error.c
+		sources/asm/ft_dis_error_free.c
 		sources/asm/ft_dis_free_struct.c
 		sources/asm/ft_dis_init_struct.c
 		sources/asm/ft_dis_read_write.c

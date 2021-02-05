@@ -17,9 +17,9 @@
 ** Returns ptr to node, if content_size == fd, or return NULL.
 */
 
-static t_list	*ft_find_fd(t_list **st_list, const int fd)
+static t_list		*ft_find_fd(t_list **st_list, const int fd)
 {
-	t_list *fd_node;
+	t_list			*fd_node;
 
 	fd_node = *st_list;
 	if (!fd_node)
@@ -39,10 +39,10 @@ static t_list	*ft_find_fd(t_list **st_list, const int fd)
 ** or it will return ptr to \n of this node->content.
 */
 
-static char		*ft_static_check(t_list **st_list, const int fd)
+static char			*ft_static_check(t_list **st_list, const int fd)
 {
-	t_list	*fd_node;
-	char	*tmp;
+	t_list			*fd_node;
+	char			*tmp;
 
 	if (!*st_list)
 		return (NULL);
@@ -58,10 +58,10 @@ static char		*ft_static_check(t_list **st_list, const int fd)
 ** If there is no node with content_size == fd, creates it.
 */
 
-static int		ft_static_fill(t_list **st_list, char *buf, const int fd)
+static int			ft_static_fill(t_list **st_list, char *buf, const int fd)
 {
-	t_list	*fd_node;
-	char	*tmp;
+	t_list			*fd_node;
+	char			*tmp;
 
 	if ((fd_node = ft_find_fd(st_list, fd)))
 	{
@@ -91,11 +91,11 @@ static int		ft_static_fill(t_list **st_list, char *buf, const int fd)
 ** there is smth left in static.
 */
 
-static int		ft_put_line(char **line, t_list **st_list, \
-							const int fd, t_list *fd_node)
+static int			ft_put_line(char **line, t_list **st_list, \
+												const int fd, t_list *fd_node)
 {
-	char	*n_ptr;
-	char	*tmp;
+	char			*n_ptr;
+	char			*tmp;
 
 	if ((n_ptr = ft_static_check(st_list, fd)))
 	{
@@ -118,7 +118,7 @@ static int		ft_put_line(char **line, t_list **st_list, \
 	return ((int)ft_node_del(st_list, fd_node, (void*)0));
 }
 
-int				ft_get_next_line(const int fd, char **line)
+int					ft_get_next_line(const int fd, char **line)
 {
 	static t_list	*st_list;
 	char			*n_ptr;
