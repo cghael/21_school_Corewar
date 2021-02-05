@@ -12,12 +12,12 @@
 
 #include "asm.h"
 
-t_elem		*ft_dis_init_element(t_dis *dis_s)
+t_elem		*ft_dis_init_element()
 {
 	t_elem	*elem;
 
 	if (!(elem = (t_elem *)ft_memalloc(sizeof(t_elem))))
-		ft_dis_terminate(ERR_DIS_ELEM_INIT, dis_s);
+		return (NULL);
 	elem->op = NULL;
 	elem->next = NULL;
 	return (elem);

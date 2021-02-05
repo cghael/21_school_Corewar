@@ -129,7 +129,8 @@ SRC_LIST_ASM =	ft_asm_error.c \
 				ft_write_arg_type_code.c \
 				ft_write_bytecode_to_file.c \
 				ft_write_code_to_exec.c \
-				ft_write_exec_code_in_line.c
+				ft_write_exec_code_in_line.c \
+				ft_get_one_line.c
 
 SRC_LIST_COMMS = ld.c \
 				st.c \

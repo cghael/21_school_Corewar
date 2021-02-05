@@ -14,10 +14,12 @@
 
 int		ft_dis_read_write(t_dis *dis_s)
 {
-	ft_dis_parse_bytecode(dis_s);
+	if (EXIT_FAILURE == ft_dis_parse_bytecode(dis_s))
+		return (EXIT_FAILURE);
 	ft_dis_validate_name(dis_s);
 	ft_dis_validate_comment(dis_s);
-	ft_dis_treat_exec_code(dis_s);
+	if (EXIT_FAILURE == ft_dis_treat_exec_code(dis_s))
+		return (EXIT_FAILURE);
 	ft_dis_write_file(dis_s);
 	ft_printf("Writing output program to %s\n", dis_s->file_s);
 	return (EXIT_SUCCESS);

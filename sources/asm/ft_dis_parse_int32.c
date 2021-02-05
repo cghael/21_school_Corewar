@@ -12,19 +12,15 @@
 
 #include "asm.h"
 
-int32_t			ft_dis_parse_int32(int fd, t_dis *dis_s)
+int32_t			ft_dis_parse_int32(int fd)
 {
 	ssize_t		size;
 	uint8_t		buf[4];
 
 	size = read(fd, &buf, 4);
 	if (size == -1)
-		ft_dis_terminate(
-				ERR_DIS_READ_FILE,
-				dis_s);
+		return (EXIT_FAILURE);
 	if (size < 4)
-		ft_dis_terminate(
-				ERR_DIS_INVLD_FILE,
-				dis_s);
+		return (EXIT_FAILURE);
 	return (ft_dis_bytecode_to_int32(buf, 4));
 }

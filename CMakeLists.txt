@@ -147,7 +147,7 @@ set (SOURCES
 		sources/lib/ft_word_count.c
 		sources/lib/ft_x.c
 		sources/cw/ft_visualiser.c
-		sources/cw/vi_operation.c)
+		sources/cw/vi_operation.c sources/asm/ft_get_one_line.c)
 
 set (SOURCES_CW
 		sources/cw/corewar.c)

@@ -12,18 +12,36 @@
 
 #include "asm.h"
 
-void			ft_dis_parse_bytecode(t_dis *dis_s)
+int		ft_dis_parse_bytecode(t_dis *dis_s)
 {
-	if (ft_dis_parse_int32(dis_s->fd_cor, dis_s) != COREWAR_EXEC_MAGIC)
-		ft_dis_terminate(ERR_DIS_MAGIC, dis_s);
-	dis_s->name = ft_dis_parse_str(dis_s->fd_cor, PROG_NAME_LENGTH, dis_s);
-	if (ft_dis_parse_int32(dis_s->fd_cor, dis_s) != 0)
-		ft_dis_terminate(ERR_DIS_NO_NULL, dis_s);
-	if ((dis_s->code_size = ft_dis_parse_int32(dis_s->fd_cor, dis_s)) < 0)
-		ft_dis_terminate(ERR_DIS_CODE_SIZE, dis_s);
-	dis_s->comment = ft_dis_parse_str(dis_s->fd_cor, COMMENT_LENGTH, dis_s);
-	if (ft_dis_parse_int32(dis_s->fd_cor, dis_s) != 0)
-		ft_dis_terminate(ERR_DIS_NO_NULL, dis_s);
-	dis_s->code = ft_dis_parse_code(dis_s->fd_cor, (size_t)dis_s->code_size, \
-																		dis_s);
+	if (ft_dis_parse_int32(
+			dis_s->fd_cor) != COREWAR_EXEC_MAGIC)
+//		ft_dis_terminate(ERR_DIS_MAGIC, dis_s);
+		return (EXIT_FAILURE);
+	dis_s->name = ft_dis_parse_str(
+			dis_s->fd_cor,
+			PROG_NAME_LENGTH);
+	if (dis_s->name == NULL)
+		return (EXIT_FAILURE);
+	if (ft_dis_parse_int32(
+			dis_s->fd_cor) != 0)
+//		ft_dis_terminate(ERR_DIS_NO_NULL, dis_s);
+		return (EXIT_FAILURE);
+	if ((dis_s->code_size = ft_dis_parse_int32(
+			dis_s->fd_cor)) < 0)
+//		ft_dis_terminate(ERR_DIS_CODE_SIZE, dis_s);
+		return (EXIT_FAILURE);
+	dis_s->comment = ft_dis_parse_str(
+			dis_s->fd_cor,
+			COMMENT_LENGTH);
+	if (ft_dis_parse_int32(
+			dis_s->fd_cor) != 0)
+//		ft_dis_terminate(ERR_DIS_NO_NULL, dis_s);
+		return (EXIT_FAILURE);
+	dis_s->code = ft_dis_parse_code(
+			dis_s->fd_cor,
+			(size_t) dis_s->code_size);
+	if (dis_s->code == NULL)
+		return (EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }
