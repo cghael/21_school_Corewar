@@ -12,11 +12,11 @@
 
 #include "asm.h"
 
-static int	ft_count_op_exec_len(t_operations *tmp)
+static int			ft_count_op_exec_len(t_operations *tmp)
 {
-	int len;
-	int n;
-	int i;
+	int				len;
+	int				n;
+	int				i;
 
 	i = 0;
 	len = 1;
@@ -36,9 +36,9 @@ static int	ft_count_op_exec_len(t_operations *tmp)
 	return (len);
 }
 
-static char	*ft_join_mem(t_asm *asm_s, char *exec, int len)
+static char			*ft_join_mem(t_asm *asm_s, char *exec, int len)
 {
-	char	*code;
+	char			*code;
 
 	code = ft_memalloc(sizeof(char) * asm_s->exec_size + len + 1);
 	if (code == NULL)
@@ -51,10 +51,10 @@ static char	*ft_join_mem(t_asm *asm_s, char *exec, int len)
 	return (code);
 }
 
-static int	ft_add_op_exec_code(t_asm *asm_s, t_operations *tmp)
+static int			ft_add_op_exec_code(t_asm *asm_s, t_operations *tmp)
 {
-	int		len;
-	char	*exec;
+	int				len;
+	char			*exec;
 
 	len = ft_count_op_exec_len(tmp);
 	exec = (char*)ft_memalloc(sizeof(*exec) * len + 1);
@@ -65,7 +65,7 @@ static int	ft_add_op_exec_code(t_asm *asm_s, t_operations *tmp)
 	return (EXIT_SUCCESS);
 }
 
-int			ft_write_exec_code_in_line(t_asm *asm_s)
+int					ft_write_exec_code_in_line(t_asm *asm_s)
 {
 	t_operations	*tmp;
 

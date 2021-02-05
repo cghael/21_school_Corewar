@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-static int	ft_parsing_processing(t_asm *asm_s)
+static int		ft_parsing_processing(t_asm *asm_s)
 {
 	ft_parse_line(asm_s);
 	while (asm_s->parse->res > 0)
@@ -35,7 +35,7 @@ static int	ft_parsing_processing(t_asm *asm_s)
 	return (PARSING_OK);
 }
 
-int			ft_parse_file(t_asm *asm_s)
+int				ft_parse_file(t_asm *asm_s)
 {
 	if (EXIT_FAILURE == ft_check_end_newline(asm_s))
 		return (PARSING_ERR);

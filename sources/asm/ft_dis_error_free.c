@@ -15,7 +15,7 @@
 int		ft_dis_error_free(char *error_text, void *data_for_free, t_dis *dis_s)
 {
 	ft_dprintf(STDERR_FILENO, error_text);
-	if (data_for_free != NULL)
+	if (data_for_free)
 		free(data_for_free);
 	if (dis_s)
 		ft_dis_free_struct(dis_s);

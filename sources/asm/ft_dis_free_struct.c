@@ -12,7 +12,7 @@
 
 #include "asm.h"
 
-int		ft_dis_free_elems(t_elem **elems)
+int			ft_dis_free_elems(t_elem **elems)
 {
 	t_elem	*tmp;
 
@@ -27,7 +27,7 @@ int		ft_dis_free_elems(t_elem **elems)
 	return (EXIT_SUCCESS);
 }
 
-int		ft_dis_free_struct(t_dis *dis_s)
+int			ft_dis_free_struct(t_dis *dis_s)
 {
 	if (dis_s->name)
 		free(dis_s->name);
