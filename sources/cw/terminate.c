@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:40:14 by ablane            #+#    #+#             */
-/*   Updated: 2021/02/05 19:37:42 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 20:47:23 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	usage(void)
 			"\t\t: Dumps memory after N cycles, then exits (64 octets)\n[-n "
 			"N]\t\t: Sets the player to position N (N is the number of "
 			"players participating in this game)\n[-a]\t\t: Prints output "
-   			"from \"aff\" (Default is to hide it)\n[-v]\t\t: Run visualizer\n");
+			"from \"aff\" (Default is to hide it)\n[-v]\t\t: Run visualizer\n");
 	exit(0);
 }
 
@@ -42,12 +42,12 @@ void	err_flag(char c)
 	if (c == 'd')
 	{
 		ft_dprintf(2, "Error: Use only -dump or -d with a number greater than"
-				" zero (ex: ./corewar -dump 5 champion_name.cor)");
+			" zero (ex: ./corewar -dump 5 champion_name.cor)");
 	}
 	else if (c == 'n')
 	{
 		ft_dprintf(2, "Error: Use the -n flag with a number from 1 to N (N is "
-			   "the number of players participating in this game) before the "
+			"the number of players participating in this game) before the "
 			"champion name (for example, 1: ./ corewar -n 3 champion-name.cor"
 			" -n 2 champion-name 2.cor champion-name3 .cor)");
 	}

@@ -192,11 +192,9 @@ typedef struct				s_dis
 	int						corr_name;
 }							t_dis;
 
-int
-ft_disassemble(
-		char *file_cor);
+int							ft_disassemble(char *file_cor);
 int							ft_dis_error_free(char *error_text, \
-											void *data_for_free, t_dis *dis_s);
+							void *data_for_free, t_dis *dis_s);
 t_dis						*ft_dis_init_struct(char *file_cor);
 int							ft_dis_free_struct(t_dis *dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
@@ -207,59 +205,41 @@ int							ft_dis_copy_filename(char *filename, t_dis *dis_s);
 int							ft_dis_add_s(t_dis *dis_s);
 int							ft_dis_del_cor(t_dis *dis_s);
 int							ft_dis_convert_start_filename(char *file, \
-																t_dis *dis_s);
+							t_dis *dis_s);
 int							ft_dis_read_write(t_dis *dis_s);
 void						ft_dis_write_file(t_dis *dis_s);
 
-t_elem *
-ft_dis_init_element();
-int
-ft_dis_parse_bytecode(t_dis *dis_s);
+t_elem						*ft_dis_init_element();
+int							ft_dis_parse_bytecode(t_dis *dis_s);
 void						ft_dis_validate_name(t_dis *dis_s);
 void						ft_dis_validate_comment(t_dis *dis_s);
 void						ft_dis_validate_code_types(t_dis *dis_s, \
-										int8_t args_types_code, int args_num);
+							int8_t args_types_code, int args_num);
 t_bool						ft_dis_is_arg_types_valide(t_elem *elem);
 void						ft_dis_warning_name(size_t pos);
 void						ft_dis_warning_comment(size_t pos);
 void						ft_dis_code_types_warning(size_t pos);
-int
-ft_dis_treat_exec_code(t_dis *dis_s);
+int							ft_dis_treat_exec_code(t_dis *dis_s);
 void						ft_dis_treat_arg_types(t_dis *dis_s, \
-															t_elem *elem);
+							t_elem *elem);
 void						ft_dis_add_elem(t_elem **list, t_elem *new);
-void *
-ft_dis_error_opcode(t_dis *dis_s);
-void *
-ft_dis_error_arg_types_code(t_dis *dis_s);
-void *
-ft_dis_error_length(t_dis *dis_s);
-int
-ft_dis_error_register(t_dis *dis_s);
+void						*ft_dis_error_opcode(t_dis *dis_s);
+void						*ft_dis_error_arg_types_code(t_dis *dis_s);
+void						*ft_dis_error_length(t_dis *dis_s);
+int							ft_dis_error_register(t_dis *dis_s);
 int32_t						ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
-																size_t size);
-int32_t
-ft_dis_parse_int32(
-		int fd);
-char *
-ft_dis_parse_str(
-		int fd,
-		size_t len);
-uint8_t *
-ft_dis_parse_code(
-		int fd,
-		size_t len);
+							size_t size);
+int32_t						ft_dis_parse_int32(int fd);
+char						*ft_dis_parse_str(int fd, size_t len);
+uint8_t						*ft_dis_parse_code(int fd, size_t len);
 t_elem						*ft_dis_args_treat(t_dis *dis_s);
 size_t						ft_dis_get_size(t_elem *elem, unsigned int i);
-int
-ft_dis_treat_arg(t_dis *dis_s, \
-												t_elem *elem, unsigned int i);
-int
-ft_dis_treat_args(t_dis *dis_s, t_elem *elem);
+int							ft_dis_treat_arg(t_dis *dis_s, \
+							t_elem *elem, unsigned int i);
+int							ft_dis_treat_args(t_dis *dis_s, t_elem *elem);
 uint8_t						ft_dis_get_arg_type(int8_t code);
 void						ft_dis_set_arg_type(int8_t arg_code, int8_t index, \
-														t_elem *elem);
-void						ft_dis_terminate(char *error_text, t_dis *dis_s);
+							t_elem *elem);
 
 /*
 ** ------------------------------ Assembler ------------------------------------
@@ -270,13 +250,13 @@ void						ft_parse_line(t_asm *asm_s);
 void						ft_free_asm_struct(t_asm *asm_s);
 int							ft_is_filename(char *filename, t_asm *asm_s);
 void						ft_check_read_argv_files(int argc, char **argv);
-int ft_assemble(char *file, t_asm *asm_s);
+int							ft_assemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
 void						ft_asm_error_in_line(t_asm *asm_s);
 void						ft_write_bytecode_to_file(int fd, t_asm *asm_s);
 void						ft_int32_to_bytecode(char *data, int32_t pos, \
-													int32_t val, size_t size);
+							int32_t val, size_t size);
 void						ft_open_solution_file(char *file, t_asm *asm_s);
 int							ft_parse_file(t_asm *asm_s);
 int							ft_is_whitespace(char c);
@@ -290,31 +270,29 @@ char						*ft_strjoin_n_free(char *s1, char *s2);
 int							ft_check_operation(t_asm *asm_s);
 int							ft_check_end_newline(t_asm *asm_s);
 int							ft_label_saving_n_pos_update(t_asm *asm_s, \
-																char *colon);
+							char *colon);
 int							ft_operation_processing_n_pos_update(t_asm *asm_s);
 int							ft_label_processing_n_pos_update(t_asm *asm_s, \
-																	int pos);
+							int pos);
 int							ft_is_label_char(char ch);
-int
-ft_check_n_write_op_args(
-		t_asm *asm_s,
-		int args_num);
+int							ft_check_n_write_op_args(t_asm *asm_s, \
+							int args_num);
 int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
 int							ft_count_num_len(const char *str);
 int							ft_check_arg_type(t_asm *asm_s, int type, \
-																int arg_pars);
+							int arg_pars);
 void						ft_write_arg_type_code(t_asm *asm_s);
 void						ft_count_exec_code_size(t_asm *asm_s);
 int							ft_write_exec_code_in_line(t_asm *asm_s);
 void						ft_write_code_to_exec(char *exec, \
-														t_operations *tmp);
+							t_operations *tmp);
 int							ft_get_label_mention(t_asm *asm_s, int arg_pars, \
-																	int type);
+							int type);
 int							ft_init_n_add_label(t_asm *asm_s, \
-												const char *name, int n_line);
+							const char *name, int n_line);
 t_label						*ft_search_label_exist(t_asm *asm_s, char *name);
 int							ft_init_n_add_mention(t_asm *asm_s, int arg_pars, \
-															t_label *label);
+							t_label *label);
 int							ft_transform_mentions(t_asm *asm_s);
 void						ft_asm_error_no_label(t_asm *asm_s);
 int							ft_is_op_char(char ch);

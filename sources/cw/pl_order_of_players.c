@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:16:16 by ablane            #+#    #+#             */
-/*   Updated: 2021/02/04 11:06:22 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 20:47:23 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,32 +58,3 @@ t_list	*pl_sort_stack_champ(t_list *champions)
 	}
 	return (start);
 }
-
-//t_list	*pl_sort_rev_stack_champ(t_list *champions)
-//{
-//	t_list *start;
-//	t_list *prev;
-//	t_list *tmp;
-//
-//	prev = champions;
-//	start = champions;
-//	while (champions && champions->next)
-//	{
-//		tmp = champions->next;
-//		if (((t_player*)champions->content)->number > ((t_player *)
-//				tmp->content)->number)
-//		{
-//			if (prev == champions)
-//				start = pl_swap(start, champions, tmp, prev);
-//			else
-//				start = pl_swap(start, champions, tmp, prev);
-//			champions = start;
-//		}
-//		else
-//		{
-//			prev = champions;
-//			champions = champions->next;
-//		}
-//	}
-//	return (start);
-//}

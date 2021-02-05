@@ -6,14 +6,14 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 17:15:04 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/02/04 10:47:18 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 20:47:23 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 #include "asm.h"
 
-void		vm_checkout(t_vm *vm)
+void			vm_checkout(t_vm *vm)
 {
 	t_list	*tmp;
 	t_list	*del;
@@ -35,14 +35,14 @@ void		vm_checkout(t_vm *vm)
 	vm->number_live = 0;
 }
 
-void		cr_operation_make(t_carriage *car, t_vm *vm)
+void			cr_operation_make(t_carriage *car, t_vm *vm)
 {
 	g_ops[car->operation - 1].fun(car, vm);
 	if (car->operation != 0x09)
 		car->position = (car->position + car->args_len) % MEM_SIZE;
 }
 
-void		cr_operation(t_carriage *car, t_vm *vm)
+void			cr_operation(t_carriage *car, t_vm *vm)
 {
 	if (car->waiting_moves == 0)
 	{
@@ -64,7 +64,7 @@ void		cr_operation(t_carriage *car, t_vm *vm)
 	}
 }
 
-void		vm_survey_carriages(t_vm *vm)
+void			vm_survey_carriages(t_vm *vm)
 {
 	t_list	*tmp;
 

@@ -84,9 +84,9 @@ typedef struct				s_carriage
 
 typedef struct				s_vi
 {
-	int				is_running;
-	int				speed;
-	int				button;
+	int						is_running;
+	int						speed;
+	int						button;
 }							t_vi;
 
 typedef struct				s_vm
@@ -114,7 +114,6 @@ t_carriage					*cr_init(t_player *player, uint32_t nb);
 uint32_t					check_args(t_carriage *car, t_vm *vm);
 uint8_t						cr_set_args(t_carriage *car, t_vm *vm);
 t_data						get_data(uint8_t n, t_carriage *car, t_vm *vm);
-t_list						*pl_sort_rev_stack_champ(t_list *champions);
 uint8_t						find_len_arg(uint8_t arg, uint8_t is_small_dir);
 int32_t						pl_bytecode_to_int32(const uint8_t *buff, int len);
 t_data						get_t_data(t_arena *array, int32_t pos, \

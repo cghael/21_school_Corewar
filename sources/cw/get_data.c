@@ -6,7 +6,7 @@
 /*   By: esnowpea <esnowpea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 14:19:17 by esnowpea          #+#    #+#             */
-/*   Updated: 2021/01/30 14:25:52 by esnowpea         ###   ########.fr       */
+/*   Updated: 2021/02/05 20:48:18 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ t_data		get_ind(uint8_t n, t_carriage *car, t_vm *vm)
 
 	ind = ft_bytetoint(get_t_data(vm->arena, car->args[n].pos, MEM_SIZE),
 			IND_SIZE);
-	if (car->operation != 0x0d /*&& car->operation != 0x0e*/)
+	if (car->operation != 0x0d)
 		ind %= IDX_MOD;
 	return (get_t_data(vm->arena, car->position + ind, MEM_SIZE));
 }
