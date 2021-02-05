@@ -17,11 +17,19 @@ int			ft_dis_add_s(t_dis *dis_s)
 	char	*tmp;
 
 	tmp = dis_s->file_s;
+
 	if (!(dis_s->file_s = ft_strjoin(dis_s->file_s, ".s")))
 	{
 		free(tmp);
 		return (ft_dis_error_free(ERR_DIS_CHOOSE, NULL, dis_s));
 	}
+//	if (ft_strequ(".s", dis_s->file_s))
+//	{
+//		free(dis_s->file_s);
+//		dis_s->corr_name = 0;
+//	}
+//	else
+//		dis_s->corr_name = 1;
 	free(tmp);
 	return (EXIT_SUCCESS);
 }
