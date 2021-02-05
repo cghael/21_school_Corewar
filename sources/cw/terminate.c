@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/15 12:40:14 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 16:13:50 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 19:37:42 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,13 @@ void	terminate(char *s)
 
 void	usage(void)
 {
-	ft_printf("Usage: ./corewar [\"-d N\" or \"-dump N\"| \"-n N\"| \"-a\"] "
-		"<champion_name.cor> [-n N] <...> <...>\n[-dump N]\t: Dumps memory "
-		"after N cycles, then exits (32 octets)\n[-d N] \t\t: Dumps memory "
-		"after N cycles, then exits (64 octets)\n[-n N]\t\t: Sets the player to"
-		" position N (N is the number of players participating in this game)"
-		"\n[-a]\t\t: Prints output from \"aff\" (Default is to hide it)\n");
+	ft_printf("Usage: ./corewar [\"-d N\" or \"-dump N\"| \"-n N\"| \"-a\"| "
+			"\"-v\"] <champion_name.cor> [-n N] <...> <...>\n[-dump N]\t: "
+			"Dumps memory after N cycles, then exits (32 octets)\n[-d N] "
+			"\t\t: Dumps memory after N cycles, then exits (64 octets)\n[-n "
+			"N]\t\t: Sets the player to position N (N is the number of "
+			"players participating in this game)\n[-a]\t\t: Prints output "
+   			"from \"aff\" (Default is to hide it)\n[-v]\t\t: Run visualizer\n");
 	exit(0);
 }
 
