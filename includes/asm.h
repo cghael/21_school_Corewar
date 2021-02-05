@@ -54,6 +54,7 @@
 # define ERR_DIS_INIT		"ERROR: in ft_dis_init_struct()\n"
 # define ERR_DIS_FILE		"ERROR: in ft_dis_filename_treat()\n"
 # define ERR_DIS_CHOOSE		"ERROR: in ft_dis_choose_new_filename()\n"
+# define ERR_DIS_READ_INPUT	"ERROR: wrong input\n"
 # define ERR_DIS_CRT_FILE	"ERROR: can't create file\n"
 # define ERR_DIS_OPEN_SOL	"ERROR: in ft_open_solution_file()\n"
 # define ERR_DIS_READ_FILE	"ERROR: read file FAIL\n"
@@ -188,6 +189,7 @@ typedef struct				s_dis
 	uint8_t					*code;
 	int32_t					pos;
 	t_elem					*elems;
+	int						corr_name;
 }							t_dis;
 
 int							ft_disassemble(char *file_cor, t_asm *asm_s);
@@ -250,7 +252,7 @@ void						ft_parse_line(t_asm *asm_s);
 void						ft_free_asm_struct(t_asm *asm_s);
 int							ft_is_filename(char *filename, t_asm *asm_s);
 void						ft_check_read_argv_files(int argc, char **argv);
-void						ft_assemble(char *file, t_asm *asm_s);
+int ft_assemble(char *file, t_asm *asm_s);
 int							ft_print_help(void);
 void						ft_asm_error(char *error_text, t_asm *asm_s);
 void						ft_asm_error_in_line(t_asm *asm_s);

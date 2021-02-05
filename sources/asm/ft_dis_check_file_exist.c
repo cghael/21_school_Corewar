@@ -26,8 +26,10 @@ int		ft_dis_check_file_exist(t_dis *dis_s)
 	dis_s->fd_s = open(dis_s->file_s, O_RDONLY);
 	if (dis_s->fd_s >= 0)
 	{
-		close(dis_s->fd_s);
-		return (FILE_EXIST);
+		if (EXIT_SUCCESS == close(dis_s->fd_s))
+			return (FILE_EXIST);
+		else
+			perror(ERR_CLOSE_FILE);
 	}
 	return (FILE_NOT_EXIST);
 }

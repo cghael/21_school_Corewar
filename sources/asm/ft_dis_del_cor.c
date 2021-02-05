@@ -12,10 +12,10 @@
 
 #include "asm.h"
 
-int		ft_dis_del_cor(t_dis *dis_s)
+int			ft_dis_del_cor(t_dis *dis_s)
 {
-	char		*dot;
-	char		*tmp;
+	char	*dot;
+	char	*tmp;
 
 	tmp = dis_s->file_s;
 	if (!(dot = ft_strrchr(dis_s->file_s, '.')) ||
