@@ -72,13 +72,11 @@ void		vm_survey_carriages(t_vm *vm)
 	while (tmp)
 	{
 		cr_operation(tmp->content, vm);
-		if (vm->flag.v)
-			ft_vi_print_arena(vm);
 		tmp = tmp->next;
 	}
 }
 
-t_player	*vm_operation(t_vm *vm)
+t_player		*vm_operation(t_vm *vm)
 {
 	uint32_t	current;
 

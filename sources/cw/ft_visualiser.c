@@ -3,17 +3,15 @@
 //
 
 #include "corewar.h"
-#include "asm_op.h"
-# include <ncurses.h>
+#include <ncurses.h>
 
 
 void			vi_print_help()
 {
-	printw("Hello! Press Enter to start visualiser, "
-		"Space for pause, Esc to exit\n\n");
+	printw("Hello! Press Space to start visualiser, Esc to exit\n\n");
 }
 
-void ft_vi_print_bit(uint8_t bit, short num_player)
+void			ft_vi_print_bit(uint8_t bit, short num_player)
 {
 	char		*a;
 
@@ -30,7 +28,7 @@ void ft_vi_print_bit(uint8_t bit, short num_player)
 	attroff(COLOR_PAIR(num_player));
 }
 
-void		ft_vi_print_arena(t_vm *vm)
+void			ft_vi_print_arena(t_vm *vm)
 {
 	uint32_t	i;
 	uint32_t	line;
@@ -64,7 +62,6 @@ void	vi_handle_buttons(t_vm *vm)
 {
 	if (vm->vi->button == KEY_ENTER)
 	{
-		printw("ERNRNFG!!!!!!!\n\n\n");
 		vm->vi->is_running = 1;
 	}
 	if (vm->vi->button == SPACE)
