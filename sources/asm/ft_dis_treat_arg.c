@@ -26,9 +26,6 @@ int				ft_dis_treat_arg(t_dis *dis_s, t_elem *elem, unsigned int i)
 			return (ft_dis_error_register(dis_s));
 	}
 	else
-	{
-		ft_dis_error_length(dis_s);
-		return (EXIT_FAILURE);
-	}
+		return (ft_dis_error_length(dis_s));
 	return (EXIT_SUCCESS);
 }

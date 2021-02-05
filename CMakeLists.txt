@@ -222,7 +222,6 @@ set(SOURCES_ASM
 		sources/asm/ft_dis_set_arg_type.c
 		sources/asm/ft_start_check_name_or_comment.c
 		sources/asm/ft_strjoin_n_free.c
-		sources/asm/ft_dis_terminate.c
 		sources/asm/ft_transform_mentions.c
 		sources/asm/ft_dis_validate_code_types.c
 		sources/asm/ft_dis_validate_comment.c

@@ -54,17 +54,9 @@
 # define ERR_DIS_INIT		"ERROR: in ft_dis_init_struct()\n"
 # define ERR_DIS_FILE		"ERROR: in ft_dis_filename_treat()\n"
 # define ERR_DIS_CHOOSE		"ERROR: in ft_dis_choose_new_filename()\n"
-# define ERR_DIS_READ_INPUT	"ERROR: wrong input\n"
 # define ERR_DIS_CRT_FILE	"ERROR: can't create file\n"
 # define ERR_DIS_OPEN_SOL	"ERROR: in ft_open_solution_file()\n"
 # define ERR_DIS_READ_FILE	"ERROR: read file FAIL\n"
-# define ERR_DIS_STR_INIT	"ERROR: initialize string FAIL\n"
-# define ERR_DIS_ELEM_INIT	"ERROR: initialize element FAIL\n"
-# define ERR_DIS_INVLD_FILE	"ERROR: Invalid champion file\n"
-# define ERR_DIS_MAGIC		"ERROR: Invalid magic header\n"
-# define ERR_DIS_NO_NULL	"ERROR: No NULL control bytes in file\n"
-# define ERR_DIS_CODE_INIT	"ERROR: initialize string of code FAIL\n"
-# define ERR_DIS_CODE_SIZE	"ERROR: Invalid code size\n"
 # define ERR_DIS_CODE_TYPE	"ERROR: Wrong code of arg types at [%u] byte\n"
 # define ERR_DIS_OPCODE		"ERROR: Wrong operator code at [%u] byte\n"
 # define ERR_DIS_LENGTH		"ERROR: Not enough bytes at [%u] byte\n"
@@ -189,18 +181,16 @@ typedef struct				s_dis
 	uint8_t					*code;
 	int32_t					pos;
 	t_elem					*elems;
-	int						corr_name;
 }							t_dis;
 
 int							ft_disassemble(char *file_cor);
-int							ft_dis_error_free(char *error_text, \
-							void *data_for_free, t_dis *dis_s);
+int							ft_dis_error_free(char *error_text, t_dis *dis_s);
 t_dis						*ft_dis_init_struct(char *file_cor);
-int							ft_dis_free_struct(t_dis *dis_s);
+int							ft_dis_free_struct(t_dis **dis_s);
 int							ft_dis_choose_new_filename(t_dis *dis_s);
 int							ft_dis_check_file_exist(t_dis *dis_s);
 int							ft_dis_try_create_file(t_dis *dis_s);
-void						ft_dis_ask_new_filename(t_dis *dis_s);
+int							ft_dis_ask_new_filename(t_dis *dis_s);
 int							ft_dis_copy_filename(char *filename, t_dis *dis_s);
 int							ft_dis_add_s(t_dis *dis_s);
 int							ft_dis_del_cor(t_dis *dis_s);
@@ -209,7 +199,7 @@ int							ft_dis_convert_start_filename(char *file, \
 int							ft_dis_read_write(t_dis *dis_s);
 void						ft_dis_write_file(t_dis *dis_s);
 
-t_elem						*ft_dis_init_element();
+t_elem						*ft_dis_init_element(void);
 int							ft_dis_parse_bytecode(t_dis *dis_s);
 void						ft_dis_validate_name(t_dis *dis_s);
 void						ft_dis_validate_comment(t_dis *dis_s);
@@ -224,22 +214,22 @@ void						ft_dis_treat_arg_types(t_dis *dis_s, \
 							t_elem *elem);
 void						ft_dis_add_elem(t_elem **list, t_elem *new);
 void						*ft_dis_error_opcode(t_dis *dis_s);
-void						*ft_dis_error_arg_types_code(t_dis *dis_s);
-void						*ft_dis_error_length(t_dis *dis_s);
+int							ft_dis_error_arg_types_code(t_dis *dis_s);
+int							ft_dis_error_length(t_dis *dis_s);
 int							ft_dis_error_register(t_dis *dis_s);
 int32_t						ft_dis_bytecode_to_int32(const uint8_t *bytecode, \
-							size_t size);
+																size_t size);
 int32_t						ft_dis_parse_int32(int fd);
 char						*ft_dis_parse_str(int fd, size_t len);
 uint8_t						*ft_dis_parse_code(int fd, size_t len);
 t_elem						*ft_dis_args_treat(t_dis *dis_s);
 size_t						ft_dis_get_size(t_elem *elem, unsigned int i);
 int							ft_dis_treat_arg(t_dis *dis_s, \
-							t_elem *elem, unsigned int i);
+												t_elem *elem, unsigned int i);
 int							ft_dis_treat_args(t_dis *dis_s, t_elem *elem);
 uint8_t						ft_dis_get_arg_type(int8_t code);
 void						ft_dis_set_arg_type(int8_t arg_code, int8_t index, \
-							t_elem *elem);
+														t_elem *elem);
 
 /*
 ** ------------------------------ Assembler ------------------------------------
@@ -276,7 +266,7 @@ int							ft_label_processing_n_pos_update(t_asm *asm_s, \
 							int pos);
 int							ft_is_label_char(char ch);
 int							ft_check_n_write_op_args(t_asm *asm_s, \
-							int args_num);
+																int args_num);
 int							ft_get_one_arg(t_asm *asm_s, int arg_pars);
 int							ft_count_num_len(const char *str);
 int							ft_check_arg_type(t_asm *asm_s, int type, \

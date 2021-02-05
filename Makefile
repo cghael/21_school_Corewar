@@ -87,7 +87,6 @@ SRC_LIST_ASM =	ft_asm_error.c \
 				ft_dis_parse_str.c \
 				ft_dis_read_write.c \
 				ft_dis_set_arg_type.c \
-				ft_dis_terminate.c \
 				ft_dis_treat_arg.c \
 				ft_dis_treat_arg_types.c \
 				ft_dis_treat_args.c \

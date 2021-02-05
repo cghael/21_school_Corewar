@@ -20,7 +20,10 @@ int			ft_dis_del_cor(t_dis *dis_s)
 	tmp = dis_s->file_s;
 	if (!(dot = ft_strrchr(dis_s->file_s, '.')) ||
 		!(dis_s->file_s = ft_strsub(tmp, 0, dot - dis_s->file_s)))
-		return (ft_dis_error_free(ERR_DIS_FILE, dis_s->file_s, dis_s));
+	{
+		free(tmp);
+		return (EXIT_FAILURE);
+	}
 	free(tmp);
 	return (EXIT_SUCCESS);
 }

@@ -1,12 +1,19 @@
-//
-// Created by Karina Semele on 2/3/21.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_visualiser.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ksemele <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/05 22:15:22 by ksemele           #+#    #+#             */
+/*   Updated: 2021/02/05 22:15:23 by ksemele          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "corewar.h"
 #include <ncurses.h>
 
-
-void			vi_print_help()
+void			vi_print_help(void)
 {
 	printw("Hello! Press Space to start visualiser, Esc to exit\n\n");
 }
@@ -35,7 +42,6 @@ void			ft_vi_print_arena(t_vm *vm)
 	uint32_t	length;
 
 	i = 0;
-	clear();
 	printw("%6s : ", "0x0000");
 	if (vm->flag.d)
 		length = 64;
@@ -58,7 +64,7 @@ void			ft_vi_print_arena(t_vm *vm)
 	refresh();
 }
 
-void	vi_handle_buttons(t_vm *vm)
+void			vi_handle_buttons(t_vm *vm)
 {
 	if (vm->vi->button == KEY_ENTER)
 	{
@@ -70,7 +76,7 @@ void	vi_handle_buttons(t_vm *vm)
 		exit(0);
 }
 
-int		ft_visualiser(t_vm *vm)
+int				ft_visualiser(t_vm *vm)
 {
 	if (vm->flag.v)
 	{

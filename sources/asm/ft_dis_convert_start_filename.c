@@ -17,9 +17,6 @@ int		ft_dis_convert_start_filename(char *file, t_dis *dis_s)
 	if (EXIT_FAILURE == ft_dis_copy_filename(file, dis_s) \
 		|| EXIT_FAILURE == ft_dis_del_cor(dis_s) \
 		|| EXIT_FAILURE == ft_dis_add_s(dis_s))
-	{
-		ft_dis_free_struct(dis_s);
 		return (EXIT_FAILURE);
-	}
 	return (EXIT_SUCCESS);
 }
