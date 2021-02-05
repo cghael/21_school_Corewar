@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:41:08 by ablane            #+#    #+#             */
-/*   Updated: 2021/02/05 20:47:23 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 21:07:46 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void		pl_cp_comment_champion(int fd, t_list *player)
 	uint8_t	buff[COMMENT_LENGTH];
 
 	r = read(fd, &buff, COMMENT_LENGTH);
+	if (pl_check_name_comm(buff, COMMENT_LENGTH) == 0)
+		terminate(ERR_BAD_COMM);
 	if (r == COMMENT_LENGTH)
 		ft_memcpy(((t_player*)player->content)->comment, buff, COMMENT_LENGTH);
 	else
@@ -52,6 +54,8 @@ void		pl_cp_name_champion(int fd, t_list *player)
 	uint8_t	buff[PROG_NAME_LENGTH];
 
 	r = read(fd, &buff, PROG_NAME_LENGTH);
+	if (pl_check_name_comm(buff, PROG_NAME_LENGTH) == 0)
+		terminate(ERR_BAD_NAME);
 	if (r == PROG_NAME_LENGTH)
 		ft_memcpy(((t_player*)player->content)->name, buff, PROG_NAME_LENGTH);
 	else

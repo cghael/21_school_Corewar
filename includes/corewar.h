@@ -6,7 +6,7 @@
 /*   By: ablane <ablane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:47:23 by ablane            #+#    #+#             */
-/*   Updated: 2021/01/31 15:45:20 by ablane           ###   ########.fr       */
+/*   Updated: 2021/02/05 20:48:18 by ablane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,7 @@ int							fl_check_num_after_flag_n(char **av, int i, \
 int							pl_search_duplicate_num(t_list *champions, \
 							uint32_t quantity);
 int							pl_next_arg(char **av, int i, int ac);
+int							pl_check_name_comm(uint8_t *str, int len);
 
 void						err_flag(char c);
 void						terminate(char *s);

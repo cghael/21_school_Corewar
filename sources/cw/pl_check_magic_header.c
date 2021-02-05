@@ -13,6 +13,20 @@
 #include "corewar.h"
 #include "asm.h"
 
+int			pl_check_name_comm(uint8_t *str, int len)
+{
+	int		i;
+
+	i = 0;
+	while (i < len)
+	{
+		if (str[i] != 0)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 void		pl_check_null_champ(int fd, int i)
 {
 	int		r;
